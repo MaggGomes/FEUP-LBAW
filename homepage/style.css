@@ -1,0 +1,16 @@
+body {
+  min-height: 2000px;
+  padding-top: 70px;
+}
+
+#bar-title {
+    color: #26C6DA;
+}
+
+#navbar {
+    margin-left: 80px;
+}
+
+#navbar ul {
+    padding-right: 50px;
+}
