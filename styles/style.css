@@ -144,11 +144,9 @@ small, .small-text, .article-footer a {
     padding-bottom: 20px;
 }
 
-.container-category-title h2 {
-}
-
-.container-category-title span {
-
+body.modal-open {
+    overflow-y: scroll;
+    padding-right: 0 !important;
 }
 
 /* Small devices (tablets, 768px and up) @screen-sm-min */
