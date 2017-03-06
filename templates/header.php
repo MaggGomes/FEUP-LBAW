@@ -38,7 +38,7 @@
 
 <body>
 <nav class="navbar navbar-default navbar-fixed-top">
-    <div class="container-fluid">
+    <div class="container">
         <div class="navbar-header">
 
             <!--<button class="navbar-toggle pull-right" data-toggle="collapse" data-target=".nav-bottom">
@@ -72,6 +72,8 @@
             <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
             <li><a href="#"><span class="glyphicon glyphicon-bell"></span></a></li>
             <li><a href="#"><span class="glyphicon glyphicon-user"></span></a></li>
+
+
         </div>
 
 
