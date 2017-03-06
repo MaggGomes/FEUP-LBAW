@@ -26,6 +26,7 @@ body {
 #brand-title {
     padding-left: 18px;
     padding-right: 20px;
+    display: none;
 }
 
 .navbar {
@@ -122,8 +123,9 @@ body {
 
 .glyph-text {
     font-size: small;
-    margin-top: 0;
     font-family: "Calibri Light";
+    position: relative;
+    top: -3px;
 }
 
 small, .small-text, .article-footer a {
@@ -160,6 +162,10 @@ body.modal-open {
 
     .navbar .navbar-collapse {
         text-align: center;
+    }
+
+    .navbar #brand-title {
+        display: block;
     }
 
     .central {
@@ -304,30 +310,35 @@ body.modal-open {
     width: 20px;
 }
 
-/* enable absolute positioning */
-.inner-addon {
-    position: relative;
+
+
+
+
+
+
+
+.navbar-header {
+    float: left;
 }
 
-/* style icon */
-.inner-addon .glyphicon {
-    position: absolute;
-    padding: 10px;
-    pointer-events: none;
+.menu-right {
+    float: left;
 }
 
-/* align icon */
-.left-addon .glyphicon  { left:  0px;}
-.right-addon .glyphicon { right: 0px;}
-
-/* add padding  */
-.left-addon input  { padding-left:  30px; }
-.right-addon input { padding-right: 30px; }
-
-.form-group {
-    color: #a9a9a9;
+.menu-right li {
+    float: left;
+    padding: 0;
+    margin: 0;
 }
 
+.menu-right span {
+    color: #039be5;
+    font-size: x-large;
+}
 
-
-
+.menu-right button {
+    margin: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 14px;
+}
