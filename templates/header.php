@@ -38,40 +38,50 @@
 
 <body>
 <nav class="navbar navbar-default navbar-fixed-top">
-    <div class="container">
+    <div class="container-fluid">
         <div class="navbar-header">
 
-            <button class="navbar-toggle pull-left" data-toggle="collapse" data-target=".nav-bottom">
+            <!--<button class="navbar-toggle pull-right" data-toggle="collapse" data-target=".nav-bottom">
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
-            </button>
+            </button>-->
 
-            <button class="navbar-toggle nav-icone btn-default" data-toggle="collapse" data-target=".nav-search">
-                <span class="glyphicon glyphicon-search"></span>
-            </button>
 
-            <button class="navbar-toggle nav-icones" data-toggle="collapse" data-target="#nav-logreg">
-                <span class="glyphicon glyphicon-user"></span>
-            </button>
 
             <a class="navbar-brand" href="#">
                 <img alt="Brand" src="../res/images/logo.png">
             </a>
             <div class="navbar-brand" id="brand-title" href="#">scriba</div>
 
-            <form class="collapse navbar-collapse navbar-form navbar-right nav-search">
+            <!--<form class="collapse navbar-collapse navbar-form navbar-right nav-search">
                 <div class="form-group">
                     <input type="text" class="form-control" placeholder="Search">
                 </div>
                 <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-search"></span></button>
-            </form>
+            </form>-->
+
         </div>
-        <ul id="nav-logreg" class="collapse nav navbar-nav navbar-right">
+        <div class="nav navbar-nav navbar-right menu-right pull-right">
+            <button class="navbar-toggle pull-right" data-toggle="collapse" data-target=".nav-bottom" style="margin-right: 8px">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-bell"></span></a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-user"></span></a></li>
+        </div>
+
+
+
+        <!-- <ul id="nav-logreg" class="collapse nav navbar-nav navbar-right">
             <li><a href="#signin" data-toggle="modal">Sign In</a></li>
             <li><a href="#register" data-toggle="modal">Register</a></li>
-        </ul>
+        </ul> -->
     </div>
+
 
     <div class="container">
         <div class="collapse navbar-collapse nav-bottom">
