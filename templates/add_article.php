@@ -9,23 +9,20 @@
         <article id="add-article">
             <div class="container row">
                 <form action="../actions/action_add_article.php" method="post" class="row form-group">
-                    <div class="container row">
-                        <div class="col-md-4">
-                            <input type="text" name="title" class="form-control" placeholder="Title" required>
+                    <div class="add-article-header">
+                        <div class="container row">
+                            <div class="col-md-12">
+                                <input type="text" name="title" class="form-control input-lg" placeholder="Title" required>
+                            </div>
                         </div>
-                    </div>
-                    <div class="container row">
-                        <div class="col-md-4">
-                            <input type="text" name="title" class="form-control" placeholder="Description" required>
+                        <div class="container row">
+                            <div class="col-md-12">
+                                <input type="text" name="title" class="form-control input-lg" placeholder="Description" required>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="col-lg-12">
-                        <textarea rows="10" name="body" class="col-lg-12" required></textarea>
-                    </div>
-                    <div class="col-lg-12">
-                        <h4>Category</h4>
-
+                    <div class="col-lg-12 add-article-category">
                         <div class="btn-group" data-toggle="buttons">
                             <label class="btn btn-primary active radio-inline">
                                 <input type="radio" name="options" id="option1" autocomplete="off" checked>World
@@ -47,12 +44,16 @@
                             </label>
                         </div>
                     </div>
-                    <div class="container row">
-                        <div class="col-md-4">
-                            <h4>Tags</h4>
-                            <input type="text" class="form-control col-lg-12" name="tags" placeholder="Write a tag">
-                        </div>
+
+                    <div class="container row add-article-tagsphoto">
+                        <a href="#" class="col-md-2"><span class="glyphicon glyphicon-tags"></span> Add tag</a>
+                        <a href="#" class="col-md-2"><span class="glyphicon glyphicon-camera"></span> Add photo</a>
                     </div>
+
+                    <div class="col-lg-12 add-article-textarea">
+                        <textarea rows="10" name="body" class="col-lg-12" required></textarea>
+                    </div>
+
                     <div class="container row">
                         <div class="col-md-2">
                             <button type="submit" class="btn btn-primary btn-block" disabled>Publish</button>
