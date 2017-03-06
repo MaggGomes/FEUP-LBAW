@@ -18,13 +18,11 @@
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <!--link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet"-->
 
+    <link type="text/css" rel="stylesheet" href="../styles/font-awesome.css"/>
     <link href="../styles/bootstrap.css" rel="stylesheet">
     <link href="../styles/bootstrap-theme.css" rel="stylesheet">
     <link href="../styles/style.css" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="<?=$cssStyle?>"/>
-    <link type="text/css" rel="stylesheet" href="../styles/font-awesome.css"/>
-    <link type="text/css" rel="stylesheet" href="../styles/font-awesome.min.css"/>
-
 
     <!--script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -94,6 +92,8 @@
 
 <!-- Modal dialogs -->
 
+<!-- Sign In -->
+
 <div id="signin"  class="modal fade" tabindex="-1" role="dialog">
     <div class="modal-dialog modal-sm" role="document">
         <div class="modal-content">
@@ -108,17 +108,13 @@
                     <span class="span-or">or</span>
                 </div>
                 <form>
-                    <div class="form-group">
-                        <div class="input-group">
-                            <input type="text" class="form-control" aria-describedby="start-date" placeholder="E-mail address">
-                            <span class="input-group-addon" id="signin-email"><i class="fa fa-envelope-o" aria-hidden="true"></i></span>
-                        </div>
+                    <div class="form-group has-feedback">
+                        <input type="text" class="form-control" placeholder="E-mail address">
+                        <span class="fa fa-envelope-o form-control-feedback"></span>
                     </div>
-                    <div class="form-group">
-                        <div class="input-group">
-                            <input type="text" class="form-control" aria-describedby="start-date" placeholder="Password">
-                            <span class="input-group-addon" id="signin-password"><i class="fa fa-lock" aria-hidden="true"></i></span>
-                        </div>
+                    <div class="form-group has-feedback">
+                        <input type="password" class="form-control" placeholder="Password">
+                        <span class="fa fa-lock form-control-feedback"></span>
                     </div>
                 </form>
 
@@ -126,7 +122,7 @@
                     <input type="checkbox" checked="checked"> Remember me
                     <a href="#" class="pull-right">Forgot password?</a>
                 </div>
-                <button type="button" class="btn btn-primary btn-submit-dialog">Sign In</button>
+                <button type="button" class="btn btn-primary btn-submit-dialog" disabled>Sign In</button>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
@@ -137,16 +133,16 @@
 </div>
 
 
-
+<!-- Register -->
 
 <div id="register"  class="modal fade" tabindex="-1" role="dialog">
     <div class="modal-dialog modal-sm" role="document">
         <div class="modal-content">
             <div class="modal-body">
                 <div class="modal-social-icons">
-                    <button class="btn btn-default facebook"><i class="fa fa-facebook modal-icons"></i> Sign In with Facebook </button>
-                    <button class="btn btn-default google"><img src="../res/images/google-logo.png">Sign In with Google</button>
-                    <button class="btn btn-default sigarra"><i class="fa fa-graduation-cap" aria-hidden="true"></i> Sign In with Sigarra U.Porto</button>
+                    <button class="btn btn-default facebook"><i class="fa fa-facebook modal-icons"></i> Continue with Facebook </button>
+                    <button class="btn btn-default google"><img src="../res/images/google-logo.png">Continue with Google</button>
+                    <button class="btn btn-default sigarra"><i class="fa fa-graduation-cap" aria-hidden="true"></i> Continue with Sigarra U.Porto</button>
                 </div>
                 <div class="login-or">
                     <hr class="hr-or">
@@ -154,28 +150,33 @@
                 </div>
                 <form>
                     <div class="form-group">
-                        <div class="input-group">
-                            <input type="text" class="form-control" aria-describedby="start-date" placeholder="E-mail address">
-                            <span class="input-group-addon" id="regiter-email"><i class="fa fa-envelope-o" aria-hidden="true"></i></span>
+                        <div class="form-group has-feedback">
+                            <input type="text" class="form-control" placeholder="First name">
+                            <span class="fa fa-user-o form-control-feedback"></span>
                         </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="input-group">
-                            <input type="text" class="form-control" aria-describedby="start-date" placeholder="Password">
-                            <span class="input-group-addon" id="register-password"><i class="fa fa-lock" aria-hidden="true"></i></span>
+                        <div class="form-group has-feedback">
+                            <input type="text" class="form-control" placeholder="Last name">
+                            <span class="fa fa-user-o form-control-feedback"></span>
+                        </div>
+                        <div class="form-group has-feedback">
+                            <input type="email" class="form-control" placeholder="E-mail address">
+                            <span class="fa fa-envelope-o form-control-feedback"></span>
+                        </div>
+                        <div class="form-group has-feedback">
+                            <input type="password" class="form-control" placeholder="Password">
+                            <span class="fa fa-lock form-control-feedback"></span>
+                        </div>
+                        <div class="form-group has-feedback">
+                            <input type="password" class="form-control" placeholder="Confirm Password">
+                            <span class="fa fa-lock form-control-feedback"></span>
                         </div>
                     </div>
                 </form>
 
-                <div class="remember-password">
-                    <input type="checkbox" checked="checked"> Remember me
-                    <a href="#" class="pull-right">Forgot password?</a>
-                </div>
-                <button type="button" class="btn btn-primary btn-submit-dialog">Sign In</button>
+                <button type="button" class="btn btn-primary btn-submit-dialog">Register</button>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-default">Register</button>
             </div>
         </div>
     </div>
