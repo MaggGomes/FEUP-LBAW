@@ -27,6 +27,7 @@
     <!--script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="../scripts/bootstrap.js"></script>
+    <script src="../scripts/script.js"></script>
     <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>-->
 
     <!-- HTML5 shim and Respond.scripts for IE8 support of HTML5 elements and media queries -->
@@ -40,13 +41,12 @@
 <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
         <div class="navbar-header">
-
-            <!--<button class="navbar-toggle pull-right" data-toggle="collapse" data-target=".nav-bottom">
+            <button class="navbar-toggle" data-toggle="collapse" data-target=".nav-bottom">
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
-            </button>-->
-
+                <span class="icon-bar"></span>
+            </button>
 
 
             <a class="navbar-brand" href="#">
@@ -63,16 +63,10 @@
 
         </div>
         <div class="nav navbar-nav navbar-right menu-right pull-right">
-            <button class="navbar-toggle pull-right" data-toggle="collapse" data-target=".nav-bottom" style="margin-right: 8px">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
+
             <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
             <li><a href="#"><span class="glyphicon glyphicon-bell"></span></a></li>
             <li><a href="#"><span class="glyphicon glyphicon-user"></span></a></li>
-
 
         </div>
 
@@ -85,7 +79,7 @@
     </div>
 
 
-    <div class="container">
+    <div class="container nav-bottom-container">
         <div class="collapse navbar-collapse nav-bottom">
             <ul class="nav navbar-nav">
                 <li><a href="#">Home</a></li>
