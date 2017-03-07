@@ -48,36 +48,38 @@
                 <span class="icon-bar"></span>
             </button>
 
-
             <a class="navbar-brand" href="home.php">
                 <img alt="Brand" src="../res/images/logo.png">
             </a>
             <div class="navbar-brand" id="brand-title" href="#">scriba</div>
-
-            <!--<form class="collapse navbar-collapse navbar-form navbar-right nav-search">
-                <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Search">
-                </div>
-                <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-search"></span></button>
-            </form>-->
-
-        </div>
-        <div class="nav navbar-nav navbar-right menu-right pull-right">
-
-            <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
-            <li><a href="#"><span class="glyphicon glyphicon-bell"></span></a></li>
-            <li><a href="#"><span class="glyphicon glyphicon-user"></span></a></li>
-
         </div>
 
+        <ul class="nav navbar-nav menu-right navbar-right pull-right">
+            <li><a href="#"><span class="glyphicon glyphicon-search menu-top"></span></a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-bell menu-top"></span></a></li>
+            <button class="navbar-toggle" data-toggle="collapse" data-target=".menu-user">
+                <span class="glyphicon glyphicon-user menu-top"></span>
+            </button>
 
-
-        <!-- <ul id="nav-logreg" class="collapse nav navbar-nav navbar-right">
-            <li><a href="#signin" data-toggle="modal">Sign In</a></li>
-            <li><a href="#register" data-toggle="modal">Register</a></li>
-        </ul> -->
+            <li id="menu-user-dropdown" class="dropdown">
+                <a class="dropdown-toggle" href="#" data-toggle="dropdown"><span class="glyphicon glyphicon-user menu-top"></span></a>
+                <ul class="dropdown-menu collapse">
+                    <li><a href="#signin" data-toggle="modal"><span class="fa fa-user-o"> &nbsp;Sign In</a></li>
+                    <li><a href="#register" data-toggle="modal"><span class="fa fa-sign-in"> &nbsp;Register</a></li>
+                </ul>
+            </li>
+        </ul>
     </div>
 
+    <!-- Collapsable menu user for resolutions < 768px -->
+    <div class="container menu-user-container">
+        <div class="collapse navbar-collapse menu-user">
+            <ul class="nav navbar-nav">
+                <li><a href="#signin" data-toggle="modal"><span class="fa fa-user-o"> &nbsp;Sign In</a></li>
+                <li><a href="#register" data-toggle="modal"><span class="fa fa-sign-in"> &nbsp;Register</a></li>
+            </ul>
+        </div>
+    </div>
 
     <div class="container nav-bottom-container">
         <div class="collapse navbar-collapse nav-bottom">

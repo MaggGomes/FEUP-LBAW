@@ -13,11 +13,11 @@ $(document).ready(function() {
         if (windowWidth >= 768){
             if ($(this).scrollTop()>200)
             {
-                $('.nav-bottom-container').fadeOut('slow');
+                $('.nav-bottom-container').slideUp();
             }
             else
             {
-                $('.nav-bottom-container').fadeIn('slow');
+                $('.nav-bottom-container').slideDown();
             }
         }
     });
