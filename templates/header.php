@@ -49,7 +49,7 @@
             </button>
 
 
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="home.php">
                 <img alt="Brand" src="../res/images/logo.png">
             </a>
             <div class="navbar-brand" id="brand-title" href="#">scriba</div>
@@ -187,4 +187,3 @@
         </div>
     </div>
 </div>
-
