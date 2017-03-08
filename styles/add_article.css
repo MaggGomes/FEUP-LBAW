@@ -2,10 +2,6 @@ body {
     background-color: white;
 }
 
-.add-article {
-    margin-top: 100px;
-}
-
 .add-article-header input {
     margin-bottom: 20px;
     border: none;
@@ -30,5 +26,25 @@ body {
     padding-right: 1px;
     padding-left: 1px;
     font-size: small;
+}
+
+.central {
+    margin-top: 70px;
+}
+
+/* Small devices (tablets, 768px and up) @screen-sm-min */
+@media (min-width: 768px) {
+
+    .central {
+        margin-top: 140px;
+    }
+
+    .add-article-category .btn-primary{
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-right: 2px;
+        padding-left: 2px;
+        font-size: medium;
+    }
 }
 
