@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="input-group" id="adv-search">
-                    <input type="text" class="form-control" placeholder="Search for articles" />
+                    <input id="abc" type="text" class="form-control" placeholder="Search for articles" />
                     <div class="input-group-btn">
                         <div class="btn-group" role="group">
                             <div class="dropdown dropdown-lg">
