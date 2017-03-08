@@ -66,6 +66,10 @@
                 <ul class="dropdown-menu collapse">
                     <li><a href="#signin" data-toggle="modal"><span class="fa fa-user-o"> &nbsp;Sign In</a></li>
                     <li><a href="#register" data-toggle="modal"><span class="fa fa-sign-in"> &nbsp;Register</a></li>
+                    <!--li><a href="#signin" data-toggle="modal"><span class="fa fa-user-o"> &nbsp;My Profile</a></li>
+                    <li><a href="../pages/add_article.php" data-toggle="modal"><span class="fa fa-pencil"> &nbsp;Create Article</a></li>
+                    <li><a href="#signin" data-toggle="modal"><span class="fa fa-sign-out"> &nbsp;Log out</a></li-->
+
                 </ul>
             </li>
         </ul>
