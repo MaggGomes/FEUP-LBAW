@@ -1,76 +1,132 @@
 <section class="central">
     <div class="container">
-        <article>
-            <div class="sectiondescription">
-                <h3>List of something<h3>
-            </div>
-            <div class="row">
-                <div class="col-md-3">
-                    <form class="" action="index.html" method="post">
-                        <!-- <div class="btn-group">
-                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" name="button" aria-haspopup="true" aria-expanded="false">
-                                Search Users <span class="caret"></span>
-                            </button>
-                            <ul class="dropdown-menu">
-                                <li>Search Users</li>
-                                <li>Search Article Title</li>
-                                <li>Search Article content</li>
-                            </ul>
-                        </div> -->
-
-                        <select class="btn btn-primary form-control input-md" name="type">
-                            <option value="users">Search Users</option>
-                            <option value="title">Search Article Title</option>
-                            <option value="content">Search Article Content</option>
-                        </select>
-                        <br><br>
-
-
-                        <div class="row col-md-offset-1">
-                            <label for="">Category</label>
-                            <div class="">
-                                <input type="checkbox" class="" name="" value=""> Sporting
-                                <input type="checkbox" class="" name="" value=""> Espinho
+        <div class="row">
+            <div class="col-md-12">
+                <div class="input-group" id="adv-search">
+                    <input type="text" class="form-control" placeholder="Search for articles" />
+                    <div class="input-group-btn">
+                        <div class="btn-group" role="group">
+                            <div class="dropdown dropdown-lg">
+                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="caret"></span></button>
+                                <div class="dropdown-menu dropdown-menu-right" role="menu">
+                                    <form class="form-horizontal" role="form">
+                                        <div class="form-group">
+                                            <label for="filter">Filter by</label>
+                                            <select class="form-control">
+                                                <option value="0" selected>All Articles</option>
+                                                <option value="1">World</option>
+                                                <option value="2">Sports</option>
+                                                <option value="3">Technology</option>
+                                                <option value="4">Politics</option>
+                                                <option value="4">Culture</option>
+                                                <option value="4">Science</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="contain">Author</label>
+                                            <input class="form-control" type="text" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="contain">Contains the words</label>
+                                            <input class="form-control" type="text" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="contain">Contains the tags</label>
+                                            <input class="form-control" type="text" />
+                                        </div>
+                                        <button type="submit" class="btn btn-primary">Search</button>
+                                    </form>
+                                </div>
                             </div>
-                            <div class="">
-                                <input type="checkbox" name="" value=""> Sporting
-
-                                    <input type="checkbox" name="" value=""> Sporting
-                            </div><div class="">
-                                <input type="checkbox" name="" value=""> Sporting
-
-                                    <input type="checkbox" name="" value=""> Sporting
-                            </div>
+                            <button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
                         </div>
-                        <br>
-                        <div class="">
-                            <input type="textarea" name="tags" rows="5" placeholder="tags" class="form-control input-md" value="">
-                        </div>
-                    </form>
-                </div>
-                <div class="col-md-9">
-                    <input type="text" name="content" placeholder="Search in article" class="form-control input-md" ></input>
-                    <br>
-                    <div class="list-group">
-                        <div class="list-group-item list-group-item-info">
-                            <div class="row">
-                                <a href="#" class="btn btn-link col-xs-6">Name</a>
-                                <a href="#" class="btn btn-link col-xs-2">Rating</a>
-                                <a href="#" class="btn btn-link col-xs-2">Publisher</a>
-                                <a href="#" class="btn btn-link col-xs-2">Views</a>
-                            </div>
-                        </div>
-                        <a href="#" class="list-group-item list-group-item-action">
-                            <div class="row">
-                                <div class="col-xs-6">Big Short</div>
-                                <div class="col-xs-2">4.34</div>
-                                <div class="col-xs-2">Rui asdad</div>
-                                <div class="col-xs-2">45</div>
-                            </div>
-                        </a>
                     </div>
                 </div>
             </div>
-        </article>
+        </div>
     </div>
+
+    <div class="container">
+        <div class="row container-category-title">
+            <h3 class="col-md-12">Results <span class="glyphicon glyphicon-menu-down"></span></h3>
+        </div>
+        <div class="list-group table-results">
+            <div id="table-header" class="list-group-item list-group-item-info">
+                <div class="row">
+                    <a href="#" class="btn btn-primary col-xs-3">Name</a>
+                    <a href="#" class="btn btn-primary col-xs-3">Rating</a>
+                    <a href="#" class="btn btn-primary col-xs-3">Publisher</a>
+                    <a href="#" class="btn btn-primary col-xs-3">Views</a>
+                </div>
+            </div>
+            <a href="#" class="list-group-item list-group-item-action">
+                <div class="row">
+                    <div class="col-xs-3">Big Short</div>
+                    <div class="col-xs-3">4.95</div>
+                    <div class="col-xs-3">Rui Andrade</div>
+                    <div class="col-xs-3">83</div>
+                </div>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action">
+                <div class="row">
+                    <div class="col-xs-3">Big Small</div>
+                    <div class="col-xs-3">4.34</div>
+                    <div class="col-xs-3">Chaler Albin</div>
+                    <div class="col-xs-3">59</div>
+                </div>
+            </a>
+
+
+        </div>
+    </div>
+
+
+
+
+        <!--<div class="row">
+            <div class="col-xs-12">
+                <input type="text" name="content" placeholder="Search in article" class="form-control input-md">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <select class="btn btn-primary form-control input-md" name="type">
+                    <option value="users">Search Users</option>
+                    <option value="title">Search Article Title</option>
+                    <option value="content">Search Article Content</option>
+                </select>
+
+            </div>
+            <div class="col-md-8">
+                <div class="list-group table-results">
+                    <div id="table-header" class="list-group-item list-group-item-info">
+                        <div class="row">
+                            <a href="#" class="btn btn-primary col-xs-3">Name</a>
+                            <a href="#" class="btn btn-primary col-xs-3">Rating</a>
+                            <a href="#" class="btn btn-primary col-xs-3">Publisher</a>
+                            <a href="#" class="btn btn-primary col-xs-3">Views</a>
+                        </div>
+                    </div>
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <div class="row">
+                            <div class="col-xs-3">Big Short</div>
+                            <div class="col-xs-3">4.95</div>
+                            <div class="col-xs-3">Rui Andrade</div>
+                            <div class="col-xs-3">83</div>
+                        </div>
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <div class="row">
+                            <div class="col-xs-3">Big Small</div>
+                            <div class="col-xs-3">4.34</div>
+                            <div class="col-xs-3">Chaler Albin</div>
+                            <div class="col-xs-3">59</div>
+                        </div>
+                    </a>
+
+
+                </div>
+
+        </div>
+    </div>-->
 </section>
