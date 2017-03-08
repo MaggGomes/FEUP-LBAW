@@ -1,4 +1,4 @@
-<section class="central main-article">
+<section class="central">
     <div class="container">
         <div class="row">
             <article class="col-lg-9 article-text">
@@ -22,6 +22,7 @@
                                 </div>
                             </div>
                         </div>
+                        <h3>Lorem ipsum</h3>
                         <img class="article-image" src="../upload/articles/city.png">
                         <p>Maecenas vulputate luctus nec justo magna, rhoncus a purus quisque justo, vel earum vitae placerat, facilisi nullam. Orci justo mauris phasellus quam. Occaecat ut nunc ac etiam netus, ultrices velit et sed, vulputate parturient sit accumsan integer luctus sagittis, at integer duis fringilla semper, in non morbi. Bibendum vestibulum eget, ut quam scelerisque duis pellentesque at, condimentum eget massa, adipiscing libero quam auctor venenatis, lacus wisi ac cras nec neque quam. Litora lacus, eu senectus, tempor ac nibh hymenaeos. Vivamus curabitur, porta quisque ullamcorper nec ut tortor nec, montes suscipit sed est aenean nec, libero sem semper suspendisse, ultrices eros pretium cras suscipit vitae.
 
@@ -51,6 +52,9 @@
             </article>
 
             <div class="col-lg-3">
+                <div class="row container-category-title">
+                    <h3 class="col-xs-12">Recommended <span class="glyphicon glyphicon-menu-down"></span></h3>
+                </div>
                 <div class="list-group">
                     <a href="#" class="list-group-item">
                         <h4 class="list-group-item-heading">Lorem ipsum</h4>

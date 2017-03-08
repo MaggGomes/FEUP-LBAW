@@ -81,10 +81,10 @@
         </div>
     </div>
 
-    <div class="container nav-bottom-container">
+    <div id="nav-bottom-container" class="container">
         <div class="collapse navbar-collapse nav-bottom">
             <ul class="nav navbar-nav">
-                <li><a href="#">Home</a></li>
+                <li><a href="../pages/home.php">Home</a></li>
                 <li><a href="#">Top Articles</a></li>
                 <li><a href="#">World</a></li>
                 <li><a href="#">Sports</a></li>
@@ -92,6 +92,7 @@
                 <li><a href="#">Politics</a></li>
                 <li><a href="#">Culture</a></li>
                 <li><a href="#">Science</a></li>
+                <li><a href="#">Recommended</a></li>
             </ul>
         </div>
     </div>
