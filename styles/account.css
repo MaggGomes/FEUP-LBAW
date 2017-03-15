@@ -81,6 +81,10 @@
     color: #039be5;
 }
 
+.account-usermenu ul li a:hover .badge{
+    background-color: #039be5;
+}
+
 .account-usermenu ul li.active {
     border-bottom: none;
 }
@@ -90,6 +94,10 @@
     background-color: #f6f9fb;
     border-left: 2px solid #039be5;
     margin-left: -2px;
+}
+
+.account-usermenu ul li.active .badge {
+    background-color: #039be5;
 }
 
 .account-content {
@@ -110,6 +118,18 @@
 
 .account-recommended .container-category-title h3 {
     margin-top: 0;
+}
+
+.account-notification-description {
+    margin-bottom: 0;
+}
+
+.account-notification-description a {
+    text-decoration: none;
+}
+
+.account-notification-description .article-author {
+    font-size: large;
 }
 
 /* Small devices (tablets, 768px and up) @screen-sm-min */

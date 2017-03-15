@@ -20,19 +20,24 @@
                     <div class="account-usermenu">
                         <ul class="nav">
                             <li class="active">
-                                <a href="#">
+                                <a href="../pages/account.php">
                                     <i class="glyphicon glyphicon-home"></i>
                                     Overview </a>
                             </li>
                             <li class="">
-                                <a href="#">
+                                <a href="../pages/add_article.php">
+                                    <i class="fa fa-pencil"></i>
+                                    Write an article </a>
+                            </li>
+                            <li class="">
+                                <a href="../pages/edit_profile.php">
                                     <i class="glyphicon glyphicon-user"></i>
                                     Account Settings </a>
                             </li>
-                            <li>
-                                <a href="#">
+                            <li class="">
+                                <a href="../pages/notifications.php">
                                     <i class="glyphicon glyphicon-bell"></i>
-                                    Notifications </a>
+                                    Notifications &nbsp;<span class="badge">6</span></a>
                             </li>
                             <li>
                                 <a href="#">
