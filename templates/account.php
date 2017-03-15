@@ -8,7 +8,7 @@
                     </div>
                     <div class="account-usertitle">
                         <div class="account-usertitle-name">
-                            Clark Muller
+                            <h3>Clark Muller</h3>
                         </div>
                         <div class="account-usertitle-job">
                             Administrator
@@ -16,9 +16,6 @@
                     </div>
                     <div class="account-presentation row">
                         <div class="col-md-12" style="text-align: center"><span class="account-follow">88</span> Following &middot; <span class="account-follow">200</span> Followers</div>
-                    </div>
-                    <div class="account-userbuttons">
-                        <button type="button" class="btn btn-default btn-sm"><span class="fa fa-user-plus"> Follow</span></button>
                     </div>
                     <div class="account-usermenu">
                         <ul class="nav">
@@ -70,7 +67,14 @@
                                                 </div>
                                             </div>
                                             <div class="col-xs-2 small-text">
-                                                <span class="glyphicon glyphicon-option-horizontal pull-right"></span>
+                                                <div class="dropdown horizontal-menu">
+                                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-option-horizontal pull-right"></span></a>
+
+                                                    <ul class="dropdown-menu pull-right" role="menu">
+                                                        <li><a href="#"><span class="fa fa-flag" aria-hidden="true"></span> &nbsp;Report article</a></li>
+                                                        <li><a href="#"><span class="fa fa-eye-slash" aria-hidden="true"></span> &nbsp;Hide article</a></li>
+                                                    </ul>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -117,7 +121,14 @@
                                                 </div>
                                             </div>
                                             <div class="col-xs-2 small-text">
-                                                <span class="glyphicon glyphicon-option-horizontal pull-right"></span>
+                                                <div class="dropdown horizontal-menu">
+                                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-option-horizontal pull-right"></span></a>
+
+                                                    <ul class="dropdown-menu pull-right" role="menu">
+                                                        <li><a href="#"><span class="fa fa-flag" aria-hidden="true"></span> &nbsp;Report article</a></li>
+                                                        <li><a href="#"><span class="fa fa-eye-slash" aria-hidden="true"></span> &nbsp;Hide article</a></li>
+                                                    </ul>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -164,7 +175,14 @@
                                                 </div>
                                             </div>
                                             <div class="col-xs-2 small-text">
-                                                <span class="glyphicon glyphicon-option-horizontal pull-right"></span>
+                                                <div class="dropdown horizontal-menu">
+                                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-option-horizontal pull-right"></span></a>
+
+                                                    <ul class="dropdown-menu pull-right" role="menu">
+                                                        <li><a href="#"><span class="fa fa-flag" aria-hidden="true"></span> &nbsp;Report article</a></li>
+                                                        <li><a href="#"><span class="fa fa-eye-slash" aria-hidden="true"></span> &nbsp;Hide article</a></li>
+                                                    </ul>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -211,7 +229,14 @@
                                                 </div>
                                             </div>
                                             <div class="col-xs-2 small-text">
-                                                <span class="glyphicon glyphicon-option-horizontal pull-right"></span>
+                                                <div class="dropdown horizontal-menu">
+                                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-option-horizontal pull-right"></span></a>
+
+                                                    <ul class="dropdown-menu pull-right" role="menu">
+                                                        <li><a href="#"><span class="fa fa-flag" aria-hidden="true"></span> &nbsp;Report article</a></li>
+                                                        <li><a href="#"><span class="fa fa-eye-slash" aria-hidden="true"></span> &nbsp;Hide article</a></li>
+                                                    </ul>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -258,7 +283,14 @@
                                                 </div>
                                             </div>
                                             <div class="col-xs-2 small-text">
-                                                <span class="glyphicon glyphicon-option-horizontal pull-right"></span>
+                                                <div class="dropdown horizontal-menu">
+                                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-option-horizontal pull-right"></span></a>
+
+                                                    <ul class="dropdown-menu pull-right" role="menu">
+                                                        <li><a href="#"><span class="fa fa-flag" aria-hidden="true"></span> &nbsp;Report article</a></li>
+                                                        <li><a href="#"><span class="fa fa-eye-slash" aria-hidden="true"></span> &nbsp;Hide article</a></li>
+                                                    </ul>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
