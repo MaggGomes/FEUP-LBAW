@@ -40,7 +40,7 @@
                                     Notifications &nbsp;<span class="badge">6</span></a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="../pages/statistics.php">
                                     <i class="fa fa-line-chart"></i>
                                     Statistics </a>
                             </li>

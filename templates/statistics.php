@@ -29,7 +29,7 @@
                                     <i class="fa fa-pencil"></i>
                                     Write an article </a>
                             </li>
-                            <li class="active">
+                            <li class="">
                                 <a href="../pages/edit_profile.php">
                                     <i class="glyphicon glyphicon-user"></i>
                                     Account Settings </a>
@@ -37,9 +37,9 @@
                             <li class="">
                                 <a href="../pages/notifications.php">
                                     <i class="glyphicon glyphicon-bell"></i>
-                                    Notifications &nbsp;<span class="badge">6</span></a>
+                                    Notifications &nbsp;<span class="badge active">6</span></a>
                             </li>
-                            <li>
+                            <li class="active">
                                 <a href="../pages/statistics.php">
                                     <i class="fa fa-line-chart"></i>
                                     Statistics </a>
@@ -54,45 +54,39 @@
                 </div>
             </div>
             <div class="col-md-6">
+                <div class="account-content account-statistics>
 
-
-                <div class="account-content account-edit-account">
-                    <h3>Edit Profile</h3>
-                    <form>
-                        <div class="form-group">
-                            <div class="form-group has-feedback">
-                                <input type="text" class="form-control" placeholder="First name" value="Clark">
-                                <span class="fa fa-user-o form-control-feedback"></span>
+                    <article class="article-text">
+                        <div class="panel panel-default">
+                            <div class="panel-body article-text">
+                                <h4>Lorem ipsum</h4>
+                                <img class="article-image article-image-small" src="../upload/chart_examples/chart2.png" width="100%">
+                                <p>Maecenas vulputate luctus nec justo magna, rhoncus a purus quisque justo, vel earum vitae placerat, facilisi nullam.</p>
                             </div>
-                            <div class="form-group has-feedback">
-                                <input type="text" class="form-control" placeholder="Last name" value="Muller">
-                                <span class="fa fa-user-o form-control-feedback"></span>
-                            </div>
-                            <div class="form-group has-feedback">
-                                <input type="email" class="form-control" placeholder="E-mail address" value="someemail@email.com">
-                                <span class="fa fa-envelope-o form-control-feedback"></span>
-                            </div>
-                            <div class="form-group has-feedback">
-                                <input type="text" class="form-control" placeholder="Country" value="Portugal">
-                                <span class="fa fa-globe form-control-feedback"></span>
-                            </div>
-                            <div class="form-group has-feedback">
-                                <input type="password" class="form-control" placeholder="Current Password">
-                                <span class="fa fa-lock form-control-feedback"></span>
-                            </div>
-                            <div class="form-group has-feedback">
-                                <input type="password" class="form-control" placeholder="New Password">
-                                <span class="fa fa-lock form-control-feedback"></span>
-                            </div>
-                            <div class="form-group has-feedback">
-                                <input type="password" class="form-control" placeholder="Confirm New Password">
-                                <span class="fa fa-lock form-control-feedback"></span>
-                            </div>
-                            <button type="button" class="btn btn-primary">Update Profile</button>
                         </div>
-                    </form>
-                </div>
+                    </article>
 
+                    <article class="article-text">
+                        <div class="panel panel-default">
+                            <div class="panel-body article-text">
+                                <h4>Lorem ipsum</h4>
+                                <img class="article-image article-image-small" src="../upload/chart_examples/chart2.png" width="100%">
+                                <p>Maecenas vulputate luctus nec justo magna, rhoncus a purus quisque justo, vel earum vitae placerat, facilisi nullam.</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="article-text">
+                        <div class="panel panel-default">
+                            <div class="panel-body article-text">
+                                <h4>Lorem ipsum</h4>
+                                <img class="article-image article-image-small" src="../upload/chart_examples/chart2.png" width="100%">
+                                <p>Maecenas vulputate luctus nec justo magna, rhoncus a purus quisque justo, vel earum vitae placerat, facilisi nullam.</p>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
             </div>
 
             <div class="account-recommended col-md-3">
