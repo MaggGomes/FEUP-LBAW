@@ -3,11 +3,11 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="input-group" id="adv-search">
-                    <input id="abc" type="text" class="form-control" placeholder="Search for articles" />
+                    <input type="text" class="form-control input-lg" placeholder="Search for articles"/>
                     <div class="input-group-btn">
                         <div class="btn-group" role="group">
                             <div class="dropdown dropdown-lg">
-                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="caret"></span></button>
+                                <button type="button" id="advanced-dropdown" class="btn btn-default dropdown-toggle btn-lg" data-toggle="dropdown" aria-expanded="false"><span id="advanced-text">Advanced</span> <span class="caret"></span></button>
                                 <div class="dropdown-menu dropdown-menu-right" role="menu">
                                     <form class="form-horizontal" role="form">
                                         <div class="form-group">
@@ -53,10 +53,10 @@
         <div class="list-group table-results">
             <div id="table-header" class="list-group-item list-group-item-info">
                 <div class="row">
-                    <a href="#" class="btn btn-primary col-xs-3">Name</a>
-                    <a href="#" class="btn btn-primary col-xs-3">Rating</a>
-                    <a href="#" class="btn btn-primary col-xs-3">Publisher</a>
-                    <a href="#" class="btn btn-primary col-xs-3">Views</a>
+                    <a href="#" class="col-xs-3">Name</a>
+                    <a href="#" class="col-xs-3">Rating</a>
+                    <a href="#" id="advanced-publisher" class="col-xs-3">Publisher</a>
+                    <a href="#" class="col-xs-3">Views</a>
                 </div>
             </div>
             <a href="#" class="list-group-item list-group-item-action">
@@ -75,58 +75,41 @@
                     <div class="col-xs-3">59</div>
                 </div>
             </a>
+            <a href="#" class="list-group-item list-group-item-action">
+                <div class="row">
+                    <div class="col-xs-3">Big Small</div>
+                    <div class="col-xs-3">4.34</div>
+                    <div class="col-xs-3">Chaler Albin</div>
+                    <div class="col-xs-3">59</div>
+                </div>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action">
+                <div class="row">
+                    <div class="col-xs-3">Big Small</div>
+                    <div class="col-xs-3">4.34</div>
+                    <div class="col-xs-3">Chaler Albin</div>
+                    <div class="col-xs-3">59</div>
+                </div>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action">
+                <div class="row">
+                    <div class="col-xs-3">Big Small</div>
+                    <div class="col-xs-3">4.34</div>
+                    <div class="col-xs-3">Chaler Albin</div>
+                    <div class="col-xs-3">59</div>
+                </div>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action">
+                <div class="row">
+                    <div class="col-xs-3">Big Small</div>
+                    <div class="col-xs-3">4.34</div>
+                    <div class="col-xs-3">Chaler Albin</div>
+                    <div class="col-xs-3">59</div>
+                </div>
+            </a>
 
 
         </div>
     </div>
 
-
-
-
-        <!--<div class="row">
-            <div class="col-xs-12">
-                <input type="text" name="content" placeholder="Search in article" class="form-control input-md">
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-3">
-                <select class="btn btn-primary form-control input-md" name="type">
-                    <option value="users">Search Users</option>
-                    <option value="title">Search Article Title</option>
-                    <option value="content">Search Article Content</option>
-                </select>
-
-            </div>
-            <div class="col-md-8">
-                <div class="list-group table-results">
-                    <div id="table-header" class="list-group-item list-group-item-info">
-                        <div class="row">
-                            <a href="#" class="btn btn-primary col-xs-3">Name</a>
-                            <a href="#" class="btn btn-primary col-xs-3">Rating</a>
-                            <a href="#" class="btn btn-primary col-xs-3">Publisher</a>
-                            <a href="#" class="btn btn-primary col-xs-3">Views</a>
-                        </div>
-                    </div>
-                    <a href="#" class="list-group-item list-group-item-action">
-                        <div class="row">
-                            <div class="col-xs-3">Big Short</div>
-                            <div class="col-xs-3">4.95</div>
-                            <div class="col-xs-3">Rui Andrade</div>
-                            <div class="col-xs-3">83</div>
-                        </div>
-                    </a>
-                    <a href="#" class="list-group-item list-group-item-action">
-                        <div class="row">
-                            <div class="col-xs-3">Big Small</div>
-                            <div class="col-xs-3">4.34</div>
-                            <div class="col-xs-3">Chaler Albin</div>
-                            <div class="col-xs-3">59</div>
-                        </div>
-                    </a>
-
-
-                </div>
-
-        </div>
-    </div>-->
 </section>

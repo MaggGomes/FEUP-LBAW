@@ -291,7 +291,25 @@ body.modal-open {
     border: 1px solid #039be5;
 }
 
-.btn-default:hover {
+.btn-default:hover, .btn-default:focus {
+    background-color: white;
+    border: 1px solid #0279B3;
+    color: #0279B3;
+}
+
+.btn-default:active {
+    background-color: white;
+    border: 1px solid #0279B3;
+    color: #0279B3;
+}
+
+.btn-default:active:focus {
+    background-color: white;
+    border: 1px solid #0279B3;
+    color: #0279B3;
+}
+
+.btn-default:active:hover {
     background-color: white;
     border: 1px solid #0279B3;
     color: #0279B3;

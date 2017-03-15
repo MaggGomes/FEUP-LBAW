@@ -85,7 +85,7 @@
         </div>
     </div>
 
-    <div id="nav-bottom-container" class="container">
+    <div id="nav-bottom-container" class="container nav-bottom-container">
         <div class="collapse navbar-collapse nav-bottom">
             <ul class="nav navbar-nav">
                 <li><a href="../pages/home.php">Home</a></li>

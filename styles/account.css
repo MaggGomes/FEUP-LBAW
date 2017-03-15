@@ -1,0 +1,134 @@
+.account {
+    margin: 20px 0;
+}
+
+.account-sidebar {
+    padding: 20px 0 10px 0;
+    background: #fff;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+}
+
+.account-userpic img {
+    float: none;
+    margin: 0 auto;
+    width: 40%;
+    height: 40%;
+    border-radius: 50% !important;
+}
+
+.account-usertitle {
+    text-align: center;
+    margin-top: 20px;
+    font-family: "Calibri Light";
+}
+
+.account-usertitle-name {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 7px;
+}
+
+.account-usertitle-job {
+    color: #039be5;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.account-presentation {
+    color: #a9a9a9;
+    font-family: "Calibri Light";
+}
+
+.account-follow {
+    color: #777777;
+}
+
+.account-userbuttons {
+    text-align: center;
+    margin-top: 10px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.account-userbuttons .btn {
+    font-size: 11px;
+    font-weight: 600;
+    padding: 6px 15px;
+    margin-right: 5px;
+}
+
+.account-userbuttons .btn:last-child {
+    margin-right: 0px;
+}
+
+.account-usermenu {
+    margin-top: 30px;
+}
+
+.account-usermenu ul li {
+    border-bottom: 1px solid #f0f4f7;
+}
+
+.account-usermenu ul li:last-child {
+    border-bottom: none;
+}
+
+.account-usermenu ul li a {
+    color: #a9a9a9;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.account-usermenu ul li a i {
+    margin-right: 8px;
+    font-size: 14px;
+}
+
+.account-usermenu ul li a:hover {
+    background-color: #fafcfd;
+    color: #039be5;
+}
+
+.account-usermenu ul li.active {
+    border-bottom: none;
+}
+
+.account-usermenu ul li.active a {
+    color: #039be5;
+    background-color: #f6f9fb;
+    border-left: 2px solid #039be5;
+    margin-left: -2px;
+}
+
+.account-content {
+    margin-top: 20px;
+}
+
+.account-edit-account {
+    padding: 20px;
+    background: #fff;
+    min-height: 485px;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+}
+
+.account-recommended {
+    display: none;
+}
+
+.account-recommended .container-category-title h3 {
+    margin-top: 0;
+}
+
+/* Small devices (tablets, 768px and up) @screen-sm-min */
+@media (min-width: 768px) {
+
+    .account-content{
+        margin-top: 0;
+    }
+
+    .account-recommended {
+        display: block;
+    }
+}
