@@ -3,7 +3,7 @@
 }
 
 .account-sidebar {
-    padding: 20px 0 10px 0;
+    padding: 20px 0 0 0;
     background: #fff;
     border: 1px solid #dddddd;
     border-radius: 4px;
@@ -130,6 +130,25 @@
 
 .account-notification-description .article-author {
     font-size: large;
+}
+
+.account-menu-collapse {
+    margin-left: 20px;
+}
+
+.btn-staff {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.btn-staff:hover {
+    background-color: #039be5;
+    border: 1px solid #039be5;
+}
+
+.pending-articles-notification {
+    font-size: small;
+    text-align: justify;
 }
 
 /* Small devices (tablets, 768px and up) @screen-sm-min */

@@ -194,3 +194,29 @@
         </div>
     </div>
 </div>
+
+
+<!-- Report Article -->
+
+<div id="report-article"  class="modal fade" tabindex="-1" role="dialog">
+
+    <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <h4>Reason for report:</h4>
+                <form>
+                    <input type="checkbox" name="vehicle" value=""> Contains abusive language.<br>
+                    <input type="checkbox" name="vehicle" value=""> Contains not apropriate content for Scriba<br>
+                    <input type="checkbox" name="vehicle" value=""> It's spam. <br> <br>
+                </form>
+                <button type="button" class="btn btn-primary btn-submit-dialog" disabled>Submit</button>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

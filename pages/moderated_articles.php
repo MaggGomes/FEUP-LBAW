@@ -1,9 +1,9 @@
 <?php
     session_start();
 
-    $cssStyle = "../styles/list.css";
+    $cssStyle = "../styles/account.css";
 
     require('../templates/header.php');
-    require('../templates/list.php');
+    require('../templates/moderated_articles.php');
     require('../templates/footer.php');
 ?>

@@ -69,7 +69,7 @@
                                     </ul>
                                 </div>
 
-                                <li class="active">
+                                <li class="">
                                     <a href="../pages/notifications.php">
                                         <i class="glyphicon glyphicon-bell"></i>
                                         Notifications &nbsp;<span class="badge active">6</span></a>
@@ -106,7 +106,7 @@
                                                 <i class="glyphicon glyphicon-flag"></i>
                                                 Reported articles</a>
                                         </li>
-                                        <li>
+                                        <li class="active">
                                             <a href="../pages/reported_comments.php">
                                                 <i class="glyphicon glyphicon-flag"></i>
                                                 Reported comments</a>
@@ -129,7 +129,7 @@
                                                 <img class="img-circle" src="../upload/user_profile/demo-user.png" />
                                             </div>
                                             <div class="article-publisher">
-                                                <p class="account-notification-description"><a href="../pages/profile.php"><span class="article-author">Clark Muller</span></a> has commented an article.</p>
+                                                <p class="account-notification-description"><a href="../pages/profile.php"><span class="article-author">Clark Muller</span></a> has reported a comment.</p>
                                                 <small>March 1</small>
                                             </div>
                                         </div>
@@ -159,7 +159,7 @@
                                                 <img class="img-circle" src="../upload/user_profile/demo-user.png" />
                                             </div>
                                             <div class="article-publisher">
-                                                <p class="account-notification-description"><a href="../pages/profile.php"><span class="article-author">Clark Muller</span></a> has commented an article.</p>
+                                                <p class="account-notification-description"><a href="../pages/profile.php"><span class="article-author">Clark Muller</span></a> has reported a comment.</p>
                                                 <small>March 1</small>
                                             </div>
                                         </div>
@@ -189,7 +189,7 @@
                                                 <img class="img-circle" src="../upload/user_profile/demo-user.png" />
                                             </div>
                                             <div class="article-publisher">
-                                                <p class="account-notification-description"><a href="../pages/profile.php"><span class="article-author">Clark Muller</span></a> has commented an article.</p>
+                                                <p class="account-notification-description"><a href="../pages/profile.php"><span class="article-author">Clark Muller</span></a> has reported a comment.</p>
                                                 <small>March 1</small>
                                             </div>
                                         </div>
@@ -219,7 +219,7 @@
                                                 <img class="img-circle" src="../upload/user_profile/demo-user.png" />
                                             </div>
                                             <div class="article-publisher">
-                                                <p class="account-notification-description"><a href="../pages/profile.php"><span class="article-author">Clark Muller</span></a> has commented an article.</p>
+                                                <p class="account-notification-description"><a href="../pages/profile.php"><span class="article-author">Clark Muller</span></a> has reported a comment.</p>
                                                 <small>March 1</small>
                                             </div>
                                         </div>
@@ -249,7 +249,7 @@
                                                 <img class="img-circle" src="../upload/user_profile/demo-user.png" />
                                             </div>
                                             <div class="article-publisher">
-                                                <p class="account-notification-description"><a href="../pages/profile.php"><span class="article-author">Clark Muller</span></a> has commented an article.</p>
+                                                <p class="account-notification-description"><a href="../pages/profile.php"><span class="article-author">Clark Muller</span></a> has reported a comment.</p>
                                                 <small>March 1</small>
                                             </div>
                                         </div>
@@ -279,7 +279,37 @@
                                                 <img class="img-circle" src="../upload/user_profile/demo-user.png" />
                                             </div>
                                             <div class="article-publisher">
-                                                <p class="account-notification-description"><a href="../pages/profile.php"><span class="article-author">Clark Muller</span></a> has commented an article.</p>
+                                                <p class="account-notification-description"><a href="../pages/profile.php"><span class="article-author">Clark Muller</span></a> has reported a comment.</p>
+                                                <small>March 1</small>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-2 small-text">
+                                            <div class="dropdown horizontal-menu">
+                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-option-horizontal pull-right"></span></a>
+
+                                                <ul class="dropdown-menu pull-right" role="menu">
+                                                    <li><a href="#"><span class="fa fa-check-square-o" aria-hidden="true"></span> &nbsp;Mark as read</a></li>
+                                                    <li><a href="#"><span class="fa fa-eye-slash" aria-hidden="true"></span> &nbsp;Hide notification</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="article-text">
+                        <div class="panel panel-default">
+                            <div class="panel-body article-text">
+                                <div class="profile-header-container">
+                                    <div class="row">
+                                        <div class="col-xs-10">
+                                            <div class="profile-header-img">
+                                                <img class="img-circle" src="../upload/user_profile/demo-user.png" />
+                                            </div>
+                                            <div class="article-publisher">
+                                                <p class="account-notification-description"><a href="../pages/profile.php"><span class="article-author">Clark Muller</span></a> has reported a comment.</p>
                                                 <small>March 1</small>
                                             </div>
                                         </div>

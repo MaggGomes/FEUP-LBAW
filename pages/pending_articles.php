@@ -1,9 +1,9 @@
 <?php
     session_start();
 
-    $cssStyle = "../styles/admin_page.css";
+    $cssStyle = "../styles/account.css";
 
     require('../templates/header.php');
-    require('../templates/admin_page.php');
+    require('../templates/pending_articles.php');
     require('../templates/footer.php');
 ?>
