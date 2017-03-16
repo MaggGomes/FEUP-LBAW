@@ -21,7 +21,7 @@
                                             <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-option-horizontal pull-right"></span></a>
 
                                             <ul class="dropdown-menu pull-right" role="menu">
-                                                <li><a href="#"><span class="fa fa-flag" aria-hidden="true"></span> &nbsp;Report article</a></li>
+                                                <li><a href="#report-article" data-toggle="modal"><span class="fa fa-flag" aria-hidden="true"></span> &nbsp;Report article</a></li>
                                                 <li><a href="#"><span class="fa fa-eye-slash" aria-hidden="true"></span> &nbsp;Hide article</a></li>
                                             </ul>
                                         </div>
