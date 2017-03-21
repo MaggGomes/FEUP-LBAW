@@ -1,8 +1,8 @@
 
 
-DROP SEQUENCE IF EXISTS article_idarticle_seq;
-DROP SEQUENCE IF EXISTS comment_idcomment_seq;
-DROP SEQUENCE IF EXISTS tags_id_seq;
+DROP SEQUENCE IF EXISTS article_idarticle_seq CASCADE;
+DROP SEQUENCE IF EXISTS comment_idcomment_seq CASCADE;
+DROP SEQUENCE IF EXISTS tags_id_seq CASCADE;
 
 DROP TABLE IF EXISTS Article CASCADE;
 DROP TABLE IF EXISTS Comment CASCADE;
@@ -14,6 +14,11 @@ DROP TABLE IF EXISTS Rating CASCADE;
 DROP TABLE IF EXISTS Report CASCADE;
 DROP TABLE IF EXISTS Suspension CASCADE;
 DROP TABLE IF EXISTS Tags CASCADE;
+
+
+CREATE SEQUENCE article_idarticle_seq INCREMENT 1 START 1;
+CREATE SEQUENCE comment_idcomment_seq INCREMENT 1 START 1;
+CREATE SEQUENCE tags_id_seq INCREMENT 1 START 1;
 
 CREATE TABLE Article(
 	abstract varchar(50)	,
@@ -79,7 +84,7 @@ CREATE TABLE Report(
 
 CREATE TABLE Suspension(
 	start timestamp NOT NULL,
-	end timestamp NOT NULL,
+	terminate timestamp NOT NULL,
 	reason varchar(500)	,
 	email varchar NOT NULL
 );
@@ -89,14 +94,11 @@ CREATE TABLE Tags(
 	id integer NOT NULL DEFAULT nextval('tags_id_seq')
 );
 
-CREATE SEQUENCE article_idarticle_seq INCREMENT 1 START 1;
-CREATE SEQUENCE comment_idcomment_seq INCREMENT 1 START 1;
-CREATE SEQUENCE tags_id_seq INCREMENT 1 START 1;
 
 ALTER TABLE Article ADD CONSTRAINT PK_Article
 	PRIMARY KEY (idArticle);
 
-ALTER TABLE Comment ADD CONSTRAINT PK_Table1
+ALTER TABLE Comment ADD CONSTRAINT PK_Comment
 	PRIMARY KEY (idComment);
 
 ALTER TABLE Image ADD CONSTRAINT PK_Image
@@ -108,7 +110,7 @@ ALTER TABLE LinkTag ADD CONSTRAINT PK_LinkTag
 ALTER TABLE Notification ADD CONSTRAINT PK_Notification
 	PRIMARY KEY (email,idArticle,idComment);
 
-ALTER TABLE Publisher ADD CONSTRAINT PK_Table1
+ALTER TABLE Publisher ADD CONSTRAINT PK_Publisher
 	PRIMARY KEY (email);
 
 ALTER TABLE Rating ADD CONSTRAINT PK_Rating
@@ -120,7 +122,7 @@ ALTER TABLE Report ADD CONSTRAINT PK_Report
 ALTER TABLE Suspension ADD CONSTRAINT PK_Suspension
 	PRIMARY KEY (email);
 
-ALTER TABLE Suspension ADD CONSTRAINT start < end CHECK ();
+ALTER TABLE Suspension ADD CONSTRAINT Date_Order CHECK (start < terminate);
 
 ALTER TABLE Tags ADD CONSTRAINT PK_Tags
 	PRIMARY KEY (id);
