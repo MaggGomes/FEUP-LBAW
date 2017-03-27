@@ -99,7 +99,7 @@ CREATE TABLE Users(
 	photoURL varchar(200)	,
 	rating integer DEFAULT 0,
 	country varchar(100)	,
-	permission Permissions NOT NULL,
+	permission Permissions NOT NULL DEFAULT 'Publisher',
 	id integer NOT NULL DEFAULT nextval('Users_id_seq')
 );
 
