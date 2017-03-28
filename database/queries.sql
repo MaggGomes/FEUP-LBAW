@@ -6,15 +6,15 @@ SELECT * FROM Article JOIN Users ON (Users.id = Article.idUser)
 -- ver artigos mais votados de sempre
 SELECT * FROM Article JOIN Users ON Users.id = Article.iduser
                        JOIN Rating ON Rating.idArticle = Article.idarticle
-                       GROUP BY Article.idarticle, Users.id, Rating.id
+                       GROUP BY Article.idArticle, Users.id, Rating.id
                        ORDER BY SUM(Rating.value) DESC;
 
 
 -- ver artigos mais votados do dia
 SELECT * FROM Article JOIN Users ON Users.id = Article.iduser
-                      JOIN Rating ON Rating.idArticle = Article.idarticle
+                      JOIN Rating ON Rating.idArticle = Article.idArticle
                       WHERE Rating.date = CURRENT_DATE
-                      GROUP BY Article.idarticle, Users.id, Rating.id
+                      GROUP BY Article.idArticle, Users.id, Rating.id
                       ORDER BY SUM(Rating.value) DESC;
 
 
@@ -25,6 +25,10 @@ SELECT * FROM Article JOIN Users ON Users.id = Article.iduser
                        GROUP BY Article.idarticle, Users.id, Rating.id
                        ORDER BY SUM(Rating.value) DESC;
 
+
+-- ver comentários de um artigos
+
+
 -- ver artigos reportados
 SELECT * FROM Report JOIN Article ON Report.idArticle = Article.idarticle;
 
@@ -33,7 +37,7 @@ SELECT * FROM Report JOIN Comment ON Report.idComment = Comment.idComment;
 
 
 -- ver artigos de um user
-SELECT * FROM Article JOIN Users ON Users.id = Article.iduser
+SELECT * FROM Article JOIN Users ON Users.id = Article.idUser
                        WHERE Users.name = '?';
 
 -- ver artigos de uma dada categoria
