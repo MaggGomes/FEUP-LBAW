@@ -1,9 +1,14 @@
+DROP TRIGGER IF EXISTS updateRating ON Rating;
+DROP TRIGGER IF EXISTS replyNotification ON Comment;
+DROP TRIGGER IF EXISTS articleNotification ON Article;
+DROP TRIGGER IF EXISTS moderationNotification ON Report;
+
 -- update user rating
 CREATE OR REPLACE FUNCTION sumRating() RETURNS trigger AS $$
     BEGIN
         UPDATE Users
         SET Users.rating = Users.rating + NEW.value
-        WHERE Users.id = NEW.idUser;
+        WHERE Users.id IN (SELECT Article.idUser FROM Article WHERE Article.idArticle = NEW.idArticle);
     END;
     $$ LANGUAGE plpgsql;
 
@@ -31,13 +36,14 @@ CREATE OR REPLACE FUNCTION addArtNot() RETURNS trigger AS $$
 -- notificar resposta a comentários
 CREATE OR REPLACE FUNCTION addComRepl() RETURNS trigger AS $$
     BEGIN
-        SELECT Comment.idUser AS NotUser FROM Comment WHERE Comment.idComment = NEW.idReply;
-        INSERT INTO Notification(date, description, read, idUser, idArticle, idComment) VALUES(CURRENT_DATE, "TEST Reply", false, NotUser, null, NEW.idComment);
+        IF NEW.idReply != NULL THEN
+            SELECT Comment.idUser AS NotUser FROM Comment WHERE Comment.idComment = NEW.idReply;
+            INSERT INTO Notification(date, description, read, idUser, idArticle, idComment) VALUES(CURRENT_DATE, "TEST Reply", false, NotUser, null, NEW.idComment);
+        END IF;
     END;
     $$ LANGUAGE plpgsql;
 
 CREATE TRIGGER replyNotification AFTER INSERT ON Comment
-    WHEN (NEW.idReply != NULL)
     EXECUTE PROCEDURE addComRepl();
 
 
