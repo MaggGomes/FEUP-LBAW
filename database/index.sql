@@ -1,16 +1,15 @@
-DROP INDEX IF EXISTS report;
-DROP INDEX IF EXISTS suspensions;
-DROP INDEX IF EXISTS acceptedArticles;
-DROP INDEX IF EXISTS articleImages;
+DROP INDEX IF EXISTS reportIn;
+DROP INDEX IF EXISTS suspensionsIn;
+DROP INDEX IF EXISTS acceptedArticlesIn;
+DROP INDEX IF EXISTS articleImagesIn;
 DROP INDEX IF EXISTS articleDateCreation;
 
-CREATE INDEX report USING hash ON Report(id);
+CREATE INDEX reportIn ON Report USING hash(id);
 
-CREATE INDEX suspensions USING hash ON Suspension(idUser);
+CREATE INDEX suspensionsIn ON Suspension USING hash(idUser);
 
-CREATE INDEX acceptedArticles USING hash ON Article(idArticle)
-    WHERE (visibility == "Visible");
+CREATE INDEX acceptedArticlesIn ON Article USING hash(idArticle);
 
-CREATE INDEX articleImages USING hash ON Image(idArticle);
+CREATE INDEX articleImagesIn ON Image USING hash(idArticle);
 
-CREATE INDEX articleDateCreation on Article USING btree(date);
+CREATE INDEX commentDateCreation ON Comment USING btree(date ASC);
