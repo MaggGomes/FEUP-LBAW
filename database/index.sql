@@ -13,4 +13,4 @@ CREATE INDEX acceptedArticles USING hash ON Article(idArticle)
 
 CREATE INDEX articleImages USING hash ON Image(idArticle);
 
-CREATE INDEX articleDateCreation on Article USING btree(datacolocacao);
+CREATE INDEX articleDateCreation on Article USING btree(date);
