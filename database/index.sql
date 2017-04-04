@@ -16,3 +16,5 @@ CREATE INDEX articleImagesIn ON Image USING hash(idArticle);
 CREATE INDEX commentDateCreation ON Comment USING btree(date ASC);
 
 CREATE INDEX articleCategory ON Article USING btree(category);
+
+CREATE INDEX articleTag ON Tags USING hash(tag);

@@ -252,22 +252,22 @@ INSERT INTO Rating (value,date,idComment,idUser) VALUES (-1,'04/05/17',23,26);
 
 
 
-INSERT INTO Report (description,state,idArticle,idUser) VALUES ('facilisi. Sed neque. Sed eget','Pending',22,37);
-INSERT INTO Report (description,state,idArticle,idUser) VALUES ('morbi tristique senectus et netus','Pending',29,37);
-INSERT INTO Report (description,state,idArticle,idUser) VALUES ('lobortis ultrices. Vivamus rhoncus. Donec est. Nunc ullamcorper, velit in aliquet lobortis, nisi nibh','Accepted',23,5);
-INSERT INTO Report (description,state,idArticle,idUser) VALUES ('Ut tincidunt orci','Accepted',28,48);
-INSERT INTO Report (description,state,idArticle,idUser) VALUES ('magna.','Ignored',12,29);
-INSERT INTO Report (description,state,idArticle,idUser) VALUES ('hendrerit id, ante. Nunc','Ignored',12,22);
-INSERT INTO Report (description,state,idArticle,idUser) VALUES ('quam. Pellentesque habitant','Pending',7,5);
-INSERT INTO Report (description,state,idArticle,idUser) VALUES ('ligula. Aenean euismod mauris eu elit. Nulla facilisi. Sed neque. Sed eget lacus.','Pending',28,39);
-INSERT INTO Report (description,state,idArticle,idUser) VALUES ('Maecenas ornare egestas ligula. Nullam feugiat placerat velit. Quisque varius. Nam','Accepted',29,40);
-INSERT INTO Report (description,state,idArticle,idUser) VALUES ('consectetuer adipiscing elit. Etiam laoreet, libero et tristique pellentesque,','Accepted',29,41);
+INSERT INTO Report (state,idArticle,idUser) VALUES ('Pending',22,37);
+INSERT INTO Report (state,idArticle,idUser) VALUES ('Pending',29,37);
+INSERT INTO Report (state,idArticle,idUser) VALUES ('Accepted',23,5);
+INSERT INTO Report (state,idArticle,idUser) VALUES ('Accepted',28,48);
+INSERT INTO Report (state,idArticle,idUser) VALUES ('Ignored',12,29);
+INSERT INTO Report (state,idArticle,idUser) VALUES ('Ignored',12,22);
+INSERT INTO Report (state,idArticle,idUser) VALUES ('Pending',7,5);
+INSERT INTO Report (state,idArticle,idUser) VALUES ('Pending',28,39);
+INSERT INTO Report (state,idArticle,idUser) VALUES ('Accepted',29,40);
+INSERT INTO Report (state,idArticle,idUser) VALUES ('Accepted',29,41);
 
-INSERT INTO Report (description,state,idComment,idUser) VALUES ('enim diam vel arcu. Curabitur ut odio vel est tempor bibendum. Donec felis','Pending',7,39);
-INSERT INTO Report (description,state,idComment,idUser) VALUES ('ac tellus. Suspendisse sed dolor. Fusce mi lorem, vehicula et, rutrum eu,','Pending',3,27);
-INSERT INTO Report (description,state,idComment,idUser) VALUES ('sagittis semper. Nam tempor diam dictum','Accepted',5,22);
-INSERT INTO Report (description,state,idComment,idUser) VALUES ('Nullam nisl. Maecenas malesuada fringilla est.','Accepted',13,11);
-INSERT INTO Report (description,state,idComment,idUser) VALUES ('lobortis quis, pede. Suspendisse dui. Fusce diam nunc, ullamcorper eu, euismod','Ignored',22,36);
+INSERT INTO Report (state,idComment,idUser) VALUES ('Pending',7,39);
+INSERT INTO Report (state,idComment,idUser) VALUES ('Pending',3,27);
+INSERT INTO Report (state,idComment,idUser) VALUES ('Accepted',5,22);
+INSERT INTO Report (state,idComment,idUser) VALUES ('Accepted',13,11);
+INSERT INTO Report (state,idComment,idUser) VALUES ('Ignored',22,36);
 
 
 

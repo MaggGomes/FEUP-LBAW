@@ -113,7 +113,6 @@ CREATE TABLE Rating(
 );
 
 CREATE TABLE Report(
-	description varchar(200)	 NOT NULL,
 	id  integer NOT NULL DEFAULT nextval('report_id_seq'),
 	idArticle integer,
 	idComment integer,
