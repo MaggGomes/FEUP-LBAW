@@ -252,46 +252,47 @@ INSERT INTO Rating (value,date,idComment,idUser) VALUES (-1,'04/05/17',23,26);
 
 
 
-INSERT INTO Report (state,idArticle,idUser) VALUES ('Pending',22,37);
-INSERT INTO Report (state,idArticle,idUser) VALUES ('Pending',29,37);
-INSERT INTO Report (state,idArticle,idUser) VALUES ('Accepted',23,5);
-INSERT INTO Report (state,idArticle,idUser) VALUES ('Accepted',28,48);
-INSERT INTO Report (state,idArticle,idUser) VALUES ('Ignored',12,29);
-INSERT INTO Report (state,idArticle,idUser) VALUES ('Ignored',12,22);
-INSERT INTO Report (state,idArticle,idUser) VALUES ('Pending',7,5);
-INSERT INTO Report (state,idArticle,idUser) VALUES ('Pending',28,39);
-INSERT INTO Report (state,idArticle,idUser) VALUES ('Accepted',29,40);
-INSERT INTO Report (state,idArticle,idUser) VALUES ('Accepted',29,41);
+INSERT INTO Report (description,state,idArticle,idUser) VALUES ('facilisi. Sed neque. Sed eget','Pending',22,37);
+INSERT INTO Report (description,state,idArticle,idUser) VALUES ('morbi tristique senectus et netus','Pending',29,37);
+INSERT INTO Report (description,state,idArticle,idUser) VALUES ('lobortis ultrices. Vivamus rhoncus. Donec est. Nunc ullamcorper, velit in aliquet lobortis, nisi nibh','Accepted',23,5);
+INSERT INTO Report (description,state,idArticle,idUser) VALUES ('Ut tincidunt orci','Accepted',28,48);
+INSERT INTO Report (description,state,idArticle,idUser) VALUES ('magna.','Ignored',12,29);
+INSERT INTO Report (description,state,idArticle,idUser) VALUES ('hendrerit id, ante. Nunc','Ignored',12,22);
+INSERT INTO Report (description,state,idArticle,idUser) VALUES ('quam. Pellentesque habitant','Pending',7,5);
+INSERT INTO Report (description,state,idArticle,idUser) VALUES ('ligula. Aenean euismod mauris eu elit. Nulla facilisi. Sed neque. Sed eget lacus.','Pending',28,39);
+INSERT INTO Report (description,state,idArticle,idUser) VALUES ('Maecenas ornare egestas ligula. Nullam feugiat placerat velit. Quisque varius. Nam','Accepted',29,40);
+INSERT INTO Report (description,state,idArticle,idUser) VALUES ('consectetuer adipiscing elit. Etiam laoreet, libero et tristique pellentesque,','Accepted',29,41);
 
-INSERT INTO Report (state,idComment,idUser) VALUES ('Pending',7,39);
-INSERT INTO Report (state,idComment,idUser) VALUES ('Pending',3,27);
-INSERT INTO Report (state,idComment,idUser) VALUES ('Accepted',5,22);
-INSERT INTO Report (state,idComment,idUser) VALUES ('Accepted',13,11);
-INSERT INTO Report (state,idComment,idUser) VALUES ('Ignored',22,36);
+INSERT INTO Report (description,state,idComment,idUser) VALUES ('enim diam vel arcu. Curabitur ut odio vel est tempor bibendum. Donec felis','Pending',7,39);
+INSERT INTO Report (description,state,idComment,idUser) VALUES ('ac tellus. Suspendisse sed dolor. Fusce mi lorem, vehicula et, rutrum eu,','Pending',3,27);
+INSERT INTO Report (description,state,idComment,idUser) VALUES ('sagittis semper. Nam tempor diam dictum','Accepted',5,22);
+INSERT INTO Report (description,state,idComment,idUser) VALUES ('Nullam nisl. Maecenas malesuada fringilla est.','Accepted',13,11);
+INSERT INTO Report (description,state,idComment,idUser) VALUES ('lobortis quis, pede. Suspendisse dui. Fusce diam nunc, ullamcorper eu, euismod','Ignored',22,36);
 
 
 
-INSERT INTO Notification (description,date,idArticle,idUser,read) VALUES ('enim diam vel arcu. Curabitur ut','04/05/17',27,45,true);
-INSERT INTO Notification (description,date,idArticle,idUser,read) VALUES ('ultricies ligula. Nullam enim. Sed nulla ante, iaculis nec, eleifend non,','04/05/17',24,35,true);
-INSERT INTO Notification (description,date,idArticle,idUser,read) VALUES ('enim. Etiam gravida molestie arcu. Sed eu nibh vulputate mauris sagittis placerat. Cras dictum ultricies','04/05/17',10,17,true);
-INSERT INTO Notification (description,date,idArticle,idUser,read) VALUES ('mattis velit justo nec ante. Maecenas mi felis, adipiscing fringilla,','04/05/17',8,39,true);
-INSERT INTO Notification (description,date,idArticle,idUser,read) VALUES ('est. Nunc laoreet lectus quis','04/05/17',23,16,true);
-INSERT INTO Notification (description,date,idArticle,idUser,read) VALUES ('nisl. Nulla eu neque pellentesque massa lobortis ultrices. Vivamus rhoncus. Donec est. Nunc ullamcorper,','04/05/17',15,28,true);
-INSERT INTO Notification (description,date,idArticle,idUser,read) VALUES ('enim, sit amet ornare lectus justo eu arcu. Morbi','04/05/17',4,11,true);
-INSERT INTO Notification (description,date,idArticle,idUser,read) VALUES ('quis arcu vel quam dignissim pharetra. Nam ac','04/05/17',19,40,true);
-INSERT INTO Notification (description,date,idArticle,idUser,read) VALUES ('congue turpis. In condimentum. Donec at arcu. Vestibulum','04/05/17',13,35,true);
-INSERT INTO Notification (description,date,idArticle,idUser,read) VALUES ('at, nisi. Cum sociis natoque penatibus et magnis dis','04/05/17',28,35,true);
 
-INSERT INTO Notification (description,date,idComment,idUser,read) VALUES ('dolor dolor,','04/05/17',3,26,true);
-INSERT INTO Notification (description,date,idComment,idUser,read) VALUES ('neque vitae semper egestas, urna justo faucibus lectus, a sollicitudin orci','04/05/17',4,27,true);
-INSERT INTO Notification (description,date,idComment,idUser,read) VALUES ('dapibus gravida. Aliquam tincidunt, nunc ac mattis ornare, lectus ante dictum mi,','04/05/17',21,49,true);
-INSERT INTO Notification (description,date,idComment,idUser,read) VALUES ('velit. Aliquam nisl. Nulla eu','04/05/17',20,41,false);
-INSERT INTO Notification (description,date,idComment,idUser,read) VALUES ('sed, hendrerit a, arcu. Sed et','04/05/17',13,49,false);
-INSERT INTO Notification (description,date,idComment,idUser,read) VALUES ('Aliquam nisl. Nulla eu neque pellentesque massa lobortis ultrices.','04/05/17',16,48,true);
-INSERT INTO Notification (description,date,idComment,idUser,read) VALUES ('et risus. Quisque libero lacus, varius et, euismod et, commodo','04/05/17',23,47,true);
-INSERT INTO Notification (description,date,idComment,idUser,read) VALUES ('sit amet','04/05/17',4,18,false);
-INSERT INTO Notification (description,date,idComment,idUser,read) VALUES ('pharetra nibh. Aliquam ornare, libero at auctor ullamcorper, nisl arcu iaculis','04/05/17',5,43,true);
-INSERT INTO Notification (description,date,idComment,idUser,read) VALUES ('in','04/05/17',24,2,false);
+INSERT INTO Notification (date,idArticle,idUser,read) VALUES ('04/05/17',27,45,true);
+INSERT INTO Notification (date,idArticle,idUser,read) VALUES ('04/05/17',24,35,true);
+INSERT INTO Notification (date,idArticle,idUser,read) VALUES ('04/05/17',10,17,true);
+INSERT INTO Notification (date,idArticle,idUser,read) VALUES ('04/05/17',8,39,true);
+INSERT INTO Notification (date,idArticle,idUser,read) VALUES ('04/05/17',23,16,true);
+INSERT INTO Notification (date,idArticle,idUser,read) VALUES ('04/05/17',15,28,true);
+INSERT INTO Notification (date,idArticle,idUser,read) VALUES ('04/05/17',4,11,true);
+INSERT INTO Notification (date,idArticle,idUser,read) VALUES ('04/05/17',19,40,true);
+INSERT INTO Notification (date,idArticle,idUser,read) VALUES ('04/05/17',13,35,true);
+INSERT INTO Notification (date,idArticle,idUser,read) VALUES ('04/05/17',28,35,true);
+
+INSERT INTO Notification (date,idComment,idUser,read) VALUES ('04/05/17',3,26,true);
+INSERT INTO Notification (date,idComment,idUser,read) VALUES ('04/05/17',4,27,true);
+INSERT INTO Notification (date,idComment,idUser,read) VALUES ('04/05/17',21,49,true);
+INSERT INTO Notification (date,idComment,idUser,read) VALUES ('04/05/17',20,41,false);
+INSERT INTO Notification (date,idComment,idUser,read) VALUES ('04/05/17',13,49,false);
+INSERT INTO Notification (date,idComment,idUser,read) VALUES ('04/05/17',16,48,true);
+INSERT INTO Notification (date,idComment,idUser,read) VALUES ('04/05/17',23,47,true);
+INSERT INTO Notification (date,idComment,idUser,read) VALUES ('04/05/17',4,18,false);
+INSERT INTO Notification (date,idComment,idUser,read) VALUES ('04/05/17',5,43,true);
+INSERT INTO Notification (date,idComment,idUser,read) VALUES ('04/05/17',24,2,false);
 
 
 

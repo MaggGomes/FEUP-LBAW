@@ -79,7 +79,6 @@ CREATE TABLE LinkTag(
 
 CREATE TABLE Notification(
 	date timestamp NOT NULL,
-	description varchar(200)	,
 	read boolean,
 	id  integer NOT NULL DEFAULT nextval('notification_id_seq'),
 	idUser integer	 NOT NULL,
@@ -113,6 +112,7 @@ CREATE TABLE Rating(
 );
 
 CREATE TABLE Report(
+	description varchar(200)	 NOT NULL,
 	id  integer NOT NULL DEFAULT nextval('report_id_seq'),
 	idArticle integer,
 	idComment integer,
