@@ -6,7 +6,7 @@ SELECT Article.title, Article.abstract, Article.date, Article.category, Users.na
 --ver tags de um artigo
 SELECT Tags.tag FROM LinkTag JOIN Tags ON Tags.id = LinkTag.idTag
                              JOIN Article ON Article.idArticle = LinkTag.idArticle
-                             WHERE Article.id = 3;
+                             WHERE Article.idArticle = 3;
 
 
 
@@ -65,4 +65,5 @@ SELECT Article.title, Article.abstract, Article.date, Article.category, Users.na
                                                                                                                                  JOIN Rating ON Rating.idArticle = Article.idArticle
                                                                                                                                  WHERE to_tsvector(content) @@ to_tsquery('?')
                                                                                                                                  OR to_tsvector(abstract) @@ to_tsquery('?')
+                                                                                                                                 OR to_tsvector(title) @@ to_tsquery('?')
                                                                                                                                  GROUP BY Article.idArticle, Users.id;
