@@ -1,9 +1,8 @@
 <?php
-    session_start();
+    include_once('../config/init.php');
 
     $cssStyle = "../css/account.css";
 
-    require('../templates/common/header.php');
-    require('../templates/edit_profile.php');
-    require('../templates/common/footer.php');
+    $smarty->assign('cssStyle', $cssStyle);
+    $smarty->display('edit_profile.tpl');
 ?>

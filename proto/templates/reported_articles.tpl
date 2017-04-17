@@ -1,3 +1,5 @@
+{include file='common/header.tpl'}
+
 <section class="central">
     <div class="container">
         <div class="row account">
@@ -101,12 +103,12 @@
                                                 <i class="fa fa-newspaper-o"></i>
                                                 Pending articles</a>
                                         </li>
-                                        <li>
+                                        <li class="active">
                                             <a href="../pages/reported_articles.php">
                                                 <i class="glyphicon glyphicon-flag"></i>
                                                 Reported articles</a>
                                         </li>
-                                        <li class="active">
+                                        <li>
                                             <a href="../pages/reported_comments.php">
                                                 <i class="glyphicon glyphicon-flag"></i>
                                                 Reported comments</a>
@@ -129,7 +131,8 @@
                                                 <img class="img-circle" src="../upload/user_profile/demo-user.png" />
                                             </div>
                                             <div class="article-publisher">
-                                                <p class="account-notification-description"><a href="../pages/profile.php"><span class="article-author">Clark Muller</span></a> has reported a comment.</p>
+                                                <p class="account-notification-description"><a href="../pages/profile.php"><span class="article-author">Clark Muller</span></a></p>
+                                                <p class="pending-articles-notification"> has reported this article.</p>
                                                 <small>March 1</small>
                                             </div>
                                         </div>
@@ -138,13 +141,15 @@
                                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-option-horizontal pull-right"></span></a>
 
                                                 <ul class="dropdown-menu pull-right" role="menu">
-                                                    <li><a href="#"><span class="fa fa-check-square-o" aria-hidden="true"></span> &nbsp;Mark as read</a></li>
-                                                    <li><a href="#"><span class="fa fa-eye-slash" aria-hidden="true"></span> &nbsp;Hide notification</a></li>
+                                                    <li><a href="#"><span class="fa fa-check-circle-o" aria-hidden="true"></span> &nbsp;Ignore request</a></li>
+                                                    <li><a href="#"><span class="fa fa-ban" aria-hidden="true"></span> &nbsp;Moderate article</a></li>
                                                 </ul>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                                <h4>Lorem ipsum</h4>
+                                <img class="article-image article-image-small" src="../upload/articles/city.png" width="100%">
                             </div>
                         </div>
                     </article>
@@ -159,7 +164,8 @@
                                                 <img class="img-circle" src="../upload/user_profile/demo-user.png" />
                                             </div>
                                             <div class="article-publisher">
-                                                <p class="account-notification-description"><a href="../pages/profile.php"><span class="article-author">Clark Muller</span></a> has reported a comment.</p>
+                                                <p class="account-notification-description"><a href="../pages/profile.php"><span class="article-author">Clark Muller</span></a></p>
+                                                <p class="pending-articles-notification"> has reported this article.</p>
                                                 <small>March 1</small>
                                             </div>
                                         </div>
@@ -168,13 +174,15 @@
                                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-option-horizontal pull-right"></span></a>
 
                                                 <ul class="dropdown-menu pull-right" role="menu">
-                                                    <li><a href="#"><span class="fa fa-check-square-o" aria-hidden="true"></span> &nbsp;Mark as read</a></li>
-                                                    <li><a href="#"><span class="fa fa-eye-slash" aria-hidden="true"></span> &nbsp;Hide notification</a></li>
+                                                    <li><a href="#"><span class="fa fa-check-circle-o" aria-hidden="true"></span> &nbsp;Ignore request</a></li>
+                                                    <li><a href="#"><span class="fa fa-ban" aria-hidden="true"></span> &nbsp;Moderate article</a></li>
                                                 </ul>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                                <h4>Lorem ipsum</h4>
+                                <img class="article-image article-image-small" src="../upload/articles/city.png" width="100%">
                             </div>
                         </div>
                     </article>
@@ -189,7 +197,8 @@
                                                 <img class="img-circle" src="../upload/user_profile/demo-user.png" />
                                             </div>
                                             <div class="article-publisher">
-                                                <p class="account-notification-description"><a href="../pages/profile.php"><span class="article-author">Clark Muller</span></a> has reported a comment.</p>
+                                                <p class="account-notification-description"><a href="../pages/profile.php"><span class="article-author">Clark Muller</span></a></p>
+                                                <p class="pending-articles-notification"> has reported this article.</p>
                                                 <small>March 1</small>
                                             </div>
                                         </div>
@@ -198,13 +207,15 @@
                                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-option-horizontal pull-right"></span></a>
 
                                                 <ul class="dropdown-menu pull-right" role="menu">
-                                                    <li><a href="#"><span class="fa fa-check-square-o" aria-hidden="true"></span> &nbsp;Mark as read</a></li>
-                                                    <li><a href="#"><span class="fa fa-eye-slash" aria-hidden="true"></span> &nbsp;Hide notification</a></li>
+                                                    <li><a href="#"><span class="fa fa-check-circle-o" aria-hidden="true"></span> &nbsp;Ignore request</a></li>
+                                                    <li><a href="#"><span class="fa fa-ban" aria-hidden="true"></span> &nbsp;Moderate article</a></li>
                                                 </ul>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                                <h4>Lorem ipsum</h4>
+                                <img class="article-image article-image-small" src="../upload/articles/city.png" width="100%">
                             </div>
                         </div>
                     </article>
@@ -219,7 +230,8 @@
                                                 <img class="img-circle" src="../upload/user_profile/demo-user.png" />
                                             </div>
                                             <div class="article-publisher">
-                                                <p class="account-notification-description"><a href="../pages/profile.php"><span class="article-author">Clark Muller</span></a> has reported a comment.</p>
+                                                <p class="account-notification-description"><a href="../pages/profile.php"><span class="article-author">Clark Muller</span></a></p>
+                                                <p class="pending-articles-notification"> has reported this article.</p>
                                                 <small>March 1</small>
                                             </div>
                                         </div>
@@ -228,106 +240,19 @@
                                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-option-horizontal pull-right"></span></a>
 
                                                 <ul class="dropdown-menu pull-right" role="menu">
-                                                    <li><a href="#"><span class="fa fa-check-square-o" aria-hidden="true"></span> &nbsp;Mark as read</a></li>
-                                                    <li><a href="#"><span class="fa fa-eye-slash" aria-hidden="true"></span> &nbsp;Hide notification</a></li>
+                                                    <li><a href="#"><span class="fa fa-check-circle-o" aria-hidden="true"></span> &nbsp;Ignore request</a></li>
+                                                    <li><a href="#"><span class="fa fa-ban" aria-hidden="true"></span> &nbsp;Moderate article</a></li>
                                                 </ul>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                                <h4>Lorem ipsum</h4>
+                                <img class="article-image article-image-small" src="../upload/articles/city.png" width="100%">
                             </div>
                         </div>
                     </article>
 
-                    <article class="article-text">
-                        <div class="panel panel-default">
-                            <div class="panel-body article-text">
-                                <div class="profile-header-container">
-                                    <div class="row">
-                                        <div class="col-xs-10">
-                                            <div class="profile-header-img">
-                                                <img class="img-circle" src="../upload/user_profile/demo-user.png" />
-                                            </div>
-                                            <div class="article-publisher">
-                                                <p class="account-notification-description"><a href="../pages/profile.php"><span class="article-author">Clark Muller</span></a> has reported a comment.</p>
-                                                <small>March 1</small>
-                                            </div>
-                                        </div>
-                                        <div class="col-xs-2 small-text">
-                                            <div class="dropdown horizontal-menu">
-                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-option-horizontal pull-right"></span></a>
-
-                                                <ul class="dropdown-menu pull-right" role="menu">
-                                                    <li><a href="#"><span class="fa fa-check-square-o" aria-hidden="true"></span> &nbsp;Mark as read</a></li>
-                                                    <li><a href="#"><span class="fa fa-eye-slash" aria-hidden="true"></span> &nbsp;Hide notification</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="article-text">
-                        <div class="panel panel-default">
-                            <div class="panel-body article-text">
-                                <div class="profile-header-container">
-                                    <div class="row">
-                                        <div class="col-xs-10">
-                                            <div class="profile-header-img">
-                                                <img class="img-circle" src="../upload/user_profile/demo-user.png" />
-                                            </div>
-                                            <div class="article-publisher">
-                                                <p class="account-notification-description"><a href="../pages/profile.php"><span class="article-author">Clark Muller</span></a> has reported a comment.</p>
-                                                <small>March 1</small>
-                                            </div>
-                                        </div>
-                                        <div class="col-xs-2 small-text">
-                                            <div class="dropdown horizontal-menu">
-                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-option-horizontal pull-right"></span></a>
-
-                                                <ul class="dropdown-menu pull-right" role="menu">
-                                                    <li><a href="#"><span class="fa fa-check-square-o" aria-hidden="true"></span> &nbsp;Mark as read</a></li>
-                                                    <li><a href="#"><span class="fa fa-eye-slash" aria-hidden="true"></span> &nbsp;Hide notification</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="article-text">
-                        <div class="panel panel-default">
-                            <div class="panel-body article-text">
-                                <div class="profile-header-container">
-                                    <div class="row">
-                                        <div class="col-xs-10">
-                                            <div class="profile-header-img">
-                                                <img class="img-circle" src="../upload/user_profile/demo-user.png" />
-                                            </div>
-                                            <div class="article-publisher">
-                                                <p class="account-notification-description"><a href="../pages/profile.php"><span class="article-author">Clark Muller</span></a> has reported a comment.</p>
-                                                <small>March 1</small>
-                                            </div>
-                                        </div>
-                                        <div class="col-xs-2 small-text">
-                                            <div class="dropdown horizontal-menu">
-                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-option-horizontal pull-right"></span></a>
-
-                                                <ul class="dropdown-menu pull-right" role="menu">
-                                                    <li><a href="#"><span class="fa fa-check-square-o" aria-hidden="true"></span> &nbsp;Mark as read</a></li>
-                                                    <li><a href="#"><span class="fa fa-eye-slash" aria-hidden="true"></span> &nbsp;Hide notification</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
                 </div>
             </div>
 
@@ -363,3 +288,5 @@
         </div>
     </div>
 </section>
+
+{include file='common/footer.tpl'}

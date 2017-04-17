@@ -1,3 +1,5 @@
+{include file='common/header.tpl'}
+
 <section class="central">
     <div class="container">
         <div class="row account">
@@ -91,12 +93,12 @@
                                                 <i class="fa fa-user-o"></i>
                                                 List of registered users</a>
                                         </li>
-                                        <li class="active">
+                                        <li class="">
                                             <a href="../pages/managing_team.php">
                                                 <i class="fa fa-users"></i>
                                                 Managing team</a>
                                         </li>
-                                        <li class="">
+                                        <li class="active">
                                             <a href="../pages/pending_articles.php">
                                                 <i class="fa fa-newspaper-o"></i>
                                                 Pending articles</a>
@@ -118,142 +120,140 @@
                 </div>
             </div>
             <div class="col-md-6">
-                <div class="account-content account-overview">
-
-                    <div class="row">
-                        <article class="col-xs-12 col-sm-6 article-text">
-                            <div class="panel panel-default">
-                                <div class="panel-body article-text">
-                                    <div class="profile-header-container">
-                                        <div class="row">
-                                            <div class="col-xs-10">
-                                                <div class="profile-header-img">
-                                                    <img class="img-circle" src="../upload/user_profile/demo-user.png" />
-                                                </div>
-                                                <div class="article-publisher">
-                                                    <a href="../pages/article.php"><h4 class="article-author">Clark Muller</h4></a>
-                                                    <small>Member since 2017</small>
-                                                    <p class="btn btn-primary btn-staff">Moderator</p>
-                                                </div>
+                <div class="account-content account-notifications">
+                    <article class="article-text">
+                        <div class="panel panel-default">
+                            <div class="panel-body article-text">
+                                <div class="profile-header-container">
+                                    <div class="row">
+                                        <div class="col-xs-10">
+                                            <div class="profile-header-img">
+                                                <img class="img-circle" src="../upload/user_profile/demo-user.png" />
                                             </div>
-                                            <div class="col-xs-2 small-text">
-                                                <div class="dropdown horizontal-menu">
-                                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-option-horizontal pull-right"></span></a>
+                                            <div class="article-publisher">
+                                                <p class="account-notification-description"><a href="../pages/profile.php"><span class="article-author">Clark Muller</span></a></p>
+                                                <p class="pending-articles-notification"> has created an article and needs approval.</p>
+                                                <small>March 1</small>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-2 small-text">
+                                            <div class="dropdown horizontal-menu">
+                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-option-horizontal pull-right"></span></a>
 
-                                                    <ul class="dropdown-menu pull-right" role="menu">
-                                                        <li><a href="#"><span class="fa fa-arrow-circle-o-up" aria-hidden="true"></span> &nbsp;Promote to Administrator</a></li>
-                                                        <li><a href="#"><span class="fa fa-arrow-circle-o-down" aria-hidden="true"></span> &nbsp;Demote to Publisher</a></li>
-                                                        <li><a href="#"><span class="fa fa-ban" aria-hidden="true"></span> &nbsp;Ban user</a></li>
-                                                    </ul>
-                                                </div>
+                                                <ul class="dropdown-menu pull-right" role="menu">
+                                                    <li><a href="#"><span class="fa fa-check-circle-o" aria-hidden="true"></span> &nbsp;Approve article</a></li>
+                                                    <li><a href="#"><span class="fa fa-flag" aria-hidden="true"></span> &nbsp;Report article</a></li>
+                                                </ul>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                                <h4>Lorem ipsum</h4>
+                                <img class="article-image article-image-small" src="../upload/articles/city.png" width="100%">
                             </div>
-                        </article>
+                        </div>
+                    </article>
 
-                        <article class="col-xs-12 col-sm-6 article-text">
-                            <div class="panel panel-default">
-                                <div class="panel-body article-text">
-                                    <div class="profile-header-container">
-                                        <div class="row">
-                                            <div class="col-xs-10">
-                                                <div class="profile-header-img">
-                                                    <img class="img-circle" src="../upload/user_profile/demo-user.png" />
-                                                </div>
-                                                <div class="article-publisher">
-                                                    <a href="../pages/article.php"><h4 class="article-author">Clark Muller</h4></a>
-                                                    <small>Member since 2017</small>
-                                                    <p class="btn btn-primary btn-staff">Moderator</p>
-                                                </div>
+                    <article class="article-text">
+                        <div class="panel panel-default">
+                            <div class="panel-body article-text">
+                                <div class="profile-header-container">
+                                    <div class="row">
+                                        <div class="col-xs-10">
+                                            <div class="profile-header-img">
+                                                <img class="img-circle" src="../upload/user_profile/demo-user.png" />
                                             </div>
-                                            <div class="col-xs-2 small-text">
-                                                <div class="dropdown horizontal-menu">
-                                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-option-horizontal pull-right"></span></a>
+                                            <div class="article-publisher">
+                                                <p class="account-notification-description"><a href="../pages/profile.php"><span class="article-author">Clark Muller</span></a></p>
+                                                <p class="pending-articles-notification"> has created an article and needs approval.</p>
+                                                <small>March 1</small>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-2 small-text">
+                                            <div class="dropdown horizontal-menu">
+                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-option-horizontal pull-right"></span></a>
 
-                                                    <ul class="dropdown-menu pull-right" role="menu">
-                                                        <li><a href="#"><span class="fa fa-arrow-circle-o-up" aria-hidden="true"></span> &nbsp;Promote to Administrator</a></li>
-                                                        <li><a href="#"><span class="fa fa-arrow-circle-o-down" aria-hidden="true"></span> &nbsp;Demote to Publisher</a></li>
-                                                        <li><a href="#"><span class="fa fa-ban" aria-hidden="true"></span> &nbsp;Ban user</a></li>
-                                                    </ul>
-                                                </div>
+                                                <ul class="dropdown-menu pull-right" role="menu">
+                                                    <li><a href="#"><span class="fa fa-check-circle-o" aria-hidden="true"></span> &nbsp;Approve article</a></li>
+                                                    <li><a href="#"><span class="fa fa-flag" aria-hidden="true"></span> &nbsp;Report article</a></li>
+                                                </ul>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                                <h4>Lorem ipsum</h4>
+                                <img class="article-image article-image-small" src="../upload/articles/city.png" width="100%">
                             </div>
-                        </article>
-                    </div>
+                        </div>
+                    </article>
 
-                    <div class="row">
-                        <article class="col-xs-12 col-sm-6 article-text">
-                            <div class="panel panel-default">
-                                <div class="panel-body article-text">
-                                    <div class="profile-header-container">
-                                        <div class="row">
-                                            <div class="col-xs-10">
-                                                <div class="profile-header-img">
-                                                    <img class="img-circle" src="../upload/user_profile/demo-user.png" />
-                                                </div>
-                                                <div class="article-publisher">
-                                                    <a href="../pages/article.php"><h4 class="article-author">Clark Muller</h4></a>
-                                                    <small>Member since 2017</small>
-                                                    <p class="btn btn-primary btn-staff">Moderator</p>
-                                                </div>
+                    <article class="article-text">
+                        <div class="panel panel-default">
+                            <div class="panel-body article-text">
+                                <div class="profile-header-container">
+                                    <div class="row">
+                                        <div class="col-xs-10">
+                                            <div class="profile-header-img">
+                                                <img class="img-circle" src="../upload/user_profile/demo-user.png" />
                                             </div>
-                                            <div class="col-xs-2 small-text">
-                                                <div class="dropdown horizontal-menu">
-                                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-option-horizontal pull-right"></span></a>
+                                            <div class="article-publisher">
+                                                <p class="account-notification-description"><a href="../pages/profile.php"><span class="article-author">Clark Muller</span></a></p>
+                                                <p class="pending-articles-notification"> has created an article and needs approval.</p>
+                                                <small>March 1</small>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-2 small-text">
+                                            <div class="dropdown horizontal-menu">
+                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-option-horizontal pull-right"></span></a>
 
-                                                    <ul class="dropdown-menu pull-right" role="menu">
-                                                        <li><a href="#"><span class="fa fa-arrow-circle-o-up" aria-hidden="true"></span> &nbsp;Promote to Administrator</a></li>
-                                                        <li><a href="#"><span class="fa fa-arrow-circle-o-down" aria-hidden="true"></span> &nbsp;Demote to Publisher</a></li>
-                                                        <li><a href="#"><span class="fa fa-ban" aria-hidden="true"></span> &nbsp;Ban user</a></li>
-                                                    </ul>
-                                                </div>
+                                                <ul class="dropdown-menu pull-right" role="menu">
+                                                    <li><a href="#"><span class="fa fa-check-circle-o" aria-hidden="true"></span> &nbsp;Approve article</a></li>
+                                                    <li><a href="#"><span class="fa fa-flag" aria-hidden="true"></span> &nbsp;Report article</a></li>
+                                                </ul>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                                <h4>Lorem ipsum</h4>
+                                <img class="article-image article-image-small" src="../upload/articles/city.png" width="100%">
                             </div>
-                        </article>
+                        </div>
+                    </article>
 
-                        <article class="col-xs-12 col-sm-6 article-text">
-                            <div class="panel panel-default">
-                                <div class="panel-body article-text">
-                                    <div class="profile-header-container">
-                                        <div class="row">
-                                            <div class="col-xs-10">
-                                                <div class="profile-header-img">
-                                                    <img class="img-circle" src="../upload/user_profile/demo-user.png" />
-                                                </div>
-                                                <div class="article-publisher">
-                                                    <a href="../pages/article.php"><h4 class="article-author">Clark Muller</h4></a>
-                                                    <small>Member since 2017</small>
-                                                    <p class="btn btn-primary btn-staff">Moderator</p>
-                                                </div>
+                    <article class="article-text">
+                        <div class="panel panel-default">
+                            <div class="panel-body article-text">
+                                <div class="profile-header-container">
+                                    <div class="row">
+                                        <div class="col-xs-10">
+                                            <div class="profile-header-img">
+                                                <img class="img-circle" src="../upload/user_profile/demo-user.png" />
                                             </div>
-                                            <div class="col-xs-2 small-text">
-                                                <div class="dropdown horizontal-menu">
-                                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-option-horizontal pull-right"></span></a>
+                                            <div class="article-publisher">
+                                                <p class="account-notification-description"><a href="../pages/profile.php"><span class="article-author">Clark Muller</span></a></p>
+                                                <p class="pending-articles-notification"> has created an article and needs approval.</p>
+                                                <small>March 1</small>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-2 small-text">
+                                            <div class="dropdown horizontal-menu">
+                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-option-horizontal pull-right"></span></a>
 
-                                                    <ul class="dropdown-menu pull-right" role="menu">
-                                                        <li><a href="#"><span class="fa fa-arrow-circle-o-up" aria-hidden="true"></span> &nbsp;Promote to Administrator</a></li>
-                                                        <li><a href="#"><span class="fa fa-arrow-circle-o-down" aria-hidden="true"></span> &nbsp;Demote to Publisher</a></li>
-                                                        <li><a href="#"><span class="fa fa-ban" aria-hidden="true"></span> &nbsp;Ban user</a></li>
-                                                    </ul>
-                                                </div>
+                                                <ul class="dropdown-menu pull-right" role="menu">
+                                                    <li><a href="#"><span class="fa fa-check-circle-o" aria-hidden="true"></span> &nbsp;Approve article</a></li>
+                                                    <li><a href="#"><span class="fa fa-flag" aria-hidden="true"></span> &nbsp;Report article</a></li>
+                                                </ul>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                                <h4>Lorem ipsum</h4>
+                                <img class="article-image article-image-small" src="../upload/articles/city.png" width="100%">
                             </div>
-                        </article>
-                    </div>
+                        </div>
+                    </article>
 
                 </div>
-
             </div>
 
             <div class="account-recommended col-md-3">
@@ -283,6 +283,10 @@
                     </a>
                 </div>
             </div>
+
+
         </div>
     </div>
 </section>
+
+{include file='common/footer.tpl'}

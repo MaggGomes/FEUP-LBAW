@@ -1,3 +1,5 @@
+{include file='common/header.tpl'}
+
 <head>
     <script src="http://cloud.tinymce.com/stable/tinymce.min.js?apiKey=desi6hiftg5yqtfrrkmlemy77km6yea6m7l7yjvdnkx93tpn"></script>
     <script>tinymce.init({ selector:'textarea' });</script>
@@ -121,3 +123,6 @@
 
 
 </section>
+
+
+{include file='common/footer.tpl'}

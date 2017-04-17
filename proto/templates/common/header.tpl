@@ -22,7 +22,7 @@
     <link href="../css/bootstrap.css" rel="stylesheet">
     <link href="../css/bootstrap-theme.css" rel="stylesheet">
     <link href="../css/style.css" rel="stylesheet">
-    <link type="text/css" rel="stylesheet" href="<?=$cssStyle?>"/>
+    <link type="text/css" rel="stylesheet" href="{$cssStyle}"/>
 
     <!--script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>

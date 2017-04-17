@@ -1,3 +1,5 @@
+{include file='common/header.tpl'}
+
 <div class="container">
     <div class="row">
         <div class="profile-head">
@@ -267,3 +269,6 @@
     </div>
 </section>
 
+
+
+{include file='common/footer.tpl'}

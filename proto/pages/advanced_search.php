@@ -1,9 +1,8 @@
 <?php
-    session_start();
+    include_once('../config/init.php');
 
     $cssStyle = "../css/advanced_search.css";
 
-    require('../templates/common/header.php');
-    require('../templates/advanced_search.php');
-    require('../templates/common/footer.php');
+    $smarty->assign('cssStyle', $cssStyle);
+    $smarty->display('advanced_search.tpl');
 ?>

@@ -1,9 +1,8 @@
 <?php
-    session_start();
+    include_once('../config/init.php');
 
     $cssStyle = "../css/account.css";
 
-    require('../templates/common/header.php');
-    require('../templates/managing_team.php');
-    require('../templates/common/footer.php');
+    $smarty->assign('cssStyle', $cssStyle);
+    $smarty->display('managing_team.tpl');
 ?>

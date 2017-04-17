@@ -1,9 +1,8 @@
 <?php
-    session_start();
+    include_once('../config/init.php');
 
     $cssStyle = "../css/article.css";
 
-    require('../templates/common/header.php');
-    require('../templates/article.php');
-    require('../templates/common/footer.php');
+    $smarty->assign('cssStyle', $cssStyle);
+    $smarty->display('article.tpl');
 ?>

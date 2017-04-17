@@ -1,3 +1,5 @@
+{include file='common/header.tpl'}
+
 <section class="central">
     <div class="container">
         <div class="row account">
@@ -44,7 +46,7 @@
                                                 <i class="fa fa-pencil-square-o"></i>
                                                 Edit Profile</a>
                                         </li>
-                                        <li class="">
+                                        <li class="active">
                                             <a href="../pages/followers.php">
                                                 <i class="fa fa-users"></i>
                                                 Followers</a>
@@ -86,7 +88,7 @@
 
                                 <div id="collapseAdmin" class="panel-collapse collapse account-menu-collapse">
                                     <ul class="nav">
-                                        <li class="active">
+                                        <li class="">
                                             <a href="../pages/list_users.php">
                                                 <i class="fa fa-user-o"></i>
                                                 List of registered users</a>
@@ -732,3 +734,5 @@
         </div>
     </div>
 </section>
+
+{include file='common/footer.tpl'}

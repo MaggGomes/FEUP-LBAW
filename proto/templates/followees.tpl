@@ -1,3 +1,5 @@
+{include file='common/header.tpl'}
+
 <section class="central">
     <div class="container">
         <div class="row account">
@@ -732,3 +734,5 @@
         </div>
     </div>
 </section>
+
+{include file='common/footer.tpl'}
