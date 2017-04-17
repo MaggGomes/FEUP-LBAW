@@ -1,0 +1,452 @@
+@font-face {
+    font-family: 'Caviar Dreams';
+    src: url("../fonts/CaviarDreams.ttf"); /*URL to font*/
+}
+
+@font-face {
+    font-family: 'Caviar Dreams Bold';
+    src: url("../fonts/Caviar_Dreams_Bold.ttf"); /*URL to font*/
+}
+
+body {
+    background-color: #f3f3f3;
+}
+
+.navbar-header .navbar-brand {
+    display: none;
+}
+
+.navbar-brand img {
+    width: 32px;
+    transform: translateY(-25%);
+}
+
+.navbar-brand {
+    font-family: 'Caviar Dreams';
+    font-size: x-large;
+    font-weight: bold;
+    padding-right: 0;
+}
+
+#brand-title {
+    padding-left: 18px;
+    padding-right: 20px;
+}
+
+.navbar {
+    box-shadow: none;
+    border-bottom: 1px solid #e1e1e1;
+}
+
+.menu-right {
+    margin-bottom: 0;
+}
+
+.navbar-header button {
+    margin-bottom: 0;
+}
+
+.navbar-header .navbar-toggle:first-child {
+    position: relative;
+}
+
+.navbar-header {
+    float: left;
+}
+
+#menu-user-dropdown {
+    display: none;
+}
+
+#menu-user-dropdown .dropdown-menu {
+    position: absolute;
+    margin-right: 15px;
+}
+
+#menu-user-dropdown .dropdown-menu li {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:hover, .navbar-default .navbar-nav>.open>a:focus{
+    background-image: none;
+    color: #fff;
+    background-color:white;
+    padding-bottom: 0;
+    box-shadow: none;
+}
+
+#menu-user-dropdown .dropdown-menu span {
+    color: #777777;
+}
+
+#menu-user-dropdown .dropdown-menu span:hover {
+    color: #333333;
+    background-color: white;
+}
+
+#menu-user-dropdown .dropdown-menu a:hover {
+    background-image: none;
+    background-color: white;
+    box-shadow: none;
+}
+
+.menu-right > li {
+    float: left;
+}
+
+.menu-right li {
+    max-height: 50px;
+}
+
+.menu-right .menu-top {
+    color: #039be5;
+    font-size: large;
+}
+
+.menu-right  button {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-right: 0;
+}
+
+.navbar-toggle {
+    border: none;
+    outline: none;
+}
+
+.nav-bottom {
+    border-top: 1px solid #eee;
+}
+
+#nav-logreg a {
+    color: #039be5;
+}
+
+.nav-icones {
+    color: #039be5;
+    font-size: large;
+}
+
+.central {
+    margin-top: 70px;
+}
+
+.page-header {
+    margin-top: 0;
+    text-decoration: none;
+}
+
+.page-header a {
+    text-decoration: none;
+}
+
+.page-header-content {
+    display: table;
+}
+
+.article-image {
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.profile-header-img, .article-publisher {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.article-author {
+    font-family: "Calibri Light";
+    color: #039be5;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.article-title {
+    font-family: "Calibri Light";
+    color: #039be5;
+    margin-bottom: 0;
+}
+
+.profile-header-img > img.img-circle {
+    width: 40px;
+    height: 40px;
+}
+
+.page-body {
+    padding-top: 0;
+}
+
+.article-text {
+    color: #333333;
+    font-size: medium;
+}
+
+.article-footer {
+    font-family: "Caviar Dreams";
+    background-color: white;
+    border: none;
+}
+
+.article-footer-upper {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.article-footer-lower {
+    padding-top: 10px;
+}
+
+.glyph-text {
+    font-size: small;
+    font-family: "Calibri Light";
+    position: relative;
+    top: -3px;
+}
+
+small, .small-text, .article-footer a {
+    color: #a9a9a9;
+}
+
+.article-footer a:hover {
+    color: #039be5;
+}
+
+.article-footer a:hover {
+    text-decoration: none;
+}
+
+.container-category-title {
+    color: #039be5;
+    padding-bottom: 20px;
+}
+
+body.modal-open {
+    overflow-y: scroll;
+    padding-right: 0 !important;
+}
+
+/* button's styling */
+
+.btn-default, .btn-primary, .btn-success, .btn-info {
+    background-image: none;
+    text-shadow: none;
+    box-shadow: none;
+    outline: none;
+}
+
+.btn-default:focus, .btn-primary:focus, .btn-success:focus, .btn-info {
+    outline: none;
+}
+
+.btn-default {
+    border: 1px solid #039be5;
+}
+
+.btn-default:hover, .btn-default:focus {
+    background-color: white;
+    border: 1px solid #0279B3;
+    color: #0279B3;
+}
+
+.btn-default:active {
+    background-color: white;
+    border: 1px solid #0279B3;
+    color: #0279B3;
+}
+
+.btn-default:active:focus {
+    background-color: white;
+    border: 1px solid #0279B3;
+    color: #0279B3;
+}
+
+.btn-default:active:hover {
+    background-color: white;
+    border: 1px solid #0279B3;
+    color: #0279B3;
+}
+
+.btn-primary {
+    border: 1px solid #039be5;
+}
+
+.btn-info {
+    background-color: white;
+    color: #949494;
+    border: 1px solid #ccc;
+}
+
+.btn-info:hover {
+    background-color: white;
+    color: #949494;
+    border: 1px solid #949494;
+}
+
+.login-or {
+    position: relative;
+    font-size: 18px;
+    color: #aaa;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.span-or {
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: -2px;
+    margin-left: -25px;
+    background-color: #fff;
+    width: 50px;
+    text-align: center;
+}
+
+.hr-or {
+    background-color: #cdcdcd;
+    height: 1px;
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+}
+
+.remember-password {
+    margin-bottom: 8px;
+}
+
+.facebook, .google, .sigarra, .btn-submit-dialog {
+    width:100%;
+    margin-bottom: 5px;
+    padding: 16px;
+}
+
+.modal-social-icons i {
+    float: left;
+}
+
+.facebook {
+    background-color: #3b5999;
+    border:2px solid #3b5999;
+    color:#fff;
+}
+
+.facebook:hover {
+    background-color: #3c4889;
+    border:2px solid #3c4889;
+    color:#fff;
+}
+
+.google {
+    background-color: white;
+    border:1px solid #dbdbdb;
+    color: #949494;
+}
+
+.google:hover {
+    background-color: white;
+    border:1px solid #949494;
+    color: #949494;
+}
+
+.google img{
+    width: 16px;
+    float: left;
+}
+
+.sigarra {
+    background-color: #746238;
+    border: 2px solid #746238;
+    color: #fff;
+}
+
+.sigarra:hover {
+    background-color: #655332;
+    border: 2px solid #655332;
+    color: #fff;
+}
+
+.form-group i {
+    width: 20px;
+}
+
+.horizontal-menu .dropdown-toggle {
+    color: #a9a9a9;
+}
+
+.horizontal-menu .dropdown-toggle:hover {
+    color: #039be5;
+}
+
+.horizontal-menu .dropdown-toggle:focus {
+    color: #039be5;
+}
+
+.horizontal-menu .dropdown-menu {
+    top: 20px;
+}
+
+.horizontal-menu .dropdown-menu li {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.horizontal-menu .dropdown-menu li a {
+    text-decoration: none;
+    color: #777777;
+    background-image: none;
+}
+
+.horizontal-menu .dropdown-menu li a:hover {
+    color: #333333;
+    background-color: white;
+    background-image: none;
+}
+
+/* Small devices (tablets, 768px and up) @screen-sm-min */
+@media (min-width: 768px) {
+
+    .navbar .navbar-nav {
+        display: inline-block;
+        float: none;
+        vertical-align: top;
+    }
+
+    .navbar .navbar-collapse {
+        text-align: center;
+    }
+
+    #nav-bottom-container a {
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+
+    .navbar-header .navbar-brand {
+        display: block;
+    }
+
+    .central {
+        margin-top: 100px;
+    }
+
+    .modal-dialog {
+        width: 400px;
+    }
+
+    .menu-user-container {
+        display: none
+    }
+
+    #menu-user-dropdown {
+        display: block;
+    }
+}
+
+/* Medium devices (desktops, 992px and up) @screen-md-min */
+@media (min-width: 992px) {
+
+    .article-image-small {
+        height: 180px;
+    }
+}
+
