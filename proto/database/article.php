@@ -2,7 +2,7 @@
 
     function getAllArticles() {
         global $conn;
-        $stmt = $conn->prepare("SELECT * FROM Article");
+        $stmt = $conn->prepare("SELECT * FROM article");
         $stmt->execute();
         return $stmt->fetchAll();
     }

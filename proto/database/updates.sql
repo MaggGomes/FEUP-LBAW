@@ -1,5 +1,5 @@
 -- edit article
-UPDATE "Article"
+UPDATE "article"
 SET "abstract" = $abstract,
     "title" = $title,
     "content" = $content,
@@ -8,18 +8,18 @@ SET "abstract" = $abstract,
 WHERE "idArticle" = $idArticle;
 
 --edit comment
-UPDATE "Comment"
+UPDATE "comment"
 SET "text" = $text,
     "visibility" = $visibility
 WHERE "idComment" = $idComment;
 
 --change rating
-UPDATE "Rating"
+UPDATE "rating"
 SET "value" = $value,
 WHERE "id" = $id;
 
 --edit personal info
-UPDATE "Users"
+UPDATE "users"
 SET "name" = $name,
     "email" = $email,
     "password" = $password,
@@ -28,35 +28,35 @@ SET "name" = $name,
 WHERE "id" = $id;
 
 --change report state
-UPDATE "Report"
+UPDATE "report"
 SET "state" = $state
 WHERE "id" = $id;
 
 --change article visibility
-UPDATE "Article"
+UPDATE "article"
 SET "visibility" = $visibility
 WHERE "idComment" = $idComment;
 
 --promote user to moderator
-UPDATE "Users"
+UPDATE "users"
 SET "permission" = "Moderator"
 WHERE "id" = $id;
 
 --demote moderator to publisher
-UPDATE "Users"
+UPDATE "users"
 SET "permission" = "Publisher"
 WHERE "id" = $id;
 
 --unfollow
-DELETE FROM "Follower"
+DELETE FROM "follower"
 WHERE "idFollowed" = $idFollowed AND
       "idFollower" = $idFollower;
 
 --delete Comment
-DELETE FROM "Comment"
+DELETE FROM "comment"
 WHERE "idComment" = $idComment;
 
 --delete link tag
-DELETE FROM "LinkTag"
+DELETE FROM "linktag"
 WHERE "idTag" = $idTag AND
       "idArticle" = $idArticle;
