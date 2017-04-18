@@ -6,10 +6,14 @@
                     <div class="row">
                         <div class="col-xs-10">
                             <div class="profile-header-img">
-                                <img class="img-circle" src="../upload/user_profile/demo-user.png" />
+                                {if $article[$i].userimage == NULL}
+                                    <img class="img-circle" src="../upload/user_profile/default.png" />
+                                {else}
+                                    <img class="img-circle" src="../upload/user_profile/{$article[$i].userimage}" />
+                                {/if}
                             </div>
                             <div class="article-publisher">
-                                <a href="../pages/article.php"><h4 class="article-author">Clark Muller</h4></a>
+                                <a href="../pages/profile.php?id={$article[$i].userid}"><h4 class="article-author">{$article[$i].username}</h4></a>
                                 <small>March 1</small>
                             </div>
                         </div>
@@ -27,7 +31,7 @@
                 </div>
             </div>
             <a href="{$BASE_URL}pages/article.php?id={$article[$i].id}" class="article-title"><h4>{$article[$i].title}</h4></a>
-            <img class="article-image article-image-small" src="../upload/articles/{$article[$i].imageurl}">
+            <img class="article-image article-image-small" src="../upload/articles/{$article[$i].articleimage}">
             <div class="article-abstract">
                 <p>{$article[$i].abstract}</p>
             </div>

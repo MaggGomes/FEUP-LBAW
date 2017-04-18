@@ -11,10 +11,14 @@
                                 <div class="row">
                                     <div class="col-xs-10">
                                         <div class="profile-header-img">
-                                            <img class="img-circle" src="../upload/user_profile/demo-user.png" />
+                                            {if $article.userimage == NULL}
+                                                <img class="img-circle" src="../upload/user_profile/default.png" />
+                                            {else}
+                                                <img class="img-circle" src="../upload/user_profile/{$article.userimage}" />
+                                            {/if}
                                         </div>
                                         <div class="article-publisher">
-                                            <a href="../pages/article.php"><h4 class="article-author">Clark Muller</h4></a>
+                                            <a href="../pages/profile.php?id={$article.userid}"><h4 class="article-author">{$article.username}</h4></a>
                                             <small>March 1</small>
                                         </div>
                                     </div>
@@ -32,7 +36,7 @@
                             </div>
                         </div>
                         <h3>{$article.title}</h3>
-                        <img class="article-image" src="../upload/articles/{$article.imageurl}">
+                        <img class="article-image" src="../upload/articles/{$article.articleimage}">
                         <p>{$article.content}</p>
                     </div>
                     <div class="panel-footer article-footer">
