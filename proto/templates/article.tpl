@@ -31,12 +31,9 @@
                                 </div>
                             </div>
                         </div>
-                        <h3>Lorem ipsum</h3>
-                        <img class="article-image" src="../upload/articles/city.png">
-                        <p>Maecenas vulputate luctus nec justo magna, rhoncus a purus quisque justo, vel earum vitae placerat, facilisi nullam. Orci justo mauris phasellus quam. Occaecat ut nunc ac etiam netus, ultrices velit et sed, vulputate parturient sit accumsan integer luctus sagittis, at integer duis fringilla semper, in non morbi. Bibendum vestibulum eget, ut quam scelerisque duis pellentesque at, condimentum eget massa, adipiscing libero quam auctor venenatis, lacus wisi ac cras nec neque quam. Litora lacus, eu senectus, tempor ac nibh hymenaeos. Vivamus curabitur, porta quisque ullamcorper nec ut tortor nec, montes suscipit sed est aenean nec, libero sem semper suspendisse, ultrices eros pretium cras suscipit vitae.
-
-                            <br><br>Accusamus adipiscing sed pharetra tristique ultrices, quis dapibus urna, lectus mi eros, nonummy augue at aenean eu neque. Et lorem in nibh aenean et, eu ligula tempus, elementum dolor et sit egestas imperdiet cras, rhoncus sagittis nulla nunc iaculis metus, erat a cursus lectus eros commodo. Pellentesque vivamus suscipit morbi luctus, hac orci integer velit quam velit pellentesque.
-                            Viverra pharetra id viverra consectetuer scelerisque. Scelerisque suspendisse, orci tempor quis proin vestibulum, fusce nulla nunc nibh ac. Augue aenean id sapien elementum, neque risus erat elit dolor dolor. Neque pellentesque, ornare ultricies eget nec, eros luctus velit at sed tortor facilisis, luctus auctor dis. Tempus nascetur nulla, sollicitudin in sed viverra, lacus libero vitae velit penatibus sed. Eleifend consequat leo. Aliquam tortor, rutrum tellus, sed turpis porttitor dis in vestibulum imperdiet, interdum odio cras. Varius consectetuer suspendisse vulputate sem at, a dictum aenean praesent orci bibendum donec, congue vel odio pellentesque mus aut, lacinia interdum consequat. Nunc consectetuer scelerisque irure ut magna mollis, nunc vestibulum metus lorem sed. Nullam molestie nulla, non diam bibendum nulla est, sapien fusce et viverra vel, sapien orci facilisi congue amet urna, libero quis mauris mauris fusce hendrerit. Praesent condimentum et convallis laoreet donec, sapien quam quis iaculis, tellus tempus nibh est sed ut mauris. Suspendisse non, quis dapibus eu quam convallis, vel laboris voluptas dolorem, nec taciti non in vestibulum.</p>
+                        <h3>{$article.title}</h3>
+                        <img class="article-image" src="../upload/articles/{$article.imageurl}">
+                        <p>{$article.content}</p>
                     </div>
                     <div class="panel-footer article-footer">
                         <div class="row article-footer-upper">
