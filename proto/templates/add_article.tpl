@@ -9,29 +9,29 @@
         <form action="../actions/action_add_article.php" method="post" class="form-group">
             <div class="add-article-header">
                 <input type="text" name="title" class="form-control input-lg" placeholder="Title" required autocomplete="off">
-                <input type="text" name="title" class="form-control input-lg" placeholder="Abstract" required autocomplete="off">
+                <input type="text" name="abstract" class="form-control input-lg" placeholder="Abstract" required autocomplete="off">
             </div>
 
 
             <div class="add-article-category">
                 <div class="btn-group" data-toggle="buttons">
                     <label class="btn btn-primary active">
-                        <input type="radio" name="options" id="option1" autocomplete="off" checked>World
+                        <input type="radio" name="options" id="option1" autocomplete="off" checked value="world">World
                     </label>
                     <label class="btn btn-primary">
-                        <input type="radio" name="options" id="option2" autocomplete="off">Sports
+                        <input type="radio" name="options" id="option2" autocomplete="off" value="sports">Sports
                     </label>
                     <label class="btn btn-primary">
-                        <input type="radio" name="options" id="option3" autocomplete="off">Technology
+                        <input type="radio" name="options" id="option3" autocomplete="off" value="technology">Technology
                     </label>
                     <label class="btn btn-primary">
-                        <input type="radio" name="options" id="option4" autocomplete="off">Politics
+                        <input type="radio" name="options" id="option4" autocomplete="off" value="politics">Politics
                     </label>
                     <label class="btn btn-primary">
-                        <input type="radio" name="options" id="option5" autocomplete="off">Culture
+                        <input type="radio" name="options" id="option5" autocomplete="off" value="culture">Culture
                     </label>
                     <label class="btn btn-primary">
-                        <input type="radio" name="options" id="option6" autocomplete="off">Science
+                        <input type="radio" name="options" id="option6" autocomplete="off" value="science">Science
                     </label>
                 </div>
             </div>
@@ -49,7 +49,7 @@
 
             <div class="row">
                 <div class="col-md-2">
-                    <button type="submit" class="btn btn-primary btn-block" disabled>Publish</button>
+                    <button type="submit" class="btn btn-primary btn-block" >Publish</button>
                 </div>
             </div>
 
