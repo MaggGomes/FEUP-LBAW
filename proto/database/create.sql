@@ -94,7 +94,7 @@ CREATE TABLE follower(
 CREATE TABLE users (
 	name varchar(200)	 NOT NULL,
 	email varchar(100)	 UNIQUE NOT NULL,
-	password varchar(50)	 NOT NULL,
+	password varchar(64)	 NOT NULL,
 	photoURL varchar(200)	,
 	rating integer DEFAULT 0,
 	country varchar(100)	,

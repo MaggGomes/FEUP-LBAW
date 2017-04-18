@@ -161,22 +161,18 @@
                     <hr class="hr-or">
                     <span class="span-or">or</span>
                 </div>
-                <form>
+                <form action="../actions/base/register.php" method="post">
                     <div class="form-group">
                         <div class="form-group has-feedback">
-                            <input type="text" class="form-control" placeholder="First name">
+                            <input type="text" class="form-control" placeholder="Name" name="name">
                             <span class="fa fa-user-o form-control-feedback"></span>
                         </div>
                         <div class="form-group has-feedback">
-                            <input type="text" class="form-control" placeholder="Last name">
-                            <span class="fa fa-user-o form-control-feedback"></span>
-                        </div>
-                        <div class="form-group has-feedback">
-                            <input type="email" class="form-control" placeholder="E-mail address">
+                            <input type="email" class="form-control" placeholder="E-mail address" name="email">
                             <span class="fa fa-envelope-o form-control-feedback"></span>
                         </div>
                         <div class="form-group has-feedback">
-                            <input type="password" class="form-control" placeholder="Password">
+                            <input type="password" class="form-control" placeholder="Password" name="password">
                             <span class="fa fa-lock form-control-feedback"></span>
                         </div>
                         <div class="form-group has-feedback">
@@ -184,9 +180,9 @@
                             <span class="fa fa-lock form-control-feedback"></span>
                         </div>
                     </div>
+                    <input type="submit" class="btn btn-primary btn-submit-dialog" value="Register">
                 </form>
 
-                <button type="button" class="btn btn-primary btn-submit-dialog">Register</button>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
@@ -217,6 +213,3 @@
         </div>
     </div>
 </div>
-
-
-
