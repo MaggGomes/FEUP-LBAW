@@ -225,6 +225,12 @@ INSERT INTO image (description,url,idArticle) VALUES ('lacus.','garden.png',48);
 INSERT INTO image (description,url,idArticle) VALUES ('Vestibulum','lawyer.png',49);
 INSERT INTO image (description,url,idArticle) VALUES ('diam vel arcu. Curabitur ut odio vel est tempor bibendum.','books.png',50);
 INSERT INTO image (description,url,idArticle) VALUES ('lorem lorem, luctus ut, pellentesque eget,','city.png',51);
+INSERT INTO image (description,url,idArticle) VALUES ('in faucibus orci luctus et ultrices','books.png',52);
+INSERT INTO image (description,url,idArticle) VALUES ('nonummy. Fusce fermentum fermentum arcu.','city.png',53);
+INSERT INTO image (description,url,idArticle) VALUES ('lacus.','garden.png',54);
+INSERT INTO image (description,url,idArticle) VALUES ('Vestibulum','lawyer.png',55);
+INSERT INTO image (description,url,idArticle) VALUES ('diam vel arcu. Curabitur ut odio vel est tempor bibendum.','books.png',56);
+INSERT INTO image (description,url,idArticle) VALUES ('lorem lorem, luctus ut, pellentesque eget,','city.png',57);
 
 
 

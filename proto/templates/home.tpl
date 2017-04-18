@@ -470,7 +470,7 @@
                                     </div>
                                 </div>
                                 <h4>{$article[$i].title}</h4>
-                                <img class="article-image article-image-small" src="../upload/articles/city.png">
+                                <img class="article-image article-image-small" src="../upload/articles/{$article[$i].imageurl}">
                                 <div class="article-abstract">
                                     <p>{$article[$i].abstract}</p>
                                 </div>
@@ -530,7 +530,7 @@
                                     </div>
                                 </div>
                                 <h4>{$article[$i].title}</h4>
-                                <img class="article-image article-image-small" src="../upload/articles/city.png">
+                                <img class="article-image article-image-small" src="../upload/articles/{$article[$i].imageurl}">
                                 <div class="article-abstract">
                                     <p>{$article[$i].abstract}</p>
                                 </div>

@@ -9,20 +9,15 @@
 
     function getArticlesByCategory($category) {
         global $conn;
-        $stmt = $conn->prepare("SELECT * FROM public.article WHERE category = ?");
-        $stmt->execute(array($category));
-        return $stmt->fetchAll();
-    }
-
-// TODO - CORRIGIR FUNC
-    function getArticlesByCategory1($category) {
-        global $conn;
         $stmt = $conn->prepare("SELECT public.article.title AS title,
                                 public.article.abstract AS abstract,
-                                public.article.date AS articleDate,
-                                public.image.url AS imageUrl,
-                                FROM public.article JOIN public.image ON public.article.idArticle = public.image.idArticle WHERE category = ?");
-        $stmt->execute(array($category));
+                                public.article.date AS articledate,
+                                public.article.content AS content,
+                                public.image.url AS imageurl
+                                FROM public.article LEFT JOIN public.image ON (public.article.idArticle = public.image.idArticle)
+                                WHERE public.article.category = ? AND public.article.visibility = ?
+                                ORDER BY public.article.date");
+        $stmt->execute(array($category, 'Visible'));
         return $stmt->fetchAll();
     }
 
