@@ -469,7 +469,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <h4>{$article[$i].title}</h4>
+                                <a href="{$BASE_URL}pages/article.php?id={$article[$i].id}" class="article-title"><h4>{$article[$i].title}</h4></a>
                                 <img class="article-image article-image-small" src="../upload/articles/{$article[$i].imageurl}">
                                 <div class="article-abstract">
                                     <p>{$article[$i].abstract}</p>
@@ -529,7 +529,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <h4>{$article[$i].title}</h4>
+                                <a href="{$BASE_URL}pages/article.php?id={$article[$i].id}" class="article-title"><h4>{$article[$i].title}</h4></a>
                                 <img class="article-image article-image-small" src="../upload/articles/{$article[$i].imageurl}">
                                 <div class="article-abstract">
                                     <p>{$article[$i].abstract}</p>

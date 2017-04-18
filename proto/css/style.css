@@ -166,10 +166,13 @@ body {
     margin-top: 0;
 }
 
-.article-title {
-    font-family: "Calibri Light";
-    color: #039be5;
-    margin-bottom: 0;
+.article-title a {
+    color: #333333;
+}
+
+.article-title a:hover{
+    color: #333333;
+    text-decoration: none;
 }
 
 .profile-header-img > img.img-circle {
