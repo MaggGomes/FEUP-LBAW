@@ -12,6 +12,10 @@ body {
     background-color: #f3f3f3;
 }
 
+a:hover {
+    text-decoration: none;
+}
+
 .navbar-header .navbar-brand {
     display: none;
 }
@@ -166,13 +170,16 @@ body {
     margin-top: 0;
 }
 
-.article-title a {
+.article-title {
     color: #333333;
 }
 
-.article-title a:hover{
-    color: #333333;
+.article-title a {
     text-decoration: none;
+}
+
+.article-title:hover {
+    color: #333333;
 }
 
 .profile-header-img > img.img-circle {
