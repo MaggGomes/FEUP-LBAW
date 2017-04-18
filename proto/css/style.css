@@ -155,6 +155,10 @@ body {
     vertical-align: top;
 }
 
+.article-publisher {
+    margin-left: 10px;
+}
+
 .article-author {
     font-family: "Calibri Light";
     color: #039be5;
@@ -180,6 +184,10 @@ body {
 .article-text {
     color: #333333;
     font-size: medium;
+}
+
+.article-abstract {
+    height: 40px;
 }
 
 .article-footer {
