@@ -44,8 +44,8 @@
             </div>
             <div class="row article-footer-lower">
                 <div class="col-xs-5">
-                    <a href="#"><span class="glyphicon glyphicon-thumbs-up"></span><span class="glyph-text"> 30 &nbsp&nbsp</span></a>
-                    <a href="#"><span class="glyphicon glyphicon-thumbs-down"></span><span class="glyph-text"> 10</span></a>
+                    <a href="#"><span class="glyphicon glyphicon-thumbs-up"></span><span class="glyph-text"> {$article[$i].upvotes} &nbsp&nbsp</span></a>
+                    <a href="#"><span class="glyphicon glyphicon-thumbs-down"></span><span class="glyph-text"> {$article[$i].downvotes}</span></a>
                 </div>
                 <div class="col-xs-7">
                     <div class="pull-right">
