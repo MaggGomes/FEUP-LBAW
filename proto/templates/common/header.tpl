@@ -35,6 +35,10 @@
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+
+    <!-- scripts for login with google account-->
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <meta name="google-signin-client_id" content="702080112341-73p7rf48svsdsjjggajealjjcsa4njcm.apps.googleusercontent.com">
 </head>
 
 <body>
@@ -113,7 +117,8 @@
             <div class="modal-body">
                 <div class="modal-social-icons">
                     <button class="btn btn-default facebook"><i class="fa fa-facebook modal-icons"></i> Sign In with Facebook </button>
-                    <button class="btn btn-default google"><img src="../images/google-logo.png">Sign In with Google</button>
+                    <!--button class="btn btn-default google"><img src="../images/google-logo.png">Sign In with Google</button-->
+                    <div class="g-signin2 btn btn-default google" data-onsuccess="onSignIn"></div>
                     <button class="btn btn-default sigarra"><i class="fa fa-graduation-cap" aria-hidden="true"></i> Sign In with Sigarra U.Porto</button>
                 </div>
                 <div class="login-or">
