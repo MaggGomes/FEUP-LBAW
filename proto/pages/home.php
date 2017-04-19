@@ -2,6 +2,7 @@
     include_once('../config/init.php');
     include_once($BASE_DIR .'database/article.php');
     try {
+        $dailyTopArticle = getDailyTopArticle();
         $articlesWorld = array_slice(getArticlesByCategory('World'), 0, 6);
         $articlesSports = array_slice(getArticlesByCategory('Sports'), 0, 6);
         $articlesTechnology = array_slice(getArticlesByCategory('Technology'), 0, 6);
@@ -13,7 +14,7 @@
         die($e->getMessage());
     }
 
-    $articles = array('World' => $articlesWorld,
+    $articles = array(  'World' => $articlesWorld,
                         'Sports' => $articlesSports,
                         'Technology' => $articlesTechnology,
                         'Politics' => $articlesPolitics,
@@ -23,6 +24,7 @@
 
     $cssStyle = "../css/home.css";
 
+    $smarty->assign('dailyTopArticle', $dailyTopArticle);
     $smarty->assign('articles', $articles);
     $smarty->assign('cssStyle', $cssStyle);
     $smarty->display('home.tpl');
