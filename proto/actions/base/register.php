@@ -18,10 +18,16 @@
 	$stmt->execute(array($name, $email, $password));
 	$result = $stmt->fetch();
 
+	$users = $conn->prepare("SELECT * FROM public.Users WHERE email = ?");
+	$users->execute(array($email));
+	$result = $users->fetch();
+
 	global $smarty;
-	
+
 	$_SESSION['email'] = $email;
 	$_SESSION['username'] = $name;
+	$_SESSION["id"] = $result["id"];
+
 	header('Location: ../../pages/home.php');
 
 ?>

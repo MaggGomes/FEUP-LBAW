@@ -1,12 +1,18 @@
 <?php
+	include_once("../config/init.php");
 
-    function getUserById($id){
-        global $conn;
+	function getAllUsers(){
+		global $conn;
 
-        $stmt = $conn->prepare("SELECT * FROM public.users WHERE public.users.id = ?");
+		$stmt = $conn->prepare("SELECT public.users.name,
+			 							public.users.email,
+										public.users.photoURL,
+										public.users.rating,
+										public.users.permission,
+										public.users.id
+								FROM public.users");
 
-        $stmt->execute(array($id));
-        return $stmt->fetch();
-    }
-
-?>
+		$stmt->execute();
+		return $stmt->fetchAll();
+	}
+ ?>
