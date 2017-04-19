@@ -1,7 +1,7 @@
 {include file='common/header.tpl'}
 
 <head>
-    <script src="http://cloud.tinymce.com/stable/tinymce.min.js?apiKey=desi6hiftg5yqtfrrkmlemy77km6yea6m7l7yjvdnkx93tpn"></script>
+    <script src="https://cloud.tinymce.com/stable/tinymce.min.js"></script>
     <script>tinymce.init({ selector:'textarea' });</script>
     <script src="../javascript/add_article.js"></script>
 </head>
@@ -44,7 +44,7 @@
 
             <div class="row">
                 <div class="col-lg-12 add-article-textarea">
-                    <textarea rows="10" name="body" class="col-lg-12" placeholder="Write your article" required></textarea>
+                    <textarea rows="10" name="body" class="col-lg-12" placeholder="Write your article"></textarea>
                 </div>
             </div>
 
