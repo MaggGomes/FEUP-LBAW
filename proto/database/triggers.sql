@@ -25,13 +25,13 @@ CREATE TRIGGER updateRating AFTER INSERT ON rating
 
 
 
-
+/*
 -- notificar artigos
 CREATE OR REPLACE FUNCTION addArtNot() RETURNS trigger AS $$
     DECLARE
-        r Follower%rowtype;
+        r public.Follower%rowtype;
     BEGIN
-        FOR r IN SELECT * FROM follower LOOP
+        FOR r IN SELECT * FROM public.follower LOOP
             IF r.idFollowed = NEW.idUser THEN
                 INSERT INTO Notification(date, description, read, idUser, idArticle, idComment) VALUES (CURRENT_DATE, "TEST article", false, r.idFollower, NEW.idArticle, null);
             END IF;
@@ -41,7 +41,7 @@ CREATE OR REPLACE FUNCTION addArtNot() RETURNS trigger AS $$
     $$ LANGUAGE plpgsql;
 
 CREATE TRIGGER articleNotification AFTER INSERT ON article
-    EXECUTE PROCEDURE addArtNot();
+    EXECUTE PROCEDURE addArtNot();*/
 
 
 -- notificar resposta a comentários

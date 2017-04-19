@@ -3,6 +3,7 @@
 <head>
     <script src="http://cloud.tinymce.com/stable/tinymce.min.js?apiKey=desi6hiftg5yqtfrrkmlemy77km6yea6m7l7yjvdnkx93tpn"></script>
     <script>tinymce.init({ selector:'textarea' });</script>
+    <script src="../javascript/add_article.js"></script>
 </head>
 <section class="central">
     <div class="container add-article">
@@ -16,33 +17,34 @@
             <div class="add-article-category">
                 <div class="btn-group" data-toggle="buttons">
                     <label class="btn btn-primary active">
-                        <input type="radio" name="options" id="option1" autocomplete="off" checked value="world">World
+                        <input type="radio" name="options" id="option1" autocomplete="off" checked value="World">World
                     </label>
                     <label class="btn btn-primary">
-                        <input type="radio" name="options" id="option2" autocomplete="off" value="sports">Sports
+                        <input type="radio" name="options" id="option2" autocomplete="off" value="Sports">Sports
                     </label>
                     <label class="btn btn-primary">
-                        <input type="radio" name="options" id="option3" autocomplete="off" value="technology">Technology
+                        <input type="radio" name="options" id="option3" autocomplete="off" value="Technology">Technology
                     </label>
                     <label class="btn btn-primary">
-                        <input type="radio" name="options" id="option4" autocomplete="off" value="politics">Politics
+                        <input type="radio" name="options" id="option4" autocomplete="off" value="Politics">Politics
                     </label>
                     <label class="btn btn-primary">
-                        <input type="radio" name="options" id="option5" autocomplete="off" value="culture">Culture
+                        <input type="radio" name="options" id="option5" autocomplete="off" value="Culture">Culture
                     </label>
                     <label class="btn btn-primary">
-                        <input type="radio" name="options" id="option6" autocomplete="off" value="science">Science
+                        <input type="radio" name="options" id="option6" autocomplete="off" value="Science">Science
                     </label>
                 </div>
             </div>
 
             <div class="row add-article-tags">
-                <a href="#" class="col-md-2"><span class="glyphicon glyphicon-tags"></span> Add a tag</a>
+                <a href="#" class="col-md-2"><span class="glyphicon glyphicon-tags"></span> Add tag(s)</a>
+                <input type="text" id="tags" name="tags" class="form-control input-lg" placeholder="Tags separated by spaces">
             </div>
 
             <div class="row">
                 <div class="col-lg-12 add-article-textarea">
-                    <textarea rows="10" name="body" class="col-lg-12" required>Write your article!</textarea>
+                    <textarea rows="10" name="body" class="col-lg-12" placeholder="Write your article" required></textarea>
                 </div>
             </div>
 

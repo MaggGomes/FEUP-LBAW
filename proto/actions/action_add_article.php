@@ -16,5 +16,9 @@
 
 	echo $text;*/
 
-	header('Location: ../../pages/home.php');
+	$stmt = $conn->prepare("INSERT INTO public.article (abstract, title, date, content, category, idUser, visibility) VALUES (?, ?, LOCALTIMESTAMP, ?, ?, ?, 'Visible')");
+	$stmt->execute(array($abstract, $title, $text, $category, 51));
+	$result = $stmt->fetch();
+
+	//header('Location: ../../proto/pages/home.php');
 ?>
