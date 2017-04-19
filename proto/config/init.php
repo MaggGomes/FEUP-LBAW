@@ -1,4 +1,11 @@
 <?php
+
+	function console_log( $data ){
+	  echo '<script>';
+	  echo 'console.log('. json_encode( $data ) .')';
+	  echo '</script>';
+	}
+
   session_set_cookie_params(3600, '/~lbaw1652'); //FIXME
   session_start();
 
@@ -14,20 +21,21 @@
   $conn->exec('SET SCHEMA \'proto\''); //FIXME?
 
   include_once($BASE_DIR . 'lib/smarty/Smarty.class.php');
-  
+
   $smarty = new Smarty;
   $smarty->template_dir = $BASE_DIR . 'templates/';
   $smarty->compile_dir = $BASE_DIR . 'templates_c/';
   $smarty->assign('BASE_URL', $BASE_URL);
-  
-  $smarty->assign('ERROR_MESSAGES', $_SESSION['error_messages']);  
+
+  $smarty->assign('ERROR_MESSAGES', $_SESSION['error_messages']);
   $smarty->assign('FIELD_ERRORS', $_SESSION['field_errors']);
   $smarty->assign('SUCCESS_MESSAGES', $_SESSION['success_messages']);
   $smarty->assign('FORM_VALUES', $_SESSION['form_values']);
   $smarty->assign('USERNAME', $_SESSION['username']);
-  
+  $smarty->assign('EMAIL', $_SESSION['email']);
+
   unset($_SESSION['success_messages']);
-  unset($_SESSION['error_messages']);  
+  unset($_SESSION['error_messages']);
   unset($_SESSION['field_errors']);
   unset($_SESSION['form_values']);
 ?>
