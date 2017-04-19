@@ -113,7 +113,7 @@
                                 LEFT JOIN public.image ON (public.article.idArticle = public.image.idArticle)
                                 LEFT JOIN public.users ON (public.article.idUser = public.users.id)
                                 WHERE public.article.idArticle = ?");
-        
+
         $stmt->execute();
         return $stmt->fetchAll();
     }

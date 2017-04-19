@@ -22,36 +22,59 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="queries.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/database/queries.sql">
+      <file leaf-file-name="article.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/database/article.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="36" column="106" selection-start-line="36" selection-start-column="106" selection-end-line="36" selection-end-column="106" />
+            <state vertical-scroll-proportion="-15.961538">
+              <caret line="95" column="5" selection-start-line="55" selection-start-column="4" selection-end-line="95" selection-end-column="5" />
+              <folding>
+                <marker date="1492573476528" expanded="true" signature="94:107" placeholder="SELECT * FRO... " />
+                <marker date="1492573476528" expanded="true" signature="94:121" placeholder="SELECT * FRO... article" />
+                <marker date="1492573476528" expanded="true" signature="94:122" placeholder="SELECT * FRO... article" />
+                <marker date="1492573476528" expanded="true" signature="94:124" placeholder="SELECT * FRO... article" />
+                <marker date="1492573476528" expanded="true" signature="94:150" placeholder="SELECT * FRO... Article" />
+                <marker date="1492573476528" expanded="true" signature="296:1186" placeholder="SELECT publi... article" />
+                <marker date="1492573476528" expanded="true" signature="296:1281" placeholder="SELECT publi... article" />
+                <marker date="1492573476528" expanded="true" signature="296:1289" placeholder="SELECT publi... article" />
+                <marker date="1492573476528" expanded="true" signature="1467:1646" placeholder="SELECT COUNT... rating" />
+                <marker date="1492573476528" expanded="true" signature="1832:2014" placeholder="SELECT COUNT... article" />
+                <marker date="1492573476528" expanded="true" signature="2300:3258" placeholder="SELECT publi... article" />
+                <marker date="1492573476528" expanded="true" signature="3367:3546" placeholder="SELECT COUNT... rating" />
+                <marker date="1492573476528" expanded="true" signature="3716:3898" placeholder="SELECT COUNT... rating" />
+                <marker date="1492573476528" expanded="true" signature="4158:5116" placeholder="SELECT publi... article" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="profile.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pages/profile.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.25612053">
+              <caret line="8" column="31" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="article.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/database/article.php">
+      <file leaf-file-name="read_article.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/read_article.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7758945">
-              <caret line="115" column="8" selection-start-line="115" selection-start-column="8" selection-end-line="115" selection-end-column="8" />
+            <state vertical-scroll-proportion="-9.153846">
+              <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="41" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="user.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/database/user.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-1.3076923">
+              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="24" />
               <folding>
-                <marker date="1492573308399" expanded="true" signature="94:107" placeholder="SELECT * FRO... " />
-                <marker date="1492573308399" expanded="true" signature="94:121" placeholder="SELECT * FRO... article" />
-                <marker date="1492573308399" expanded="true" signature="94:122" placeholder="SELECT * FRO... article" />
-                <marker date="1492573308399" expanded="true" signature="94:124" placeholder="SELECT * FRO... article" />
-                <marker date="1492573308399" expanded="true" signature="94:150" placeholder="SELECT * FRO... Article" />
-                <marker date="1492573308399" expanded="true" signature="296:1186" placeholder="SELECT publi... article" />
-                <marker date="1492573308399" expanded="true" signature="296:1281" placeholder="SELECT publi... article" />
-                <marker date="1492573308399" expanded="true" signature="296:1289" placeholder="SELECT publi... article" />
-                <marker date="1492573308399" expanded="true" signature="1467:1646" placeholder="SELECT COUNT... rating" />
-                <marker date="1492573308399" expanded="true" signature="1832:2014" placeholder="SELECT COUNT... article" />
-                <marker date="1492573308399" expanded="true" signature="2300:3258" placeholder="SELECT publi... article" />
-                <marker date="1492573308399" expanded="true" signature="3367:3546" placeholder="SELECT COUNT... rating" />
-                <marker date="1492573308399" expanded="true" signature="3716:3898" placeholder="SELECT COUNT... rating" />
-                <marker date="1492573308399" expanded="true" signature="4158:5116" placeholder="SELECT publi... article" />
+                <marker date="1492573588712" expanded="true" signature="93:100" placeholder="SELECT publi... article" />
+                <marker date="1492573588712" expanded="true" signature="93:145" placeholder="SELECT * FRO... users" />
               </folding>
             </state>
           </provider>
@@ -62,7 +85,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/templates/common/footer.tpl" />
         <option value="$PROJECT_DIR$/templates/account.tpl" />
         <option value="$PROJECT_DIR$/templates/add_article.tpl" />
         <option value="$PROJECT_DIR$/templates/advanced_search.tpl" />
@@ -89,7 +111,6 @@
         <option value="$PROJECT_DIR$/pages/moderated_articles.php" />
         <option value="$PROJECT_DIR$/pages/notifications.php" />
         <option value="$PROJECT_DIR$/pages/pending_articles.php" />
-        <option value="$PROJECT_DIR$/pages/profile.php" />
         <option value="$PROJECT_DIR$/pages/reported_articles.php" />
         <option value="$PROJECT_DIR$/pages/reported_comments.php" />
         <option value="$PROJECT_DIR$/templates/common/header.tpl" />
@@ -113,6 +134,8 @@
         <option value="$PROJECT_DIR$/templates/profile.tpl" />
         <option value="$PROJECT_DIR$/css/profile.css" />
         <option value="$PROJECT_DIR$/database/article.php" />
+        <option value="$PROJECT_DIR$/database/user.php" />
+        <option value="$PROJECT_DIR$/pages/profile.php" />
       </list>
     </option>
   </component>
@@ -173,6 +196,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="proto" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="proto" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="proto" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pages" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -532,14 +569,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/user.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/upload/user_profile/demo-user.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -585,14 +614,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/create.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.8617594">
-          <caret line="94" column="30" selection-start-line="94" selection-start-column="30" selection-end-line="94" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/add_article.tpl">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33266932">
@@ -633,14 +654,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/read_article.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.096045196">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/read_article.tpl">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.12806027">
@@ -653,14 +666,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="2.1205273">
           <caret line="448" column="26" selection-start-line="448" selection-start-column="26" selection-end-line="448" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/profile.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.22410546">
-          <caret line="7" column="2" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
           <folding />
         </state>
       </provider>
@@ -689,9 +694,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/database/create.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6642729">
+          <caret line="94" column="30" selection-start-line="94" selection-start-column="30" selection-end-line="94" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/database/queries.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.5798923">
           <caret line="36" column="106" selection-start-line="36" selection-start-column="106" selection-end-line="36" selection-end-column="106" />
           <folding />
         </state>
@@ -699,24 +712,51 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/database/article.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7758945">
-          <caret line="115" column="8" selection-start-line="115" selection-start-column="8" selection-end-line="115" selection-end-column="8" />
+        <state vertical-scroll-proportion="-15.961538">
+          <caret line="95" column="5" selection-start-line="55" selection-start-column="4" selection-end-line="95" selection-end-column="5" />
           <folding>
-            <marker date="1492573308399" expanded="true" signature="94:107" placeholder="SELECT * FRO... " />
-            <marker date="1492573308399" expanded="true" signature="94:121" placeholder="SELECT * FRO... article" />
-            <marker date="1492573308399" expanded="true" signature="94:122" placeholder="SELECT * FRO... article" />
-            <marker date="1492573308399" expanded="true" signature="94:124" placeholder="SELECT * FRO... article" />
-            <marker date="1492573308399" expanded="true" signature="94:150" placeholder="SELECT * FRO... Article" />
-            <marker date="1492573308399" expanded="true" signature="296:1186" placeholder="SELECT publi... article" />
-            <marker date="1492573308399" expanded="true" signature="296:1281" placeholder="SELECT publi... article" />
-            <marker date="1492573308399" expanded="true" signature="296:1289" placeholder="SELECT publi... article" />
-            <marker date="1492573308399" expanded="true" signature="1467:1646" placeholder="SELECT COUNT... rating" />
-            <marker date="1492573308399" expanded="true" signature="1832:2014" placeholder="SELECT COUNT... article" />
-            <marker date="1492573308399" expanded="true" signature="2300:3258" placeholder="SELECT publi... article" />
-            <marker date="1492573308399" expanded="true" signature="3367:3546" placeholder="SELECT COUNT... rating" />
-            <marker date="1492573308399" expanded="true" signature="3716:3898" placeholder="SELECT COUNT... rating" />
-            <marker date="1492573308399" expanded="true" signature="4158:5116" placeholder="SELECT publi... article" />
+            <marker date="1492573476528" expanded="true" signature="94:107" placeholder="SELECT * FRO... " />
+            <marker date="1492573476528" expanded="true" signature="94:121" placeholder="SELECT * FRO... article" />
+            <marker date="1492573476528" expanded="true" signature="94:122" placeholder="SELECT * FRO... article" />
+            <marker date="1492573476528" expanded="true" signature="94:124" placeholder="SELECT * FRO... article" />
+            <marker date="1492573476528" expanded="true" signature="94:150" placeholder="SELECT * FRO... Article" />
+            <marker date="1492573476528" expanded="true" signature="296:1186" placeholder="SELECT publi... article" />
+            <marker date="1492573476528" expanded="true" signature="296:1281" placeholder="SELECT publi... article" />
+            <marker date="1492573476528" expanded="true" signature="296:1289" placeholder="SELECT publi... article" />
+            <marker date="1492573476528" expanded="true" signature="1467:1646" placeholder="SELECT COUNT... rating" />
+            <marker date="1492573476528" expanded="true" signature="1832:2014" placeholder="SELECT COUNT... article" />
+            <marker date="1492573476528" expanded="true" signature="2300:3258" placeholder="SELECT publi... article" />
+            <marker date="1492573476528" expanded="true" signature="3367:3546" placeholder="SELECT COUNT... rating" />
+            <marker date="1492573476528" expanded="true" signature="3716:3898" placeholder="SELECT COUNT... rating" />
+            <marker date="1492573476528" expanded="true" signature="4158:5116" placeholder="SELECT publi... article" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/user.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.3076923">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="24" />
+          <folding>
+            <marker date="1492573588712" expanded="true" signature="93:100" placeholder="SELECT publi... article" />
+            <marker date="1492573588712" expanded="true" signature="93:145" placeholder="SELECT * FRO... users" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/read_article.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.153846">
+          <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/profile.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.25612053">
+          <caret line="8" column="31" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
+          <folding />
         </state>
       </provider>
     </entry>
