@@ -22,21 +22,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="list_article.tpl" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/list_article.tpl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.807693">
-              <caret line="44" column="50" selection-start-line="44" selection-start-column="50" selection-end-line="44" selection-end-column="50" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="create.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/database/create.sql">
+      <file leaf-file-name="queries.sql" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/database/queries.sql">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="94" column="30" selection-start-line="94" selection-start-column="30" selection-end-line="94" selection-end-column="30" />
+              <caret line="36" column="106" selection-start-line="36" selection-start-column="106" selection-end-line="36" selection-end-column="106" />
               <folding />
             </state>
           </provider>
@@ -45,33 +35,24 @@
       <file leaf-file-name="article.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/database/article.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.42372882">
-              <caret line="80" column="0" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.7758945">
+              <caret line="115" column="8" selection-start-line="115" selection-start-column="8" selection-end-line="115" selection-end-column="8" />
               <folding>
-                <marker date="1492566079930" expanded="true" signature="94:107" placeholder="SELECT * FRO... " />
-                <marker date="1492566079930" expanded="true" signature="94:121" placeholder="SELECT * FRO... article" />
-                <marker date="1492566079930" expanded="true" signature="94:122" placeholder="SELECT * FRO... article" />
-                <marker date="1492566079930" expanded="true" signature="94:124" placeholder="SELECT * FRO... article" />
-                <marker date="1492566079930" expanded="true" signature="94:150" placeholder="SELECT * FRO... Article" />
-                <marker date="1492566079930" expanded="true" signature="296:1117" placeholder="SELECT publi... article" />
-                <marker date="1492566079930" expanded="true" signature="296:1212" placeholder="SELECT publi... article" />
-                <marker date="1492566079930" expanded="true" signature="296:1220" placeholder="SELECT publi... article" />
-                <marker date="1492566079930" expanded="true" signature="1398:1577" placeholder="SELECT COUNT... rating" />
-                <marker date="1492566079930" expanded="true" signature="1763:1945" placeholder="SELECT COUNT... article" />
-                <marker date="1492566079930" expanded="true" signature="2231:3120" placeholder="SELECT publi... article" />
-                <marker date="1492566079930" expanded="true" signature="3229:3408" placeholder="SELECT COUNT... rating" />
-                <marker date="1492566079930" expanded="true" signature="3578:3760" placeholder="SELECT COUNT... rating" />
+                <marker date="1492573308399" expanded="true" signature="94:107" placeholder="SELECT * FRO... " />
+                <marker date="1492573308399" expanded="true" signature="94:121" placeholder="SELECT * FRO... article" />
+                <marker date="1492573308399" expanded="true" signature="94:122" placeholder="SELECT * FRO... article" />
+                <marker date="1492573308399" expanded="true" signature="94:124" placeholder="SELECT * FRO... article" />
+                <marker date="1492573308399" expanded="true" signature="94:150" placeholder="SELECT * FRO... Article" />
+                <marker date="1492573308399" expanded="true" signature="296:1186" placeholder="SELECT publi... article" />
+                <marker date="1492573308399" expanded="true" signature="296:1281" placeholder="SELECT publi... article" />
+                <marker date="1492573308399" expanded="true" signature="296:1289" placeholder="SELECT publi... article" />
+                <marker date="1492573308399" expanded="true" signature="1467:1646" placeholder="SELECT COUNT... rating" />
+                <marker date="1492573308399" expanded="true" signature="1832:2014" placeholder="SELECT COUNT... article" />
+                <marker date="1492573308399" expanded="true" signature="2300:3258" placeholder="SELECT publi... article" />
+                <marker date="1492573308399" expanded="true" signature="3367:3546" placeholder="SELECT COUNT... rating" />
+                <marker date="1492573308399" expanded="true" signature="3716:3898" placeholder="SELECT COUNT... rating" />
+                <marker date="1492573308399" expanded="true" signature="4158:5116" placeholder="SELECT publi... article" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="inserts.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/database/inserts.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="312" column="71" selection-start-line="312" selection-start-column="71" selection-end-line="312" selection-end-column="71" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -81,10 +62,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/templates/header.php" />
-        <option value="$PROJECT_DIR$/css/font-awesome.css" />
-        <option value="$PROJECT_DIR$/css/font-awesome.min.css" />
-        <option value="$PROJECT_DIR$/templates/common/header.php" />
         <option value="$PROJECT_DIR$/templates/common/footer.tpl" />
         <option value="$PROJECT_DIR$/templates/account.tpl" />
         <option value="$PROJECT_DIR$/templates/add_article.tpl" />
@@ -97,7 +74,6 @@
         <option value="$PROJECT_DIR$/templates/moderated_articles.tpl" />
         <option value="$PROJECT_DIR$/templates/notifications.tpl" />
         <option value="$PROJECT_DIR$/templates/pending_articles.tpl" />
-        <option value="$PROJECT_DIR$/templates/profile.tpl" />
         <option value="$PROJECT_DIR$/templates/reported_articles.tpl" />
         <option value="$PROJECT_DIR$/templates/reported_comments.tpl" />
         <option value="$PROJECT_DIR$/templates/statistics.tpl" />
@@ -125,12 +101,17 @@
         <option value="$PROJECT_DIR$/config/init.php" />
         <option value="$PROJECT_DIR$/pages/article.php" />
         <option value="$PROJECT_DIR$/templates/listarticle.tpl" />
-        <option value="$PROJECT_DIR$/templates/home.tpl" />
-        <option value="$PROJECT_DIR$/pages/home.php" />
         <option value="$PROJECT_DIR$/database/inserts.sql" />
         <option value="$PROJECT_DIR$/css/style.css" />
-        <option value="$PROJECT_DIR$/templates/article.tpl" />
+        <option value="$PROJECT_DIR$/pages/home.php" />
+        <option value="$PROJECT_DIR$/pages/read_article.php" />
         <option value="$PROJECT_DIR$/templates/list_article.tpl" />
+        <option value="$PROJECT_DIR$/templates/read_article.tpl" />
+        <option value="$PROJECT_DIR$/templates/home.tpl" />
+        <option value="$PROJECT_DIR$/templates/article.tpl" />
+        <option value="$PROJECT_DIR$/templates/common/article.tpl" />
+        <option value="$PROJECT_DIR$/templates/profile.tpl" />
+        <option value="$PROJECT_DIR$/css/profile.css" />
         <option value="$PROJECT_DIR$/database/article.php" />
       </list>
     </option>
@@ -205,67 +186,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="upload" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="user_profile" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="proto" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="proto" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="upload" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="proto" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="proto" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="proto" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="proto" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="database" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="proto" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="proto" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -325,49 +246,38 @@
     </task>
     <servers />
   </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="CSS Styles" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991454" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21709532" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991454" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991454" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-    </layout>
-    <layout-to-restore>
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991454" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="CSS Styles" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991454" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21709532" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991454" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991454" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991454" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-    </layout-to-restore>
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+    </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -390,30 +300,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/templates/notifications.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9359699">
-          <caret line="336" column="10" selection-start-line="336" selection-start-column="10" selection-end-line="336" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/pending_articles.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9359699">
-          <caret line="289" column="10" selection-start-line="289" selection-start-column="10" selection-end-line="289" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/profile.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9359699">
-          <caret line="271" column="0" selection-start-line="271" selection-start-column="0" selection-end-line="271" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/reported_articles.tpl">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.9359699">
@@ -510,14 +396,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/profile.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.16007534">
-          <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/reported_articles.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.16007534">
@@ -546,22 +424,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.12806027">
           <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/common/header.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33709982">
-          <caret line="23" column="51" selection-start-line="23" selection-start-column="51" selection-end-line="23" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/account.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.27091634">
-          <caret line="8" column="43" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="43" />
           <folding />
         </state>
       </provider>
@@ -678,14 +540,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/article.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2881356">
-          <caret line="9" column="30" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/upload/user_profile/demo-user.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -699,26 +553,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5762712">
-          <caret line="174" column="1" selection-start-line="174" selection-start-column="1" selection-end-line="174" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/database/updates.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.6481149">
           <caret line="54" column="16" selection-start-line="54" selection-start-column="16" selection-end-line="54" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/queries.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8473968">
-          <caret line="36" column="106" selection-start-line="36" selection-start-column="106" selection-end-line="36" selection-end-column="106" />
           <folding />
         </state>
       </provider>
@@ -739,82 +577,145 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/home.php">
+    <entry file="file://$PROJECT_DIR$/database/inserts.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.48022598">
-          <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/article.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.75141245">
-          <caret line="49" column="32" selection-start-line="49" selection-start-column="32" selection-end-line="50" selection-end-column="154" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/home.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.43879473">
-          <caret line="442" column="31" selection-start-line="442" selection-start-column="31" selection-end-line="442" selection-end-column="31" />
-          <folding>
-            <element signature="e#128#3955#0#HTML" expanded="false" />
-            <element signature="e#3969#6565#0#HTML" expanded="false" />
-            <element signature="e#6829#10483#0#HTML" expanded="false" />
-            <element signature="e#10497#14153#0#HTML" expanded="false" />
-            <element signature="e#14167#17823#0#HTML" expanded="false" />
-            <element signature="e#17848#28925#0#HTML" expanded="false" />
-            <element signature="e#17878#21545#0#HTML" expanded="false" />
-            <element signature="e#21559#25228#0#HTML" expanded="false" />
-            <element signature="e#25242#28910#0#HTML" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/list_article.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.807693">
-          <caret line="44" column="50" selection-start-line="44" selection-start-column="50" selection-end-line="44" selection-end-column="50" />
+        <state vertical-scroll-proportion="0.6947935">
+          <caret line="521" column="77" selection-start-line="521" selection-start-column="77" selection-end-line="521" selection-end-column="77" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/database/create.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="1.8617594">
           <caret line="94" column="30" selection-start-line="94" selection-start-column="30" selection-end-line="94" selection-end-column="30" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/inserts.sql">
+    <entry file="file://$PROJECT_DIR$/templates/add_article.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33266932">
+          <caret line="39" column="45" selection-start-line="39" selection-start-column="45" selection-end-line="39" selection-end-column="92" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2988048">
+          <caret line="171" column="0" selection-start-line="171" selection-start-column="0" selection-end-line="171" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/account.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.4896421">
+          <caret line="8" column="43" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/common/header.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33266932">
+          <caret line="201" column="23" selection-start-line="201" selection-start-column="16" selection-end-line="201" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.06403013">
+          <caret line="2" column="52" selection-start-line="2" selection-start-column="52" selection-end-line="2" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/read_article.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.096045196">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/read_article.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.12806027">
+          <caret line="4" column="25" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/home.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="2.1205273">
+          <caret line="448" column="26" selection-start-line="448" selection-start-column="26" selection-end-line="448" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/profile.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.22410546">
+          <caret line="7" column="2" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/profile.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6374502">
+          <caret line="83" column="0" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/profile.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.22410546">
+          <caret line="7" column="37" selection-start-line="7" selection-start-column="37" selection-end-line="7" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/common/article.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.38418078">
+          <caret line="12" column="30" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/queries.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="312" column="71" selection-start-line="312" selection-start-column="71" selection-end-line="312" selection-end-column="71" />
+          <caret line="36" column="106" selection-start-line="36" selection-start-column="106" selection-end-line="36" selection-end-column="106" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/database/article.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.42372882">
-          <caret line="80" column="0" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.7758945">
+          <caret line="115" column="8" selection-start-line="115" selection-start-column="8" selection-end-line="115" selection-end-column="8" />
           <folding>
-            <marker date="1492566079930" expanded="true" signature="94:107" placeholder="SELECT * FRO... " />
-            <marker date="1492566079930" expanded="true" signature="94:121" placeholder="SELECT * FRO... article" />
-            <marker date="1492566079930" expanded="true" signature="94:122" placeholder="SELECT * FRO... article" />
-            <marker date="1492566079930" expanded="true" signature="94:124" placeholder="SELECT * FRO... article" />
-            <marker date="1492566079930" expanded="true" signature="94:150" placeholder="SELECT * FRO... Article" />
-            <marker date="1492566079930" expanded="true" signature="296:1117" placeholder="SELECT publi... article" />
-            <marker date="1492566079930" expanded="true" signature="296:1212" placeholder="SELECT publi... article" />
-            <marker date="1492566079930" expanded="true" signature="296:1220" placeholder="SELECT publi... article" />
-            <marker date="1492566079930" expanded="true" signature="1398:1577" placeholder="SELECT COUNT... rating" />
-            <marker date="1492566079930" expanded="true" signature="1763:1945" placeholder="SELECT COUNT... article" />
-            <marker date="1492566079930" expanded="true" signature="2231:3120" placeholder="SELECT publi... article" />
-            <marker date="1492566079930" expanded="true" signature="3229:3408" placeholder="SELECT COUNT... rating" />
-            <marker date="1492566079930" expanded="true" signature="3578:3760" placeholder="SELECT COUNT... rating" />
+            <marker date="1492573308399" expanded="true" signature="94:107" placeholder="SELECT * FRO... " />
+            <marker date="1492573308399" expanded="true" signature="94:121" placeholder="SELECT * FRO... article" />
+            <marker date="1492573308399" expanded="true" signature="94:122" placeholder="SELECT * FRO... article" />
+            <marker date="1492573308399" expanded="true" signature="94:124" placeholder="SELECT * FRO... article" />
+            <marker date="1492573308399" expanded="true" signature="94:150" placeholder="SELECT * FRO... Article" />
+            <marker date="1492573308399" expanded="true" signature="296:1186" placeholder="SELECT publi... article" />
+            <marker date="1492573308399" expanded="true" signature="296:1281" placeholder="SELECT publi... article" />
+            <marker date="1492573308399" expanded="true" signature="296:1289" placeholder="SELECT publi... article" />
+            <marker date="1492573308399" expanded="true" signature="1467:1646" placeholder="SELECT COUNT... rating" />
+            <marker date="1492573308399" expanded="true" signature="1832:2014" placeholder="SELECT COUNT... article" />
+            <marker date="1492573308399" expanded="true" signature="2300:3258" placeholder="SELECT publi... article" />
+            <marker date="1492573308399" expanded="true" signature="3367:3546" placeholder="SELECT COUNT... rating" />
+            <marker date="1492573308399" expanded="true" signature="3716:3898" placeholder="SELECT COUNT... rating" />
+            <marker date="1492573308399" expanded="true" signature="4158:5116" placeholder="SELECT publi... article" />
           </folding>
         </state>
       </provider>

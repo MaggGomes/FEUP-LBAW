@@ -6,7 +6,7 @@
             <div class="profiles col-xs-12 col-sm-10 col-sm-push-1 col-md-8 col-md-push-2 thumbnail">
                 <div class="col-xs-12 col-sm-3">
                     <div class="row">
-                        <img src="../upload/user_profile/demo-user.png" class="img-responsive" />
+                        <img src="{$BASE_URL}upload/user_profile/demo-user.png" class="img-responsive" />
                     </div>
                 </div>
                 <div class="col-sm-9 profile-description">
@@ -47,7 +47,7 @@
                                                 <img class="img-circle" src="../upload/user_profile/demo-user.png" />
                                             </div>
                                             <div class="article-publisher">
-                                                <a href="../pages/article.php"><h4 class="article-author">Roy Larsson</h4></a>
+                                                <a href="../pages/read_article.php"><h4 class="article-author">Roy Larsson</h4></a>
                                                 <small>March 1</small>
                                             </div>
                                         </div>
@@ -105,7 +105,7 @@
                                                 <img class="img-circle" src="../upload/user_profile/demo-user.png" />
                                             </div>
                                             <div class="article-publisher">
-                                                <a href="../pages/article.php"><h4 class="article-author">Roy Larsson</h4></a>
+                                                <a href="../pages/read_article.php"><h4 class="article-author">Roy Larsson</h4></a>
                                                 <small>March 1</small>
                                             </div>
                                         </div>
@@ -163,7 +163,7 @@
                                                 <img class="img-circle" src="../upload/user_profile/demo-user.png" />
                                             </div>
                                             <div class="article-publisher">
-                                                <a href="../pages/article.php"><h4 class="article-author">Roy Larsson</h4></a>
+                                                <a href="../pages/read_article.php"><h4 class="article-author">Roy Larsson</h4></a>
                                                 <small>March 1</small>
                                             </div>
                                         </div>
@@ -221,7 +221,7 @@
                                                 <img class="img-circle" src="../upload/user_profile/demo-user.png" />
                                             </div>
                                             <div class="article-publisher">
-                                                <a href="../pages/article.php"><h4 class="article-author">Roy Larsson</h4></a>
+                                                <a href="../pages/read_article.php"><h4 class="article-author">Roy Larsson</h4></a>
                                                 <small>March 1</small>
                                             </div>
                                         </div>

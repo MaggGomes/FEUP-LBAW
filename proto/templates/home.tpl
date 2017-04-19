@@ -17,7 +17,7 @@
                                             <img class="img-circle" src="../upload/user_profile/demo-user.png" />
                                         </div>
                                         <div class="article-publisher">
-                                            <a href="../pages/article.php"><h4 class="article-author">Clark Muller</h4></a>
+                                            <a href="../pages/read_article.php"><h4 class="article-author">Clark Muller</h4></a>
                                             <small>March 1</small>
                                         </div>
                                     </div>
@@ -116,7 +116,7 @@
                                             <img class="img-circle" src="../upload/user_profile/demo-user.png" />
                                         </div>
                                         <div class="article-publisher">
-                                            <a href="../pages/article.php"><h4 class="article-author">Clark Muller</h4></a>
+                                            <a href="../pages/read_article.php"><h4 class="article-author">Clark Muller</h4></a>
                                             <small>March 1</small>
                                         </div>
                                     </div>
@@ -170,7 +170,7 @@
                                             <img class="img-circle" src="../upload/user_profile/demo-user.png" />
                                         </div>
                                         <div class="article-publisher">
-                                            <a href="../pages/article.php"><h4 class="article-author">Clark Muller</h4></a>
+                                            <a href="../pages/read_article.php"><h4 class="article-author">Clark Muller</h4></a>
                                             <small>March 1</small>
                                         </div>
                                     </div>
@@ -224,7 +224,7 @@
                                             <img class="img-circle" src="../upload/user_profile/demo-user.png" />
                                         </div>
                                         <div class="article-publisher">
-                                            <a href="../pages/article.php"><h4 class="article-author">Clark Muller</h4></a>
+                                            <a href="../pages/read_article.php"><h4 class="article-author">Clark Muller</h4></a>
                                             <small>March 1</small>
                                         </div>
                                     </div>
@@ -280,7 +280,7 @@
                                             <img class="img-circle" src="../upload/user_profile/demo-user.png" />
                                         </div>
                                         <div class="article-publisher">
-                                            <a href="../pages/article.php"><h4 class="article-author">Clark Muller</h4></a>
+                                            <a href="../pages/read_article.php"><h4 class="article-author">Clark Muller</h4></a>
                                             <small>March 1</small>
                                         </div>
                                     </div>
@@ -334,7 +334,7 @@
                                             <img class="img-circle" src="../upload/user_profile/demo-user.png" />
                                         </div>
                                         <div class="article-publisher">
-                                            <a href="../pages/article.php"><h4 class="article-author">Clark Muller</h4></a>
+                                            <a href="../pages/read_article.php"><h4 class="article-author">Clark Muller</h4></a>
                                             <small>March 1</small>
                                         </div>
                                     </div>
@@ -388,7 +388,7 @@
                                             <img class="img-circle" src="../upload/user_profile/demo-user.png" />
                                         </div>
                                         <div class="article-publisher">
-                                            <a href="../pages/article.php"><h4 class="article-author">Clark Muller</h4></a>
+                                            <a href="../pages/read_article.php"><h4 class="article-author">Clark Muller</h4></a>
                                             <small>March 1</small>
                                         </div>
                                     </div>
@@ -433,22 +433,28 @@
         </div>
     </div>
 
-    {foreach from=$articles key=category item=article}
+    {foreach from=$articles key=category item=value}
+        {$firstArticles = array_slice($value, 0, 3)}
+        {$lastArticles = array_slice($value, 3, 3)}
 
         <div class="container">
             <div class="row container-category-title">
                 <h3 class="col-md-12">{$category} <span class="glyphicon glyphicon-menu-down"></span></h3>
             </div>
             <div class="row">
-                {for $i=0 to 2}
-                    {include file='list_article.tpl'}
-                {/for}
+                {foreach $firstArticles as $article}
+                    <article class="col-md-4 article-text">
+                        {include file='common/article.tpl'}
+                    </article>
+                {/foreach}
             </div>
 
             <div class="row">
-                {for $i=3 to 5}
-                    {include file='list_article.tpl'}
-                {/for}
+                {foreach $lastArticles as $article}
+                    <article class="col-md-4 article-text">
+                        {include file='common/article.tpl'}
+                    </article>
+                {/foreach}
             </div>
         </div>
 

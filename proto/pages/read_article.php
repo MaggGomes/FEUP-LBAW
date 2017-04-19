@@ -14,5 +14,5 @@
 
     $smarty->assign('article', $article);
     $smarty->assign('cssStyle', $cssStyle);
-    $smarty->display('article.tpl');
+    $smarty->display('read_article.tpl');
 ?>

@@ -133,7 +133,7 @@
                                                     <img class="img-circle" src="../upload/user_profile/demo-user.png" />
                                                 </div>
                                                 <div class="article-publisher">
-                                                    <a href="../pages/article.php"><h4 class="article-author">Clark Muller</h4></a>
+                                                    <a href="../pages/read_article.php"><h4 class="article-author">Clark Muller</h4></a>
                                                     <small>March 1</small>
                                                 </div>
                                             </div>
@@ -187,7 +187,7 @@
                                                     <img class="img-circle" src="../upload/user_profile/demo-user.png" />
                                                 </div>
                                                 <div class="article-publisher">
-                                                    <a href="../pages/article.php"><h4 class="article-author">Clark Muller</h4></a>
+                                                    <a href="../pages/read_article.php"><h4 class="article-author">Clark Muller</h4></a>
                                                     <small>March 1</small>
                                                 </div>
                                             </div>
@@ -241,7 +241,7 @@
                                                     <img class="img-circle" src="../upload/user_profile/demo-user.png" />
                                                 </div>
                                                 <div class="article-publisher">
-                                                    <a href="../pages/article.php"><h4 class="article-author">Clark Muller</h4></a>
+                                                    <a href="../pages/read_article.php"><h4 class="article-author">Clark Muller</h4></a>
                                                     <small>March 1</small>
                                                 </div>
                                             </div>
@@ -295,7 +295,7 @@
                                                     <img class="img-circle" src="../upload/user_profile/demo-user.png" />
                                                 </div>
                                                 <div class="article-publisher">
-                                                    <a href="../pages/article.php"><h4 class="article-author">Clark Muller</h4></a>
+                                                    <a href="../pages/read_article.php"><h4 class="article-author">Clark Muller</h4></a>
                                                     <small>March 1</small>
                                                 </div>
                                             </div>
@@ -349,7 +349,7 @@
                                                     <img class="img-circle" src="../upload/user_profile/demo-user.png" />
                                                 </div>
                                                 <div class="article-publisher">
-                                                    <a href="../pages/article.php"><h4 class="article-author">Clark Muller</h4></a>
+                                                    <a href="../pages/read_article.php"><h4 class="article-author">Clark Muller</h4></a>
                                                     <small>March 1</small>
                                                 </div>
                                             </div>
