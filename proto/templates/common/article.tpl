@@ -52,9 +52,9 @@
         </div>
         <div class="row article-footer-lower">
             <div class="col-xs-5">
-                <a href="#"><span class="glyphicon glyphicon-thumbs-up"></span><span
+                <a href="#" class="thumbs-up"><span class="glyphicon glyphicon-thumbs-up"></span><span
                             class="glyph-text"> {$article.upvotes} &nbsp&nbsp</span></a>
-                <a href="#"><span class="glyphicon glyphicon-thumbs-down"></span><span
+                <a href="#" class="thumbs-down"><span class="glyphicon glyphicon-thumbs-down"></span><span
                             class="glyph-text"> {$article.downvotes}</span></a>
             </div>
             <div class="col-xs-7">
