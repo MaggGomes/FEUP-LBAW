@@ -52,10 +52,10 @@
         </div>
         <div class="row article-footer-lower">
             <div class="col-xs-5">
-                <a href="#" class="thumbs-up" data-value="{$article.id}"><span class="glyphicon glyphicon-thumbs-up"></span><span
-                            class="glyph-text"> {$article.upvotes} &nbsp&nbsp</span></a>
-                <a href="#" class="thumbs-down" data-value="{$article.id}"><span class="glyphicon glyphicon-thumbs-down"></span><span
-                            class="glyph-text"> {$article.downvotes}</span></a>
+                <div class="thumbs-up small-text" data-value="{$article.id}"><span class="glyphicon glyphicon-thumbs-up"></span><span
+                            class="glyph-text"> {$article.upvotes} &nbsp&nbsp</span></div>
+                <div class="thumbs-down small-text" data-value="{$article.id}"><span class="glyphicon glyphicon-thumbs-down"></span><span
+                            class="glyph-text"> {$article.downvotes}</span></div>
             </div>
             <div class="col-xs-7">
                 <div class="pull-right">

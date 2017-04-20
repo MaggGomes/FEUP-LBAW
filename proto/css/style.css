@@ -244,6 +244,15 @@ body.modal-open {
     padding-right: 0 !important;
 }
 
+.thumbs-up, .thumbs-down {
+    display: inline-block;
+}
+
+.thumbs-up:hover, .thumbs-down:hover {
+    color: #039be5;
+    cursor: pointer;
+}
+
 /* button's styling */
 
 .btn-default, .btn-primary, .btn-success, .btn-info {
