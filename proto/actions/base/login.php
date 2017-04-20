@@ -1,11 +1,10 @@
 <?php
-	include_once('../../config/init.php');
+	include_once("../../config/init.php");
+	include_once("../../database/user.php");
 	$email = strip_tags($_POST["email"]);
 	$password = $_POST["password"];
 
-	$users = $conn->prepare("SELECT * FROM public.Users WHERE email = ?");
-	$users->execute(array($email));
-	$result = $users->fetch();
+	$result = getUser($email);
 	if(!$result){
 	   $error = "There is no account with this email";
 	   die ($error);
@@ -20,5 +19,5 @@
 	$_SESSION["id"] = $result["id"];
 	$_SESSION["username"] = $result["name"];
 
-	header('Location: ../../pages/home.php');
+	header("Location: ../../pages/home.php");
  ?>
