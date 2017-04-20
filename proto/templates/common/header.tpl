@@ -41,6 +41,39 @@
   <!-- scripts for login with google account-->
   <script src="https://apis.google.com/js/platform.js" async defer></script>
   <meta name="google-signin-client_id" content="702080112341-73p7rf48svsdsjjggajealjjcsa4njcm.apps.googleusercontent.com">
+
+  <!--TESTES LOGIN GOOGLE REVER-->
+
+  <script src="https://apis.google.com/js/api:client.js"></script>
+
+  <script>
+    var googleUser = {};
+    var startGoogleApp = function() {
+      gapi.load('auth2', function() {
+        // Retrieve the singleton for the GoogleAuth library and set up the client.
+        auth2 = gapi.auth2.init({
+          client_id: '702080112341-73p7rf48svsdsjjggajealjjcsa4njcm.apps.googleusercontent.com',
+          cookiepolicy: 'single_host_origin',
+          // Request scopes in addition to 'profile' and 'email'
+          //scope: 'additional_scope'
+        });
+        attachSignin(document.getElementById('google_login'));
+      });
+    };
+
+    function attachSignin(element) {
+      console.log(element.id);
+      auth2.attachClickHandler(element, {},
+        function(googleUser) {
+          console.log(googleUser.getBasicProfile().getName());
+          console.log(googleUser.getBasicProfile().getEmail());
+        },
+        function(error) {
+
+        });
+    }
+  </script>
+
 </head>
 
 <body>
@@ -70,14 +103,14 @@
         <li id="menu-user-dropdown" class="dropdown">
           <a class="dropdown-toggle" href="#" data-toggle="dropdown"><span class="glyphicon glyphicon-user menu-top"></span></a>
           <ul class="dropdown-menu collapse">
-			  {if !$USERNAME}
-            	<li><a href="#signin" data-toggle="modal"><span class="fa fa-user-o"> &nbsp;Sign In</a></li>
-				<li><a href="#register" data-toggle="modal"><span class="fa fa-sign-in"> &nbsp;Register</a></li>
-			  {else}
-            	<li><a href="../pages/profile.php" data-toggle="modal"><span class="fa fa-user-o"> &nbsp;My Profile</a></li>
-                <li><a href="../pages/add_article.php" data-toggle="modal"><span class="fa fa-pencil"> &nbsp;Create Article</a></li>
-                <li><a href="../actions/base/logout.php" data-toggle="modal"><span class="fa fa-sign-out"> &nbsp;Log out</a></li>
-			  {/if}
+            {if !$USERNAME}
+            <li><a href="#signin" data-toggle="modal"><span class="fa fa-user-o"> &nbsp;Sign In</a></li>
+            <li><a href="#register" data-toggle="modal"><span class="fa fa-sign-in"> &nbsp;Register</a></li>
+            {else}
+            <li><a href="../pages/profile.php" data-toggle="modal"><span class="fa fa-user-o"> &nbsp;My Profile</a></li>
+            <li><a href="../pages/add_article.php" data-toggle="modal"><span class="fa fa-pencil"> &nbsp;Create Article</a></li>
+            <li><a href="../actions/base/logout.php" data-toggle="modal"><span class="fa fa-sign-out"> &nbsp;Log out</a></li>
+            {/if}
           </ul>
         </li>
       </ul>
@@ -116,65 +149,43 @@
 
   <div id="signin" class="modal fade" tabindex="-1" role="dialog">
     <div class="modal-dialog modal-sm" role="document">
-  	<div class="modal-content">
-  	  <div class="modal-body">
-  		<div class="modal-social-icons">
-  		  <button class="btn btn-default facebook"><i class="fa fa-facebook modal-icons"></i> Sign In with Facebook </button>
-  		  <!--button class="btn btn-default google"><img src="../images/google-logo.png">Sign In with Google</button>
-  				  <div class="g-signin2 btn btn-default google" data-onsuccess="onSignIn"></div-->
-  		  <div id="my-signin2" class="btn btn-default"></div>
-  		  <script>
-  			function onSuccess(googleUser) {
-  			  console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
-  			}
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="modal-social-icons">
+            <button class="btn btn-default facebook"><i class="fa fa-facebook modal-icons"></i> Sign In with Facebook </button>
+            <button class="btn btn-default google" id="google_login" data-dismiss="modal"><img src="../images/google-logo.png">Sign In with Google</button>
+            <script>
+              startGoogleApp();
+            </script>
 
-  			function onFailure(error) {
-  			  console.log(error);
-  			}
+            <button class="btn btn-default sigarra"><i class="fa fa-graduation-cap" aria-hidden="true"></i> Sign In with Sigarra U.Porto</button>
+          </div>
+          <div class="login-or">
+            <hr class="hr-or">
+            <span class="span-or">or</span>
+          </div>
+          <form action="../actions/base/login.php" method="post">
+            <div class="form-group has-feedback">
+              <input type="text" class="form-control" name="email" placeholder="E-mail address">
+              <span class="fa fa-envelope-o form-control-feedback"></span>
+            </div>
+            <div class="form-group has-feedback">
+              <input type="password" class="form-control" name="password" placeholder="Password">
+              <span class="fa fa-lock form-control-feedback"></span>
+            </div>
+            <input type="submit" class="btn btn-primary btn-submit-dialog" value="Sign In">
+          </form>
 
-  			function renderButton() {
-  			  gapi.signin2.render('my-signin2', {
-  				/*'scope': 'profile email',
-  				'width': 240,
-  				'height': 50,
-  				'longtitle': true,
-  				'theme': 'dark',
-  				'onsuccess': onSuccess,
-  				'onfailure': onFailure*/
-  			  });
-  			}
-  		  </script>
-
-  		  <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
-
-  		  <button class="btn btn-default sigarra"><i class="fa fa-graduation-cap" aria-hidden="true"></i> Sign In with Sigarra U.Porto</button>
-  		</div>
-  		<div class="login-or">
-  		  <hr class="hr-or">
-  		  <span class="span-or">or</span>
-  		</div>
-  		<form action="../actions/base/login.php" method="post">
-  		  <div class="form-group has-feedback">
-  			<input type="text" class="form-control" name="email" placeholder="E-mail address">
-  			<span class="fa fa-envelope-o form-control-feedback"></span>
-  		  </div>
-  		  <div class="form-group has-feedback">
-  			<input type="password" class="form-control" name="password" placeholder="Password">
-  			<span class="fa fa-lock form-control-feedback"></span>
-  		  </div>
-  		  <input type="submit" class="btn btn-primary btn-submit-dialog" value="Sign In">
-  		</form>
-
-  		<div class="remember-password">
-  		  <input type="checkbox" checked="checked"> Remember me
-  		  <a href="#" class="pull-right">Forgot password?</a>
-  		</div>
-  	  </div>
-  	  <div class="modal-footer">
-  		<button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
-  		<button type="button" class="btn btn-default">Register</button>
-  	  </div>
-  	</div>
+          <div class="remember-password">
+            <input type="checkbox" checked="checked"> Remember me
+            <a href="#" class="pull-right">Forgot password?</a>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-default">Register</button>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -183,44 +194,44 @@
 
   <div id="register" class="modal fade" tabindex="-1" role="dialog">
     <div class="modal-dialog modal-sm" role="document">
-  	<div class="modal-content">
-  	  <div class="modal-body">
-  		<div class="modal-social-icons">
-  		  <button class="btn btn-default facebook"><i class="fa fa-facebook modal-icons"></i> Continue with Facebook </button>
-  		  <button class="btn btn-default google"><img src="../images/google-logo.png">Continue with Google</button>
-  		  <button class="btn btn-default sigarra"><i class="fa fa-graduation-cap" aria-hidden="true"></i> Continue with Sigarra U.Porto</button>
-  		</div>
-  		<div class="login-or">
-  		  <hr class="hr-or">
-  		  <span class="span-or">or</span>
-  		</div>
-  		<form action="../actions/base/register.php" method="post">
-  		  <div class="form-group">
-  			<div class="form-group has-feedback">
-  			  <input type="text" class="form-control" placeholder="Name" name="name">
-  			  <span class="fa fa-user-o form-control-feedback"></span>
-  			</div>
-  			<div class="form-group has-feedback">
-  			  <input type="email" class="form-control" placeholder="E-mail address" name="email">
-  			  <span class="fa fa-envelope-o form-control-feedback"></span>
-  			</div>
-  			<div class="form-group has-feedback">
-  			  <input type="password" class="form-control" placeholder="Password" name="password">
-  			  <span class="fa fa-lock form-control-feedback"></span>
-  			</div>
-  			<div class="form-group has-feedback">
-  			  <input type="password" class="form-control" placeholder="Confirm Password">
-  			  <span class="fa fa-lock form-control-feedback"></span>
-  			</div>
-  		  </div>
-  		  <input type="submit" class="btn btn-primary btn-submit-dialog" value="Register">
-  		</form>
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="modal-social-icons">
+            <button class="btn btn-default facebook"><i class="fa fa-facebook modal-icons"></i> Continue with Facebook </button>
+            <button class="btn btn-default google"><img src="../images/google-logo.png">Continue with Google</button>
+            <button class="btn btn-default sigarra"><i class="fa fa-graduation-cap" aria-hidden="true"></i> Continue with Sigarra U.Porto</button>
+          </div>
+          <div class="login-or">
+            <hr class="hr-or">
+            <span class="span-or">or</span>
+          </div>
+          <form action="../actions/base/register.php" method="post">
+            <div class="form-group">
+              <div class="form-group has-feedback">
+                <input type="text" class="form-control" placeholder="Name" name="name">
+                <span class="fa fa-user-o form-control-feedback"></span>
+              </div>
+              <div class="form-group has-feedback">
+                <input type="email" class="form-control" placeholder="E-mail address" name="email">
+                <span class="fa fa-envelope-o form-control-feedback"></span>
+              </div>
+              <div class="form-group has-feedback">
+                <input type="password" class="form-control" placeholder="Password" name="password">
+                <span class="fa fa-lock form-control-feedback"></span>
+              </div>
+              <div class="form-group has-feedback">
+                <input type="password" class="form-control" placeholder="Confirm Password">
+                <span class="fa fa-lock form-control-feedback"></span>
+              </div>
+            </div>
+            <input type="submit" class="btn btn-primary btn-submit-dialog" value="Register">
+          </form>
 
-  	  </div>
-  	  <div class="modal-footer">
-  		<button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
-  	  </div>
-  	</div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
+        </div>
+      </div>
     </div>
   </div>
 

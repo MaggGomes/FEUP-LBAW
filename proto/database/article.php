@@ -117,4 +117,62 @@
         $stmt->execute();
         return $stmt->fetchAll();
     }
+
+
+    function getDailyTopArticle(){
+
+        global $conn;
+
+        $stmt = $conn->prepare("SELECT idArticle FROM rating
+                                WHERE date_part('day', age(localtimestamp, date)) <= 1
+                                GROUP BY idArticle
+                                ORDER BY SUM(value) DESC
+                                LIMIT 1");
+        $stmt->execute();
+        $result = $stmt->fetchAll();
+
+        $idarticle = $result[0]['idarticle'];
+
+        $stmt = $conn->prepare("SELECT public.article.idArticle AS id,
+                                public.article.title AS title,
+                                public.article.abstract AS abstract,
+                                public.article.content AS content,
+                                public.article.date AS articledate,
+                                public.article.category AS category,
+                                public.image.url AS articleimage,
+                                public.users.id AS userid,
+                                public.users.name AS username,
+                                public.users.photoURL AS userimage
+                                FROM public.article
+                                LEFT JOIN public.image ON (public.article.idArticle = public.image.idArticle)
+                                LEFT JOIN public.users ON (public.article.idUser = public.users.id)
+                                WHERE public.article.idArticle = ?");
+
+        $stmt->execute(array($idarticle));
+
+        $article = $stmt->fetch();
+
+
+        $stmt = $conn->prepare("SELECT COUNT(*) AS upvotes
+                                    FROM public.rating
+                                    WHERE public.rating.idArticle = ? AND public.rating.value = 1");
+
+        $stmt->execute(array($article['id']));
+        $result = $stmt->fetch();
+
+        $article['upvotes'] = $result['upvotes'];
+
+        $stmt = $conn->prepare("SELECT COUNT(*) AS downvotes
+                                    FROM public.rating
+                                    WHERE public.rating.idArticle = ? AND public.rating.value = -1");
+
+        $stmt->execute(array($article['id']));
+        $result = $stmt->fetch();
+
+        $article['downvotes'] = $result['downvotes'];
+
+        return $article;
+    }
+
+
 ?>

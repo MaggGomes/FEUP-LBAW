@@ -17,51 +17,75 @@ $(document).ready(function() {
         }
     });
 
+
+
+    // TODO - CORRIGIR - VERSAO QUE VERIFICA SE USER ESTÁ LOGADO
+    /*$(".thumbs-up").click(function() {
+        var rating;
+
+        $.getJSON("../api/session_status.php", function(log) {
+            if (log.logged) { // User is logged
+                $.ajax({
+                    url: "../api/update_rating.php",
+                    type: "post",
+                    data: {
+                        value: 1,
+                        date: '04/05/17',
+                        idArticle: $(this).data('value')
+                    },
+                    success: function(result) {
+                        rating = result;
+                    },
+
+                    async: false
+                });
+
+                $(this).html('<span class="glyphicon glyphicon-thumbs-up"></span><span class="glyph-text"> '+rating+' &nbsp&nbsp</span>');
+            } else
+                $("#signin").show();
+
+        });
+    });*/
+
+    // Updates article upvotes
     $(".thumbs-up").click(function() {
-        $.getJSON("../scripts/session_status.php", function(result) {
-            if (result.logged) // User is logged
-                $("#modal-uploadrestaurantphoto").toggle("show");
-            else
-                $("#modal-login").show();
-
-        });
-    });
-
-    $(".thumbs-down").click(function() {
-        $.getJSON("../scripts/session_status.php", function(result) {
-            if (result.logged) // User is logged
-                $("#modal-uploadrestaurantphoto").toggle("show");
-            else
-                $("#modal-login").show();
-
-        });
-    });
-
-    function userAv(user) {
-        var tempUser = user;
+        var rating;
         $.ajax({
-            url: "../scripts/valid_user.php",
-            type: "get",
+            url: "../api/update_rating.php",
+            type: "post",
             data: {
-                username: tempUser
+                value: 1,
+                date: '04/05/17',
+                idArticle: $(this).data('value')
             },
-            success: function (temp) {
-                if ($("#reg-user").val() == null || $("#reg-user").val() == "") {
-                    bUser = false;
-                    $("#reg-user").css("border", "1px solid #ccc");
-                } else if (temp == "true" && /^([A-Za-z0-9]*)$/.test($("#reg-user").val()) && /^\S/.test($("#reg-user").val())) {
-                    bUser = true;
-                    $("#reg-user").css("border", "1px solid #3fa246");
-                } else {
-                    bUser = false;
-                    $("#reg-user").css("border", "1px solid #c21212");
-                }
+            success: function(result) {
+                rating = result;
             },
+
             async: false
         });
-    }
 
+        $(this).html('<span class="glyphicon glyphicon-thumbs-up"></span><span class="glyph-text"> '+rating+' &nbsp&nbsp</span>');
+    });
 
+    // Updates article downvotes
+    $(".thumbs-down").click(function() {
+        var rating;
+        $.ajax({
+            url: "../api/update_rating.php",
+            type: "post",
+            data: {
+                value: -1,
+                date: '04/05/17',
+                idArticle: $(this).data('value')
+            },
+            success: function(result) {
+                rating = result;
+            },
 
+            async: false
+        });
 
+        $(this).html('<span class="glyphicon glyphicon-thumbs-down"></span><span class="glyph-text"> '+rating+'</span>');
+    });
 });
