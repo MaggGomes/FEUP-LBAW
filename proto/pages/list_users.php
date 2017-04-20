@@ -4,8 +4,12 @@
 
 	try{
 		//TODO send the session id to check for permission
+		$permission = isAdministrator($_SESSION["id"]);
+		if(!$permission){
+			throw new Exception("You don't have access to this page");
+		}
 		$users = getAllUsers();
-	}catch(PDOException $e){
+	}catch(Exception $e){
 		die($e->getMessage());
 	}
 
