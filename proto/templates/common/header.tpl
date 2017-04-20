@@ -107,7 +107,7 @@
             <li><a href="#signin" data-toggle="modal"><span class="fa fa-user-o"> &nbsp;Sign In</a></li>
             <li><a href="#register" data-toggle="modal"><span class="fa fa-sign-in"> &nbsp;Register</a></li>
             {else}
-            <li><a href="../pages/profile.php" data-toggle="modal"><span class="fa fa-user-o"> &nbsp;My Profile</a></li>
+            <li><a href="../pages/account.php" data-toggle="modal"><span class="fa fa-user-o"> &nbsp;My Profile</a></li>
             <li><a href="../pages/add_article.php" data-toggle="modal"><span class="fa fa-pencil"> &nbsp;Create Article</a></li>
             <li><a href="../actions/base/logout.php" data-toggle="modal"><span class="fa fa-sign-out"> &nbsp;Log out</a></li>
             {/if}
@@ -133,7 +133,7 @@
     <div id="nav-bottom-container" class="container nav-bottom-container">
       <div class="collapse navbar-collapse nav-bottom">
         <ul class="nav navbar-nav">
-          <li><a href="../../pages/home.php">Home</a></li>
+          <li><a href="../pages/home.php">Home</a></li>
           <li><a href="#">Top Articles</a></li>
           <li><a href="#">World</a></li>
           <li><a href="#">Sports</a></li>

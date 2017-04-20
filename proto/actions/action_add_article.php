@@ -57,5 +57,6 @@
 		}
 	}
 
-	header('Location: ../../proto/pages/home.php');
+	$link = 'Location: ../pages/read_article.php?id=' . $idarticle;
+	header($link);
 ?>
