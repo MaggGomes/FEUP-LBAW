@@ -7,7 +7,7 @@
                 <div class="row container-category-title">
                     <h3 class="col-md-12">Highlighted <span class="glyphicon glyphicon-menu-down"></span></h3>
                 </div>
-                {$article = $dailyTopArticle}
+                {$article = $dailyTopArticle[0]}
                 {include file='common/article.tpl'}
             </article>
 

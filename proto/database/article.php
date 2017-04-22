@@ -135,12 +135,18 @@
             $numdays++;
         } while (count($result) < 7);
 
+        $article = array();
+        $i = 0;
+        foreach ($result as $selarticle) {
+            $idarticle = $result[$i]['idarticle'];
 
-        foreach ($result as $arrarticle) {
-            console_log($arrarticle['idarticle']);
+            $article[$i] = getArticleById($idarticle);
+
+            $i++;
+
         }
 
-        $idarticle = $result[0]['idarticle'];
+        /*$idarticle = $result[0]['idarticle'];
 
         $stmt = $conn->prepare("SELECT public.article.idArticle AS id,
                                 public.article.title AS title,
@@ -179,7 +185,7 @@
         $result = $stmt->fetch();
 
         $article['downvotes'] = $result['downvotes'];
-
+*/
         return $article;
     }
 
