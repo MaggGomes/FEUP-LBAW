@@ -55,7 +55,6 @@ $(document).ready(function() {
             type: "post",
             data: {
                 value: 1,
-                date: '04/05/17',
                 idArticle: $(this).data('value')
             },
             success: function(result) {
@@ -76,7 +75,6 @@ $(document).ready(function() {
             type: "post",
             data: {
                 value: -1,
-                date: '04/05/17',
                 idArticle: $(this).data('value')
             },
             success: function(result) {

@@ -1,10 +1,16 @@
 <?php
-
-    function createRating($value, $date, $idArticle, $idUser) {
+    function createRating($value, $idArticle, $idUser) {
         global $conn;
 
-        $stmt = $conn->prepare("INSERT INTO public.rating (value,date,idArticle,idUser) VALUES(?, ?, ?, ?)");
-        $stmt->execute(array($value, $date, $idArticle, $idUser));
+        $stmt = $conn->prepare("SELECT value FROM rating WHERE idArticle = ? AND idUser = ?");
+        $stmt->execute(array($idArticle, $idUser));
+
+        $result = $stmt->fetch();
+        $result = $result['value'];
+
+        $stmt = $conn->prepare("INSERT INTO public.rating (value,date,idArticle,idUser) VALUES(?, LOCALTIMESTAMP, ?, ?)");
+        $stmt->execute(array($value, $idArticle, $idUser));
+
     }
 
     function getRatingByArticleId($id){
