@@ -93,8 +93,10 @@
         <div class="navbar-brand" id="brand-title" href="#">scriba</div>
       </div>
 
+
+
       <ul class="nav navbar-nav menu-right navbar-right pull-right">
-        <li><a href="#"><span class="glyphicon glyphicon-search menu-top"></span></a></li>
+        <li><a href="#search"><span class="glyphicon glyphicon-search menu-top"></span></a></li>
         <li><a href="#"><span class="glyphicon glyphicon-bell menu-top"></span></a></li>
         <button class="navbar-toggle" data-toggle="collapse" data-target=".menu-user">
                 <span class="glyphicon glyphicon-user menu-top"></span>
@@ -255,4 +257,13 @@
         </div>
       </div>
     </div>
+  </div>
+
+  <!-- Menu Search bar -->
+  <div id="search">
+    <button type="button" class="close">×</button>
+    <form>
+      <input type="search" value="" placeholder="type keyword(s) here" />
+      <button type="submit" class="btn btn-primary">Search</button>
+    </form>
   </div>
