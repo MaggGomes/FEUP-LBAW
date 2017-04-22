@@ -123,13 +123,22 @@
 
         global $conn;
 
-        $stmt = $conn->prepare("SELECT idArticle FROM rating
-                                WHERE date_part('day', age(localtimestamp, date)) <= 1
-                                GROUP BY idArticle
-                                ORDER BY SUM(value) DESC
-                                LIMIT 1");
-        $stmt->execute();
-        $result = $stmt->fetchAll();
+        $numdays = 1;
+        do {
+            $stmt = $conn->prepare("SELECT idArticle FROM rating
+                                    WHERE date_part('day', age(localtimestamp, date)) <= $numdays
+                                    GROUP BY idArticle
+                                    ORDER BY SUM(value) DESC
+                                    LIMIT 7");
+            $stmt->execute();
+            $result = $stmt->fetchAll();
+            $numdays++;
+        } while (count($result) < 7);
+
+
+        foreach ($result as $arrarticle) {
+            console_log($arrarticle['idarticle']);
+        }
 
         $idarticle = $result[0]['idarticle'];
 
