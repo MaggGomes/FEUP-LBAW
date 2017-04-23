@@ -10,14 +10,14 @@
                     </div>
                     <div class="account-usertitle">
                         <div class="account-usertitle-name">
-                            <h3>Clark Muller</h3>
+                            <h3>{$info.name}</h3>
                         </div>
                         <div class="btn btn-primary btn-staff">
-                            Administrator
+                            {$info.permission}
                         </div>
                     </div>
                     <div class="account-presentation row">
-                        <div class="col-md-12" style="text-align: center"><span class="account-follow">88</span> Following &middot; <span class="account-follow">200</span> Followers</div>
+                        <div class="col-md-12" style="text-align: center"><span class="account-follow">{$info.following}</span> Following &middot; <span class="account-follow">{$info.followers}</span> Followers</div>
                     </div>
                     <div class="account-usermenu">
                         <ul class="nav">
@@ -82,11 +82,12 @@
                                         <i class="fa fa-line-chart"></i>
                                         Statistics </a>
                                 </li>
-                                <li class="">
-                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseAdmin"><i class="fa fa-wrench"></i>Manage Scriba</a>
-                                </li>
+                                {if $info.permission != "Publisher"}
+                                    <li class="">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseAdmin"><i class="fa fa-wrench"></i>Manage Scriba</a>
+                                    </li>
 
-                                <div id="collapseAdmin" class="panel-collapse collapse account-menu-collapse">
+                                    <div id="collapseAdmin" class="panel-collapse collapse account-menu-collapse">
                                     <ul class="nav">
                                         <li class="">
                                             <a href="../pages/list_users.php">
@@ -115,6 +116,7 @@
                                         </li>
                                     </ul>
                                 </div>
+                                {/if}
                             </ul>
                     </div>
                 </div>
