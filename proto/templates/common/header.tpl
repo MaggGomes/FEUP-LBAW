@@ -65,8 +65,18 @@
       console.log(element.id);
       auth2.attachClickHandler(element, {},
         function(googleUser) {
-          console.log(googleUser.getBasicProfile().getName());
-          console.log(googleUser.getBasicProfile().getEmail());
+          $.ajax({
+            url: "",
+            type: "post",
+            data: {
+              username: googleUser.getBasicProfile().getName(),
+              email: googleUser.getBasicProfile().getEmail(),
+              imageUrl: googleUser.getBasicProfile().getImageUrl()
+            },
+            success: function(data){
+
+            }
+          })
         },
         function(error) {
 
