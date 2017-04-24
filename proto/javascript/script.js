@@ -34,9 +34,7 @@ $(document).ready(function() {
 
     /* Functions to work with menu search */
     (function(window) {
-
         'use strict';
-
 
         function classReg(className) {
             return new RegExp("(^|\\s+)" + className + "(\\s+|$)");
@@ -100,7 +98,7 @@ $(document).ready(function() {
 
 
     (function() {
-        var expandSearch = document.getElementById('expandsearch' ),
+        var expandSearch = document.getElementById('expandsearch'),
             input =expandSearch.querySelector('input.expandsearch-input'),
             ctrlClose = expandSearch.querySelector('span.expandsearch-close'),
             isOpen = isAnimating = false,
@@ -129,14 +127,16 @@ $(document).ready(function() {
                 isOpen = !isOpen;
             };
         // events
+        $('#search').click(toggleSearch);
+
         input.addEventListener('focus', toggleSearch );
         ctrlClose.addEventListener('click', toggleSearch );
         // esc key closes search overlay
         // keyboard navigation events
-        document.addEventListener('keydown', function( ev ) {
-            var keyCode = ev.keyCode || ev.which;
+        document.addEventListener('keydown', function(event) {
+            var keyCode = event.keyCode || event.which;
             if( keyCode === 27 && isOpen ) {
-                toggleSearch(ev);
+                toggleSearch(event);
             }
         } );
 
