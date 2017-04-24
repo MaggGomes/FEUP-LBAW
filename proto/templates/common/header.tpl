@@ -103,11 +103,11 @@
         <a class="navbar-brand" href="home.php">
           <img alt="Brand" src="../images/logo.png">
         </a>
-        <a href="home.php" class="navbar-brand" id="brand-title"href="home.php">scriba</a>
+        <a href="home.php" class="navbar-brand" id="brand-title">scriba</a>
       </div>
 
       <ul class="nav navbar-nav menu-right navbar-right pull-right">
-        <li><a href="#search"><span class="glyphicon glyphicon-search menu-top"></span></a></li>
+        <li><a href="#" id="search"><span class="glyphicon glyphicon-search menu-top"></span></a></li>
         <li><a href="#"><span class="glyphicon glyphicon-bell menu-top"></span></a></li>
         <button class="navbar-toggle" data-toggle="collapse" data-target=".menu-user">
                 <span class="glyphicon glyphicon-user menu-top"></span>
