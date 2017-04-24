@@ -101,12 +101,8 @@
         <a class="navbar-brand" href="home.php">
           <img alt="Brand" src="../images/logo.png">
         </a>
-        <div class="navbar-brand" id="brand-title" href="#">scriba</div>
+        <a href="home.php" class="navbar-brand" id="brand-title"href="home.php">scriba</a>
       </div>
-
-
-
-
 
       <ul class="nav navbar-nav menu-right navbar-right pull-right">
         <li><a href="#search"><span class="glyphicon glyphicon-search menu-top"></span></a></li>
@@ -132,13 +128,13 @@
 
       <!-- Menu search -->
       <div class="home-search">
-        <div id="morphsearch" class="morphsearch">
-          <form class="morphsearch-form">
-            <input class="morphsearch-input" type="search" placeholder="Search ..."/>
-            <button class="morphsearch-submit" type="submit">Search</button>
+        <div id="expandsearch" class="expandsearch">
+          <form class="expandsearch-form">
+            <input class="expandsearch-input" type="search" placeholder="Search ..."/>
+            <button class="expandsearch-submit" type="submit">Search</button>
           </form>
-          <div class="morphsearch-content"></div>
-          <span class="morphsearch-close"></span>
+          <div class="expandsearch-content"></div>
+          <span class="expandsearch-close"></span>
         </div>
         <div class="overlay"></div>
       </div>

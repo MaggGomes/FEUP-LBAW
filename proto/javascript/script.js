@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-    // Function to hide sub-menu with categorys
+    /* Function to hide sub-menu with categorys */
     $(window).scroll(function() {
 
         var windowWidth = $(window).width();
@@ -31,47 +31,47 @@ $(document).ready(function() {
         });
     });*/
 
-    ( function( window ) {
+
+    /* Functions to work with menu search */
+    (function(window) {
 
         'use strict';
 
 
-        function classReg( className ) {
+        function classReg(className) {
             return new RegExp("(^|\\s+)" + className + "(\\s+|$)");
         }
 
-// classList support for class management
-// altho to be fair, the api sucks because it won't accept multiple classes at once
         var hasClass, addClass, removeClass;
 
-        if ( 'classList' in document.documentElement ) {
-            hasClass = function( elem, c ) {
-                return elem.classList.contains( c );
+        if ('classList' in document.documentElement ) {
+            hasClass = function(elem, c) {
+                return elem.classList.contains(c);
             };
-            addClass = function( elem, c ) {
-                elem.classList.add( c );
+            addClass = function(elem, c) {
+                elem.classList.add(c);
             };
-            removeClass = function( elem, c ) {
-                elem.classList.remove( c );
+            removeClass = function(elem, c) {
+                elem.classList.remove(c);
             };
         }
         else {
-            hasClass = function( elem, c ) {
-                return classReg( c ).test( elem.className );
+            hasClass = function(elem, c) {
+                return classReg(c).test(elem.className);
             };
-            addClass = function( elem, c ) {
-                if ( !hasClass( elem, c ) ) {
+            addClass = function(elem, c) {
+                if (!hasClass(elem, c) ) {
                     elem.className = elem.className + ' ' + c;
                 }
             };
-            removeClass = function( elem, c ) {
+            removeClass = function(elem, c) {
                 elem.className = elem.className.replace( classReg( c ), ' ' );
             };
         }
 
-        function toggleClass( elem, c ) {
-            var fn = hasClass( elem, c ) ? removeClass : addClass;
-            fn( elem, c );
+        function toggleClass(elem, c) {
+            var fn = hasClass(elem, c) ? removeClass : addClass;
+            fn(elem, c);
         }
 
         var classie = {
@@ -87,16 +87,61 @@ $(document).ready(function() {
             toggle: toggleClass
         };
 
-// transport
-        if ( typeof define === 'function' && define.amd ) {
+        if (typeof define === 'function' && define.amd) {
             // AMD
-            define( classie );
+            define(classie);
         } else {
             // browser global
             window.classie = classie;
         }
 
-    })( window );
+    })(window);
+
+
+
+    (function() {
+        var expandSearch = document.getElementById('expandsearch' ),
+            input =expandSearch.querySelector('input.expandsearch-input'),
+            ctrlClose = expandSearch.querySelector('span.expandsearch-close'),
+            isOpen = isAnimating = false,
+
+            toggleSearch = function(evt) {
+                // return if open and the input gets focused
+                if(evt.type.toLowerCase() === 'focus' && isOpen) return false;
+                var offsets = expandSearch.getBoundingClientRect();
+                if(isOpen) {
+                    classie.remove(expandSearch, 'open' );
+
+                    if( input.value !== '' ) {
+                        setTimeout(function() {
+                            classie.add( expandSearch, 'hideInput' );
+                            setTimeout(function() {
+                                classie.remove( expandSearch, 'hideInput' );
+                                input.value = '';
+                            }, 300 );
+                        }, 500);
+                    }
+                    input.blur();
+                }
+                else {
+                    classie.add(expandSearch, 'open' );
+                }
+                isOpen = !isOpen;
+            };
+        // events
+        input.addEventListener('focus', toggleSearch );
+        ctrlClose.addEventListener('click', toggleSearch );
+        // esc key closes search overlay
+        // keyboard navigation events
+        document.addEventListener('keydown', function( ev ) {
+            var keyCode = ev.keyCode || ev.which;
+            if( keyCode === 27 && isOpen ) {
+                toggleSearch(ev);
+            }
+        } );
+
+    })();
+
 
 
 
