@@ -7,10 +7,13 @@
 	$users = $conn->prepare("SELECT * FROM public.Users WHERE email = ?");
 	$users->execute(array($email));
 	$result = $users->fetch();
+
 	if(!$result){
-	   $error = "There is no account with this email";
-	   die ($error);
-	}
+		$stmt = $conn->prepare("INSERT INTO public.Users (name, email, password) VALUES (?, ?, ?)"); //adiconar imagem de perfil
+		$stmt->execute(array($name, $email, $password));
+		$result = $stmt->fetch();
+		$result = getUser($email);
+	} 
 
 	$_SESSION["email"] = $email;
 	$_SESSION["id"] = $result["id"];

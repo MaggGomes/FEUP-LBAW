@@ -16,8 +16,8 @@
 	}
 
 	$_SESSION["email"] = $email;
-	$_SESSION["id"] = $result["id"];
 	$_SESSION["username"] = $result["name"];
+	$_SESSION["id"] = $result["id"];
 
 	header("Location: ../../pages/home.php");
  ?>
