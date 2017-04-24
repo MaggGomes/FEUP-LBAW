@@ -66,12 +66,13 @@
       auth2.attachClickHandler(element, {},
         function(googleUser) {
           $.ajax({
-            url: "",
+            url: "../actions/base/3rd_party_login.php",
             type: "post",
             data: {
               username: googleUser.getBasicProfile().getName(),
               email: googleUser.getBasicProfile().getEmail(),
-              imageUrl: googleUser.getBasicProfile().getImageUrl()
+              imageUrl: googleUser.getBasicProfile().getImageUrl(),
+              platform: "google"
             },
             success: function(data){
 
