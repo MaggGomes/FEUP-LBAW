@@ -213,3 +213,13 @@ $(document).ready(function() {
         $(this).html('<span class="glyphicon glyphicon-thumbs-down"></span><span class="glyph-text"> '+rating+'</span>');
     });
 });
+
+function searchByTitle(value){
+    if(value.length >= 3){
+        $.get("../api/searchTitleTag.php", {"name": value}, showResults);
+    }
+}
+
+function showResults(data){
+    console.log(data);
+}

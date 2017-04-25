@@ -132,7 +132,7 @@
       <div class="home-search">
         <div id="expandsearch" class="expandsearch">
           <form class="expandsearch-form">
-            <input class="expandsearch-input" type="search" placeholder="Search ..."/>
+            <input class="expandsearch-input" type="search" onkeyup="searchByTitle(this.value)" placeholder="Search ..." title="Mininum of 3 characters" required/>
             <button class="expandsearch-submit" type="submit">Search</button>
           </form>
           <div class="expandsearch-content"></div>
@@ -278,4 +278,3 @@
       </div>
     </div>
   </div>
-
