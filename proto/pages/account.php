@@ -10,10 +10,8 @@
     }catch(Exception $err){
         die($err);
     }
-    console_log($_SESSION["id"]);
-    console_log($info);
+    $smarty->assign('info', $info);
 
     $smarty->assign('cssStyle', $cssStyle);
-    $smarty->assign('info', $info);
     $smarty->display('account.tpl');
 ?>

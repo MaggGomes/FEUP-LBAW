@@ -68,7 +68,6 @@
           console.log(1);
           $.post({
             url: "../actions/base/3rd_party_login.php",
-            //type: "post",
             data: {
               username: googleUser.getBasicProfile().getName(),
               email: googleUser.getBasicProfile().getEmail(),
@@ -132,7 +131,7 @@
       <div class="home-search">
         <div id="expandsearch" class="expandsearch">
           <form class="expandsearch-form">
-            <input class="expandsearch-input" type="search" onkeyup="searchByTitle(this.value)" placeholder="Search ..." title="Mininum of 3 characters" required/>
+            <input class="expandsearch-input" type="search" placeholder="Search ..."/>
             <button class="expandsearch-submit" type="submit">Search</button>
           </form>
           <div class="expandsearch-content"></div>

@@ -5,5 +5,7 @@
     $search = $_GET["name"];
 
     $titles = getArticlesByTitle($search);
+
+    $smarty->assign('titles', $titles);
     echo json_encode($titles);
  ?>
