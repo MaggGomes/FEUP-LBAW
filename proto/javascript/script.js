@@ -207,44 +207,46 @@ $(document).ready(function() {
   $("#google_login").click(startGoogleApp());
 
   // Updates article upvotes
-  $(".thumbs-up").click(function() {
-    var rating;
-    $.ajax({
-      url: "../api/update_rating.php",
-      type: "post",
-      data: {
-        value: 1,
-        idArticle: $(this).data('value')
-      },
-      success: function(result) {
-        rating = result;
-      },
-
-      async: false
-    });
-
-    $(this).html('<span class="glyphicon glyphicon-thumbs-up"></span><span class="glyph-text"> ' + rating + ' &nbsp&nbsp</span>');
-  });
-
-  // Updates article downvotes
-  $(".thumbs-down").click(function() {
-    var rating;
-    $.ajax({
-      url: "../api/update_rating.php",
-      type: "post",
-      data: {
-        value: -1,
-        idArticle: $(this).data('value')
-      },
-      success: function(result) {
-        rating = result;
-      },
-
-      async: false
-    });
-
-    $(this).html('<span class="glyphicon glyphicon-thumbs-down"></span><span class="glyph-text"> ' + rating + '</span>');
-  });
+  // $(".thumbs-up").click(function() {
+  //   var rating;
+  //   console.log($(this));
+  //   console.log($(this).data('value'));
+  //   $.ajax({
+  //     url: "../api/update_rating.php",
+  //     type: "post",
+  //     data: {
+  //       value: 1,
+  //       idArticle: $(this).data('value')
+  //     },
+  //     success: function(result) {
+  //       rating = result;
+  //     },
+  //
+  //     async: false
+  //   });
+  //
+  //   $(this).html('<span class="glyphicon glyphicon-thumbs-up"></span><span class="glyph-text"> ' + rating + ' &nbsp&nbsp</span>');
+  // });
+  //
+  // // Updates article downvotes
+  // $(".thumbs-down").click(function() {
+  //   var rating;
+  //   $.ajax({
+  //     url: "../api/update_rating.php",
+  //     type: "post",
+  //     data: {
+  //       value: -1,
+  //       idArticle: $(this).data('value')
+  //     },
+  //     success: function(result) {
+  //       rating = result;
+  //     },
+  //
+  //     async: false
+  //   });
+  //
+  //   $(this).html('<span class="glyphicon glyphicon-thumbs-down"></span><span class="glyph-text"> ' + rating + '</span>');
+  // });
 });
 
 window.onload = function() {
@@ -263,9 +265,18 @@ function showResults(data) {
   console.log(data);
 }
 
-function changeRating(html, id, value){
-    console.log(html);
-    console.log(id);
-    console.log(value);
-    
+function changeRating(html, value, idSession){
+    if(idSession){
+        $.post("../api/update_rating.php", {
+            value:value,
+            idArticle: $(html).data('value')
+        },
+        function(result){
+            if(value > 0){
+                $(html).html('<span class="glyphicon glyphicon-thumbs-up"></span><span class="glyph-text"> ' + result + ' &nbsp&nbsp</span>');
+            }else{
+                $(html).html('<span class="glyphicon glyphicon-thumbs-down"></span><span class="glyph-text"> ' + result + '</span>');
+            }
+        });
+    }
 }
