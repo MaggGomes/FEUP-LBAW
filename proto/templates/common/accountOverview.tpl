@@ -41,19 +41,19 @@
                                 Edit Profile</a>
                         </li>
                         <li class="">
-                            <a href="../pages/followers.php">
+                            <a href="#">
                                 <i class="fa fa-users"></i>
                                 Followers</a>
                         </li>
 
                         <li class="">
-                            <a href="../pages/followees.php">
+                            <a href="#">
                                 <i class="fa fa-users"></i>
                                 Followees</a>
                         </li>
 
                         <li class="">
-                            <a href="../pages/moderated_articles.php">
+                            <a href="#">
                                 <i class="fa fa-ban"></i>
                                 Moderated articles </a>
                         </li>
@@ -66,13 +66,13 @@
                 </div>
 
                 <li class="">
-                    <a href="../pages/notifications.php">
+                    <a href="#">
                         <i class="glyphicon glyphicon-bell"></i>
                         Notifications &nbsp;<span class="badge active">6</span></a>
                 </li>
 
                 <li class="">
-                    <a href="../pages/statistics.php">
+                    <a href="#">
                         <i class="fa fa-line-chart"></i>
                         Statistics </a>
                 </li>
@@ -89,22 +89,22 @@
                                 List of registered users</a>
                         </li>
                         <li class="">
-                            <a href="../pages/managing_team.php">
+                            <a href="#">
                                 <i class="fa fa-users"></i>
                                 Managing team</a>
                         </li>
                         <li class="">
-                            <a href="../pages/pending_articles.php">
+                            <a href="#">
                                 <i class="fa fa-newspaper-o"></i>
                                 Pending articles</a>
                         </li>
                         <li>
-                            <a href="../pages/reported_articles.php">
+                            <a href="#">
                                 <i class="glyphicon glyphicon-flag"></i>
                                 Reported articles</a>
                         </li>
                         <li>
-                            <a href="../pages/reported_comments.php">
+                            <a href="#">
                                 <i class="glyphicon glyphicon-flag"></i>
                                 Reported comments</a>
                         </li>
