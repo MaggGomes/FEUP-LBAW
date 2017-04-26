@@ -13,6 +13,13 @@
 		die($e->getMessage());
 	}
 
+    try{
+        $info = accountInfo($_SESSION["id"]);
+    }catch(Exception $err){
+        die($err);
+    }
+    $smarty->assign('info', $info);
+
     $cssStyle = "../css/account.css";
 
     $smarty->assign('cssStyle', $cssStyle);

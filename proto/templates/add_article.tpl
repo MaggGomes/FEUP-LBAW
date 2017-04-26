@@ -3,7 +3,6 @@
 <head>
     <script src="https://cloud.tinymce.com/stable/tinymce.min.js"></script>
     <script>tinymce.init({ selector:'textarea' });</script>
-    <script src="../javascript/add_article.js"></script>
 </head>
 <section class="central">
     <div class="container add-article">
