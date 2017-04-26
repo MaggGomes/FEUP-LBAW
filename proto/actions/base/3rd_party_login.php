@@ -23,6 +23,5 @@
 	$_SESSION["id"] = $result["id"];
 	$_SESSION["username"] = $name;
 
-	echo json_encode($name);
-//	header('Location: ../../pages/home.php');
+	header('Location: ../../pages/home.php');
  ?>

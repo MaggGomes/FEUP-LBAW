@@ -46,47 +46,6 @@
 
   <script src="https://apis.google.com/js/api:client.js"></script>
 
-  <script>
-    var googleUser = {};
-    var startGoogleApp = function() {
-      gapi.load('auth2', function() {
-        // Retrieve the singleton for the GoogleAuth library and set up the client.
-        auth2 = gapi.auth2.init({
-          client_id: '702080112341-73p7rf48svsdsjjggajealjjcsa4njcm.apps.googleusercontent.com',
-          cookiepolicy: 'single_host_origin',
-          // Request scopes in addition to 'profile' and 'email'
-          //scope: 'additional_scope'
-        });
-        attachSignin(document.getElementById('google_login'));
-      });
-    };
-
-    function attachSignin(element) {
-      console.log(element.id);
-      auth2.attachClickHandler(element, {},
-        function(googleUser) {
-          console.log(1);
-          $.post({
-            url: "../actions/base/3rd_party_login.php",
-            //type: "post",
-            data: {
-              username: googleUser.getBasicProfile().getName(),
-              email: googleUser.getBasicProfile().getEmail(),
-              imageUrl: googleUser.getBasicProfile().getImageUrl(),
-              platform: "google"
-            },
-            success: function(data){
-                console.log(data);
-            }
-          });
-          console.log(2);
-        },
-        function(error) {
-
-        });
-    }
-  </script>
-
 </head>
 
 <body>
@@ -177,10 +136,6 @@
           <div class="modal-social-icons">
             <button class="btn btn-default facebook"><i class="fa fa-facebook modal-icons"></i> Sign In with Facebook </button>
             <button class="btn btn-default google" id="google_login" data-dismiss="modal"><img src="../images/google-logo.png">Sign In with Google</button>
-            <script>
-              startGoogleApp();
-            </script>
-
             <button class="btn btn-default sigarra"><i class="fa fa-graduation-cap" aria-hidden="true"></i> Sign In with Sigarra U.Porto</button>
           </div>
           <div class="login-or">
