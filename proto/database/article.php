@@ -23,10 +23,11 @@
                                 FROM public.article
                                 LEFT JOIN public.image ON (public.article.idArticle = public.image.idArticle)
                                 LEFT JOIN public.users ON (public.article.idUser = public.users.id)
+                                LEFT JOIN public.rating ON (public.article.idArticle = public.rating.idArticle AND public.rating.idUser = ?)
                                 WHERE public.article.category = ? AND public.article.visibility = ?
                                 ORDER BY public.article.date LIMIT 6");
 
-        $stmt->execute(array($category, 'Visible'));
+        $stmt->execute(array($_SESSION['id'], $category, 'Visible'));
         $articles = $stmt->fetchAll();
 
         foreach ($articles as &$article) {
@@ -119,13 +120,15 @@
                                 public.image.url AS articleimage,
                                 public.users.id AS userid,
                                 public.users.name AS username,
-                                public.users.photoURL AS userimage
+                                public.users.photoURL AS userimage,
+                                public.rating.value AS rating
                                 FROM public.article
                                 LEFT JOIN public.image ON (public.article.idArticle = public.image.idArticle)
                                 LEFT JOIN public.users ON (public.article.idUser = public.users.id)
+                                LEFT JOIN public.rating ON (public.article.idArticle = public.rating.idArticle AND public.rating.idUser = ?)
                                 WHERE public.article.idArticle = ?");
 
-        $stmt->execute(array($id));
+        $stmt->execute(array($_SESSION['id'], $id));
         $article = $stmt->fetch();
 
         $stmt = $conn->prepare("SELECT COUNT(*) AS upvotes
@@ -161,13 +164,15 @@
                                 public.image.url AS articleimage,
                                 public.users.id AS userid,
                                 public.users.name AS username,
-                                public.users.photoURL AS userimage
+                                public.users.photoURL AS userimage,
+                                public.rating.value AS rating
                                 FROM public.article
                                 LEFT JOIN public.image ON (public.article.idArticle = public.image.idArticle)
                                 LEFT JOIN public.users ON (public.article.idUser = public.users.id)
+                                LEFT JOIN public.rating ON (public.article.idArticle = public.rating.idArticle AND public.rating.idUser = ?)
                                 WHERE public.article.idArticle = ?");
 
-        $stmt->execute(array($id));
+        $stmt->execute(array($_SESSION['id'], $id));
         $article = $stmt->fetch();
 
         $stmt = $conn->prepare("SELECT COUNT(*) AS upvotes
@@ -192,6 +197,7 @@
 
     }
 
+    //TODO not done yet
     function getTopArticle(){
 
         global $conn;
@@ -205,17 +211,19 @@
                                 public.image.url AS articleimage,
                                 public.users.id AS userid,
                                 public.users.name AS username,
-                                public.users.photoURL AS userimage
+                                public.users.photoURL AS userimage,
+                                public.rating.value AS rating
                                 FROM public.article
                                 LEFT JOIN public.image ON (public.article.idArticle = public.image.idArticle)
                                 LEFT JOIN public.users ON (public.article.idUser = public.users.id)
+                                LEFT JOIN public.rating ON (public.article.idArticle = public.rating.idArticle AND public.rating.idUser = ?)
                                 WHERE public.article.idArticle = ?");
 
         $stmt->execute();
         return $stmt->fetchAll();
     }
 
-
+    
     function getDailyTopArticle(){
 
         global $conn;

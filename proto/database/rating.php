@@ -7,18 +7,21 @@
 
         $result = $stmt->fetch();
         $oldValue = $result['value'];
-        $id = $result['value'];
+        $id = $result['id'];
         if($result){
-            //fazer update
-            //se oldvalue == value entao fazer delete do vote
+            if($oldValue != $value){ //changes the new value
+                $stmt = $conn->prepare("UPDATE public.rating SET value = ?
+                    WHERE public.rating.id = ?");
+                $stmt->execute(array($value, $id));
+            } else{ //cancels the vote made previously
+                $stmt = $conn->prepare("DELETE public.rating WHERE public.rating.id = ?");
+                $stmt->execute(array($id));
+            }
+        } else{
+            //in case it doesn't exist
+            $stmt = $conn->prepare("INSERT INTO public.rating (value,date,idArticle,idUser) VALUES(?, LOCALTIMESTAMP, ?, ?)");
+            $stmt->execute(array($value, $idArticle, $idUser));
         }
-
-
-        //in case it doesn't exist
-
-        $stmt = $conn->prepare("INSERT INTO public.rating (value,date,idArticle,idUser) VALUES(?, LOCALTIMESTAMP, ?, ?)");
-        $stmt->execute(array($value, $idArticle, $idUser));
-
     }
 
     function getRatingByArticleId($id){

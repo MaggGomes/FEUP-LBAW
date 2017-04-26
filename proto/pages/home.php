@@ -4,13 +4,13 @@
 
     try {
         $dailyTopArticle = getDailyTopArticle();
-        $articlesWorld = array_slice(getArticlesByCategory('World'), 0, 6);
-        $articlesSports = array_slice(getArticlesByCategory('Sports'), 0, 6);
-        $articlesTechnology = array_slice(getArticlesByCategory('Technology'), 0, 6);
-        $articlesPolitics = array_slice(getArticlesByCategory('Politics'), 0, 6);
-        $articlesCulture = array_slice(getArticlesByCategory('Culture'), 0, 6);
-        $articlesScience = array_slice(getArticlesByCategory('Science'), 0, 6);
-        $articlesMiscellaneous = array_slice(getArticlesByCategory('Miscellaneous'), 0, 6);
+        $articlesWorld = getArticlesByCategory('World');
+        $articlesSports = getArticlesByCategory('Sports');
+        $articlesTechnology = getArticlesByCategory('Technology');
+        $articlesPolitics = getArticlesByCategory('Politics');
+        $articlesCulture = getArticlesByCategory('Culture');
+        $articlesScience = getArticlesByCategory('Science');
+        $articlesMiscellaneous = getArticlesByCategory('Miscellaneous', 0, 6);
     } catch (PDOException $e) {
         die($e->getMessage());
     }
