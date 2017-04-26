@@ -184,7 +184,6 @@ $(document).ready(function() {
   function attachSignin(element) {
     auth2.attachClickHandler(element, {},
       function(googleUser) {
-        console.log(1);
         $.post({
           url: "../actions/base/3rd_party_login.php",
           //type: "post",
@@ -199,7 +198,6 @@ $(document).ready(function() {
             location.reload();
           }
         });
-        console.log(2);
       },
       function(error) {
 
@@ -248,6 +246,10 @@ $(document).ready(function() {
     $(this).html('<span class="glyphicon glyphicon-thumbs-down"></span><span class="glyph-text"> ' + rating + '</span>');
   });
 });
+
+window.onload = function() {
+    $(".add-article-tags a").click(function() { $("#tags").css("display", "inline")  });
+}
 
 function searchByTitle(value) {
   if (value.length >= 3) {
