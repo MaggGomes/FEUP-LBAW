@@ -260,6 +260,10 @@ body.modal-open {
     cursor: pointer;
 }
 
+.article-footer-lower .voted {
+    color: #039be5;
+}
+
 /* Menu search bar */
 
 .expandsearch {

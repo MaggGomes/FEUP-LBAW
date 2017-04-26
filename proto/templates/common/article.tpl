@@ -52,10 +52,22 @@
         </div>
         <div class="row article-footer-lower">
             <div class="col-xs-5">
-                <div class="thumbs-up small-text" data-value="{$article.id}" onclick="changeRating(this, 1, {$smarty.session.id});"><span class="glyphicon glyphicon-thumbs-up"></span><span
-                            class="glyph-text"> {$article.upvotes} &nbsp&nbsp</span></div>
-                <div class="thumbs-down small-text" data-value="{$article.id}" onclick="changeRating(this, -1, {$smarty.session.id});"><span class="glyphicon glyphicon-thumbs-down"></span><span
-                            class="glyph-text"> {$article.downvotes}</span></div>
+                {if $article.voted == 1}
+                    <div class="thumbs-up voted small-text" data-value="{$article.id}" onclick="changeRating(this, 1, {$smarty.session.id});"><span class="glyphicon glyphicon-thumbs-up"></span><span
+                                class="glyph-text"> {$article.upvotes} &nbsp&nbsp</span></div>
+                    <div class="thumbs-down small-text" data-value="{$article.id}" onclick="changeRating(this, -1, {$smarty.session.id});"><span class="glyphicon glyphicon-thumbs-down"></span><span
+                                class="glyph-text"> {$article.downvotes}</span></div>
+                {elseif $article.voted == -1}
+                    <div class="thumbs-up small-text" data-value="{$article.id}" onclick="changeRating(this, 1, {$smarty.session.id});"><span class="glyphicon glyphicon-thumbs-up"></span><span
+                                class="glyph-text"> {$article.upvotes} &nbsp&nbsp</span></div>
+                    <div class="thumbs-down voted small-text" data-value="{$article.id}" onclick="changeRating(this, -1, {$smarty.session.id});"><span class="glyphicon glyphicon-thumbs-down"></span><span
+                                class="glyph-text"> {$article.downvotes}</span></div>
+                {else}
+                    <div class="thumbs-up small-text" data-value="{$article.id}" onclick="changeRating(this, 1, {$smarty.session.id});"><span class="glyphicon glyphicon-thumbs-up"></span><span
+                                class="glyph-text"> {$article.upvotes} &nbsp&nbsp</span></div>
+                    <div class="thumbs-down small-text" data-value="{$article.id}" onclick="changeRating(this, -1, {$smarty.session.id});"><span class="glyphicon glyphicon-thumbs-down"></span><span
+                                class="glyph-text"> {$article.downvotes}</span></div>
+                {/if}
             </div>
             <div class="col-xs-7">
                 <div class="pull-right">
