@@ -66,9 +66,9 @@
       auth2.attachClickHandler(element, {},
         function(googleUser) {
           console.log(1);
-          $.ajax({
+          $.post({
             url: "../actions/base/3rd_party_login.php",
-            type: "post",
+            //type: "post",
             data: {
               username: googleUser.getBasicProfile().getName(),
               email: googleUser.getBasicProfile().getEmail(),
@@ -76,7 +76,7 @@
               platform: "google"
             },
             success: function(data){
-                console.log("google login succesful");
+                console.log(data);
             }
           });
           console.log(2);
