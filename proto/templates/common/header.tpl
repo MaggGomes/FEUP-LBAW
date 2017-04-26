@@ -111,7 +111,7 @@
       </div>
     </div>
 
-    <div id="nav-bottom-container" class="container nav-bottom-container">
+    <!--div id="nav-bottom-container" class="container nav-bottom-container">
       <div class="collapse navbar-collapse nav-bottom">
         <ul class="nav navbar-nav">
           <li><a href="../pages/home.php">Home</a></li>
@@ -125,7 +125,7 @@
           <li><a href="#">Recommended</a></li>
         </ul>
       </div>
-    </div>
+    </div-->
   </nav>
 
   <div id="signin" class="modal fade" tabindex="-1" role="dialog">
