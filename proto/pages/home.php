@@ -15,7 +15,7 @@
         die($e->getMessage());
     }
 
-    $articles = array(  'World' => $articlesWorld,
+    $articles = array('World' => $articlesWorld,
         'Sports' => $articlesSports,
         'Technology' => $articlesTechnology,
         'Politics' => $articlesPolitics,

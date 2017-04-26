@@ -2,10 +2,12 @@
     include_once('../config/init.php');
     include_once($BASE_DIR .'database/article.php');
 
-    $id = $_GET['id'];
-
     try {
-        $article = getArticleById($id);
+        if (isset($_SESSION["id"]))
+            $article = getArticleByIdUser($_GET['id'], $_SESSION["id"]);
+        else
+            $article = getArticleById($_GET['id']);
+
     } catch (PDOException $e) {
         die($e->getMessage());
     }
