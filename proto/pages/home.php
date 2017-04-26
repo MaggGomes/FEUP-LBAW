@@ -23,10 +23,7 @@
         'Science' => $articlesScience,
         'Miscellaneous' => $articlesMiscellaneous);
 
-    $cssStyle = "../css/home.css";
-
     $smarty->assign('dailyTopArticle', $dailyTopArticle);
     $smarty->assign('articles', $articles);
-    $smarty->assign('cssStyle', $cssStyle);
     $smarty->display('home.tpl');
 ?>

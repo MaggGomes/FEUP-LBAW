@@ -20,9 +20,6 @@
     }
     $smarty->assign('info', $info);
 
-    $cssStyle = "../css/account.css";
-
-    $smarty->assign('cssStyle', $cssStyle);
-	$smarty->assign('users', $users);
+	  $smarty->assign('users', $users);
     $smarty->display('list_users.tpl');
 ?>
