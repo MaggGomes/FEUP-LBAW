@@ -52,9 +52,9 @@
         </div>
         <div class="row article-footer-lower">
             <div class="col-xs-5">
-                <div class="thumbs-up small-text" data-value="{$article.id}"><span class="glyphicon glyphicon-thumbs-up"></span><span
+                <div class="thumbs-up small-text" data-value="{$article.id}" onclick="changeRating(this, 1, {$smarty.session.id});"><span class="glyphicon glyphicon-thumbs-up"></span><span
                             class="glyph-text"> {$article.upvotes} &nbsp&nbsp</span></div>
-                <div class="thumbs-down small-text" data-value="{$article.id}"><span class="glyphicon glyphicon-thumbs-down"></span><span
+                <div class="thumbs-down small-text" data-value="{$article.id}" onclick="changeRating(this, -1, {$smarty.session.id});"><span class="glyphicon glyphicon-thumbs-down"></span><span
                             class="glyph-text"> {$article.downvotes}</span></div>
             </div>
             <div class="col-xs-7">

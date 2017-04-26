@@ -262,3 +262,10 @@ function searchByTitle(value) {
 function showResults(data) {
   console.log(data);
 }
+
+function changeRating(html, id, value){
+    console.log(html);
+    console.log(id);
+    console.log(value);
+    
+}
