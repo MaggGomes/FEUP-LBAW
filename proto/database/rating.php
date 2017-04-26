@@ -2,11 +2,19 @@
     function createRating($value, $idArticle, $idUser) {
         global $conn;
 
-        $stmt = $conn->prepare("SELECT value FROM rating WHERE idArticle = ? AND idUser = ?");
+        $stmt = $conn->prepare("SELECT id, value FROM rating WHERE idArticle = ? AND idUser = ?");
         $stmt->execute(array($idArticle, $idUser));
 
         $result = $stmt->fetch();
-        $result = $result['value'];
+        $oldValue = $result['value'];
+        $id = $result['value'];
+        if($result){
+            //fazer update
+            //se oldvalue == value entao fazer delete do vote
+        }
+
+
+        //in case it doesn't exist
 
         $stmt = $conn->prepare("INSERT INTO public.rating (value,date,idArticle,idUser) VALUES(?, LOCALTIMESTAMP, ?, ?)");
         $stmt->execute(array($value, $idArticle, $idUser));
