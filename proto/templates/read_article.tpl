@@ -1,6 +1,6 @@
 {include file='common/header.tpl'}
 
-<section class="central">
+<section class="central read-article-central">
     <div class="container">
         <div class="row">
             <article class="col-lg-9 article-text">

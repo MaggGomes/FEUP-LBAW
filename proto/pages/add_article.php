@@ -1,8 +1,8 @@
 <?php
     include_once('../config/init.php');
 
-    $cssStyle = "../css/add_article.css";
+    $addarticlebody = 'addarticlebody';
 
-    $smarty->assign('cssStyle', $cssStyle);
+    $smarty->assign('addarticlebody', $addarticlebody);
     $smarty->display('add_article.tpl');
 ?>

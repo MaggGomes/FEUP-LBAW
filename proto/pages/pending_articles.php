@@ -7,7 +7,7 @@
     }catch(Exception $err){
         die($err);
     }
-    $smarty->assign('info', $info);
 
+    $smarty->assign('info', $info);
     $smarty->display('pending_articles.tpl');
 ?>

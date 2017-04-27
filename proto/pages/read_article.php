@@ -8,9 +8,6 @@
         die($e->getMessage());
     }
 
-    $cssStyle = "../css/article.css";
-
     $smarty->assign('article', $article);
-    $smarty->assign('cssStyle', $cssStyle);
     $smarty->display('read_article.tpl');
 ?>

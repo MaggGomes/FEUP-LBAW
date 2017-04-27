@@ -10,9 +10,6 @@
         die($e->getMessage());
     }
 
-    $cssStyle = "../css/profile.css";
-
     $smarty->assign('user', $user);
-    $smarty->assign('cssStyle', $cssStyle);
     $smarty->display('profile.tpl');
 ?>

@@ -20,11 +20,10 @@
   <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
   <!--link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet"-->
 
-  <link type="text/css" rel="stylesheet" href="../css/font-awesome.css" />
-  <link href="../css/bootstrap.css" rel="stylesheet">
-  <link href="../css/bootstrap-theme.css" rel="stylesheet">
+  <link type="text/css" rel="stylesheet" href="../css/font-awesome.min.css" />
+  <link href="../css/bootstrap.min.css" rel="stylesheet">
+  <link href="../css/bootstrap-theme.min.css" rel="stylesheet">
   <link href="../css/style.css" rel="stylesheet">
-  <link type="text/css" rel="stylesheet" href="{$cssStyle}" />
 
   <!--script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script-->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -47,7 +46,7 @@
   <script src="https://apis.google.com/js/api:client.js"></script>
 </head>
 
-<body>
+<body class="{$addarticlebody}">
   <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
       <div class="navbar-header">

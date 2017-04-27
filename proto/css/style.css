@@ -498,8 +498,363 @@ input[type="search"] {
     opacity: 1;
 }
 
+/* Account */
+
+.account {
+    margin: 20px 0;
+}
+
+.account-sidebar {
+    padding: 20px 0 0 0;
+    background: #fff;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+}
+
+.account-userpic img {
+    float: none;
+    margin: 0 auto;
+    width: 120px;
+    height: 120px;
+    border-radius: 50% !important;
+}
+
+.account-usertitle {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.account-usertitle-name h3 {
+    font-weight: bold;
+}
+
+
+.account-usertitle-job {
+    font-family: "Calibri Light";
+}
+
+.account-usertitle-name {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 7px;
+}
+
+.account-usertitle-job {
+    color: #039be5;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.account-presentation {
+    color: #a9a9a9;
+    font-family: "Calibri Light";
+}
+
+.account-follow {
+    color: #777777;
+}
+
+.account-usermenu {
+    margin-top: 30px;
+}
+
+.account-usermenu ul li {
+    border-bottom: 1px solid #f0f4f7;
+}
+
+.account-usermenu ul li:last-child {
+    border-bottom: none;
+}
+
+.account-usermenu ul li a {
+    color: #a9a9a9;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.account-usermenu ul li a i {
+    margin-right: 8px;
+    font-size: 14px;
+}
+
+.account-usermenu ul li a:hover {
+    background-color: #fafcfd;
+    color: #039be5;
+}
+
+.account-usermenu ul li a:hover .badge{
+    background-color: #039be5;
+}
+
+.account-usermenu ul li.active {
+    border-bottom: none;
+}
+
+.account-usermenu ul li.active a {
+    color: #039be5;
+    background-color: #f6f9fb;
+    border-left: 2px solid #039be5;
+    margin-left: -2px;
+}
+
+.account-usermenu ul li.active .badge {
+    background-color: #039be5;
+}
+
+.account-content {
+    margin-top: 20px;
+}
+
+.account-edit-account {
+    padding: 20px;
+    background: #fff;
+    min-height: 485px;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+}
+
+.account-recommended {
+    display: none;
+}
+
+.account-recommended .container-category-title h3 {
+    margin-top: 0;
+}
+
+.account-notification-description {
+    margin-bottom: 0;
+}
+
+.account-notification-description a {
+    text-decoration: none;
+}
+
+.account-notification-description .article-author {
+    font-size: large;
+}
+
+.account-menu-collapse {
+    margin-left: 20px;
+}
+
+.btn-staff {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.btn-staff:hover {
+    background-color: #039be5;
+    border: 1px solid #039be5;
+}
+
+.pending-articles-notification {
+    font-size: small;
+    text-align: justify;
+}
+
+/* Add article */
+
+.addarticlebody {
+    background-color: white;
+}
+
+.add-article-header input {
+    margin-bottom: 20px;
+    border: none;
+    box-shadow: none;
+    outline: none;
+    border-radius: 0;
+    border-left: 2px solid #ccc;
+}
+
+.add-article-header input:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.add-article-category, .add-article-tags, .add-article-textarea {
+    margin-bottom: 20px;
+}
+
+.add-article-category .btn-primary{
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-right: 1px;
+    padding-left: 1px;
+    font-size: small;
+}
+
+.add-article-central {
+    margin-top: 70px;
+    background-color: white;
+}
+
+#tags{
+    margin-top: 30px;
+    border: none;
+    box-shadow: none;
+    outline: none;
+    border-radius: 0;
+    border-left: 2px solid #ccc;
+    display: none;
+}
+
+#tags:focus{
+    outline: none;
+    box-shadow: none;
+    border-left: 2px solid #039be5;
+}
+
+/* Profile */
+
+.profile-head {
+    height:0px;
+    width:100%;
+    background-color: #039be5;
+}
+
+.profiles {
+    padding-top: 10px;
+    top: 50px;
+}
+
+.profile-central {
+    margin-top: 40px;
+}
+
+.profile-head img {
+    margin:0 auto;
+    width: 120px;
+    height: 120px;
+    border-radius: 50% !important;
+}
+
+.profile-head h2 {
+    width: 100%;
+    text-align:justify;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.profile-head p {
+    width: 100%;
+    text-align: justify;
+    padding:0px 5px 5px 5px;
+    color: #555;
+    font-size:17px;
+    margin:0;
+}
+
+.profile-head a {
+    width: 100%;
+    text-align: center;
+    padding: 10px 5px;
+    color: #555;
+    font-size: 15px;
+}
+
+.profile-head ul {
+    list-style:none;
+    padding: 0;
+}
+
+.profile-description {
+    text-align: center;
+}
+
+.profile-description h2 {
+    text-align: center;
+}
+
+.profile-presentation {
+    color: #a9a9a9;
+    font-family: "Calibri Light";
+}
+
+.profile-follow {
+    color: #777777;
+}
+
+.profile-userbuttons {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* Advanced search */
+
+.advanced-central {
+    margin-top: 70px;
+}
+
+#table-header {
+    background-color: #039be5;
+}
+
+#table-header a {
+    color: white;
+    background-color: #039be5;
+    text-align: left;
+    text-decoration: none;
+}
+
+#advanced-text {
+    display: none;
+}
+
+#advanced-dropdown.dropdown-toggle:focus {
+    background-color: white;
+    border: 1px solid #0279B3;
+}
+
+#advanced-publisher {
+    z-index: 1;
+}
+
+.advanced-central .dropdown.dropdown-lg .dropdown-menu {
+    margin-top: -1px;
+    padding: 6px 20px;
+}
+
+.advanced-central .input-group-btn .btn-group {
+    display: flex !important;
+}
+
+.advanced-central .btn-group .btn {
+    border-radius: 0;
+    margin-left: -1px;
+}
+
+.advanced-central .btn-group .btn:last-child {
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.advanced-central .btn-group .form-horizontal .btn[type="submit"] {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+.advanced-central .form-horizontal .form-group {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.advanced-central .form-group .form-control:last-child {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+/* Read article */
+
+.read-article-central {
+    margin-top: 70px;
+}
 
 /* Button's styling */
+
 .btn-default, .btn-primary, .btn-success, .btn-info {
     background-image: none;
     text-shadow: none;
@@ -717,6 +1072,100 @@ input[type="search"] {
         display: block;
         width: 140px;
     }
+
+    .account-content{
+        margin-top: 20px;
+    }
+
+    .account-recommended {
+        display: block;
+    }
+
+    .add-article-central {
+        margin-top: 140px;
+    }
+
+    .add-article-category .btn-primary{
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-right: 2px;
+        padding-left: 2px;
+        font-size: medium;
+    }
+
+    .profile-head {
+        height:300px;
+        width:100%;
+        background-color: #039be5;
+    }
+
+    .profiles {
+        padding-top: auto;
+        top: 220px;
+    }
+
+    .profile-head img {
+        margin:0 auto;
+        width: 120px;
+        height: 120px;
+        border-radius: 50% !important;
+    }
+
+    .profile-article {
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    .profile-articles .container-category-title h3 {
+        padding-left: 0;
+    }
+
+    .profile-central {
+        margin-top: 100px;
+    }
+
+    .profile-description {
+        text-align: left;
+    }
+
+    .profile-description h2 {
+        text-align: left;
+        padding-left: 0;
+    }
+
+    .profile-presentation {
+        padding-top: 5px;
+        padding-bottom: 10px;
+    }
+
+    .profile-userbuttons button {
+        float: left;
+    }
+
+    .advanced-central {
+        margin-top: 140px;
+    }
+
+    #adv-search {
+        width: 500px;
+        margin: 0 auto;
+    }
+
+    #advanced-text {
+        display: inline-block;
+    }
+
+    .advanced-central .dropdown.dropdown-lg {
+        position: static !important;
+    }
+
+    .advanced-central .dropdown.dropdown-lg .dropdown-menu {
+        min-width: 500px;
+    }
+
+    .read-article-central {
+        margin-top: 140px;
+    }
 }
 
 @media screen and (max-width: 850px) {
@@ -745,6 +1194,10 @@ input[type="search"] {
 
     .article-image-small {
         height: 180px;
+    }
+
+    .account-content{
+        margin-top: 0px;
     }
 }
 

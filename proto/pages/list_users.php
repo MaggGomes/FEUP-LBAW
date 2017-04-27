@@ -18,8 +18,8 @@
     }catch(Exception $err){
         die($err);
     }
-    $smarty->assign('info', $info);
 
-	  $smarty->assign('users', $users);
+    $smarty->assign('info', $info);
+	$smarty->assign('users', $users);
     $smarty->display('list_users.tpl');
 ?>

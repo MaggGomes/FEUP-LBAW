@@ -28,7 +28,7 @@
 </div>
 
 
-<section class="central">
+<section class="central profile-central">
 
     <div class="container profile-articles">
         <div class="row container-category-title">
