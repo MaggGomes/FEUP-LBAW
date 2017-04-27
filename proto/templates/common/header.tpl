@@ -88,8 +88,8 @@
       <!-- Menu search -->
       <div class="home-search">
         <div id="expandsearch" class="expandsearch">
-          <form class="expandsearch-form">
-            <input class="expandsearch-input" type="search" placeholder="Search ..."/>
+          <form method="get" action="../pages/advanced_search.php" class="expandsearch-form">
+            <input class="expandsearch-input" name="search" onkeyup="searchByTitle(this.value)" type="search" placeholder="Search ..."/>
             <button class="expandsearch-submit" type="submit">Search</button>
           </form>
           <div class="expandsearch-content"></div>

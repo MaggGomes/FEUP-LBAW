@@ -57,7 +57,7 @@
                     </div>
 					{/foreach}
 
-					<div>
+					<div align="center">
 						{if $pageNo > 0}
 							<a href="?pageNo={$pageNo-1}"><span class="glyphicon glyphicon-chevron-left"></span>Previous </a>
 						{/if}
