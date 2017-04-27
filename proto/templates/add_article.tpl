@@ -1,7 +1,7 @@
 {include file='common/header.tpl'}
 
 <head>
-    <script src="https://cloud.tinymce.com/stable/tinymce.min.js"></script>
+    <script src="https://cloud.tinymce.com/stable/tinymce.min.js?apiKey=desi6hiftg5yqtfrrkmlemy77km6yea6m7l7yjvdnkx93tpn"></script>
     <script>tinymce.init({ selector:'textarea' });</script>
 </head>
 <section class="central add-article-central">

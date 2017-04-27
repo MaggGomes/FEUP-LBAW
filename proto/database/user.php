@@ -1,7 +1,7 @@
 <?php
 	include_once("../config/init.php");
 
-	function getAllUsers(){
+	function getAllUsers($pageNo, $limit){
 		global $conn;
 
 		$stmt = $conn->prepare("SELECT public.users.name,
@@ -10,9 +10,12 @@
 										public.users.rating,
 										public.users.permission,
 										public.users.id
-								FROM public.users");
+								FROM public.users
+								ORDER BY public.users.name ASC
+								OFFSET ?
+								LIMIT ?");
 
-		$stmt->execute();
+		$stmt->execute(array($pageNo*$limit, $limit));
 		return $stmt->fetchAll();
 	}
 

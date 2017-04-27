@@ -167,7 +167,9 @@ window.onload = function() {
 function searchByTitle(value) {
   if (value.length >= 3) {
     $.get("../api/searchTitleTag.php", {
-      "name": value
+      "name": value,
+	  "limit": 4,
+	  "offset": 0
     }, showResults);
   }
 }

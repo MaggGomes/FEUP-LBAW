@@ -14,7 +14,7 @@
                         <div class="article-publisher">
                             <!--<a href="{$BASE_URL}pages/profile.php?id={$article.userid}"><h4 class="article-author">{$article.username}</h4></a>-->
                             <h4 class="article-author">{$article.username}</h4>
-                            <small>March 1</small>
+                            <small>{$article.articledate}</small>
                         </div>
                     </div>
                     <div class="col-xs-2 small-text">
