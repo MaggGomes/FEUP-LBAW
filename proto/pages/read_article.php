@@ -3,11 +3,7 @@
     include_once($BASE_DIR .'database/article.php');
 
     try {
-        if (isset($_SESSION["id"]))
-            $article = getArticleByIdUser($_GET['id'], $_SESSION["id"]);
-        else
-            $article = getArticleById($_GET['id']);
-
+        $article = getArticleById($_GET['id']);
     } catch (PDOException $e) {
         die($e->getMessage());
     }

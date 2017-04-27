@@ -10,7 +10,7 @@
         $articlesPolitics = getArticlesByCategory('Politics');
         $articlesCulture = getArticlesByCategory('Culture');
         $articlesScience = getArticlesByCategory('Science');
-        $articlesMiscellaneous = getArticlesByCategory('Miscellaneous', 0, 6);
+        $articlesMiscellaneous = getArticlesByCategory('Miscellaneous');
     } catch (PDOException $e) {
         die($e->getMessage());
     }
