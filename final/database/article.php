@@ -280,20 +280,22 @@
         return $articles;
     }
 
-	function getArticlesByTitle($name){
+	function getArticlesByTitle($name, $limit, $offset){
 		global $conn;
-		$stmt = $conn->prepare("SELECT public.article.idArticle,
+		$stmt = $conn->prepare("SELECT public.article.idArticle AS id,
 										public.article.title,
 										public.article.category,
-										public.users.name
+										public.users.name,
+										SUM(public.rating.value) AS rating
 										FROM public.article
 										LEFT JOIN public.users ON (public.article.idUser = public.users.id)
 										LEFT JOIN public.rating ON (public.article.idArticle = public.rating.idArticle)
 										WHERE LOWER(public.article.title) LIKE LOWER(?)
 										GROUP BY public.article.idArticle, public.users.name
-										ORDER BY SUM(public.rating.value) DESC
-										LIMIT 4");
-		$stmt->execute(array("%".$name."%"));
+										ORDER BY rating DESC
+										LIMIT ?
+										OFFSET ?");
+		$stmt->execute(array("%".$name."%", $limit, $offset));
 		$match = $stmt->fetchAll();
 		return $match;
 	}

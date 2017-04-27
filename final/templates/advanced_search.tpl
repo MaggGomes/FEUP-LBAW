@@ -4,14 +4,14 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <div class="input-group" id="adv-search">
-                    <input type="text" class="form-control input-lg" placeholder="Search for articles"/>
+                <form class="input-group" method="get" id="adv-search">
+                    <input type="text" name="search" class="form-control input-lg" placeholder="Search for articles"/>
                     <div class="input-group-btn">
                         <div class="btn-group" role="group">
                             <div class="dropdown dropdown-lg">
                                 <button type="button" id="advanced-dropdown" class="btn btn-default dropdown-toggle btn-lg" data-toggle="dropdown" aria-expanded="false"><span id="advanced-text">Advanced</span> <span class="caret"></span></button>
                                 <div class="dropdown-menu dropdown-menu-right" role="menu">
-                                    <form class="form-horizontal" role="form">
+                                    <div class="form-horizontal">
                                         <div class="form-group">
                                             <label for="filter">Filter by</label>
                                             <select class="form-control">
@@ -37,13 +37,13 @@
                                             <input class="form-control" type="text" />
                                         </div>
                                         <button type="submit" class="btn btn-primary">Search</button>
-                                    </form>
+                                    </div>
                                 </div>
                             </div>
-                            <button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+                            <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
                         </div>
                     </div>
-                </div>
+                </form>
             </div>
         </div>
     </div>
@@ -56,61 +56,32 @@
             <div id="table-header" class="list-group-item list-group-item-info">
                 <div class="row">
                     <a href="#" class="col-xs-3">Name</a>
-                    <a href="#" class="col-xs-3">Rating</a>
+                    <a href="#" class="col-xs-3">Category</a>
                     <a href="#" id="advanced-publisher" class="col-xs-3">Publisher</a>
-                    <a href="#" class="col-xs-3">Views</a>
+                    <a href="#" class="col-xs-3">Rating</a>
                 </div>
             </div>
-            <a href="#" class="list-group-item list-group-item-action">
-                <div class="row">
-                    <div class="col-xs-3">Big Short</div>
-                    <div class="col-xs-3">4.95</div>
-                    <div class="col-xs-3">Rui Andrade</div>
-                    <div class="col-xs-3">83</div>
-                </div>
-            </a>
-            <a href="#" class="list-group-item list-group-item-action">
-                <div class="row">
-                    <div class="col-xs-3">Big Small</div>
-                    <div class="col-xs-3">4.34</div>
-                    <div class="col-xs-3">Chaler Albin</div>
-                    <div class="col-xs-3">59</div>
-                </div>
-            </a>
-            <a href="#" class="list-group-item list-group-item-action">
-                <div class="row">
-                    <div class="col-xs-3">Big Small</div>
-                    <div class="col-xs-3">4.34</div>
-                    <div class="col-xs-3">Chaler Albin</div>
-                    <div class="col-xs-3">59</div>
-                </div>
-            </a>
-            <a href="#" class="list-group-item list-group-item-action">
-                <div class="row">
-                    <div class="col-xs-3">Big Small</div>
-                    <div class="col-xs-3">4.34</div>
-                    <div class="col-xs-3">Chaler Albin</div>
-                    <div class="col-xs-3">59</div>
-                </div>
-            </a>
-            <a href="#" class="list-group-item list-group-item-action">
-                <div class="row">
-                    <div class="col-xs-3">Big Small</div>
-                    <div class="col-xs-3">4.34</div>
-                    <div class="col-xs-3">Chaler Albin</div>
-                    <div class="col-xs-3">59</div>
-                </div>
-            </a>
-            <a href="#" class="list-group-item list-group-item-action">
-                <div class="row">
-                    <div class="col-xs-3">Big Small</div>
-                    <div class="col-xs-3">4.34</div>
-                    <div class="col-xs-3">Chaler Albin</div>
-                    <div class="col-xs-3">59</div>
-                </div>
-            </a>
+			{foreach $articles as $article}
+            <a href="../pages/read_article.php?id={$article.id}" class="list-group-item list-group-item-action">
 
-
+                <div class="row">
+                    <div class="col-xs-3">{$article.title}</div>
+                    <div class="col-xs-3">{$article.category}</div>
+                    <div class="col-xs-3">{$article.name}</div>
+                    <div class="col-xs-3">{$article.rating}</div>
+                </div>
+            </a>
+			{/foreach}
+			<br>
+			<div align="center">
+				{if $pageNo > 0}
+					<a href="?pageNo={$pageNo-1}"><span class="glyphicon glyphicon-chevron-left"></span>Previous </a>
+				{/if}
+				&nbsp
+				{if $limit == $articlesLength}
+					<a href="?pageNo={$pageNo+1}">Next <span class="glyphicon glyphicon-chevron-right"></span></a>
+				{/if}
+			</div>
         </div>
     </div>
 
