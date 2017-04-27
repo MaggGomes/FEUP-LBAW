@@ -14,7 +14,7 @@
                     WHERE public.rating.id = ?");
                 $stmt->execute(array($value, $id));
             } else{ //cancels the vote made previously
-                $stmt = $conn->prepare("DELETE public.rating WHERE public.rating.id = ?");
+                $stmt = $conn->prepare("DELETE FROM public.rating WHERE public.rating.id = ?");
                 $stmt->execute(array($id));
             }
         } else{

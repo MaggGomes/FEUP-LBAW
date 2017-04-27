@@ -267,15 +267,30 @@ function showResults(data) {
 
 function changeRating(html, value, idSession){
     if(idSession){
+        console.log($(html).children()[0]);
+        console.log($(html).children()[1]);
         $.post("../api/update_rating.php", {
             value:value,
             idArticle: $(html).data('value')
         },
         function(result){
+            if($(html).hasClass("voted")){
+                $(html).removeClass("voted");
+            } else{
+                $(html).addClass("voted");
+            }
             if(value > 0){
                 $(html).html('<span class="glyphicon glyphicon-thumbs-up"></span><span class="glyph-text"> ' + result + ' &nbsp&nbsp</span>');
+                if($(html).next().hasClass("voted")){
+                    $(html).next().removeClass("voted");
+                    $(html).next().children()[1].innerHTML = $(html).next().children()[1].innerHTML -1 ;
+                }
             }else{
                 $(html).html('<span class="glyphicon glyphicon-thumbs-down"></span><span class="glyph-text"> ' + result + '</span>');
+                if($(html).prev().hasClass("voted")){
+                    $(html).prev().removeClass("voted");
+                    $(html).prev().children()[1].innerHTML = $(html).next().children()[1].innerHTML - 1;
+                }
             }
         });
     }
