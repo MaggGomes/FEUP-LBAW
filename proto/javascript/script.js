@@ -14,21 +14,6 @@ $(document).ready(function() {
     }
   });
 
-  /*$(function () {
-      $('a[href="#search"]').on('click', function(event) {
-          event.preventDefault();
-          $('#search').addClass('open');
-          $('#search > form > input[type="search"]').focus();
-      });
-
-      $('#search, #search button.close').on('click keyup', function(event) {
-          if (event.target == this || event.target.className == 'close' || event.keyCode == 27) {
-              $(this).removeClass('open');
-          }
-      });
-  });*/
-
-
   /* Functions to work with menu search */
   (function(window) {
     'use strict';
@@ -91,8 +76,6 @@ $(document).ready(function() {
 
   })(window);
 
-
-
   (function() {
     var expandSearch = document.getElementById('expandsearch'),
       input = expandSearch.querySelector('input.expandsearch-input'),
@@ -137,36 +120,6 @@ $(document).ready(function() {
 
   })();
 
-
-
-
-  // TODO - CORRIGIR - VERSAO QUE VERIFICA SE USER ESTÁ LOGADO
-  /*$(".thumbs-up").click(function() {
-      var rating;
-
-      $.getJSON("../api/session_status.php", function(log) {
-          if (log.logged) { // User is logged
-              $.ajax({
-                  url: "../api/update_rating.php",
-                  type: "post",
-                  data: {
-                      value: 1,
-                      date: '04/05/17',
-                      idArticle: $(this).data('value')
-                  },
-                  success: function(result) {
-                      rating = result;
-                  },
-
-                  async: false
-              });
-
-              $(this).html('<span class="glyphicon glyphicon-thumbs-up"></span><span class="glyph-text"> '+rating+' &nbsp&nbsp</span>');
-          } else
-              $("#signin").show();
-
-      });
-  });*/
   var googleUser = {};
   var startGoogleApp = function() {
     gapi.load('auth2', function() {
@@ -205,48 +158,6 @@ $(document).ready(function() {
   }
 
   $("#google_login").click(startGoogleApp());
-
-  // Updates article upvotes
-  // $(".thumbs-up").click(function() {
-  //   var rating;
-  //   console.log($(this));
-  //   console.log($(this).data('value'));
-  //   $.ajax({
-  //     url: "../api/update_rating.php",
-  //     type: "post",
-  //     data: {
-  //       value: 1,
-  //       idArticle: $(this).data('value')
-  //     },
-  //     success: function(result) {
-  //       rating = result;
-  //     },
-  //
-  //     async: false
-  //   });
-  //
-  //   $(this).html('<span class="glyphicon glyphicon-thumbs-up"></span><span class="glyph-text"> ' + rating + ' &nbsp&nbsp</span>');
-  // });
-  //
-  // // Updates article downvotes
-  // $(".thumbs-down").click(function() {
-  //   var rating;
-  //   $.ajax({
-  //     url: "../api/update_rating.php",
-  //     type: "post",
-  //     data: {
-  //       value: -1,
-  //       idArticle: $(this).data('value')
-  //     },
-  //     success: function(result) {
-  //       rating = result;
-  //     },
-  //
-  //     async: false
-  //   });
-  //
-  //   $(this).html('<span class="glyphicon glyphicon-thumbs-down"></span><span class="glyph-text"> ' + rating + '</span>');
-  // });
 });
 
 window.onload = function() {
@@ -280,16 +191,16 @@ function changeRating(html, value, idSession){
                 $(html).addClass("voted");
             }
             if(value > 0){
-                $(html).html('<span class="glyphicon glyphicon-thumbs-up"></span><span class="glyph-text"> ' + result + ' &nbsp&nbsp</span>');
+                $(html).html('<span class="glyphicon glyphicon-thumbs-up"></span><span> </span><span class="glyph-text">' + result + '</span><span> &nbsp&nbsp</span>');
                 if($(html).next().hasClass("voted")){
                     $(html).next().removeClass("voted");
-                    $(html).next().children()[1].innerHTML = $(html).next().children()[1].innerHTML -1 ;
+                    $(html).next().children()[2].innerHTML = $(html).next().children()[2].innerHTML - 1 ;
                 }
             }else{
-                $(html).html('<span class="glyphicon glyphicon-thumbs-down"></span><span class="glyph-text"> ' + result + '</span>');
+                $(html).html('<span class="glyphicon glyphicon-thumbs-down"></span><span> </span><span class="glyph-text">' + result + '</span>');
                 if($(html).prev().hasClass("voted")){
                     $(html).prev().removeClass("voted");
-                    $(html).prev().children()[1].innerHTML = $(html).next().children()[1].innerHTML - 1;
+                    $(html).prev().children()[2].innerHTML = $(html).prev().children()[2].innerHTML - 1;
                 }
             }
         });

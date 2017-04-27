@@ -12,7 +12,8 @@
                             {/if}
                         </div>
                         <div class="article-publisher">
-                            <a href="{$BASE_URL}pages/profile.php?id={$article.userid}"><h4 class="article-author">{$article.username}</h4></a>
+                            <!--<a href="{$BASE_URL}pages/profile.php?id={$article.userid}"><h4 class="article-author">{$article.username}</h4></a>-->
+                            <h4 class="article-author">{$article.username}</h4>
                             <small>March 1</small>
                         </div>
                     </div>
@@ -53,10 +54,10 @@
         <div class="row article-footer-lower">
             <div class="col-xs-5">
 
-                <div class="thumbs-up small-text {if $article.rating == 1} voted {/if}" data-value="{$article.id}" onclick="changeRating(this, 1, {$smarty.session.id});"><span class="glyphicon glyphicon-thumbs-up"></span><span
-                            class="glyph-text"> {$article.upvotes} &nbsp&nbsp</span></div>
-                <div class="thumbs-down small-text {if $article.rating == -1} voted {/if}" data-value="{$article.id}" onclick="changeRating(this, -1, {$smarty.session.id});"><span class="glyphicon glyphicon-thumbs-down"></span><span
-                            class="glyph-text"> {$article.downvotes}</span></div>
+                <div class="thumbs-up small-text {if $article.rating == 1} voted {/if}" data-value="{$article.id}" onclick="changeRating(this, 1, {$smarty.session.id});"><span class="glyphicon glyphicon-thumbs-up"></span>
+                    <span> </span><span class="glyph-text">{$article.upvotes}</span><span> &nbsp&nbsp</span></div>
+                <div class="thumbs-down small-text {if $article.rating == -1} voted {/if}" data-value="{$article.id}" onclick="changeRating(this, -1, {$smarty.session.id});"><span class="glyphicon glyphicon-thumbs-down"></span>
+                    <span> </span><span class="glyph-text">{$article.downvotes}</span></div>
             </div>
             <div class="col-xs-7">
                 <div class="pull-right">
