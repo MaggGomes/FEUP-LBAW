@@ -57,6 +57,14 @@
                     </div>
 					{/foreach}
 
+					<div>
+						{if $pageNo > 0}
+							<a href="?pageNo={$pageNo-1}"><span class="glyphicon glyphicon-chevron-left"></span>Previous </a>
+						{/if}
+						{if $limit == $usersLength}
+							<a href="?pageNo={$pageNo+1}">Next <span class="glyphicon glyphicon-chevron-right"></span></a>
+						{/if}
+					</div>
                 </div>
 
             </div>
