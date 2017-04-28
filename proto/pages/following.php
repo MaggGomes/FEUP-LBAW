@@ -4,10 +4,14 @@
 
     try{
         $info = accountInfo($_SESSION["id"]);
+		$following = getFollowing($_SESSION["id"]);
     }catch(Exception $err){
         die($err);
     }
 
+
+	$smarty->assign('followLength', count($following));
+	$smarty->assign('following', $following);
     $smarty->assign('info', $info);
-    $smarty->display('followees.tpl');
+    $smarty->display('following.tpl');
 ?>

@@ -47,9 +47,9 @@
                         </li>
 
                         <li class="">
-                            <a href="#">
+                            <a href="../pages/following.php">
                                 <i class="fa fa-users"></i>
-                                Followees</a>
+                                Following</a>
                         </li>
 
                         <li class="">

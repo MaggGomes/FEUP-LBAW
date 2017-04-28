@@ -57,4 +57,16 @@
 			header("Location: home.php");
 		}
 	}
+
+	function getFollowing($id){
+		global $conn;
+
+		$stmt = $conn->prepare("SELECT public.users.name, public.follower.idFollowed
+								FROM public.users
+								JOIN public.follower ON (public.users.id = public.follower.idFollowed)
+								WHERE public.follower.idFollower = ?");
+		$stmt->execute(array($id));
+		$return = $stmt->fetchAll();
+		return $return;
+	}
  ?>
