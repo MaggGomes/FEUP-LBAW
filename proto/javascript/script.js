@@ -180,8 +180,6 @@ function showResults(data) {
 
 function changeRating(html, value, idSession){
     if(idSession){
-        console.log($(html).children()[0]);
-        console.log($(html).children()[1]);
         $.post("../api/update_rating.php", {
             value:value,
             idArticle: $(html).data('value')
@@ -207,4 +205,21 @@ function changeRating(html, value, idSession){
             }
         });
     }
+}
+
+function follow(html, idPerson){
+    $.post("../api/editFollow.php", {
+        idPerson: idPerson
+    },
+    function(result){
+        if(result){
+            $(html).html("<span class=\"fa fa-user\"> Following</span>");
+            $(html).addClass("btn-primary");
+        }else{
+            $(html).html("<span class=\"fa fa-user-plus\"> Follow</span>");
+            $(html).removeClass("btn-primary");
+        }
+
+    });
+
 }

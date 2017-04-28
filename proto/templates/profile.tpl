@@ -6,7 +6,15 @@
             <div class="profiles col-xs-12 col-sm-10 col-sm-push-1 col-md-8 col-md-push-2 thumbnail">
                 <div class="col-xs-12 col-sm-3">
                     <div class="row">
+                        {if $user.photourl}
+                            {if strpos($user.photourl, '://')}
+                            <img src="{$user.photourl}" class="img-responsive" />
+                            {else}
+                            <img src="{$BASE_URL}upload/user_profile/{$user.photourl}" class="img-responsive" />
+                            {/if}
+                        {else}
                         <img src="{$BASE_URL}upload/user_profile/demo-user.png" class="img-responsive" />
+                        {/if}
                     </div>
                 </div>
                 <div class="col-sm-9 profile-description">
@@ -17,7 +25,11 @@
                                 <div class="col-md-12"><span class="profile-follow">{$user.following}</span> Following &middot; <span class="profile-follow">{$user.followers}</span> Followers</div>
                             </div>
                             <div class="profile-userbuttons">
-                                <button type="button" onclick="follow({$user.id})" class="btn btn-default"><span class="fa fa-user-plus"> Follow</span></button>
+                                {if $user.profilefollow}
+                                    <button type="button" onclick="follow(this, {$user.id})" class="btn btn-default btn-primary"><span class="fa fa-user"> Following</span></button>
+                                {else}
+                                    <button type="button" onclick="follow(this, {$user.id})" class="btn btn-default"><span class="fa fa-user-plus"> Follow</span></button>
+                                {/if}
                             </div>
                         </div>
                     </div>

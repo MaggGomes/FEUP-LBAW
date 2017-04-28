@@ -40,14 +40,15 @@
 		global $conn;
 
 		$user = $conn->prepare("SELECT public.users.name, public.users.rating,
-			public.users.permission,
-		    SUM(CASE WHEN public.follower.idfollower = ? THEN 1 ELSE 0 END) AS following,
-		    SUM(CASE WHEN public.follower.idfollowed = ? THEN 1 ELSE 0 END) AS followers
+			public.users.permission, public.users.photourl, public.users.id,
+			SUM(CASE WHEN public.follower.idfollowed = public.users.id AND public.follower.idfollower = ?  THEN 1 ELSE 0 END) AS profileFollow,
+		    SUM(CASE WHEN public.follower.idfollower = public.users.id THEN 1 ELSE 0 END) AS following,
+		    SUM(CASE WHEN public.follower.idfollowed = public.users.id THEN 1 ELSE 0 END) AS followers
 		    FROM public.users
 		    LEFT JOIN public.follower ON (public.follower.idfollower = public.users.id OR public.follower.idfollowed = public.users.id)
 		    WHERE public.users.id = ?
 		    GROUP BY public.users.name, public.users.rating, public.users.permission, public.users.id");
-		$user->execute(array($id, $id, $id));
+		$user->execute(array($_SESSION["id"], $id));
 		return $user->fetch();
 	}
 
@@ -68,5 +69,25 @@
 		$stmt->execute(array($id));
 		$return = $stmt->fetchAll();
 		return $return;
+	}
+
+	function follow($ownId, $secondId){
+		global $conn;
+		if(isFollowing($ownId, $secondId)){
+			$stmt = $conn->prepare("DELETE FROM public.follower WHERE public.follower.idFollower = ? AND public.follower.idFollowed = ?");
+			$stmt->execute(array($ownId, $secondId));
+			return 0;
+		}else{
+			$stmt = $conn->prepare("INSERT INTO public.follower (idFollower, idFollowed) VALUES(?, ?)");
+			$stmt->execute(array($ownId, $secondId));
+			return 1;
+		}
+	}
+
+	function isFollowing($id, $secondId){
+		global $conn;
+		$stmt = $conn->prepare("SELECT * FROM public.follower WHERE public.follower.idFollower = ? AND public.follower.idFollowed = ?");
+		$stmt->execute(array($id, $secondId));
+		return $stmt->fetch();
 	}
  ?>

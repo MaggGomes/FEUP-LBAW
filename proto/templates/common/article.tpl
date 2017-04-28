@@ -5,15 +5,18 @@
                 <div class="row">
                     <div class="col-xs-10">
                         <div class="profile-header-img">
-                            {if $article.userimage == NULL}
-                                <img class="img-circle" src="{$BASE_URL}upload/user_profile/default.png"/>
-                            {else}
+                            {if $article.userimage}
+                                {if strpos($article.userimage, '://')}
+                                <img src="{$article.userimage}" class="img-circle" />
+                                {else}
                                 <img class="img-circle" src="{$BASE_URL}upload/user_profile/{$article.userimage}"/>
+                                {/if}
+                            {else}
+                            <img class="img-circle" src="{$BASE_URL}upload/user_profile/default.png"/>
                             {/if}
                         </div>
                         <div class="article-publisher">
-                            <!--<a href="{$BASE_URL}pages/profile.php?id={$article.userid}"><h4 class="article-author">{$article.username}</h4></a>-->
-                            <h4 class="article-author">{$article.username}</h4>
+                            <a href="{$BASE_URL}pages/profile.php?id={$article.userid}"><h4 class="article-author">{$article.username}</h4></a>
                             <small>{$article.articledate}</small>
                         </div>
                     </div>
