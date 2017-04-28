@@ -41,7 +41,7 @@
                                 Edit Profile</a>
                         </li>
                         <li class="">
-                            <a href="#">
+                            <a href="../pages/followers.php">
                                 <i class="fa fa-users"></i>
                                 Followers</a>
                         </li>

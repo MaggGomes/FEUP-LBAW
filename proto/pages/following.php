@@ -9,9 +9,7 @@
         die($err);
     }
 
-
-	$smarty->assign('followLength', count($following));
-	$smarty->assign('following', $following);
+	$smarty->assign('follows', $following);
     $smarty->assign('info', $info);
     $smarty->display('following.tpl');
 ?>

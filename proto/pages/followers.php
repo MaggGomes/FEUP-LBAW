@@ -4,10 +4,12 @@
 
     try{
         $info = accountInfo($_SESSION["id"]);
+		$followers = getFollowers($_SESSION["id"]);
     }catch(Exception $err){
         die($err);
     }
 
+	$smarty->assign('follows', $followers);
     $smarty->assign('info', $info);
-    $smarty->display('followers.tpl');
+    $smarty->display('following.tpl');
 ?>

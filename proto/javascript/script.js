@@ -212,14 +212,12 @@ function follow(html, idPerson){
         idPerson: idPerson
     },
     function(result){
+        $(html).toggleClass("btn-primary");
         if(result){
             $(html).html("<span class=\"fa fa-user\"> Following</span>");
-            $(html).addClass("btn-primary");
         }else{
             $(html).html("<span class=\"fa fa-user-plus\"> Follow</span>");
-            $(html).removeClass("btn-primary");
         }
 
     });
-
 }
