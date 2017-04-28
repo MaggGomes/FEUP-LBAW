@@ -280,6 +280,30 @@
         return $articles;
     }
 
+    function getArticlesByUser($userId){
+        global $conn;
+
+        $stmt = $conn->prepare("SELECT public.article.idArticle AS id,
+                                public.article.title AS title,
+                                public.article.abstract AS abstract,
+                                public.article.date AS articledate,
+                                public.article.category AS category,
+                                public.image.url AS articleimage,
+                                public.users.id AS userid,
+                                public.users.name AS username,
+                                public.rating.value AS rating,
+                                public.users.photoURL AS userimage
+                                FROM public.article
+                                LEFT JOIN public.image ON (public.article.idArticle = public.image.idArticle)
+                                LEFT JOIN public.users ON (public.article.idUser = public.users.id)
+                                LEFT JOIN public.rating ON (public.article.idArticle = public.rating.idArticle AND public.rating.idUser = ?)
+                                WHERE public.article.idUser = ? AND public.article.visibility = 'Visible'
+                                ORDER BY public.article.date LIMIT 6");
+
+        $stmt->execute(array($_SESSION['id'], $userId));
+        return $stmt->fetchAll();
+    }
+
 	function getArticlesByTitle($name, $limit, $offset){
 		global $conn;
 		$stmt = $conn->prepare("SELECT public.article.idArticle AS id,

@@ -41,8 +41,8 @@
 
 		$user = $conn->prepare("SELECT public.users.name, public.users.rating,
 			public.users.permission,
-		    SUM(CASE WHEN public.follower.idfollower = ? THEN 1 ELSE 0 END) AS followers,
-		    SUM(CASE WHEN public.follower.idfollowed = ? THEN 1 ELSE 0 END) AS following
+		    SUM(CASE WHEN public.follower.idfollower = ? THEN 1 ELSE 0 END) AS following,
+		    SUM(CASE WHEN public.follower.idfollowed = ? THEN 1 ELSE 0 END) AS followers
 		    FROM public.users
 		    LEFT JOIN public.follower ON (public.follower.idfollower = public.users.id OR public.follower.idfollowed = public.users.id)
 		    WHERE public.users.id = ?
