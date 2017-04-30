@@ -89,7 +89,7 @@
       <div class="home-search">
         <div id="expandsearch" class="expandsearch">
           <form method="get" action="../pages/advanced_search.php" class="expandsearch-form">
-            <input class="expandsearch-input" name="search" onkeyup="searchByTitle(this.value)" type="search" placeholder="Search ..."/>
+            <input class="expandsearch-input" name="search" onkeyup="searchByTitle(this.value)" type="search" placeholder="Search ..." />
             <button class="expandsearch-submit" type="submit">Search</button>
           </form>
           <div class="expandsearch-content"></div>
@@ -127,14 +127,16 @@
     </div-->
   </nav>
 
+
+
   <div id="signin" class="modal fade" tabindex="-1" role="dialog">
     <div class="modal-dialog modal-sm" role="document">
       <div class="modal-content">
         <div class="modal-body">
           <div class="modal-social-icons">
-            <button class="btn btn-default facebook"><i class="fa fa-facebook modal-icons"></i> Sign In with Facebook </button>
+            <button class="btn btn-default facebook" id="facebook_login"><i class="fa fa-facebook modal-icons"></i> Sign In with Facebook </button>
             <button class="btn btn-default google" id="google_login" data-dismiss="modal"><img src="../images/google-logo.png">Sign In with Google</button>
-            <button class="btn btn-default sigarra" id="facebook_login"><i class="fa fa-graduation-cap" aria-hidden="true"></i> Sign In with Sigarra U.Porto</button>
+            <button class="btn btn-default sigarra"><i class="fa fa-graduation-cap" aria-hidden="true"></i> Sign In with Sigarra U.Porto</button>
           </div>
           <div class="login-or">
             <hr class="hr-or">
