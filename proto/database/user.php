@@ -100,4 +100,18 @@
 		$stmt->execute(array($id, $secondId));
 		return $stmt->fetch();
 	}
+
+    //TODO needs testing
+    function banUser($id, $end, $reason, $banLevel){
+        global $conn;
+        $stmt = $conn->prepare("INSERT INTO public.suspension (start, terminate, reason, ban, idUser) VALUES(LOCALTIMESTAMP, ?, ?, ?, ?)")
+        $stmt->execute($end, $reason, $banLevel, $idUser);
+    }
+
+    //TODO needs testing
+    function changeStatus($id, $newStatus){
+        global $conn;
+        $stmt = $conn->prepare("UPDATE users SET users.permission = ? WHERE users.id = ?")
+        $stmt->execute($newStatus, $id);
+    }
  ?>
