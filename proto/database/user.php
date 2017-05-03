@@ -114,4 +114,23 @@
         $stmt = $conn->prepare("UPDATE users SET users.permission = ? WHERE users.id = ?")
         $stmt->execute($newStatus, $id);
     }
+
+	//TODO needs testing
+	function userStatistics($id){
+        global $conn;
+        $stmt = $conn->prepare("SELECT
+			SUM(CASE WHEN rating.idUser = ? AND rating.value = 1 THEN 1 ELSE 0) AS upvotes
+			SUM(CASE WHEN rating.idUser = ? AND rating.value = -1 THEN 1 ELSE 0) AS downvotes
+			SUM(CASE WHEN report.idUser = ? AND report.state = 'Accepted' THEN 1 ELSE 0) AS acceptedReports
+			SUM(CASE WHEN article.idUser = ? THEN 1 ELSE 0) AS articlesWritten
+			SUM(CASE WHEN suspension.idUser = ? THEN 1 ELSE 0) AS suspensions
+			SUM(CASE WHEN report.idArticle = ? AND article.idUser = ? THEN 1 ELSE 0) AS ownReported
+			FROM users
+			LEFT JOIN rating ON (rating.idUser = users.id)
+			LEFT JOIN report ON (report.idUser = users.id)
+			LEFT JOIN article ON (article.idUser = users.id)
+			LEFT JOIN suspension ON (suspension.idUser = users.id)
+			WHERE users.id = ?")
+        $stmt->execute($id);
+    }
  ?>
