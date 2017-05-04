@@ -7,6 +7,7 @@
                 {include file='common/article.tpl'}
             </article>
 
+
             <div class="col-lg-3">
                 <div class="row container-category-title">
                     <h3 class="col-xs-12">Recommended <span class="glyphicon glyphicon-menu-down"></span></h3>
@@ -33,6 +34,22 @@
                         <small class="text-muted">3 days ago</small>
                     </a>
                 </div>
+            </div>
+        </div>
+        <div class="row">
+            {if $smarty.session.id != null}
+            <div class="col-lg-9">
+                <form action="../actions/add_comment.php" method="post">
+                    <input class="form-control" type="text" name="comment">
+                    <input type="text" name="idarticle" value="{$article.id}" hidden="hidden">
+                    <button class="btn btn-primary" type="submit">Comment </button>
+                </form>
+            </div>
+            {/if}
+            <div class="col-lg-9 ">
+                {foreach $comments as $comment}
+                    {include file='common/comment.tpl'}
+                {/foreach}
             </div>
         </div>
     </div>
