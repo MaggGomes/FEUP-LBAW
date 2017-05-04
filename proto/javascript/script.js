@@ -261,3 +261,13 @@ function follow(html, idPerson) {
 
     });
 }
+
+
+function accountPage(page){
+	$.get("../api/accountPage.php", {
+		page: page
+	},
+	function(data) {
+		$("#page").html(data);
+	});
+}

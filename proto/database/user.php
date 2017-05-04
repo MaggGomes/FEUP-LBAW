@@ -104,14 +104,14 @@
     //TODO needs testing
     function banUser($id, $end, $reason, $banLevel){
         global $conn;
-        $stmt = $conn->prepare("INSERT INTO public.suspension (start, terminate, reason, ban, idUser) VALUES(LOCALTIMESTAMP, ?, ?, ?, ?)")
+        $stmt = $conn->prepare("INSERT INTO public.suspension (start, terminate, reason, ban, idUser) VALUES(LOCALTIMESTAMP, ?, ?, ?, ?)");
         $stmt->execute($end, $reason, $banLevel, $idUser);
     }
 
     //TODO needs testing
     function changeStatus($id, $newStatus){
         global $conn;
-        $stmt = $conn->prepare("UPDATE users SET users.permission = ? WHERE users.id = ?")
+        $stmt = $conn->prepare("UPDATE users SET users.permission = ? WHERE users.id = ?");
         $stmt->execute($newStatus, $id);
     }
 
@@ -130,7 +130,15 @@
 			LEFT JOIN report ON (report.idUser = users.id)
 			LEFT JOIN article ON (article.idUser = users.id)
 			LEFT JOIN suspension ON (suspension.idUser = users.id)
-			WHERE users.id = ?")
+			WHERE users.id = ?");
         $stmt->execute($id);
     }
+
+	function getAccountPage($id){
+		global $conn;
+		$user = accountInfo($id);
+		$smarty->assign('user', $user);
+		$output = $smarty->fetch($BASE_DIR . "templates/common/a.tpl");
+		return $output;
+	}
  ?>
