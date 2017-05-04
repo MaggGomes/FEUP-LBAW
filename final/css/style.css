@@ -108,6 +108,17 @@ a:hover {
     max-height: 50px;
 }
 
+.menu-text {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.menu-photo {
+    position: relative;
+    top: -5px;
+    width: 36px;
+    height: 36px;
+}
+
 .menu-right .menu-top {
     color: #039be5;
     font-size: large;
@@ -1063,6 +1074,10 @@ input[type="search"] {
 
     .menu-user-container {
         display: none
+    }
+
+    .menu-photo {
+        top: -8px;
     }
 
     #menu-user-dropdown {

@@ -1,6 +1,10 @@
 <div class="account-sidebar">
     <div class="account-userpic">
-        <img src="../upload/user_profile/demo-user.png" class="img-responsive" alt="">
+        {if $info.photoURL == NULL}
+            <img class="img-responsive" src="{$BASE_URL}upload/user_profile/default.png"/>
+        {else}
+            <img class="img-responsive" src="{$BASE_URL}upload/user_profile/{$info.photoURL}"/>
+        {/if}
     </div>
     <div class="account-usertitle">
         <div class="account-usertitle-name">

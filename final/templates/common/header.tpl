@@ -64,19 +64,37 @@
         <li><a href="#" id="search"><span class="glyphicon glyphicon-search menu-top"></span></a></li>
         <li><a href="#"><span class="glyphicon glyphicon-bell menu-top"></span></a></li>
         <button class="navbar-toggle" data-toggle="collapse" data-target=".menu-user">
-                <span class="glyphicon glyphicon-user menu-top"></span>
-            </button>
+          {if !$USERNAME}
+            <span class="glyphicon glyphicon-user menu-top"></span>
+          {else}
+            {if !$photo}
+              <img class="img-circle menu-photo" src="{$BASE_URL}upload/user_profile/default.jpg"/>
+            {else}
+              <img class="img-circle menu-photo" src="{$BASE_URL}upload/user_profile/default.png"/>
+            {/if}
+          {/if}
+        </button>
 
         <li id="menu-user-dropdown" class="dropdown">
-          <a class="dropdown-toggle" href="#" data-toggle="dropdown"><span class="glyphicon glyphicon-user menu-top"></span></a>
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            {if !$USERNAME}
+              <span class="glyphicon glyphicon-user menu-top"></span>
+            {else}
+              {if !$photo}
+                <img class="img-circle menu-photo" src="{$BASE_URL}upload/user_profile/default.jpg"/>
+              {else}
+                <img class="img-circle menu-photo" src="{$BASE_URL}upload/user_profile/default.png"/>
+              {/if}
+            {/if}
+          </a>
           <ul class="dropdown-menu collapse">
             {if !$USERNAME}
-            <li><a href="#signin" data-toggle="modal"><span class="fa fa-user-o"> &nbsp;Sign In</a></li>
-            <li><a href="#register" data-toggle="modal"><span class="fa fa-sign-in"> &nbsp;Register</a></li>
+              <li><a href="#signin" data-toggle="modal"><span class="fa fa-user-o"><span class="menu-text"> &nbsp;Sign In</span></a></li>
+              <li><a href="#register" data-toggle="modal"><span class="fa fa-sign-in"><span class="menu-text"> &nbsp;Register</span></a></li>
             {else}
-            <li><a href="../pages/account.php" data-toggle="modal"><span class="fa fa-user-o"> &nbsp;My Profile</a></li>
-            <li><a href="../pages/add_article.php" data-toggle="modal"><span class="fa fa-pencil"> &nbsp;Create Article</a></li>
-            <li><a href="../actions/base/logout.php" data-toggle="modal"><span class="fa fa-sign-out"> &nbsp;Log out</a></li>
+              <li><a href="../pages/account.php" data-toggle="modal"><span class="fa fa-user-o"><span class="menu-text"> &nbsp;My Profile</span></a></li>
+              <li><a href="../pages/add_article.php" data-toggle="modal"><span class="fa fa-pencil"><span class="menu-text"> &nbsp;Create Article</span></a></li>
+              <li><a href="../actions/base/logout.php" data-toggle="modal"><span class="fa fa-sign-out"><span class="menu-text"> &nbsp;Log out</span></a></li>
             {/if}
           </ul>
         </li>
@@ -96,13 +114,18 @@
       </div>
     </div>
 
-
     <!-- Collapsable menu user for resolutions < 768px -->
     <div class="container menu-user-container">
       <div class="collapse navbar-collapse menu-user">
         <ul class="nav navbar-nav">
-          <li><a href="#signin" data-toggle="modal"><span class="fa fa-user-o"> &nbsp;Sign In</a></li>
-          <li><a href="#register" data-toggle="modal"><span class="fa fa-sign-in"> &nbsp;Register</a></li>
+          {if !$USERNAME}
+            <li><a href="#signin" data-toggle="modal"><span class="fa fa-user-o"><span class="menu-text"> &nbsp;Sign In</span></a></li>
+            <li><a href="#register" data-toggle="modal"><span class="fa fa-sign-in"><span class="menu-text"> &nbsp;Register</span></a></li>
+          {else}
+            <li><a href="../pages/account.php" data-toggle="modal"><span class="fa fa-user-o"><span class="menu-text"> &nbsp;My Profile</span></a></li>
+            <li><a href="../pages/add_article.php" data-toggle="modal"><span class="fa fa-pencil"><span class="menu-text"> &nbsp;Create Article</span></a></li>
+            <li><a href="../actions/base/logout.php" data-toggle="modal"><span class="fa fa-sign-out"><span class="menu-text"> &nbsp;Log out</span></a></li>
+          {/if}
         </ul>
       </div>
     </div>
@@ -110,19 +133,21 @@
     <div id="nav-bottom-container" class="container nav-bottom-container">
       <div class="collapse navbar-collapse nav-bottom">
         <ul class="nav navbar-nav">
-          <li><a href="../pages/home.php">Home</a></li>
-          <li><a href="#">Top Articles</a></li>
-          <li><a href="#">World</a></li>
-          <li><a href="#">Sports</a></li>
-          <li><a href="#">Technology</a></li>
-          <li><a href="#">Politics</a></li>
-          <li><a href="#">Culture</a></li>
-          <li><a href="#">Science</a></li>
-          <li><a href="#">Recommended</a></li>
+          <li><a href="../pages/home.php"><span>Home</span></a></li>
+          <li><a href="#"><span class="menu-text">Top Articles</span></a></li>
+          <li><a href="#"><span class="menu-text">World</span></a></li>
+          <li><a href="#"><span class="menu-text">Sports</span></a></li>
+          <li><a href="#"><span class="menu-text">Technology</span></a></li>
+          <li><a href="#"><span class="menu-text">Politics</span></a></li>
+          <li><a href="#"><span class="menu-text">Culture</span></a></li>
+          <li><a href="#"><span class="menu-text">Science</span></a></li>
+          <li><a href="#"><span class="menu-text">Recommended</span></a></li>
         </ul>
       </div>
     </div>
   </nav>
+
+  <!-- Sign In -->
 
   <div id="signin" class="modal fade" tabindex="-1" role="dialog">
     <div class="modal-dialog modal-sm" role="document">
