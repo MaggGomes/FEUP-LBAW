@@ -9,5 +9,5 @@
     }
 
     $smarty->assign('info', $info);
-    $smarty->display('reported_articles.tpl');
+    $smarty->display('account/reported_articles.tpl');
 ?>

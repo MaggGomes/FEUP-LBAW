@@ -1,10 +1,10 @@
-{include file='common/header.tpl'}
+{include file='../common/header.tpl'}
 
 <section class="central">
     <div class="container">
         <div class="row account">
             <div class="col-md-3">
-                {include file='common/accountOverview.tpl'}
+                {include file='account/accountOverview.tpl'}
             </div>
 
             <div class="col-md-6">
@@ -14,7 +14,7 @@
                 <div class="panel panel-default">
                     <div class="panel-body article-text">
                         <h4>Lorem ipsum</h4>
-                        <img class="article-image article-image-small" src="../upload/chart_examples/chart2.png" width="100%">
+                        <img class="article-image article-image-small" src="{$BASE_URL}upload/chart_examples/chart2.png" width="100%">
                         <p>Maecenas vulputate luctus nec justo magna, rhoncus a purus quisque justo, vel earum vitae placerat, facilisi nullam.</p>
                     </div>
                 </div>
@@ -24,7 +24,7 @@
                     <div class="panel panel-default">
                         <div class="panel-body article-text">
                             <h4>Lorem ipsum</h4>
-                            <img class="article-image article-image-small" src="../upload/chart_examples/chart2.png" width="100%">
+                            <img class="article-image article-image-small" src="{$BASE_URL}upload/chart_examples/chart2.png" width="100%">
                             <p>Maecenas vulputate luctus nec justo magna, rhoncus a purus quisque justo, vel earum vitae placerat, facilisi nullam.</p>
                         </div>
                     </div>
@@ -34,7 +34,7 @@
                     <div class="panel panel-default">
                         <div class="panel-body article-text">
                             <h4>Lorem ipsum</h4>
-                            <img class="article-image article-image-small" src="../upload/chart_examples/chart2.png" width="100%">
+                            <img class="article-image article-image-small" src="{$BASE_URL}upload/chart_examples/chart2.png" width="100%">
                             <p>Maecenas vulputate luctus nec justo magna, rhoncus a purus quisque justo, vel earum vitae placerat, facilisi nullam.</p>
                         </div>
                     </div>
@@ -76,4 +76,4 @@
     </div>
 </section>
 
-{include file='common/footer.tpl'}
+{include file='../common/footer.tpl'}

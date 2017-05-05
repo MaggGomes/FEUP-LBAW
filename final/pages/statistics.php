@@ -9,5 +9,5 @@
     }
 
     $smarty->assign('info', $info);
-    $smarty->display('statistics.tpl');
+    $smarty->display('account/statistics.tpl');
 ?>

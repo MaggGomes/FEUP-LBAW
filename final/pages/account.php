@@ -11,5 +11,5 @@
     }
 
     $smarty->assign('info', $info);
-    $smarty->display('account.tpl');
+    $smarty->display('account/account.tpl');
 ?>

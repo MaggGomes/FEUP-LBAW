@@ -9,5 +9,5 @@
     }
 
     $smarty->assign('info', $info);
-    $smarty->display('moderated_articles.tpl');
+    $smarty->display('account/moderated_articles.tpl');
 ?>

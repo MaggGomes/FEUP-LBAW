@@ -9,5 +9,5 @@
     }
 
     $smarty->assign('info', $info);
-    $smarty->display('managing_team.tpl');
+    $smarty->display('account/managing_team.tpl');
 ?>

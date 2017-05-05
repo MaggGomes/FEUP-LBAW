@@ -21,5 +21,5 @@
 
     $smarty->assign('info', $info);
 	$smarty->assign('users', $users);
-    $smarty->display('list_users.tpl');
+    $smarty->display('account/list_users.tpl');
 ?>

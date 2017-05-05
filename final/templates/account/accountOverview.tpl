@@ -26,12 +26,12 @@
 
             <ul class="nav">
                 <li class="active">
-                    <a href="../pages/account.php">
+                    <a href="{$BASE_URL}pages/account.php">
                         <i class="glyphicon glyphicon-home"></i>
                         Overview </a>
                 </li>
                 <li class="">
-                    <a href="../pages/add_article.php">
+                    <a href="{$BASE_URL}pages/add_article.php">
                         <i class="fa fa-pencil"></i>
                         Write an article </a>
                 </li>
@@ -44,7 +44,7 @@
                 <div id="collapseUser" class="panel-collapse collapse account-menu-collapse">
                     <ul class="nav">
                         <li class="">
-                            <a href="../pages/edit_profile.php">
+                            <a href="{$BASE_URL}pages/edit_profile.php">
                                 <i class="fa fa-pencil-square-o"></i>
                                 Edit Profile</a>
                         </li>
@@ -92,7 +92,7 @@
                     <div id="collapseAdmin" class="panel-collapse collapse account-menu-collapse">
                     <ul class="nav">
                         <li class="">
-                            <a href="../pages/list_users.php">
+                            <a href="{$BASE_URL}pages/list_users.php">
                                 <i class="fa fa-user-o"></i>
                                 List of registered users</a>
                         </li>

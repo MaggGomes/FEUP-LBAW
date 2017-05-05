@@ -1,10 +1,10 @@
-{include file='common/header.tpl'}
+{include file='../common/header.tpl'}
 
 <section class="central">
     <div class="container">
         <div class="row account">
             <div class="col-md-3">
-                {include file='common/accountOverview.tpl'}
+                {include file='account/accountOverview.tpl'}
             </div>
             <div class="col-md-6">
                 <div class="account-content account-notifications">
@@ -15,10 +15,10 @@
                                     <div class="row">
                                         <div class="col-xs-10">
                                             <div class="profile-header-img">
-                                                <img class="img-circle" src="../upload/user_profile/demo-user.png" />
+                                                <img class="img-circle" src="../../upload/user_profile/demo-user.png" />
                                             </div>
                                             <div class="article-publisher">
-                                                <p class="account-notification-description"><a href="../pages/profile.php"><span class="article-author">Clark Muller</span></a> has commented an article.</p>
+                                                <p class="account-notification-description"><a href="../../pages/profile.php"><span class="article-author">Clark Muller</span></a> has commented an article.</p>
                                                 <small>March 1</small>
                                             </div>
                                         </div>
@@ -45,10 +45,10 @@
                                     <div class="row">
                                         <div class="col-xs-10">
                                             <div class="profile-header-img">
-                                                <img class="img-circle" src="../upload/user_profile/demo-user.png" />
+                                                <img class="img-circle" src="../../upload/user_profile/demo-user.png" />
                                             </div>
                                             <div class="article-publisher">
-                                                <p class="account-notification-description"><a href="../pages/profile.php"><span class="article-author">Clark Muller</span></a> has commented an article.</p>
+                                                <p class="account-notification-description"><a href="../../pages/profile.php"><span class="article-author">Clark Muller</span></a> has commented an article.</p>
                                                 <small>March 1</small>
                                             </div>
                                         </div>
@@ -75,10 +75,10 @@
                                     <div class="row">
                                         <div class="col-xs-10">
                                             <div class="profile-header-img">
-                                                <img class="img-circle" src="../upload/user_profile/demo-user.png" />
+                                                <img class="img-circle" src="../../upload/user_profile/demo-user.png" />
                                             </div>
                                             <div class="article-publisher">
-                                                <p class="account-notification-description"><a href="../pages/profile.php"><span class="article-author">Clark Muller</span></a> has commented an article.</p>
+                                                <p class="account-notification-description"><a href="../../pages/profile.php"><span class="article-author">Clark Muller</span></a> has commented an article.</p>
                                                 <small>March 1</small>
                                             </div>
                                         </div>
@@ -105,10 +105,10 @@
                                     <div class="row">
                                         <div class="col-xs-10">
                                             <div class="profile-header-img">
-                                                <img class="img-circle" src="../upload/user_profile/demo-user.png" />
+                                                <img class="img-circle" src="../../upload/user_profile/demo-user.png" />
                                             </div>
                                             <div class="article-publisher">
-                                                <p class="account-notification-description"><a href="../pages/profile.php"><span class="article-author">Clark Muller</span></a> has commented an article.</p>
+                                                <p class="account-notification-description"><a href="../../pages/profile.php"><span class="article-author">Clark Muller</span></a> has commented an article.</p>
                                                 <small>March 1</small>
                                             </div>
                                         </div>
@@ -135,10 +135,10 @@
                                     <div class="row">
                                         <div class="col-xs-10">
                                             <div class="profile-header-img">
-                                                <img class="img-circle" src="../upload/user_profile/demo-user.png" />
+                                                <img class="img-circle" src="../../upload/user_profile/demo-user.png" />
                                             </div>
                                             <div class="article-publisher">
-                                                <p class="account-notification-description"><a href="../pages/profile.php"><span class="article-author">Clark Muller</span></a> has commented an article.</p>
+                                                <p class="account-notification-description"><a href="../../pages/profile.php"><span class="article-author">Clark Muller</span></a> has commented an article.</p>
                                                 <small>March 1</small>
                                             </div>
                                         </div>
@@ -165,10 +165,10 @@
                                     <div class="row">
                                         <div class="col-xs-10">
                                             <div class="profile-header-img">
-                                                <img class="img-circle" src="../upload/user_profile/demo-user.png" />
+                                                <img class="img-circle" src="../../upload/user_profile/demo-user.png" />
                                             </div>
                                             <div class="article-publisher">
-                                                <p class="account-notification-description"><a href="../pages/profile.php"><span class="article-author">Clark Muller</span></a> has commented an article.</p>
+                                                <p class="account-notification-description"><a href="../../pages/profile.php"><span class="article-author">Clark Muller</span></a> has commented an article.</p>
                                                 <small>March 1</small>
                                             </div>
                                         </div>
@@ -223,4 +223,4 @@
     </div>
 </section>
 
-{include file='common/footer.tpl'}
+{include file='../common/footer.tpl'}

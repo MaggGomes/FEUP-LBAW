@@ -1,10 +1,10 @@
-{include file='common/header.tpl'}
+{include file='../common/header.tpl'}
 
 <section class="central">
     <div class="container">
         <div class="row account">
             <div class="col-md-3">
-                {include file='common/accountOverview.tpl'}
+                {include file='account/accountOverview.tpl'}
             </div>
             <div class="col-md-6">
 
@@ -81,4 +81,4 @@
     </div>
 </section>
 
-{include file='common/footer.tpl'}
+{include file='../common/footer.tpl'}

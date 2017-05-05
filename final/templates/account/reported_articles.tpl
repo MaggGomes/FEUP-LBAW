@@ -1,10 +1,10 @@
-{include file='common/header.tpl'}
+{include file='../common/header.tpl'}
 
 <section class="central">
     <div class="container">
         <div class="row account">
             <div class="col-md-3">
-                {include file='common/accountOverview.tpl'}
+                {include file='account/accountOverview.tpl'}
             </div>
             <div class="col-md-6">
                 <div class="account-content account-notifications">
@@ -15,11 +15,11 @@
                                     <div class="row">
                                         <div class="col-xs-10">
                                             <div class="profile-header-img">
-                                                <img class="img-circle" src="../upload/user_profile/demo-user.png" />
+                                                <img class="img-circle" src="{$BASE_URL}upload/user_profile/demo-user.png" />
                                             </div>
                                             <div class="article-publisher">
-                                                <p class="account-notification-description"><a href="../pages/profile.php"><span class="article-author">Clark Muller</span></a></p>
-                                                <p class="pending-articles-notification"> has created an article and needs approval.</p>
+                                                <p class="account-notification-description"><a href="../../pages/profile.php"><span class="article-author">Clark Muller</span></a></p>
+                                                <p class="pending-articles-notification"> has reported this article.</p>
                                                 <small>March 1</small>
                                             </div>
                                         </div>
@@ -28,15 +28,15 @@
                                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-option-horizontal pull-right"></span></a>
 
                                                 <ul class="dropdown-menu pull-right" role="menu">
-                                                    <li><a href="#"><span class="fa fa-check-circle-o" aria-hidden="true"></span> &nbsp;Approve article</a></li>
-                                                    <li><a href="#"><span class="fa fa-flag" aria-hidden="true"></span> &nbsp;Report article</a></li>
+                                                    <li><a href="#"><span class="fa fa-check-circle-o" aria-hidden="true"></span> &nbsp;Ignore request</a></li>
+                                                    <li><a href="#"><span class="fa fa-ban" aria-hidden="true"></span> &nbsp;Moderate article</a></li>
                                                 </ul>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <h4>Lorem ipsum</h4>
-                                <img class="article-image article-image-small" src="../upload/articles/city.png" width="100%">
+                                <img class="article-image article-image-small" src="{$BASE_URL}upload/articles/city.png" width="100%">
                             </div>
                         </div>
                     </article>
@@ -48,11 +48,11 @@
                                     <div class="row">
                                         <div class="col-xs-10">
                                             <div class="profile-header-img">
-                                                <img class="img-circle" src="../upload/user_profile/demo-user.png" />
+                                                <img class="img-circle" src="{$BASE_URL}upload/user_profile/demo-user.png" />
                                             </div>
                                             <div class="article-publisher">
-                                                <p class="account-notification-description"><a href="../pages/profile.php"><span class="article-author">Clark Muller</span></a></p>
-                                                <p class="pending-articles-notification"> has created an article and needs approval.</p>
+                                                <p class="account-notification-description"><a href="../../pages/profile.php"><span class="article-author">Clark Muller</span></a></p>
+                                                <p class="pending-articles-notification"> has reported this article.</p>
                                                 <small>March 1</small>
                                             </div>
                                         </div>
@@ -61,15 +61,15 @@
                                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-option-horizontal pull-right"></span></a>
 
                                                 <ul class="dropdown-menu pull-right" role="menu">
-                                                    <li><a href="#"><span class="fa fa-check-circle-o" aria-hidden="true"></span> &nbsp;Approve article</a></li>
-                                                    <li><a href="#"><span class="fa fa-flag" aria-hidden="true"></span> &nbsp;Report article</a></li>
+                                                    <li><a href="#"><span class="fa fa-check-circle-o" aria-hidden="true"></span> &nbsp;Ignore request</a></li>
+                                                    <li><a href="#"><span class="fa fa-ban" aria-hidden="true"></span> &nbsp;Moderate article</a></li>
                                                 </ul>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <h4>Lorem ipsum</h4>
-                                <img class="article-image article-image-small" src="../upload/articles/city.png" width="100%">
+                                <img class="article-image article-image-small" src="{$BASE_URL}upload/articles/city.png" width="100%">
                             </div>
                         </div>
                     </article>
@@ -81,11 +81,11 @@
                                     <div class="row">
                                         <div class="col-xs-10">
                                             <div class="profile-header-img">
-                                                <img class="img-circle" src="../upload/user_profile/demo-user.png" />
+                                                <img class="img-circle" src="{$BASE_URL}upload/user_profile/demo-user.png" />
                                             </div>
                                             <div class="article-publisher">
-                                                <p class="account-notification-description"><a href="../pages/profile.php"><span class="article-author">Clark Muller</span></a></p>
-                                                <p class="pending-articles-notification"> has created an article and needs approval.</p>
+                                                <p class="account-notification-description"><a href="../../pages/profile.php"><span class="article-author">Clark Muller</span></a></p>
+                                                <p class="pending-articles-notification"> has reported this article.</p>
                                                 <small>March 1</small>
                                             </div>
                                         </div>
@@ -94,15 +94,15 @@
                                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-option-horizontal pull-right"></span></a>
 
                                                 <ul class="dropdown-menu pull-right" role="menu">
-                                                    <li><a href="#"><span class="fa fa-check-circle-o" aria-hidden="true"></span> &nbsp;Approve article</a></li>
-                                                    <li><a href="#"><span class="fa fa-flag" aria-hidden="true"></span> &nbsp;Report article</a></li>
+                                                    <li><a href="#"><span class="fa fa-check-circle-o" aria-hidden="true"></span> &nbsp;Ignore request</a></li>
+                                                    <li><a href="#"><span class="fa fa-ban" aria-hidden="true"></span> &nbsp;Moderate article</a></li>
                                                 </ul>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <h4>Lorem ipsum</h4>
-                                <img class="article-image article-image-small" src="../upload/articles/city.png" width="100%">
+                                <img class="article-image article-image-small" src="{$BASE_URL}upload/articles/city.png" width="100%">
                             </div>
                         </div>
                     </article>
@@ -114,11 +114,11 @@
                                     <div class="row">
                                         <div class="col-xs-10">
                                             <div class="profile-header-img">
-                                                <img class="img-circle" src="../upload/user_profile/demo-user.png" />
+                                                <img class="img-circle" src="{$BASE_URL}upload/user_profile/demo-user.png" />
                                             </div>
                                             <div class="article-publisher">
-                                                <p class="account-notification-description"><a href="../pages/profile.php"><span class="article-author">Clark Muller</span></a></p>
-                                                <p class="pending-articles-notification"> has created an article and needs approval.</p>
+                                                <p class="account-notification-description"><a href="../../pages/profile.php"><span class="article-author">Clark Muller</span></a></p>
+                                                <p class="pending-articles-notification"> has reported this article.</p>
                                                 <small>March 1</small>
                                             </div>
                                         </div>
@@ -127,15 +127,15 @@
                                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-option-horizontal pull-right"></span></a>
 
                                                 <ul class="dropdown-menu pull-right" role="menu">
-                                                    <li><a href="#"><span class="fa fa-check-circle-o" aria-hidden="true"></span> &nbsp;Approve article</a></li>
-                                                    <li><a href="#"><span class="fa fa-flag" aria-hidden="true"></span> &nbsp;Report article</a></li>
+                                                    <li><a href="#"><span class="fa fa-check-circle-o" aria-hidden="true"></span> &nbsp;Ignore request</a></li>
+                                                    <li><a href="#"><span class="fa fa-ban" aria-hidden="true"></span> &nbsp;Moderate article</a></li>
                                                 </ul>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <h4>Lorem ipsum</h4>
-                                <img class="article-image article-image-small" src="../upload/articles/city.png" width="100%">
+                                <img class="article-image article-image-small" src="{$BASE_URL}upload/articles/city.png" width="100%">
                             </div>
                         </div>
                     </article>
@@ -176,4 +176,4 @@
     </div>
 </section>
 
-{include file='common/footer.tpl'}
+{include file='../common/footer.tpl'}

@@ -9,5 +9,5 @@
     }
 
     $smarty->assign('info', $info);
-    $smarty->display('followees.tpl');
+    $smarty->display('account/followees.tpl');
 ?>

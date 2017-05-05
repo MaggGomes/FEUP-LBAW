@@ -9,5 +9,5 @@
     }
 
     $smarty->assign('info', $info);
-    $smarty->display('reported_comments.tpl');
+    $smarty->display('account/reported_comments.tpl');
 ?>

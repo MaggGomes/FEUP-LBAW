@@ -9,5 +9,5 @@
     }
 
     $smarty->assign('info', $info);
-    $smarty->display('edit_profile.tpl');
+    $smarty->display('account/edit_profile.tpl');
 ?>

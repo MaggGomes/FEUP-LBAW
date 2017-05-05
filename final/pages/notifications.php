@@ -9,5 +9,5 @@
     }
 
     $smarty->assign('info', $info);
-    $smarty->display('notifications.tpl');
+    $smarty->display('account/notifications.tpl');
 ?>

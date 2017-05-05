@@ -1,11 +1,11 @@
-{include file='common/header.tpl'}
+{include file='../common/header.tpl'}
 
 
 <section class="central">
     <div class="container">
         <div class="row account">
             <div class="col-md-3">
-                {include file='common/accountOverview.tpl'}
+                {include file='account/accountOverview.tpl'}
             </div>
             <div class="col-md-6">
                 <div class="account-content account-overview">
@@ -16,15 +16,15 @@
                                 <div class="panel panel-default">
                                     <div class="panel-body article-text">
                                         <div class="profile-header-container">
-                                            <form method="get" action="profile.php" class="row">
+                                            <form method="get" action="../profile.php" class="row">
                                                 <input type="hidden" name="id" value={$user.id}>
                                                 <div type="submit">
                                                     <div class="col-xs-10">
                                                         <div class="profile-header-img">
-                                                            <img class="img-circle" src="../upload/user_profile/demo-user.png" />
+                                                            <img class="img-circle" src="{$BASE_URL}upload/user_profile/demo-user.png" />
                                                         </div>
                                                         <div class="article-publisher">
-                                                            <a href="../pages/profile.php">
+                                                            <a href="{$BASE_URL}pages/profile.php">
                                                                 <h4 class="article-author">{$user.name}</h4>
                                                                 <small>Rating: {$user.rating}</small>
                                                                 <small>Permission: {$user.permission}</small>
@@ -100,4 +100,4 @@
     </div>
 </section>
 
-{include file='common/footer.tpl'}
+{include file='../common/footer.tpl'}

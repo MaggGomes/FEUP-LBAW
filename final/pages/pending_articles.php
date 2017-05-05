@@ -9,5 +9,5 @@
     }
 
     $smarty->assign('info', $info);
-    $smarty->display('pending_articles.tpl');
+    $smarty->display('account/pending_articles.tpl');
 ?>

@@ -1,10 +1,10 @@
-{include file='common/header.tpl'}
+{include file='../common/header.tpl'}
 
 <section class="central">
     <div class="container">
         <div class="row account">
             <div class="col-md-3">
-                {include file='common/accountOverview.tpl'}
+                {include file='account/accountOverview.tpl'}
             </div>
             <div class="col-md-6">
                 <div class="account-content account-overview">
@@ -17,10 +17,10 @@
                                         <div class="row">
                                             <div class="col-xs-10">
                                                 <div class="profile-header-img">
-                                                    <img class="img-circle" src="../upload/user_profile/demo-user.png" />
+                                                    <img class="img-circle" src="{$BASE_URL}upload/user_profile/demo-user.png" />
                                                 </div>
                                                 <div class="article-publisher">
-                                                    <a href="../pages/read_article.php"><h4 class="article-author">Clark Muller</h4></a>
+                                                    <a href="../../pages/read_article.php"><h4 class="article-author">Clark Muller</h4></a>
                                                     <small>Member since 2017</small>
                                                     <p class="btn btn-primary btn-staff">Moderator</p>
                                                 </div>
@@ -49,10 +49,10 @@
                                         <div class="row">
                                             <div class="col-xs-10">
                                                 <div class="profile-header-img">
-                                                    <img class="img-circle" src="../upload/user_profile/demo-user.png" />
+                                                    <img class="img-circle" src="{$BASE_URL}upload/user_profile/demo-user.png" />
                                                 </div>
                                                 <div class="article-publisher">
-                                                    <a href="../pages/read_article.php"><h4 class="article-author">Clark Muller</h4></a>
+                                                    <a href="../../pages/read_article.php"><h4 class="article-author">Clark Muller</h4></a>
                                                     <small>Member since 2017</small>
                                                     <p class="btn btn-primary btn-staff">Moderator</p>
                                                 </div>
@@ -83,10 +83,10 @@
                                         <div class="row">
                                             <div class="col-xs-10">
                                                 <div class="profile-header-img">
-                                                    <img class="img-circle" src="../upload/user_profile/demo-user.png" />
+                                                    <img class="img-circle" src="{$BASE_URL}upload/user_profile/demo-user.png" />
                                                 </div>
                                                 <div class="article-publisher">
-                                                    <a href="../pages/read_article.php"><h4 class="article-author">Clark Muller</h4></a>
+                                                    <a href="../../pages/read_article.php"><h4 class="article-author">Clark Muller</h4></a>
                                                     <small>Member since 2017</small>
                                                     <p class="btn btn-primary btn-staff">Moderator</p>
                                                 </div>
@@ -115,10 +115,10 @@
                                         <div class="row">
                                             <div class="col-xs-10">
                                                 <div class="profile-header-img">
-                                                    <img class="img-circle" src="../upload/user_profile/demo-user.png" />
+                                                    <img class="img-circle" src="{$BASE_URL}upload/user_profile/demo-user.png" />
                                                 </div>
                                                 <div class="article-publisher">
-                                                    <a href="../pages/read_article.php"><h4 class="article-author">Clark Muller</h4></a>
+                                                    <a href="../../pages/read_article.php"><h4 class="article-author">Clark Muller</h4></a>
                                                     <small>Member since 2017</small>
                                                     <p class="btn btn-primary btn-staff">Moderator</p>
                                                 </div>
@@ -176,4 +176,4 @@
     </div>
 </section>
 
-{include file='common/footer.tpl'}
+{include file='../common/footer.tpl'}
