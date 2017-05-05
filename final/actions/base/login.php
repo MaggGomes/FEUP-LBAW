@@ -18,6 +18,7 @@
 	$_SESSION["email"] = $email;
 	$_SESSION["username"] = $result["name"];
 	$_SESSION["id"] = $result["id"];
+	$_SESSION["photo"] = $result["photourl"];
 
 	header("Location: ../../pages/home.php");
  ?>

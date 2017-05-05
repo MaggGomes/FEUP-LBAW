@@ -1,9 +1,13 @@
 <div class="account-sidebar">
     <div class="account-userpic">
-        {if $info.photoURL == NULL}
+        {if $info.photourl == NULL}
             <img class="img-responsive" src="{$BASE_URL}upload/user_profile/default.png"/>
         {else}
-            <img class="img-responsive" src="{$BASE_URL}upload/user_profile/{$info.photoURL}"/>
+            {if strpos($info.photourl, '://')}
+                <img class="img-responsive" src="{$info.photourl}"/>
+            {else}
+                <img class="img-responsive" src="{$BASE_URL}upload/user_profile/{$info.photourl}"/>
+            {/if}
         {/if}
     </div>
     <div class="account-usertitle">

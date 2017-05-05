@@ -34,6 +34,7 @@
   $smarty->assign('USERNAME', $_SESSION['username']);
   $smarty->assign('EMAIL', $_SESSION['email']);
   $smarty->assign('ID', $_SESSION['id']);
+  $smarty->assign("PHOTO", $_SESSION['photo']);
 
   unset($_SESSION['success_messages']);
   unset($_SESSION['error_messages']);

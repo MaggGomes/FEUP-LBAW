@@ -67,10 +67,14 @@
           {if !$USERNAME}
             <span class="glyphicon glyphicon-user menu-top"></span>
           {else}
-            {if !$photo}
-              <img class="img-circle menu-photo" src="{$BASE_URL}upload/user_profile/default.jpg"/>
-            {else}
+            {if !$PHOTO}
               <img class="img-circle menu-photo" src="{$BASE_URL}upload/user_profile/default.png"/>
+            {else}
+              {if strpos($PHOTO, '://')}
+                <img class="img-circle menu-photo" src="{$PHOTO}"/>
+              {else}
+                <img class="img-circle menu-photo" src="{$BASE_URL}upload/user_profile/{$PHOTO}"/>
+              {/if}
             {/if}
           {/if}
         </button>
@@ -80,10 +84,14 @@
             {if !$USERNAME}
               <span class="glyphicon glyphicon-user menu-top"></span>
             {else}
-              {if !$photo}
-                <img class="img-circle menu-photo" src="{$BASE_URL}upload/user_profile/default.jpg"/>
-              {else}
+              {if !$PHOTO}
                 <img class="img-circle menu-photo" src="{$BASE_URL}upload/user_profile/default.png"/>
+              {else}
+                {if strpos($PHOTO, '://')}
+                  <img class="img-circle menu-photo" src="{$PHOTO}"/>
+                {else}
+                  <img class="img-circle menu-photo" src="{$BASE_URL}upload/user_profile/{$PHOTO}"/>
+                {/if}
               {/if}
             {/if}
           </a>
@@ -92,9 +100,9 @@
               <li><a href="#signin" data-toggle="modal"><span class="fa fa-user-o"><span class="menu-text"> &nbsp;Sign In</span></a></li>
               <li><a href="#register" data-toggle="modal"><span class="fa fa-sign-in"><span class="menu-text"> &nbsp;Register</span></a></li>
             {else}
-              <li><a href="../pages/account.php" data-toggle="modal"><span class="fa fa-user-o"><span class="menu-text"> &nbsp;My Profile</span></a></li>
-              <li><a href="../pages/add_article.php" data-toggle="modal"><span class="fa fa-pencil"><span class="menu-text"> &nbsp;Create Article</span></a></li>
-              <li><a href="../actions/base/logout.php" data-toggle="modal"><span class="fa fa-sign-out"><span class="menu-text"> &nbsp;Log out</span></a></li>
+              <li><a href="{$BASE_URL}pages/account.php" data-toggle="modal"><span class="fa fa-user-o"><span class="menu-text"> &nbsp;My Profile</span></a></li>
+              <li><a href="{$BASE_URL}pages/add_article.php" data-toggle="modal"><span class="fa fa-pencil"><span class="menu-text"> &nbsp;Create Article</span></a></li>
+              <li><a href="{$BASE_URL}actions/base/logout.php" data-toggle="modal"><span class="fa fa-sign-out"><span class="menu-text"> &nbsp;Log out</span></a></li>
             {/if}
           </ul>
         </li>
@@ -103,7 +111,7 @@
       <!-- Menu search -->
       <div class="home-search">
         <div id="expandsearch" class="expandsearch">
-          <form method="get" action="../pages/advanced_search.php" class="expandsearch-form">
+          <form method="get" action="{$BASE_URL}pages/advanced_search.php" class="expandsearch-form">
             <input class="expandsearch-input" name="search" onkeyup="searchByTitle(this.value)" type="search" placeholder="Search ..."/>
             <button class="expandsearch-submit" type="submit">Search</button>
           </form>

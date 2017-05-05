@@ -1,5 +1,4 @@
 <?php
-
 	include_once('../../config/init.php');
 	include_once("../../database/user.php");
 
@@ -25,5 +24,4 @@
 	$_SESSION["id"] = $result["id"];
 
 	header('Location: ../../pages/home.php');
-
 ?>
