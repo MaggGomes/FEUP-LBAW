@@ -141,7 +141,9 @@ $(document).ready(function() {
   };
 
   function attachSignin(element) {
-    auth2.attachClickHandler(element, {},
+    auth2.attachClickHandler(element, {
+        prompt: 'consent'
+      },
       function(googleUser) {
         $.post({
           url: "../actions/base/3rd_party_login.php",
@@ -153,24 +155,24 @@ $(document).ready(function() {
             platform: "google"
           },
           success: function(data) {
-            console.log(googleUser.getBasicProfile());
             location.reload();
           }
         });
       },
-      function(error) {
-
-      });
+      function(error) {});
   }
 
   $("#google_login").click(
     startGoogleApp()
   );
 
-  $("#facebook_login").click(
-    FB.login(function(response){
-      console.log(response);
-    }));
+  $("#logout_button").click(
+    function() {
+      var auth2 = gapi.auth2.getAuthInstance();
+      console.log(auth2.currentUser.get());
+      auth2.signOut();
+    });
+
 
   //Facebook
   window.fbAsyncInit = function() {
@@ -192,6 +194,16 @@ $(document).ready(function() {
     js.src = "//connect.facebook.net/en_US/sdk.js";
     fjs.parentNode.insertBefore(js, fjs);
   }(document, 'script', 'facebook-jssdk'));
+
+  $("#facebook_login").click(
+    function() {
+      FB.login(function(response) {
+        console.log(response);
+      }, {scope: 'email'}
+    )
+
+      location.reload();
+    });
 
 
 });
@@ -263,11 +275,11 @@ function follow(html, idPerson) {
 }
 
 
-function accountPage(page){
-	$.get("../api/accountPage.php", {
-		page: page
-	},
-	function(data) {
-		$("#page").html(data);
-	});
+function accountPage(page) {
+  $.get("../api/accountPage.php", {
+      page: page
+    },
+    function(data) {
+      $("#page").html(data);
+    });
 }

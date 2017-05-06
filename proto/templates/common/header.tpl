@@ -79,7 +79,7 @@
             {else}
             <li><a href="../pages/account.php" data-toggle="modal"><span class="fa fa-user-o"> &nbsp;My Profile</a></li>
             <li><a href="../pages/add_article.php" data-toggle="modal"><span class="fa fa-pencil"> &nbsp;Create Article</a></li>
-            <li><a href="../actions/base/logout.php" data-toggle="modal"><span class="fa fa-sign-out"> &nbsp;Log out</a></li>
+            <li id="logout_button"><a href="../actions/base/logout.php" data-toggle="modal"><span class="fa fa-sign-out" > &nbsp;Log out</a></li>
             {/if}
           </ul>
         </li>
