@@ -14,7 +14,9 @@
         $stmt = $conn->prepare("SELECT public.article.idArticle AS id,
                                 public.article.title AS title,
                                 public.article.abstract AS abstract,
-                                public.article.date AS articledate,
+                                date_part('day', public.article.date) AS articleday,
+                                to_char(public.article.date, 'Month') AS articlemonth,
+                                date_part('year', public.article.date) AS articleyear,
                                 public.article.category AS category,
                                 public.image.url AS articleimage,
                                 public.users.id AS userid,
@@ -61,7 +63,9 @@
                                 public.article.title AS title,
                                 public.article.abstract AS abstract,
                                 public.article.content AS content,
-                                public.article.date AS articledate,
+                                date_part('day', public.article.date) AS articleday,
+                                to_char(public.article.date, 'Month') AS articlemonth,
+                                date_part('year', public.article.date) AS articleyear,
                                 public.article.category AS category,
                                 public.image.url AS articleimage,
                                 public.users.id AS userid,
@@ -104,7 +108,9 @@
         $stmt = $conn->prepare("SELECT public.article.idArticle AS id,
                                 public.article.title AS title,
                                 public.article.abstract AS abstract,
-                                public.article.date AS articledate,
+                                date_part('day', public.article.date) AS articleday,
+                                to_char(public.article.date, 'Month') AS articlemonth,
+                                date_part('year', public.article.date) AS articleyear,
                                 public.article.category AS category,
                                 public.image.url AS articleimage,
                                 public.users.id AS userid,
@@ -139,33 +145,6 @@
         $article['downvotes'] = $result['downvotes'];
 
         return $article;
-
-    }
-
-    //TODO not done yet
-    function getTopArticle(){
-
-        global $conn;
-
-        $stmt = $conn->prepare("SELECT public.article.idArticle AS id,
-                                public.article.title AS title,
-                                public.article.abstract AS abstract,
-                                public.article.content AS content,
-                                public.article.date AS articledate,
-                                public.article.category AS category,
-                                public.image.url AS articleimage,
-                                public.users.id AS userid,
-                                public.users.name AS username,
-                                public.users.photoURL AS userimage,
-                                public.rating.value AS rating
-                                FROM public.article
-                                LEFT JOIN public.image ON (public.article.idArticle = public.image.idArticle)
-                                LEFT JOIN public.users ON (public.article.idUser = public.users.id)
-                                LEFT JOIN public.rating ON (public.article.idArticle = public.rating.idArticle AND public.rating.idUser = ?)
-                                WHERE public.article.idArticle = ?");
-
-        $stmt->execute();
-        return $stmt->fetchAll();
     }
 
     function getDailyTopArticle(){
@@ -173,12 +152,13 @@
 
         $numdays = 1;
         do {
-            $stmt = $conn->prepare("SELECT idArticle FROM rating
-                                    WHERE date_part('day', age(localtimestamp, date)) <= $numdays
-                                    GROUP BY idArticle
+            $stmt = $conn->prepare("SELECT public.rating.idArticle FROM public.rating
+                                    LEFT JOIN public.article ON (public.rating.idArticle = public.article.idArticle)
+                                    WHERE public.article.visibility = ? AND date_part('day', age(localtimestamp, public.rating.date)) <= $numdays
+                                    GROUP BY public.rating.idArticle
                                     ORDER BY SUM(value) DESC
                                     LIMIT 7");
-            $stmt->execute();
+            $stmt->execute(array('Visible'));
             $result = $stmt->fetchAll();
             $numdays++;
         } while (count($result) < 7);
@@ -195,46 +175,6 @@
             $article[$i] = getArticleShortById($idarticle);
         }
 
-        /*$idarticle = $result[0]['idarticle'];
-
-        $stmt = $conn->prepare("SELECT public.article.idArticle AS id,
-                                public.article.title AS title,
-                                public.article.abstract AS abstract,
-                                public.article.content AS content,
-                                public.article.date AS articledate,
-                                public.article.category AS category,
-                                public.image.url AS articleimage,
-                                public.users.id AS userid,
-                                public.users.name AS username,
-                                public.users.photoURL AS userimage
-                                FROM public.article
-                                LEFT JOIN public.image ON (public.article.idArticle = public.image.idArticle)
-                                LEFT JOIN public.users ON (public.article.idUser = public.users.id)
-                                WHERE public.article.idArticle = ?");
-
-        $stmt->execute(array($idarticle));
-
-        $article = $stmt->fetch();
-
-
-        $stmt = $conn->prepare("SELECT COUNT(*) AS upvotes
-                                    FROM public.rating
-                                    WHERE public.rating.idArticle = ? AND public.rating.value = 1");
-
-        $stmt->execute(array($article['id']));
-        $result = $stmt->fetch();
-
-        $article['upvotes'] = $result['upvotes'];
-
-        $stmt = $conn->prepare("SELECT COUNT(*) AS downvotes
-                                    FROM public.rating
-                                    WHERE public.rating.idArticle = ? AND public.rating.value = -1");
-
-        $stmt->execute(array($article['id']));
-        $result = $stmt->fetch();
-
-        $article['downvotes'] = $result['downvotes'];
-*/
         return $article;
     }
 
@@ -286,16 +226,19 @@
 										public.article.title,
 										public.article.category,
 										public.users.name,
+										date_part('day', public.article.date) AS articleday,
+                                        to_char(public.article.date, 'Month') AS articlemonth,
+                                        date_part('year', public.article.date) AS articleyear,
 										SUM(public.rating.value) AS rating
 										FROM public.article
 										LEFT JOIN public.users ON (public.article.idUser = public.users.id)
 										LEFT JOIN public.rating ON (public.article.idArticle = public.rating.idArticle)
-										WHERE LOWER(public.article.title) LIKE LOWER(?)
+										WHERE public.article.visibility = ? AND LOWER(public.article.title) LIKE LOWER(?)
 										GROUP BY public.article.idArticle, public.users.name
 										ORDER BY rating DESC
 										LIMIT ?
 										OFFSET ?");
-		$stmt->execute(array("%".$name."%", $limit, $offset));
+		$stmt->execute(array('Visible', "%".$name."%", $limit, $offset));
 		$match = $stmt->fetchAll();
 		return $match;
 	}

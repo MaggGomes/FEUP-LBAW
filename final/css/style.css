@@ -114,9 +114,9 @@ a:hover {
 
 .menu-photo {
     position: relative;
-    top: -5px;
-    width: 36px;
-    height: 36px;
+    top: -4px;
+    width: 34px;
+    height: 34px;
 }
 
 .menu-right .menu-top {
@@ -1056,8 +1056,8 @@ input[type="search"] {
     }
 
     #nav-bottom-container a {
-        padding-right: 10px;
-        padding-left: 10px;
+        padding-right: 5px;
+        padding-left: 5px;
     }
 
     .navbar-header .navbar-brand {
@@ -1207,6 +1207,11 @@ input[type="search"] {
 
 /* Medium devices (desktops, 992px and up) @screen-md-min */
 @media (min-width: 992px) {
+
+    #nav-bottom-container a {
+        padding-right: 10px;
+        padding-left: 10px;
+    }
 
     .article-image-small {
         height: 180px;

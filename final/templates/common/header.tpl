@@ -149,6 +149,7 @@
           <li><a href="#"><span class="menu-text">Politics</span></a></li>
           <li><a href="#"><span class="menu-text">Culture</span></a></li>
           <li><a href="#"><span class="menu-text">Science</span></a></li>
+          <li><a href="#"><span class="menu-text">Miscellaneous</span></a></li>
           <li><a href="#"><span class="menu-text">Recommended</span></a></li>
         </ul>
       </div>

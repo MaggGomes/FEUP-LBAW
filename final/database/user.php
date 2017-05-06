@@ -24,6 +24,21 @@
 		return $user->fetch();
 	}
 
+	function getUserByID($id){
+		global $conn;
+
+		$user = $conn->prepare("SELECT public.users.name, public.users.rating,
+			public.users.photoURL,
+		    SUM(CASE WHEN public.follower.idfollower = ? THEN 1 ELSE 0 END) AS followers,
+		    SUM(CASE WHEN public.follower.idfollowed = ? THEN 1 ELSE 0 END) AS following
+		    FROM public.users
+		    LEFT JOIN public.follower ON (public.follower.idfollower = public.users.id OR public.follower.idfollowed = public.users.id)
+		    WHERE public.users.id = ?
+		    GROUP BY public.users.name, public.users.rating, public.users.permission, public.users.id");
+		$user->execute(array($id, $id, $id));
+		return $user->fetch();
+	}
+
 	function isAdministrator($id){
 		global $conn;
 

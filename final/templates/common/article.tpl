@@ -13,7 +13,7 @@
                         </div>
                         <div class="article-publisher">
                             <a href="{$BASE_URL}pages/profile.php?id={$article.userid}"><h4 class="article-author">{$article.username}</h4></a>
-                            <small>March 1</small>
+                            <small>{$article.articlemonth} {$article.articleday}, {$article.articleyear}</small>
                         </div>
                     </div>
                     <div class="col-xs-2 small-text">

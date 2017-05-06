@@ -1,11 +1,12 @@
 <?php
     include_once('../config/init.php');
-    include_once($BASE_DIR .'database/article.php');
+    include_once($BASE_DIR .'database/user.php');
+
 
     $id = $_GET['id'];
 
     try {
-        $user = getUserById($id);
+        $user = getUserByID($id);
     } catch (PDOException $e) {
         die($e->getMessage());
     }
