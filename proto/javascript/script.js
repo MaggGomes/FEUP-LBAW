@@ -124,86 +124,87 @@ $(document).ready(function() {
   Third party login scripts
    */
 
-  //Google
+//Google
 
-  var googleUser = {};
-  var startGoogleApp = function() {
-    gapi.load('auth2', function() {
-      // Retrieve the singleton for the GoogleAuth library and set up the client.
-      auth2 = gapi.auth2.init({
-        client_id: '702080112341-73p7rf48svsdsjjggajealjjcsa4njcm.apps.googleusercontent.com',
-        cookiepolicy: 'single_host_origin',
-        // Request scopes in addition to 'profile' and 'email'
-        //scope: 'additional_scope'
+var googleUser = {};
+var startGoogleApp = function() {
+  gapi.load('auth2', function() {
+    // Retrieve the singleton for the GoogleAuth library and set up the client.
+    auth2 = gapi.auth2.init({
+      client_id: '702080112341-73p7rf48svsdsjjggajealjjcsa4njcm.apps.googleusercontent.com',
+      cookiepolicy: 'single_host_origin',
+      // Request scopes in addition to 'profile' and 'email'
+      //scope: 'additional_scope'
+    });
+    attachSignin(document.getElementById('google_login'));
+  });
+};
+
+function attachSignin(element) {
+  auth2.attachClickHandler(element, {
+      prompt: 'consent'
+    },
+    function(googleUser) {
+      $.post({
+        url: "../actions/base/3rd_party_login.php",
+        //type: "post",
+        data: {
+          username: googleUser.getBasicProfile().getName(),
+          email: googleUser.getBasicProfile().getEmail(),
+          imageUrl: googleUser.getBasicProfile().getImageUrl(),
+          platform: "google"
+        },
+        success: function(data) {
+          location.reload();
+        }
       });
-      attachSignin(document.getElementById('google_login'));
-    });
-  };
+    },
+    function(error) {});
+}
 
-  function attachSignin(element) {
-    auth2.attachClickHandler(element, {
-        prompt: 'consent'
-      },
-      function(googleUser) {
-        $.post({
-          url: "../actions/base/3rd_party_login.php",
-          //type: "post",
-          data: {
-            username: googleUser.getBasicProfile().getName(),
-            email: googleUser.getBasicProfile().getEmail(),
-            imageUrl: googleUser.getBasicProfile().getImageUrl(),
-            platform: "google"
-          },
-          success: function(data) {
-            location.reload();
-          }
-        });
-      },
-      function(error) {});
+$("#google_login").click(
+  startGoogleApp()
+);
+
+$("#logout_button").click(
+  function() {
+    var auth2 = gapi.auth2.getAuthInstance();
+    console.log(auth2.currentUser.get());
+    auth2.signOut();
+  });
+
+
+//Facebook
+window.fbAsyncInit = function() {
+  FB.init({
+    appId: '1664589083847513',
+    xfbml: true,
+    version: 'v2.9'
+  });
+  FB.AppEvents.logPageView();
+};
+
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {
+    //  return;
   }
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
 
-  $("#google_login").click(
-    startGoogleApp()
-  );
+$("#facebook_login").click(
+  function() {
+    FB.login(function(response) {
+      console.log(response);
+    }, {
+      scope: 'email'
+    })
 
-  $("#logout_button").click(
-    function() {
-      var auth2 = gapi.auth2.getAuthInstance();
-      console.log(auth2.currentUser.get());
-      auth2.signOut();
-    });
-
-
-  //Facebook
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId: '1664589083847513',
-      xfbml: true,
-      version: 'v2.9'
-    });
-    FB.AppEvents.logPageView();
-  };
-
-  (function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) {
-      //  return;
-    }
-    js = d.createElement(s);
-    js.id = id;
-    js.src = "//connect.facebook.net/en_US/sdk.js";
-    fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));
-
-  $("#facebook_login").click(
-    function() {
-      FB.login(function(response) {
-        console.log(response);
-      }, {scope: 'email'}
-    )
-
-      location.reload();
-    });
+    location.reload();
+  });
 
 
 });

@@ -120,6 +120,12 @@ $(document).ready(function() {
 
   })();
 
+  /*
+  Third party login scripts
+   */
+
+  //Google
+
   var googleUser = {};
   var startGoogleApp = function() {
     gapi.load('auth2', function() {
@@ -135,7 +141,9 @@ $(document).ready(function() {
   };
 
   function attachSignin(element) {
-    auth2.attachClickHandler(element, {},
+    auth2.attachClickHandler(element, {
+        prompt: 'consent'
+      },
       function(googleUser) {
         $.post({
           url: "../actions/base/3rd_party_login.php",
@@ -147,29 +155,70 @@ $(document).ready(function() {
             platform: "google"
           },
           success: function(data) {
-            console.log(googleUser.getBasicProfile());
             location.reload();
           }
         });
       },
-      function(error) {
-
-      });
+      function(error) {});
   }
 
-  $("#google_login").click(startGoogleApp());
+  $("#google_login").click(
+    startGoogleApp()
+  );
+
+  $("#logout_button").click(
+    function() {
+      var auth2 = gapi.auth2.getAuthInstance();
+      console.log(auth2.currentUser.get());
+      auth2.signOut();
+    });
+
+
+  //Facebook
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId: '1664589083847513',
+      xfbml: true,
+      version: 'v2.9'
+    });
+    FB.AppEvents.logPageView();
+  };
+
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) {
+      //  return;
+    }
+    js = d.createElement(s);
+    js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+
+  $("#facebook_login").click(
+    function() {
+      FB.login(function(response) {
+        console.log(response);
+      }, {
+        scope: 'email'
+      })
+
+      location.reload();
+    });
 });
 
 window.onload = function() {
-    $(".add-article-tags a").click(function() { $("#tags").css("display", "inline")  });
+  $(".add-article-tags a").click(function() {
+    $("#tags").css("display", "inline")
+  });
 }
 
 function searchByTitle(value) {
   if (value.length >= 3) {
     $.get("../api/searchTitleTag.php", {
       "name": value,
-	  "limit": 4,
-	  "offset": 0
+      "limit": 4,
+      "offset": 0
     }, showResults);
   }
 }
@@ -178,33 +227,33 @@ function showResults(data) {
   console.log(data);
 }
 
-function changeRating(html, value, idSession){
-    if(idSession){
-        console.log($(html).children()[0]);
-        console.log($(html).children()[1]);
-        $.post("../api/update_rating.php", {
-            value:value,
-            idArticle: $(html).data('value')
-        },
-        function(result){
-            if($(html).hasClass("voted")){
-                $(html).removeClass("voted");
-            } else{
-                $(html).addClass("voted");
-            }
-            if(value > 0){
-                $(html).html('<span class="glyphicon glyphicon-thumbs-up"></span><span> </span><span class="glyph-text">' + result + '</span><span> &nbsp&nbsp</span>');
-                if($(html).next().hasClass("voted")){
-                    $(html).next().removeClass("voted");
-                    $(html).next().children()[2].innerHTML = $(html).next().children()[2].innerHTML - 1 ;
-                }
-            }else{
-                $(html).html('<span class="glyphicon glyphicon-thumbs-down"></span><span> </span><span class="glyph-text">' + result + '</span>');
-                if($(html).prev().hasClass("voted")){
-                    $(html).prev().removeClass("voted");
-                    $(html).prev().children()[2].innerHTML = $(html).prev().children()[2].innerHTML - 1;
-                }
-            }
-        });
-    }
+function changeRating(html, value, idSession) {
+  if (idSession) {
+    console.log($(html).children()[0]);
+    console.log($(html).children()[1]);
+    $.post("../api/update_rating.php", {
+        value: value,
+        idArticle: $(html).data('value')
+      },
+      function(result) {
+        if ($(html).hasClass("voted")) {
+          $(html).removeClass("voted");
+        } else {
+          $(html).addClass("voted");
+        }
+        if (value > 0) {
+          $(html).html('<span class="glyphicon glyphicon-thumbs-up"></span><span> </span><span class="glyph-text">' + result + '</span><span> &nbsp&nbsp</span>');
+          if ($(html).next().hasClass("voted")) {
+            $(html).next().removeClass("voted");
+            $(html).next().children()[2].innerHTML = $(html).next().children()[2].innerHTML - 1;
+          }
+        } else {
+          $(html).html('<span class="glyphicon glyphicon-thumbs-down"></span><span> </span><span class="glyph-text">' + result + '</span>');
+          if ($(html).prev().hasClass("voted")) {
+            $(html).prev().removeClass("voted");
+            $(html).prev().children()[2].innerHTML = $(html).prev().children()[2].innerHTML - 1;
+          }
+        }
+      });
+  }
 }
