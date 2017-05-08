@@ -213,6 +213,7 @@ window.onload = function() {
   });
 }
 
+/*  Searchs an article by title */
 function searchByTitle(value) {
   if (value.length >= 3) {
     $.get("../api/searchTitleTag.php", {
@@ -223,10 +224,12 @@ function searchByTitle(value) {
   }
 }
 
+/* Show results */
 function showResults(data) {
   console.log(data);
 }
 
+/* Changes rating og an article*/
 function changeRating(html, value, idSession) {
   if (idSession) {
     console.log($(html).children()[0]);
@@ -255,5 +258,8 @@ function changeRating(html, value, idSession) {
           }
         }
       });
+  } else {
+    // Show modal for login
+    $("#signin").modal();
   }
 }
