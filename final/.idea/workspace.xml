@@ -29,32 +29,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="script.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/javascript/script.js">
+      <file leaf-file-name="edit_profile.tpl" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/account/edit_profile.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5509434">
-              <caret line="217" column="26" selection-start-line="217" selection-start-column="26" selection-end-line="217" selection-end-column="26" />
+            <state vertical-scroll-proportion="-16.346153">
+              <caret line="25" column="88" selection-start-line="25" selection-start-column="88" selection-end-line="25" selection-end-column="88" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="header.tpl" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/common/header.tpl">
+      <file leaf-file-name="action_add_article.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/actions/action_add_article.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="31.363636">
-              <caret line="99" column="34" selection-start-line="99" selection-start-column="28" selection-end-line="99" selection-end-column="34" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="article.tpl" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/common/article.tpl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.0363636">
-              <caret line="55" column="130" selection-start-line="55" selection-start-column="124" selection-end-line="55" selection-end-column="130" />
-              <folding />
+            <state vertical-scroll-proportion="-1.0564972">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <marker date="1492678443016" expanded="true" signature="314:453" placeholder="INSERT INTO public.article... " />
+                <marker date="1492678443016" expanded="true" signature="588:657" placeholder="SELECT idArt... article" />
+                <marker date="1492678443016" expanded="true" signature="901:941" placeholder="SELECT id FR... tags" />
+                <marker date="1492678443016" expanded="true" signature="1093:1133" placeholder="INSERT INTO public.tags... " />
+                <marker date="1492678443016" expanded="true" signature="1231:1271" placeholder="SELECT id FR... tags" />
+                <marker date="1492678443016" expanded="true" signature="1408:1467" placeholder="INSERT INTO public.linktag... " />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -72,10 +69,8 @@
         <option value="$PROJECT_DIR$/actions/base/login.php" />
         <option value="$PROJECT_DIR$/templates/common/accountOverview.tpl" />
         <option value="$PROJECT_DIR$/actions/base/3rd_party_login.php" />
-        <option value="$PROJECT_DIR$/pages/account.php" />
         <option value="$PROJECT_DIR$/pages/edit_profile.php" />
         <option value="$PROJECT_DIR$/pages/followees.php" />
-        <option value="$PROJECT_DIR$/pages/followers.php" />
         <option value="$PROJECT_DIR$/pages/list_users.php" />
         <option value="$PROJECT_DIR$/pages/moderated_articles.php" />
         <option value="$PROJECT_DIR$/pages/managing_team.php" />
@@ -85,10 +80,7 @@
         <option value="$PROJECT_DIR$/pages/reported_comments.php" />
         <option value="$PROJECT_DIR$/pages/statistics.php" />
         <option value="$PROJECT_DIR$/templates/account/account.tpl" />
-        <option value="$PROJECT_DIR$/templates/account/edit_profile.tpl" />
         <option value="$PROJECT_DIR$/templates/account/followees.tpl" />
-        <option value="$PROJECT_DIR$/templates/account/followers.tpl" />
-        <option value="$PROJECT_DIR$/templates/account/list_users.tpl" />
         <option value="$PROJECT_DIR$/templates/account/managing_team.tpl" />
         <option value="$PROJECT_DIR$/templates/account/moderated_articles.tpl" />
         <option value="$PROJECT_DIR$/templates/account/notifications.tpl" />
@@ -96,15 +88,28 @@
         <option value="$PROJECT_DIR$/templates/account/reported_articles.tpl" />
         <option value="$PROJECT_DIR$/templates/account/reported_comments.tpl" />
         <option value="$PROJECT_DIR$/templates/account/statistics.tpl" />
-        <option value="$PROJECT_DIR$/templates/account/accountOverview.tpl" />
-        <option value="$PROJECT_DIR$/css/style.css" />
-        <option value="$PROJECT_DIR$/database/article.php" />
-        <option value="$PROJECT_DIR$/templates/common/article.tpl" />
-        <option value="$PROJECT_DIR$/pages/profile.php" />
-        <option value="$PROJECT_DIR$/database/user.php" />
-        <option value="$PROJECT_DIR$/templates/profile.tpl" />
         <option value="$PROJECT_DIR$/templates/common/header.tpl" />
+        <option value="$PROJECT_DIR$/templates/common/recommended-side.tpl" />
+        <option value="$PROJECT_DIR$/css/style.css" />
+        <option value="$PROJECT_DIR$/pages/profile.php" />
+        <option value="$PROJECT_DIR$/api/editFollow.php" />
+        <option value="$PROJECT_DIR$/pages/following.php" />
+        <option value="$PROJECT_DIR$/pages/followers.php" />
+        <option value="$PROJECT_DIR$/database/comment.php" />
+        <option value="$PROJECT_DIR$/pages/account.php" />
+        <option value="$PROJECT_DIR$/templates/account/list_users.tpl" />
+        <option value="$PROJECT_DIR$/templates/account.tpl" />
+        <option value="$PROJECT_DIR$/database/user.php" />
+        <option value="$PROJECT_DIR$/templates/account/accountOverview.tpl" />
+        <option value="$PROJECT_DIR$/templates/account/following.tpl" />
+        <option value="$PROJECT_DIR$/templates/account/followers.tpl" />
+        <option value="$PROJECT_DIR$/api/accountPage.php" />
+        <option value="$PROJECT_DIR$/templates/home.tpl" />
+        <option value="$PROJECT_DIR$/templates/common/article.tpl" />
+        <option value="$PROJECT_DIR$/database/article.php" />
+        <option value="$PROJECT_DIR$/templates/profile.tpl" />
         <option value="$PROJECT_DIR$/javascript/script.js" />
+        <option value="$PROJECT_DIR$/templates/account/edit_profile.tpl" />
       </list>
     </option>
   </component>
@@ -209,7 +214,25 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="javascript" />
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="account" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="final" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="final" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="actions" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -225,16 +248,16 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\wamp64\www\LBAW-Project\final\templates\account" />
-      <recent name="C:\wamp64\www\LBAW-Project\final\templates" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\wamp64\www\LBAW-Project\final\upload\user_profile" />
       <recent name="C:\wamp64\www\LBAW-Project\final\templates" />
       <recent name="C:\wamp64\www\LBAW-Project\final\pages" />
       <recent name="C:\wamp64\www\LBAW-Project\final\javascript" />
       <recent name="C:\wamp64\www\LBAW-Project\final\database" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\LBAW-Project\final\templates" />
+      <recent name="C:\wamp64\www\LBAW-Project\final\templates\account" />
     </key>
   </component>
   <component name="RunManager">
@@ -284,7 +307,7 @@
     <frame x="-8" y="-8" width="1370" height="744" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26183206" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26183206" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991454" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32977098" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -320,65 +343,12 @@
     </ignored-roots>
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/templates/profile.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/user.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding>
-            <element signature="n#isAdministrator#0;n#!!top" expanded="false" />
-            <element signature="n#accountInfo#0;n#!!top" expanded="false" />
-            <marker date="1494039055990" expanded="true" signature="112:319" placeholder="SELECT publi... users" />
-            <marker date="1494039055990" expanded="true" signature="446:488" placeholder="SELECT * FRO... users" />
-            <marker date="1494039055990" expanded="true" signature="625:1146" placeholder="SELECT publi... users" />
-            <marker date="1494039055990" expanded="true" signature="1294:1355" placeholder="SELECT publi... users" />
-            <marker date="1494039055990" expanded="true" signature="1543:2092" placeholder="SELECT publi... users" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/profile.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="30" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="195" column="12" selection-start-line="195" selection-start-column="12" selection-end-line="195" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/account/list_users.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/bootstrap.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2968421">
-          <caret line="13" column="3462" selection-start-line="13" selection-start-column="3462" selection-end-line="13" selection-end-column="3462" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/api/searchTitleTag.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.19209039">
@@ -422,6 +392,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.35150376">
           <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -429,6 +400,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.52871287">
           <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding>
+            <marker date="1493944988573" expanded="true" signature="351:429" placeholder="INSERT INTO public.users... " />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -440,122 +414,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/account.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.41541353">
-          <caret line="13" column="22" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/edit_profile.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.38345864">
-          <caret line="12" column="2" selection-start-line="12" selection-start-column="2" selection-end-line="12" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/followees.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.287594">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/followers.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.287594">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/moderated_articles.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2556391">
-          <caret line="8" column="5" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/managing_team.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.19172932">
-          <caret line="6" column="27" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/list_users.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.575188">
-          <caret line="18" column="18" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/notifications.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2236842">
-          <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/pending_articles.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2236842">
-          <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/reported_articles.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.287594">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/reported_comments.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.287594">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/account/account.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5432331">
-          <caret line="17" column="57" selection-start-line="17" selection-start-column="57" selection-end-line="17" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/account/edit_profile.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.19172932">
-          <caret line="6" column="39" selection-start-line="6" selection-start-column="39" selection-end-line="6" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/account/followees.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.19172932">
-          <caret line="6" column="60" selection-start-line="6" selection-start-column="60" selection-end-line="6" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/account/followers.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.120300755">
-          <caret line="5" column="34" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/account/list_users.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.12781955">
-          <caret line="4" column="27" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/account/managing_team.tpl">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.12781955">
           <caret line="4" column="33" selection-start-line="4" selection-start-column="33" selection-end-line="4" selection-end-column="33" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -563,6 +426,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.15977444">
           <caret line="5" column="34" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -570,6 +434,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.15977444">
           <caret line="5" column="34" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -577,6 +442,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.2236842">
           <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -584,6 +450,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.12781955">
           <caret line="4" column="33" selection-start-line="4" selection-start-column="33" selection-end-line="4" selection-end-column="33" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -591,6 +458,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.15977444">
           <caret line="5" column="34" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -598,105 +466,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.15977444">
           <caret line="5" column="34" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/statistics.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.41541353">
-          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/sql/create.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.4353877">
-          <caret line="42" column="61" selection-start-line="42" selection-start-column="60" selection-end-line="42" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/home.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.032015067">
-          <caret line="1" column="4" selection-start-line="1" selection-start-column="4" selection-end-line="2" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/article.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.44821092">
-          <caret line="222" column="56" selection-start-line="222" selection-start-column="56" selection-end-line="222" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/user.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.032015067">
-          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding>
-            <element signature="n#isAdministrator#0;n#!!top" expanded="false" />
-            <element signature="n#accountInfo#0;n#!!top" expanded="false" />
-            <marker date="1494039055990" expanded="true" signature="112:319" placeholder="SELECT publi... users" />
-            <marker date="1494039055990" expanded="true" signature="446:488" placeholder="SELECT * FRO... users" />
-            <marker date="1494039055990" expanded="true" signature="625:1146" placeholder="SELECT publi... users" />
-            <marker date="1494039055990" expanded="true" signature="1294:1355" placeholder="SELECT publi... users" />
-            <marker date="1494039055990" expanded="true" signature="1543:2092" placeholder="SELECT publi... users" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/profile.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.16007534">
-          <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/home.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.029880479">
-          <caret line="50" column="14" selection-start-line="50" selection-start-column="14" selection-end-line="50" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/profile.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.2485876">
-          <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/account/accountOverview.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.35216573">
-          <caret line="12" column="35" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.79096043">
-          <caret line="127" column="18" selection-start-line="127" selection-start-column="18" selection-end-line="127" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/common/header.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="31.363636">
-          <caret line="99" column="34" selection-start-line="99" selection-start-column="28" selection-end-line="99" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/common/article.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.0363636">
-          <caret line="55" column="130" selection-start-line="55" selection-start-column="124" selection-end-line="55" selection-end-column="130" />
           <folding />
         </state>
       </provider>
@@ -706,16 +475,268 @@
         <state vertical-scroll-proportion="0.33333334">
           <caret line="10" column="10803" selection-start-line="10" selection-start-column="10798" selection-end-line="10" selection-end-column="10803" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/list_articles.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/list_articles.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/comment.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.440678">
+          <caret line="45" column="25" selection-start-line="45" selection-start-column="25" selection-end-line="45" selection-end-column="25" />
+          <folding>
+            <marker date="1494269416253" expanded="true" signature="101:482" placeholder="SELECT comme... " />
+            <marker date="1494269416253" expanded="true" signature="862:1241" placeholder="SELECT comme... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/common/recommended_side.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5442561">
+          <caret line="17" column="53" selection-start-line="17" selection-start-column="53" selection-end-line="17" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/account/list_users.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.64030135">
+          <caret line="20" column="38" selection-start-line="20" selection-start-column="38" selection-end-line="20" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/sql/create.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.3856859">
+          <caret line="42" column="61" selection-start-line="42" selection-start-column="60" selection-end-line="42" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/account/accountOverview.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5517891">
+          <caret line="58" column="29" selection-start-line="58" selection-start-column="29" selection-end-line="58" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/account/followers.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.06403013">
+          <caret line="8" column="64" selection-start-line="8" selection-start-column="64" selection-end-line="8" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/account/following.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.19209039">
+          <caret line="6" column="41" selection-start-line="6" selection-start-column="41" selection-end-line="6" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.16007534">
+          <caret line="5" column="27" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.50199205">
+          <caret line="620" column="23" selection-start-line="620" selection-start-column="23" selection-end-line="620" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/account.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.38418078">
+          <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/account.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.25612053">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/accountPage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.25612053">
+          <caret line="8" column="31" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/home.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.32015067">
+          <caret line="10" column="16" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/common/article.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.35216573">
+          <caret line="47" column="22" selection-start-line="47" selection-start-column="22" selection-end-line="47" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/article.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.58380413">
+          <caret line="191" column="0" selection-start-line="191" selection-start-column="0" selection-end-line="191" selection-end-column="0" />
+          <folding>
+            <element signature="n#getArticleById#0;n#!!top" expanded="false" />
+            <element signature="n#getArticleShortById#0;n#!!top" expanded="false" />
+            <element signature="n#getDailyTopArticle#0;n#!!top" expanded="false" />
+            <element signature="n#getArticlesByTitle#0;n#!!top" expanded="false" />
+            <marker date="1494294018471" expanded="true" signature="110:1435" placeholder="SELECT publi... article" />
+            <marker date="1494294018471" expanded="true" signature="1630:1809" placeholder="SELECT COUNT... rating" />
+            <marker date="1494294018471" expanded="true" signature="1995:2177" placeholder="SELECT COUNT... rating" />
+            <marker date="1494294018471" expanded="true" signature="2463:3816" placeholder="SELECT publi... article" />
+            <marker date="1494294018471" expanded="true" signature="3942:4121" placeholder="SELECT COUNT... rating" />
+            <marker date="1494294018471" expanded="true" signature="4291:4473" placeholder="SELECT COUNT... rating" />
+            <marker date="1494294018471" expanded="true" signature="4741:6027" placeholder="SELECT publi... article" />
+            <marker date="1494294018471" expanded="true" signature="6153:6332" placeholder="SELECT COUNT... rating" />
+            <marker date="1494294018471" expanded="true" signature="6502:6684" placeholder="SELECT COUNT... rating" />
+            <marker date="1494294018471" expanded="true" signature="6987:7473" placeholder="SELECT idArt... rating" />
+            <marker date="1494294018471" expanded="true" signature="7955:9349" placeholder="SELECT publi... article" />
+            <marker date="1494294018471" expanded="true" signature="9531:9710" placeholder="SELECT COUNT... rating" />
+            <marker date="1494294018471" expanded="true" signature="9896:10078" placeholder="SELECT COUNT... rating" />
+            <marker date="1494294018471" expanded="false" signature="10371:11224" placeholder="SELECT publi... article" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/profile.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.22410546">
+          <caret line="7" column="9" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/user.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.173258">
+          <caret line="76" column="31" selection-start-line="76" selection-start-column="31" selection-end-line="76" selection-end-column="31" />
+          <folding>
+            <marker date="1494287190273" expanded="true" signature="126:405" placeholder="SELECT publi... users" />
+            <marker date="1494287190273" expanded="true" signature="562:604" placeholder="SELECT * FRO... users" />
+            <marker date="1494287190273" expanded="true" signature="746:807" placeholder="SELECT publi... users" />
+            <marker date="1494287190273" expanded="true" signature="996:1764" placeholder="SELECT publi... users" />
+            <marker date="1494287190273" expanded="true" signature="2077:2302" placeholder="SELECT publi... users" />
+            <marker date="1494287190273" expanded="true" signature="2440:2665" placeholder="SELECT publi... users" />
+            <marker date="1494287190273" expanded="true" signature="2850:2949" placeholder="DELETE FROM " />
+            <marker date="1494287190273" expanded="true" signature="3047:3112" placeholder="INSERT INTO public.follower... " />
+            <marker date="1494287190273" expanded="true" signature="3263:3364" placeholder="SELECT * FRO... follower" />
+            <marker date="1494287190273" expanded="true" signature="3553:3657" placeholder="INSERT INTO public.suspension... " />
+            <marker date="1494287190273" expanded="true" signature="3829:3885" placeholder="UPDATE users... " />
+            <marker date="1494287190273" expanded="true" signature="4033:4781" placeholder="SELECT SUM(C... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/editFollow.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.19209039">
+          <caret line="6" column="9" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/javascript/script.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5509434">
-          <caret line="217" column="26" selection-start-line="217" selection-start-column="26" selection-end-line="217" selection-end-column="26" />
+        <state vertical-scroll-proportion="0.7943396">
+          <caret line="274" column="14" selection-start-line="274" selection-start-column="14" selection-end-line="274" selection-end-column="14" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/profile.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.83239174">
+          <caret line="26" column="61" selection-start-line="26" selection-start-column="61" selection-end-line="26" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/common/header.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.51224107">
+          <caret line="113" column="37" selection-start-line="113" selection-start-column="37" selection-end-line="113" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/actions/update_profile.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/actions/add_comment.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.096045196">
+          <caret line="3" column="30" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="30" />
+          <folding>
+            <marker date="1493914918604" expanded="true" signature="170:277" placeholder="INSERT INTO comment... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/account/edit_profile.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-16.346153">
+          <caret line="25" column="88" selection-start-line="25" selection-start-column="88" selection-end-line="25" selection-end-column="88" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/actions/action_add_article.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.0564972">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1492678443016" expanded="true" signature="314:453" placeholder="INSERT INTO public.article... " />
+            <marker date="1492678443016" expanded="true" signature="588:657" placeholder="SELECT idArt... article" />
+            <marker date="1492678443016" expanded="true" signature="901:941" placeholder="SELECT id FR... tags" />
+            <marker date="1492678443016" expanded="true" signature="1093:1133" placeholder="INSERT INTO public.tags... " />
+            <marker date="1492678443016" expanded="true" signature="1231:1271" placeholder="SELECT id FR... tags" />
+            <marker date="1492678443016" expanded="true" signature="1408:1467" placeholder="INSERT INTO public.linktag... " />
+          </folding>
         </state>
       </provider>
     </entry>

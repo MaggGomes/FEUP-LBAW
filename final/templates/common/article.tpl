@@ -32,15 +32,24 @@
         </div>
 
         {if $article.content == NULL}
-            <a href="{$BASE_URL}pages/read_article.php?id={$article.id}" class="article-title"><h4>{$article.title}</h4>
-            </a>
-            <img class="article-image article-image-small" src="../upload/articles/{$article.articleimage}">
-            <div class="article-abstract">
-                <p>{$article.abstract}</p>
-            </div>
+            {if $largeArticleImage == true}
+                <a href="{$BASE_URL}pages/read_article.php?id={$article.id}" class="article-title"><h3>{$article.title}</h3>
+                </a>
+                <img class="article-image" src="../upload/articles/{$article.articleimage}">
+                <div class="article-abstract">
+                    <p>{$article.abstract}</p>
+                </div>
+            {else}
+                <a href="{$BASE_URL}pages/read_article.php?id={$article.id}" class="article-title"><h4>{$article.title}</h4>
+                </a>
+                <img class="article-image article-image-small" src="{$BASE_URL}upload/articles/{$article.articleimage}">
+                <div class="article-abstract">
+                    <p>{$article.abstract}</p>
+                </div>
+            {/if}
         {else}
             <h3>{$article.title}</h3>
-            <img class="article-image" src="../upload/articles/{$article.articleimage}">
+            <img class="article-image" src="{$BASE_URL}upload/articles/{$article.articleimage}">
             <p>{$article.content}</p>
         {/if}
     </div>

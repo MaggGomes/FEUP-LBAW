@@ -536,11 +536,6 @@ input[type="search"] {
     margin-top: 20px;
 }
 
-.account-usertitle-name h3 {
-    font-weight: bold;
-}
-
-
 .account-usertitle-job {
     font-family: "Calibri Light";
 }
@@ -744,8 +739,7 @@ input[type="search"] {
 
 .profile-head h2 {
     width: 100%;
-    text-align:justify;
-    font-weight: bold;
+    text-align: justify;
     margin-bottom: 0;
 }
 

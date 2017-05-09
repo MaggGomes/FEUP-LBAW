@@ -232,8 +232,6 @@ function showResults(data) {
 /* Changes rating og an article*/
 function changeRating(html, value, idSession) {
   if (idSession) {
-    console.log($(html).children()[0]);
-    console.log($(html).children()[1]);
     $.post("../api/update_rating.php", {
         value: value,
         idArticle: $(html).data('value')
@@ -262,4 +260,31 @@ function changeRating(html, value, idSession) {
     // Show modal for login
     $("#signin").modal();
   }
+}
+
+/* Updates follow/following button */
+function follow(html, idPerson){
+  $.post("../api/editFollow.php", {
+        idPerson: idPerson
+      },
+      function(result){
+        $(html).toggleClass("btn-primary");
+        if(result){
+          $(html).html("<span class=\"fa fa-user\"> Following</span>");
+          $("#user-follower").html(parseInt($("#user-follower").html())+1);
+        }else{
+          $(html).html("<span class=\"fa fa-user-plus\"> Follow</span>");
+          $("#user-follower").html(parseInt($("#user-follower").html())-1);
+        }
+      });
+}
+
+/* Allows account pages to be shown dynamically*/
+function accountPage(page){
+  $.get("../api/accountPage.php", {
+        page: page
+      },
+      function(data) {
+        $("#page").html(data);
+      });
 }

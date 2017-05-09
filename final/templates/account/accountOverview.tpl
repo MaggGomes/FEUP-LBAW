@@ -23,7 +23,6 @@
     </div>
     <div class="account-usermenu">
         <ul class="nav">
-
             <ul class="nav">
                 <li class="active">
                     <a href="{$BASE_URL}pages/account.php">
@@ -44,29 +43,27 @@
                 <div id="collapseUser" class="panel-collapse collapse account-menu-collapse">
                     <ul class="nav">
                         <li class="">
-                            <a href="{$BASE_URL}pages/edit_profile.php">
+                            <a href="#" onclick="accountPage('editProfile')">
                                 <i class="fa fa-pencil-square-o"></i>
                                 Edit Profile</a>
                         </li>
                         <li class="">
-                            <a href="#">
+                            <a href="#" onclick="accountPage('followers')">
                                 <i class="fa fa-users"></i>
                                 Followers</a>
                         </li>
-
                         <li class="">
-                            <a href="#">
+                            <a href="#" onclick="accountPage('following')">
                                 <i class="fa fa-users"></i>
-                                Followees</a>
+                                Following</a>
                         </li>
-
                         <li class="">
-                            <a href="#">
+                            <a href="#" onclick="accountPage('articlesModerated')">
                                 <i class="fa fa-ban"></i>
                                 Moderated articles </a>
                         </li>
                         <li class="">
-                            <a href="">
+                            <a href="" onclick="accountPage('delete')">
                                 <i class="fa fa-trash-o"></i>
                                 Delete Account </a>
                         </li>
@@ -74,7 +71,7 @@
                 </div>
 
                 <li class="">
-                    <a href="#">
+                    <a href="#" onclick="accountPage('notifications')">
                         <i class="glyphicon glyphicon-bell"></i>
                         Notifications &nbsp;<span class="badge active">6</span></a>
                 </li>
@@ -90,34 +87,34 @@
                     </li>
 
                     <div id="collapseAdmin" class="panel-collapse collapse account-menu-collapse">
-                    <ul class="nav">
-                        <li class="">
-                            <a href="{$BASE_URL}pages/list_users.php">
-                                <i class="fa fa-user-o"></i>
-                                List of registered users</a>
-                        </li>
-                        <li class="">
-                            <a href="#">
-                                <i class="fa fa-users"></i>
-                                Managing team</a>
-                        </li>
-                        <li class="">
-                            <a href="#">
-                                <i class="fa fa-newspaper-o"></i>
-                                Pending articles</a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="glyphicon glyphicon-flag"></i>
-                                Reported articles</a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="glyphicon glyphicon-flag"></i>
-                                Reported comments</a>
-                        </li>
-                    </ul>
-                </div>
+                        <ul class="nav">
+                            <li class="">
+                                <a href="#" onclick="accountPage('listUsers')">
+                                    <i class="fa fa-user-o"></i>
+                                    List of registered users</a>
+                            </li>
+                            <li class="">
+                                <a href="#" onclick="accountPage('teamManagement')">
+                                    <i class="fa fa-users"></i>
+                                    Managing team</a>
+                            </li>
+                            <li class="">
+                                <a href="#" onclick="accountPage('articlesPending')">
+                                    <i class="fa fa-newspaper-o"></i>
+                                    Pending articles</a>
+                            </li>
+                            <li>
+                                <a href="#" onclick="accountPage('articlesReported')">
+                                    <i class="glyphicon glyphicon-flag"></i>
+                                    Reported articles</a>
+                            </li>
+                            <li>
+                                <a href="#" onclick="accountPage('commentsReported')">
+                                    <i class="glyphicon glyphicon-flag"></i>
+                                    Reported comments</a>
+                            </li>
+                        </ul>
+                    </div>
                 {/if}
             </ul>
     </div>

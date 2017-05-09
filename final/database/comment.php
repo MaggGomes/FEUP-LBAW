@@ -1,24 +1,48 @@
 <?php
+
     function getArticleComments($id) {
         global $conn;
 
-        $stmt = $conn->prepare("SELECT * FROM comment JOIN users ON (users.id = comment.idUser) WHERE comment.idArticle = ?");
-        $stmt->execute(array($id));
+        $stmt = $conn->prepare("SELECT comment.*,
+			users.id AS userid
+			users.name AS username
+			users.photourl AS userimage
+			SUM(CASE WHEN rating.value = 1 THEN 1 ELSE 0 END) AS upvotes,
+			SUM(CASE WHEN rating.value = -1 THEN 1 ELSE 0 END) AS downvotes,
+			FROM comment
+			LEFT JOIN users ON (users.id = comment.idUser)
+			LEFT JOIN rating ON (rating.idComment = comment.id)
+			WHERE comment.idArticle = ?");
 
+        $stmt->execute(array($id));
         $comments = $stmt->fetchAll();
 
-        for ($i = 0; $i < count($comments); $i++)
-        {
-            $stmt = $conn->prepare("SELECT COUNT(value) AS upvotes FROM rating WHERE rating.idComment = ? AND value = 1");
-            $stmt->execute(array($comment['idComment']));
-            $comments[$i]['upvotes'] = $stmt->fetch()['upvotes'];
-
-            $stmt = $conn->prepare("SELECT COUNT(value) AS downvotes FROM rating WHERE rating.idComment = ? AND value = -1");
-            $stmt->execute(array($comment['idComment']));
-            $comments[$i]['downvotes'] = $stmt->fetch()['downvotes'];
+        for ($i = 0; $i < count($comments); $i++){
+            $comments[$i]['replies'] = getCommentReplies($comments[$i]['id']);
         }
+
         console_log($comments);
+
         return $comments;
     }
 
+    function getCommentReplies($id){
+        global $conn;
+
+        $stmt = $conn->prepare("SELECT comment.*,
+			users.id AS userid
+			users.name AS username
+			users.photourl AS userimage
+			SUM(CASE WHEN rating.value = 1 THEN 1 ELSE 0 END) AS upvotes,
+			SUM(CASE WHEN rating.value = -1 THEN 1 ELSE 0 END) AS downvotes,
+			FROM comment
+			LEFT JOIN users ON (users.id = comment.idUser)
+			LEFT JOIN rating ON (rating.idComment = comment.id)
+			WHERE comment.idReply = ?");
+
+        $stmt->execute(array($id));
+        $comments = $stmt->fetchAll();
+
+        return $comments;
+    }
 ?>
