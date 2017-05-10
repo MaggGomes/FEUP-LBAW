@@ -26,7 +26,7 @@
                 <input type="password" class="form-control" name = "confirmnewpassword" placeholder="Confirm New Password">
                 <span class="fa fa-lock form-control-feedback"></span>
             </div>
-            <button type="button" class="btn btn-primary">Update Profile</button>
+            <input type="submit" class="btn btn-primary" value="Update Profile">
         </div>
     </form>
 </div>

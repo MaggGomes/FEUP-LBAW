@@ -24,7 +24,7 @@
                             </div>
                             <div class="profile-userbuttons">
                                 {if $user.profilefollow}
-                                    <button type="button" onclick="follow(this, {$user.id})" class="btn btn-default btn-primary"><span class="fa fa-user"> Following</span></button>
+                                    <button type="button" onclick="follow(this, {$user.id})" class="btn btn-primary"><span class="fa fa-user"> Following</span></button>
                                 {else}
                                     <button type="button" onclick="follow(this, {$user.id})" class="btn btn-default"><span class="fa fa-user-plus"> Follow</span></button>
                                 {/if}

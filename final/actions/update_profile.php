@@ -1,7 +1,17 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Manuel Gomes
- * Date: 09/05/2017
- * Time: 03:18
- */
+    include_once('../config/init.php');
+    include_once('../database/user.php');
+
+    if(isset($_SESSION["id"])) {
+
+        try {
+            updateUser($_POST["name"], $_POST["email"], $_POST["country"], $_SESSION["id"]);
+        } catch (PDOException $e) {
+            $e->getMessage();
+        }
+
+        header('Location: ' . '../pages/account.php');
+    } else {
+        header('Location: ' . '../pages/home.php');
+    }
+?>

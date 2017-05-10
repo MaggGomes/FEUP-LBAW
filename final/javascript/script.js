@@ -269,6 +269,7 @@ function follow(html, idPerson){
       },
       function(result){
         $(html).toggleClass("btn-primary");
+        $(html).toggleClass("btn-default");
         if(result){
           $(html).html("<span class=\"fa fa-user\"> Following</span>");
           $("#user-follower").html(parseInt($("#user-follower").html())+1);

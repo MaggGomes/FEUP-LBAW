@@ -101,9 +101,20 @@ include_once("../config/init.php");
 
 	function isFollowing($id, $secondId){
 		global $conn;
+
 		$stmt = $conn->prepare("SELECT * FROM public.follower WHERE public.follower.idFollower = ? AND public.follower.idFollowed = ?");
 		$stmt->execute(array($id, $secondId));
 		return $stmt->fetch();
+	}
+
+	function  updateUser($name, $email, $country, $id){
+		global $conn;
+
+		$stmt = $conn->prepare('UPDATE public.users SET
+								name = ?,
+								email = ?,
+								country = ? WHERE id = ?');
+		$stmt->execute(array($name, $email, $country, $id));
 	}
 
 	//TODO needs testing
