@@ -4,15 +4,16 @@
         global $conn;
 
         $stmt = $conn->prepare("SELECT comment.*,
-			users.id AS userid
-			users.name AS username
-			users.photourl AS userimage
+			users.id AS userid,
+			users.name AS username,
+			users.photourl AS userimage,
 			SUM(CASE WHEN rating.value = 1 THEN 1 ELSE 0 END) AS upvotes,
-			SUM(CASE WHEN rating.value = -1 THEN 1 ELSE 0 END) AS downvotes,
+			SUM(CASE WHEN rating.value = -1 THEN 1 ELSE 0 END) AS downvotes
 			FROM comment
 			LEFT JOIN users ON (users.id = comment.idUser)
-			LEFT JOIN rating ON (rating.idComment = comment.id)
-			WHERE comment.idArticle = ?");
+			LEFT JOIN rating ON (rating.idComment = comment.idComment)
+			WHERE comment.idArticle = ?
+            GROUP BY comment.idComment, users.id");
 
         $stmt->execute(array($id));
         $comments = $stmt->fetchAll();
@@ -30,15 +31,16 @@
         global $conn;
 
         $stmt = $conn->prepare("SELECT comment.*,
-			users.id AS userid
-			users.name AS username
-			users.photourl AS userimage
+			users.id AS userid,
+			users.name AS username,
+			users.photourl AS userimage,
 			SUM(CASE WHEN rating.value = 1 THEN 1 ELSE 0 END) AS upvotes,
-			SUM(CASE WHEN rating.value = -1 THEN 1 ELSE 0 END) AS downvotes,
+			SUM(CASE WHEN rating.value = -1 THEN 1 ELSE 0 END) AS downvotes
 			FROM comment
 			LEFT JOIN users ON (users.id = comment.idUser)
-			LEFT JOIN rating ON (rating.idComment = comment.id)
-			WHERE comment.idReply = ?");
+			LEFT JOIN rating ON (rating.idComment = comment.idComment)
+			WHERE comment.idReply = ?
+            GROUP BY comment.idComment, users.id");
 
         $stmt->execute(array($id));
         $comments = $stmt->fetchAll();
