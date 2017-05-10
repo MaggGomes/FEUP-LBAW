@@ -2,10 +2,9 @@
 
 <div class="container">
     <div class="row">
-        <div class="profile-head">
+        <div class="profile-head background-gradient">
             <div class="profiles col-xs-12 col-sm-10 col-sm-push-1 col-md-8 col-md-push-2 thumbnail">
-                <div class="col-xs-12 col-sm-3">
-                    <div class="row">
+                    <div class="row profile-row-img">
                         {if $user.photourl == NULL}
                             <img class="img-responsive" src="{$BASE_URL}upload/user_profile/default.png"/>
                         {else}
@@ -16,11 +15,10 @@
                             {/if}
                         {/if}
                     </div>
-                </div>
-                <div class="col-sm-9 profile-description">
-                    <div class="row">
+
+                    <div class="row profile-description"">
                         <span class="col-xs-12"><h2>{$user.name}</h2></span>
-                        <div class="col-md-4 col-xs-12 profile-presentation">
+                        <div class="col-xs-12 profile-presentation">
                             <div class="row">
                                 <div class="col-md-12"><span id="user-following" class="profile-follow">{$user.following}</span> Following &middot; <span id="user-follower" class="profile-follow">{$user.followers}</span> Followers</div>
                             </div>
@@ -33,7 +31,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+
             </div>
         </div>
     </div>

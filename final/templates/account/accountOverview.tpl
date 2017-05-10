@@ -14,7 +14,7 @@
         <div class="account-usertitle-name">
             <h3>{$info.name}</h3>
         </div>
-        <div class="btn btn-primary btn-staff">
+        <div class="permission">
             {$info.permission}
         </div>
     </div>

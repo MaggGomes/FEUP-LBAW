@@ -52,7 +52,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
-            </button>
+        </button>
 
         <a class="navbar-brand" href="home.php">
           <img alt="Brand" src="../images/logo.png">
