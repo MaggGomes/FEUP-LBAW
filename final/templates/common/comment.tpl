@@ -49,4 +49,8 @@
         </form>
     </div>
     {/if}
+    
+    {foreach $comment.replies as $reply}
+        {include file='common/reply_comment.tpl'}
+    {/foreach}
 </div>

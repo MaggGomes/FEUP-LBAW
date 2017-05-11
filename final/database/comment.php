@@ -12,14 +12,15 @@
 			FROM comment
 			LEFT JOIN users ON (users.id = comment.idUser)
 			LEFT JOIN rating ON (rating.idComment = comment.idComment)
-			WHERE comment.idArticle = ?
-            GROUP BY comment.idComment, users.id");
+			WHERE comment.idArticle = ? AND comment.idreply IS NULL
+            GROUP BY comment.idComment, users.id
+            ORDER BY comment.date DESC");
 
         $stmt->execute(array($id));
         $comments = $stmt->fetchAll();
 
         for ($i = 0; $i < count($comments); $i++){
-            $comments[$i]['replies'] = getCommentReplies($comments[$i]['id']);
+            $comments[$i]['replies'] = getCommentReplies($comments[$i]['idcomment']);
         }
 
         console_log($comments);
