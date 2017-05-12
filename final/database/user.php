@@ -162,4 +162,25 @@ include_once("../config/init.php");
 		$output = $smarty->fetch($BASE_DIR . "templates/common/a.tpl");
 		return $output;
 	}
+
+	function ownModerated($id){
+		global $conn;
+
+		$stmt = $conn->prepare("SELECT public.article.idArticle AS id,
+			public.article.title AS title,
+			public.article.abstract AS abstract,
+			public.article.content AS content,
+			public.article.date AS articledate,
+			public.article.category AS category,
+			public.image.url AS articleimage
+			FROM public.article
+			JOIN public.users ON (public.article.idUser = public.users.id)
+			LEFT JOIN public.image ON (public.article.idArticle = public.image.idArticle)
+			WHERE public.article.visibility = 'Moderated'
+			AND public.users.id = ?");
+
+		$stmt->execute(array($id));
+		return $stmt->fetchAll();
+
+	}
 ?>

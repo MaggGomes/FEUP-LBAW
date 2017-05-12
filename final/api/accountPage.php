@@ -22,7 +22,9 @@
                 $filename = "following.tpl";
                 break;
             case 'articlesModerated':
-                $filename = "articlesModerated.tpl";
+                $moderated = ownModerated($_SESSION["id"]);
+                $smarty->assign('moderated', $moderated);
+                $filename = "moderated_articles.tpl";
                 break;
             case 'delete':
                 $filename = "delete.tpl";

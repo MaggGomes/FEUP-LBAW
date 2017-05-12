@@ -287,5 +287,6 @@ function accountPage(page){
       },
       function(data) {
         $("#page").html(data);
+        console.log(data);
       });
 }
