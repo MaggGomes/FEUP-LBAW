@@ -250,11 +250,11 @@
         <div class="modal-body">
           <h4>Reason for report:</h4>
           <form>
-            <input type="checkbox" name="vehicle" value=""> Contains abusive language.<br>
-            <input type="checkbox" name="vehicle" value=""> Contains not apropriate content for Scriba<br>
-            <input type="checkbox" name="vehicle" value=""> It's spam. <br> <br>
+            <input type="checkbox" name="vehicle" class="reportCheck" id="repC1" value=""> Contains abusive language.<br>
+            <input type="checkbox" name="vehicle" class="reportCheck" id="repC2" value=""> Contains not apropriate content for Scriba<br>
+            <input type="checkbox" name="vehicle" class="reportCheck" id="repC3" value=""> It's spam. <br> <br>
           </form>
-          <button type="button" class="btn btn-primary btn-submit-dialog" disabled>Submit</button>
+          <button type="button" class="btn btn-primary btn-submit-dialog" id="submitRep" disabled>Submit</button>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>

@@ -205,7 +205,15 @@ $(document).ready(function() {
 
       location.reload();
     });
-});
+
+  //functions to work with report
+  $(".reportCheck").click(
+    function functionName() {
+      $("#submitRep").attr("disabled", !($(".reportCheck#repC1")[0].checked ||
+                                         $(".reportCheck#repC2")[0].checked ||
+                                         $(".reportCheck#repC3")[0].checked));
+    });
+11});
 
 window.onload = function() {
   $(".add-article-tags a").click(function() {
@@ -263,30 +271,30 @@ function changeRating(html, value, idSession) {
 }
 
 /* Updates follow/following button */
-function follow(html, idPerson){
+function follow(html, idPerson) {
   $.post("../api/editFollow.php", {
-        idPerson: idPerson
-      },
-      function(result){
-        $(html).toggleClass("btn-primary");
-        $(html).toggleClass("btn-default");
-        if(result){
-          $(html).html("<span class=\"fa fa-user\"> Following</span>");
-          $("#user-follower").html(parseInt($("#user-follower").html())+1);
-        }else{
-          $(html).html("<span class=\"fa fa-user-plus\"> Follow</span>");
-          $("#user-follower").html(parseInt($("#user-follower").html())-1);
-        }
-      });
+      idPerson: idPerson
+    },
+    function(result) {
+      $(html).toggleClass("btn-primary");
+      $(html).toggleClass("btn-default");
+      if (result) {
+        $(html).html("<span class=\"fa fa-user\"> Following</span>");
+        $("#user-follower").html(parseInt($("#user-follower").html()) + 1);
+      } else {
+        $(html).html("<span class=\"fa fa-user-plus\"> Follow</span>");
+        $("#user-follower").html(parseInt($("#user-follower").html()) - 1);
+      }
+    });
 }
 
 /* Allows account pages to be shown dynamically*/
-function accountPage(page){
+function accountPage(page) {
   $.get("../api/accountPage.php", {
-        page: page
-      },
-      function(data) {
-        $("#page").html(data);
-        console.log(data);
-      });
+      page: page
+    },
+    function(data) {
+      $("#page").html(data);
+      console.log(data);
+    });
 }
