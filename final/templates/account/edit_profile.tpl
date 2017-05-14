@@ -1,7 +1,11 @@
 <div class="account-edit-account">
     <h3>Edit Profile</h3>
-    <form action="{$BASE_URL}actions/update_profile.php" method="post">
+    <form action="{$BASE_URL}actions/update_profile.php" enctype="multipart/form-data" method="post">
         <div class="form-group">
+            <div class="form-group has-feedback">
+                <input type="file" class="form-control" name="profilePicture" >
+                <span class="fa fa-user-o form-control-feedback"></span>
+            </div>
             <div class="form-group has-feedback">
                 <input type="text" class="form-control" name = "name" placeholder="Name" value="{$info.name}">
                 <span class="fa fa-user-o form-control-feedback"></span>
@@ -30,6 +34,3 @@
         </div>
     </form>
 </div>
-
-
-

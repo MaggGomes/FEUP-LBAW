@@ -107,14 +107,52 @@ include_once("../config/init.php");
 		return $stmt->fetch();
 	}
 
-	function  updateUser($name, $email, $country, $id){
+	function updateUser($name, $email, $country, $id){
 		global $conn;
+
+		if($_FILES['profilePicture']['size'] > 0){
+			if(uploadProfilePicture()){
+				console_log($_FILES['profilePicture']['name']);
+				$stmt = $conn->prepare('UPDATE users SET
+										photourl = ? WHERE id = ?');
+				$stmt->execute(array($_FILES['profilePicture']['name'], $id));
+			}
+		}
+
 
 		$stmt = $conn->prepare('UPDATE public.users SET
 								name = ?,
 								email = ?,
 								country = ? WHERE id = ?');
 		$stmt->execute(array($name, $email, $country, $id));
+	}
+
+	function uploadProfilePicture(){
+		console_log($_FILES['profilePicture']);
+		$target = '../upload/user_profile/' . $_FILES['profilePicture']['name'];
+		console_log($target);
+
+		if(strpos(mime_content_type($_FILES['profilePicture']['tmp_name']), 'image') === false){
+			echo "File uploaded is not an image";
+			return false;
+		}
+
+		if ($_FILES['profilePicture']['size'] > 500000) {
+            echo 'Sorry, your file is too large.';
+			return false;
+        }
+
+		if(file_exists($target)){
+			echo "File already exists";
+			return false;
+		}
+
+		if(!move_uploaded_file($_FILES['profilePicture']['tmp_name'], $target)){
+			echo "There was an error uploading your file, please try again";
+			return false;
+		}
+
+		return true;
 	}
 
 	//TODO needs testing
