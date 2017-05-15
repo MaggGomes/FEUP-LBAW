@@ -128,9 +128,7 @@ include_once("../config/init.php");
 	}
 
 	function uploadProfilePicture(){
-		console_log($_FILES['profilePicture']);
 		$target = '../upload/user_profile/' . $_FILES['profilePicture']['name'];
-		console_log($target);
 
 		if(strpos(mime_content_type($_FILES['profilePicture']['tmp_name']), 'image') === false){
 			echo "File uploaded is not an image";

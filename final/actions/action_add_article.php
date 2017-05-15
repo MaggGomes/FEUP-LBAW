@@ -1,5 +1,6 @@
 <?php
 	include_once('../config/init.php');
+	include_once('../database/article.php');
 
 	$title = $_POST["title"];
 	$abstract = $_POST["abstract"];
@@ -11,14 +12,6 @@
 	{
 		die("No session");
 	}
-/*
-	echo $title;
-
-	echo $abstract;
-
-	echo $category;
-
-	echo $text;*/
 
 	$stmt = $conn->prepare("INSERT INTO public.article (abstract, title, date, content, category, idUser, visibility) VALUES (?, ?, LOCALTIMESTAMP, ?, ?, ?, 'Visible')");
 	$stmt->execute(array($abstract, $title, $text, $category, $_SESSION["id"]));
@@ -55,6 +48,12 @@
 			$stmt->execute(array($idtag, $idarticle));
 			$result = $stmt->fetch();
 		}
+	}
+
+	$articlePhoto = uploadArticlePhoto();
+	if($articlePhoto !== false){
+		$stmt = $stmt = $conn->prepare("INSERT INTO image (url, idarticle) VALUES (?, ?)");
+		$stmt->execute(array($articlePhoto, $idarticle));
 	}
 
 	$link = 'Location: ../pages/read_article.php?id=' . $idarticle;

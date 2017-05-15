@@ -236,4 +236,33 @@
 		$match = $stmt->fetchAll();
 		return $match;
 	}
+
+
+    function uploadArticlePhoto(){
+        $name = $_FILES['articlePicture']['name'];
+
+        $target = '../upload/articles/' . $_FILES['articlePicture']['name'];
+
+		if(strpos(mime_content_type($_FILES['articlePicture']['tmp_name']), 'image') === false){
+			echo "File uploaded is not an image";
+			return false;
+		}
+
+		if ($_FILES['articlePicture']['size'] > 500000) {
+            echo 'Sorry, your file is too large.';
+			return false;
+        }
+
+		if(file_exists($target)){
+			echo "File already exists";
+			return false;
+		}
+
+		if(!move_uploaded_file($_FILES['articlePicture']['tmp_name'], $target)){
+			echo "There was an error uploading your file, please try again";
+			return false;
+		}
+
+		return $name;
+    }
 ?>

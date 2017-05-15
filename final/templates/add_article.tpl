@@ -6,10 +6,11 @@
 </head>
 <section class="central add-article-central">
     <div class="container add-article">
-        <form action="../actions/action_add_article.php" method="post" class="form-group">
+        <form action="../actions/action_add_article.php" method="post" class="form-group" enctype="multipart/form-data">
             <div class="add-article-header">
                 <input type="text" name="title" class="form-control input-lg" placeholder="Title" required autocomplete="off">
                 <input type="text" name="abstract" class="form-control input-lg" placeholder="Abstract" required autocomplete="off">
+                <input type="file" name="articlePicture" class="form-control input-lg" required >
             </div>
 
             <div class="add-article-category">
