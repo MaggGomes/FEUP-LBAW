@@ -1,14 +1,18 @@
 <?php
 	include_once('../config/init.php');
 
-    $description = $_POST["description"];
-    $idArt = $_POST["artID"];
-/*
-	$stmt = $conn->prepare("INSERT INTO comment (date, text, idarticle, visibility, iduser) VALUES (LOCALTIMESTAMP, ?, ?, 'Visible', ?)");
-	$stmt->execute(array($text, $idarticle, $iduser));
-	$result = $stmt->fetch();
+	$iduser = $_SESSION["id"];
+	$idarticle = $_POST["idArt"];
 
-	$link = 'Location: ../pages/read_article.php?id=' . $idarticle;
-	header($link);*/
+	console_log($idsuser);
+	die($iduser);
+	/*$text = $_POST["comment"];
+		$idreply = $_POST["idReply"];
+
+	$stmt = $conn->prepare("INSERT INTO comment (date, text, idarticle, visibility, iduser, idreply) VALUES (LOCALTIMESTAMP, ?, ?, 'Visible', ?, ?)");
+	$stmt->execute(array($text, $idarticle, $iduser, $idreply));
+	$result = $stmt->fetch();*/
+
+	header("Location: ../pages/home.php");
 
 ?>

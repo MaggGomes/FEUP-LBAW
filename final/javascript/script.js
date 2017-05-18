@@ -309,24 +309,24 @@ function reportArticle(id) {
   $("input#repID").val(id);
 }
 
-/* Allows account pages to be shown dynamically*/
+
 /* Allows account pages to be shown dynamically*/
 function accountPage(html, page) {
-  	$.get("../api/accountPage.php", {
-      	page: page
+  $.get("../api/accountPage.php", {
+      page: page
     },
     function(data) {
-	    $("#page").html(data);
-	    console.log(data);
-		$("li.active").removeClass("active");
-		$(html).parent().addClass("active");
+      $("#page").html(data);
+      console.log(data);
+      $("li.active").removeClass("active");
+      $(html).parent().addClass("active");
 
     });
 }
 
-function changePermissions(permission, userId){
-	$.get("../api/changePermission.php", {
-      	permission: permission
+function changePermissions(permission, userId) {
+  $.get("../api/changePermission.php", {
+      permission: permission
     },
     function(data) {
 
@@ -349,8 +349,11 @@ function updateSession(usName, em, image, platf) {
       }
     });
   } else {
-    FB.api('/me', function(response) {
+    var x = FB.getAccessToken();
+    console.log(x);
+    FB.api('\me', function(response) {
       console.log(JSON.stringify(response));
     });
+    location.reload();
   }
 }
