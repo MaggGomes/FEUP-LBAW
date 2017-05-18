@@ -238,6 +238,36 @@
 		return $match;
 	}
 
+    function getArticleEdit($id){
+        global $conn;
+
+        $stmt = $conn->prepare("SELECT public.article.idArticle AS id,
+                                public.article.title AS title,
+                                public.article.abstract AS abstract,
+                                public.article.content AS content,
+                                public.article.category AS category,
+                                public.users.id AS userid
+                                FROM public.article
+                                LEFT JOIN public.users ON (public.article.idUser = public.users.id)
+                                WHERE public.article.idArticle = ?");
+
+        $stmt->execute(array($id));
+        $article = $stmt->fetch();
+
+
+        $stmt = $conn->prepare("SELECT tag AS tag FROM tags LEFT JOIN linktag ON tags.id = linktag.idtag
+                                                                 WHERE linktag.idarticle = ?");
+        $stmt->execute(array($id));
+        $tags = $stmt->fetchAll();
+
+        $stringtag;
+        foreach ($tags as $tag) {
+            $stringtag = $stringtag . ' ' . $tag['tag'];
+        }
+        $article['tags'] = $stringtag;
+
+        return $article;
+    }
 
     function uploadArticlePhoto(){
         $name = $_FILES['articlePicture']['name'];

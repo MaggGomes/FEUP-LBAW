@@ -36,7 +36,7 @@
                 </div>
             </div>
 
-            <div class="row add-article-tags">
+            <div class="row col-lg-12 add-article-tags">
                 <a href="#" class="col-md-2"><span class="glyphicon glyphicon-tags"></span> Add tag(s)</a>
                 <input type="text" id="tags" name="tags" class="form-control input-lg" placeholder="Tags separated by spaces">
             </div>
