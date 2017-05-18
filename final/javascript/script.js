@@ -212,18 +212,31 @@ $(document).ready(function() {
       $("#submitRep").attr("disabled", !($(".reportCheck#repC1")[0].checked || $(".reportCheck#repC2")[0].checked || $(".reportCheck#repC3")[0].checked));
     });
 
-  $("#submitRep").click(
-    function() {
-      var description = "";
-      if ($(".reportCheck#repC1")[0].checked)
-        description += "Contains abusive language;";
-      if ($(".reportCheck#repC2")[0].checked)
-        description += "Contains not apropriate content for Scriba;";
-      if ($(".reportCheck#repC3")[0].checked)
-        description += "It's spam;";
+    $("#submitRep").click(
+      function() {
+        var descr = "";
+        if ($(".reportCheck#repC1")[0].checked)
+          descr += "Contains abusive language;\n";
+        if ($(".reportCheck#repC2")[0].checked)
+          descr += "Contains not apropriate content for Scriba;\n";
+        if ($(".reportCheck#repC3")[0].checked)
+          descr += "It's spam;\n";
 
-      console.log(description);
-    });
+        $.post({
+          url: "../actions/base/report_article.php",
+          //type: "post",
+          data: {
+            artID: $("input#repID").val(),
+            description: descr
+          },
+          success: function(data) {
+            location.reload();
+          }
+        });
+
+        console.log(descr);
+        console.log($("input#repID").val());
+      });
 });
 
 window.onload = function() {
