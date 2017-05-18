@@ -219,4 +219,24 @@ include_once("../config/init.php");
 		return $stmt->fetchAll();
 
 	}
+
+	function getStaff(){
+		global $conn;
+
+		$stmt = $conn->prepare("SELECT public.users.name,
+										public.users.email,
+										public.users.photoURL,
+										public.users.rating,
+										public.users.permission,
+										public.users.id
+								FROM public.users
+								WHERE users.permission = 'Moderator' OR users.permission = 'Administrator'
+								ORDER BY public.users.name ASC
+								OFFSET ?
+								LIMIT ?");
+
+		$stmt->execute(array($pageNo*$limit, $limit));
+
+		return $stmt->fetchAll();
+	}
 ?>

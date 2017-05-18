@@ -320,12 +320,15 @@ function reportArticle(id) {
 }
 
 /* Allows account pages to be shown dynamically*/
-function accountPage(page) {
+function accountPage(html, page) {
   $.get("../api/accountPage.php", {
       page: page
     },
     function(data) {
       $("#page").html(data);
       console.log(data);
+	  $("li.active").removeClass("active");
+	  $(html).parent().addClass("active");
+
     });
 }

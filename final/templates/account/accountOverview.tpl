@@ -43,27 +43,27 @@
                 <div id="collapseUser" class="panel-collapse collapse account-menu-collapse">
                     <ul class="nav">
                         <li class="">
-                            <a href="#" onclick="accountPage('editProfile')">
+                            <a href="#" onclick="accountPage(this, 'editProfile')">
                                 <i class="fa fa-pencil-square-o"></i>
                                 Edit Profile</a>
                         </li>
                         <li class="">
-                            <a href="#" onclick="accountPage('followers')">
+                            <a href="#" onclick="accountPage(this, 'followers')">
                                 <i class="fa fa-users"></i>
                                 Followers</a>
                         </li>
                         <li class="">
-                            <a href="#" onclick="accountPage('following')">
+                            <a href="#" onclick="accountPage(this, 'following')">
                                 <i class="fa fa-users"></i>
                                 Following</a>
                         </li>
                         <li class="">
-                            <a href="#" onclick="accountPage('articlesModerated')">
+                            <a href="#" onclick="accountPage(this, 'articlesModerated')">
                                 <i class="fa fa-ban"></i>
                                 Moderated articles </a>
                         </li>
                         <li class="">
-                            <a href="" onclick="accountPage('delete')">
+                            <a href="" onclick="accountPage(this, 'delete')">
                                 <i class="fa fa-trash-o"></i>
                                 Delete Account </a>
                         </li>
@@ -71,7 +71,7 @@
                 </div>
 
                 <li class="">
-                    <a href="#" onclick="accountPage('notifications')">
+                    <a href="#" onclick="accountPage(this, 'notifications')">
                         <i class="glyphicon glyphicon-bell"></i>
                         Notifications &nbsp;<span class="badge active">6</span></a>
                 </li>
@@ -89,27 +89,27 @@
                     <div id="collapseAdmin" class="panel-collapse collapse account-menu-collapse">
                         <ul class="nav">
                             <li class="">
-                                <a href="#" onclick="accountPage('listUsers')">
+                                <a href="#" onclick="accountPage(this, 'listUsers')">
                                     <i class="fa fa-user-o"></i>
                                     List of registered users</a>
                             </li>
                             <li class="">
-                                <a href="#" onclick="accountPage('teamManagement')">
+                                <a href="#" onclick="accountPage(this, 'teamManagement')">
                                     <i class="fa fa-users"></i>
                                     Managing team</a>
                             </li>
                             <li class="">
-                                <a href="#" onclick="accountPage('articlesPending')">
+                                <a href="#" onclick="accountPage(this, 'articlesPending')">
                                     <i class="fa fa-newspaper-o"></i>
                                     Pending articles</a>
                             </li>
                             <li>
-                                <a href="#" onclick="accountPage('articlesReported')">
+                                <a href="#" onclick="accountPage(this, 'articlesReported')">
                                     <i class="glyphicon glyphicon-flag"></i>
                                     Reported articles</a>
                             </li>
                             <li>
-                                <a href="#" onclick="accountPage('commentsReported')">
+                                <a href="#" onclick="accountPage(this, 'commentsReported')">
                                     <i class="glyphicon glyphicon-flag"></i>
                                     Reported comments</a>
                             </li>
