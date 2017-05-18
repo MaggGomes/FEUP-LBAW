@@ -25,12 +25,12 @@
 
                                         <ul class="dropdown-menu pull-right" role="menu">
                                             {if $user.permission == "Publisher"}
-                                                <li><a href="#"><span class="fa fa-arrow-circle-o-up" aria-hidden="true"></span> &nbsp;Promote to Moderator</a></li>
+                                                <li><a href="#" onclick="changePermissions('Moderator', {$user.id})"><span class="fa fa-arrow-circle-o-up" aria-hidden="true"></span> &nbsp;Promote to Moderator</a></li>
                                             {elseif $user.permission == "Moderator"}
-                                                <li><a href="#"><span class="fa fa-arrow-circle-o-up" aria-hidden="true"></span> &nbsp;Promote to Administrator</a></li>
-                                                <li><a href="#"><span class="fa fa-arrow-circle-o-down" aria-hidden="true"></span> &nbsp;Demote to Publisher</a></li>
+                                                <li><a href="#" onclick="changePermissions('Administrator', {$user.id})"><span class="fa fa-arrow-circle-o-up" aria-hidden="true"></span> &nbsp;Promote to Administrator</a></li>
+                                                <li><a href="#" onclick="changePermissions('Publisher', {$user.id})"><span class="fa fa-arrow-circle-o-down" aria-hidden="true"></span> &nbsp;Demote to Publisher</a></li>
                                             {else}
-                                                <li><a href="#"><span class="fa fa-arrow-circle-o-down" aria-hidden="true"></span> &nbsp;Demote to Moderator</a></li>
+                                                <li><a href="#" onclick="changePermissions('Moderator', {$user.id})"><span class="fa fa-arrow-circle-o-down" aria-hidden="true"></span> &nbsp;Demote to Moderator</a></li>
                                             {/if}
                                             <li><a href="#"><span class="fa fa-ban" aria-hidden="true"></span> &nbsp;Ban user</a></li>
                                         </ul>

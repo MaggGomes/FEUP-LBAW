@@ -321,14 +321,23 @@ function reportArticle(id) {
 
 /* Allows account pages to be shown dynamically*/
 function accountPage(html, page) {
-  $.get("../api/accountPage.php", {
-      page: page
+  	$.get("../api/accountPage.php", {
+      	page: page
     },
     function(data) {
-      $("#page").html(data);
-      console.log(data);
-	  $("li.active").removeClass("active");
-	  $(html).parent().addClass("active");
+	    $("#page").html(data);
+	    console.log(data);
+		$("li.active").removeClass("active");
+		$(html).parent().addClass("active");
+
+    });
+}
+
+function changePermissions(permission, userId){
+	$.get("../api/changePermission.php", {
+      	permission: permission
+    },
+    function(data) {
 
     });
 }
