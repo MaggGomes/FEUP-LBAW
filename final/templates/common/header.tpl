@@ -118,7 +118,7 @@
           <div class="expandsearch-content"></div>
           <span class="expandsearch-close"></span>
         </div>
-        <div class="overlay"></div>
+		<div id="normalSearch" class="overlay"></div>
       </div>
     </div>
 

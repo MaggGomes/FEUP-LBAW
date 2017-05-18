@@ -239,7 +239,10 @@ function searchByTitle(value) {
       "name": value,
       "limit": 4,
       "offset": 0
-    }, showResults);
+  }, function(results){
+	  $("#normalSearch").html(results);
+	  console.log(results);
+  });
   }
 }
 

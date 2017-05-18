@@ -219,6 +219,7 @@
 		$stmt = $conn->prepare("SELECT public.article.idArticle AS id,
 										public.article.title,
 										public.article.category,
+										public.users.photoURL AS userimage,
 										public.users.name,
 										date_part('day', public.article.date) AS articleday,
                                         to_char(public.article.date, 'Month') AS articlemonth,
@@ -228,7 +229,7 @@
 										LEFT JOIN public.users ON (public.article.idUser = public.users.id)
 										LEFT JOIN public.rating ON (public.article.idArticle = public.rating.idArticle)
 										WHERE public.article.visibility = ? AND LOWER(public.article.title) LIKE LOWER(?)
-										GROUP BY public.article.idArticle, public.users.name
+										GROUP BY public.article.idArticle, public.users.name, public.users.photoURL
 										ORDER BY rating DESC
 										LIMIT ?
 										OFFSET ?");

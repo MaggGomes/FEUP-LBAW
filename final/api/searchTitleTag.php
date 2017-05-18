@@ -8,6 +8,7 @@
 
     $titles = getArticlesByTitle($search, $limit, $offset);
 
-    $smarty->assign('titles', $titles);
-    echo json_encode($titles);
+    $smarty->assign('articles', $titles);
+	$output = $smarty->fetch("list_articles.tpl");
+    echo $output;
  ?>
