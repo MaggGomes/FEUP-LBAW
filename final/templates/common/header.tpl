@@ -163,9 +163,9 @@
       <div class="modal-content">
         <div class="modal-body">
           <div class="modal-social-icons">
-            <button class="btn btn-default facebook"><i class="fa fa-facebook modal-icons"></i> Sign In with Facebook </button>
+            <button class="btn btn-default facebook" id="facebook_login"><i class="fa fa-facebook modal-icons"></i> Sign In with Facebook </button>
             <button class="btn btn-default google" id="google_login" data-dismiss="modal"><img src="../images/google-logo.png">Sign In with Google</button>
-            <button class="btn btn-default sigarra" id="facebook_login"><i class="fa fa-graduation-cap" aria-hidden="true"></i> Sign In with Sigarra U.Porto</button>
+            <button class="btn btn-default sigarra"><i class="fa fa-graduation-cap" aria-hidden="true"></i> Sign In with Sigarra U.Porto</button>
           </div>
           <div class="login-or">
             <hr class="hr-or">
