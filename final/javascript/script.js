@@ -300,7 +300,7 @@ function follow(html, idPerson) {
 }
 
 function reportArticle(id) {
-  console.log(id);
+  $("input#repID").val(id);
 }
 
 /* Allows account pages to be shown dynamically*/
