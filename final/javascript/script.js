@@ -145,19 +145,7 @@ $(document).ready(function() {
         prompt: 'consent'
       },
       function(googleUser) {
-        $.post({
-          url: "../actions/base/3rd_party_login.php",
-          //type: "post",
-          data: {
-            username: googleUser.getBasicProfile().getName(),
-            email: googleUser.getBasicProfile().getEmail(),
-            imageUrl: googleUser.getBasicProfile().getImageUrl(),
-            platform: "google"
-          },
-          success: function(data) {
-            location.reload();
-          }
-        });
+        updateSession(googleUser.getBasicProfile().getName(), googleUser.getBasicProfile().getEmail(), googleUser.getBasicProfile().getImageUrl(), "google");
       },
       function(error) {});
   }
@@ -168,9 +156,10 @@ $(document).ready(function() {
 
   $("#logout_button").click(
     function() {
-      var auth2 = gapi.auth2.getAuthInstance();
-      console.log(auth2.currentUser.get());
-      auth2.signOut();
+      /*
+            var auth2 = gapi.auth2.getAuthInstance();
+            console.log(auth2.currentUser.get());
+            auth2.signOut();*/
     });
 
 
@@ -201,9 +190,13 @@ $(document).ready(function() {
         console.log(response);
       }, {
         scope: 'email'
-      })
+      });
 
-      location.reload();
+      /*  FB.api('/me', function(response) {
+          console.log(JSON.stringify(response));
+        });*/
+
+      updateSession(FB, "", "", "facebook");
     });
 
   //functions to work with report
@@ -212,31 +205,28 @@ $(document).ready(function() {
       $("#submitRep").attr("disabled", !($(".reportCheck#repC1")[0].checked || $(".reportCheck#repC2")[0].checked || $(".reportCheck#repC3")[0].checked));
     });
 
-    $("#submitRep").click(
-      function() {
-        var descr = "";
-        if ($(".reportCheck#repC1")[0].checked)
-          descr += "Contains abusive language;\n";
-        if ($(".reportCheck#repC2")[0].checked)
-          descr += "Contains not apropriate content for Scriba;\n";
-        if ($(".reportCheck#repC3")[0].checked)
-          descr += "It's spam;\n";
+  $("#submitRep").click(
+    function() {
+      var descr = "";
+      if ($(".reportCheck#repC1")[0].checked)
+        descr += "Contains abusive language;\n";
+      if ($(".reportCheck#repC2")[0].checked)
+        descr += "Contains not apropriate content for Scriba;\n";
+      if ($(".reportCheck#repC3")[0].checked)
+        descr += "It's spam;\n";
 
-        $.post({
-          url: "../actions/base/report_article.php",
-          //type: "post",
-          data: {
-            artID: $("input#repID").val(),
-            description: descr
-          },
-          success: function(data) {
-            location.reload();
-          }
-        });
-
-        console.log(descr);
-        console.log($("input#repID").val());
+      $.post({
+        url: "../actions/base/report_article.php",
+        //type: "post",
+        data: {
+          artID: $("input#repID").val(),
+          description: descr
+        },
+        success: function(data) {
+          location.reload();
+        }
       });
+    });
 });
 
 window.onload = function() {
@@ -252,10 +242,10 @@ function searchByTitle(value) {
       "name": value,
       "limit": 4,
       "offset": 0
-  }, function(results){
-	  $("#normalSearch").html(results);
-	  console.log(results);
-  });
+    }, function(results) {
+      $("#normalSearch").html(results);
+      console.log(results);
+    });
   }
 }
 
@@ -320,24 +310,34 @@ function reportArticle(id) {
 }
 
 /* Allows account pages to be shown dynamically*/
-function accountPage(html, page) {
-  	$.get("../api/accountPage.php", {
-      	page: page
+function accountPage(page) {
+  $.get("../api/accountPage.php", {
+      page: page
     },
     function(data) {
-	    $("#page").html(data);
-	    console.log(data);
-		$("li.active").removeClass("active");
-		$(html).parent().addClass("active");
-
+      $("#page").html(data);
+      console.log(data);
     });
 }
 
-function changePermissions(permission, userId){
-	$.get("../api/changePermission.php", {
-      	permission: permission
-    },
-    function(data) {
-
+function updateSession(usName, em, image, platf) {
+  if (platf == "google") {
+    $.post({
+      url: "../actions/base/3rd_party_login.php",
+      //type: "post",
+      data: {
+        username: usName,
+        email: em,
+        imageUrl: image,
+        platform: platf
+      },
+      success: function(data) {
+        location.reload();
+      }
     });
+  } else {
+    FB.api('/me', function(response) {
+      console.log(JSON.stringify(response));
+    });
+  }
 }
