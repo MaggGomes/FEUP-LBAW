@@ -208,12 +208,23 @@ $(document).ready(function() {
 
   //functions to work with report
   $(".reportCheck").click(
-    function functionName() {
-      $("#submitRep").attr("disabled", !($(".reportCheck#repC1")[0].checked ||
-                                         $(".reportCheck#repC2")[0].checked ||
-                                         $(".reportCheck#repC3")[0].checked));
+    function() {
+      $("#submitRep").attr("disabled", !($(".reportCheck#repC1")[0].checked || $(".reportCheck#repC2")[0].checked || $(".reportCheck#repC3")[0].checked));
     });
-11});
+
+  $("#submitRep").click(
+    function() {
+      var description = "";
+      if ($(".reportCheck#repC1")[0].checked)
+        description += "Contains abusive language;";
+      if ($(".reportCheck#repC2")[0].checked)
+        description += "Contains not apropriate content for Scriba;";
+      if ($(".reportCheck#repC3")[0].checked)
+        description += "It's spam;";
+
+      console.log(description);
+    });
+});
 
 window.onload = function() {
   $(".add-article-tags a").click(function() {
@@ -286,6 +297,10 @@ function follow(html, idPerson) {
         $("#user-follower").html(parseInt($("#user-follower").html()) - 1);
       }
     });
+}
+
+function reportArticle(id) {
+  console.log(id);
 }
 
 /* Allows account pages to be shown dynamically*/
