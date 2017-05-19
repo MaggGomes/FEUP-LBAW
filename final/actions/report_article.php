@@ -1,18 +1,15 @@
 <?php
 	include_once('../config/init.php');
 
-	$iduser = $_SESSION["id"];
-	$idarticle = $_POST["idArt"];
+	$idUser = $_SESSION["id"];
+	$idArticle = $_POST["artID"];
+	$description = $_POST["description"];
 
-	console_log($idsuser);
-	die($iduser);
-	/*$text = $_POST["comment"];
-		$idreply = $_POST["idReply"];
+	console_log($_POST);
 
-	$stmt = $conn->prepare("INSERT INTO comment (date, text, idarticle, visibility, iduser, idreply) VALUES (LOCALTIMESTAMP, ?, ?, 'Visible', ?, ?)");
-	$stmt->execute(array($text, $idarticle, $iduser, $idreply));
-	$result = $stmt->fetch();*/
+	$stmt = $conn->prepare("INSERT INTO report (description,state,idArticle,idUser) VALUES (?, 'Pending', ?, ?)");
+	$stmt->execute(array($description, $idArticle, $idUser));
+	$result = $stmt->fetch();
 
 	header("Location: ../pages/home.php");
-
 ?>

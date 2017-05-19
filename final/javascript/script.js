@@ -215,15 +215,17 @@ $(document).ready(function() {
       if ($(".reportCheck#repC3")[0].checked)
         descr += "It's spam;\n";
 
+      console.log(descr);
+      console.log($("input#repID").val());
       $.post({
-        url: "../actions/base/report_article.php",
+        url: "../actions/report_article.php",
         //type: "post",
         data: {
           artID: $("input#repID").val(),
           description: descr
         },
         success: function(data) {
-          location.reload();
+          console.log(data);
         }
       });
     });
