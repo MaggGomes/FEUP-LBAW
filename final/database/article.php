@@ -221,6 +221,7 @@
 										public.article.category,
 										public.users.photoURL AS userimage,
 										public.users.name,
+										public.users.id AS userid,
 										date_part('day', public.article.date) AS articleday,
                                         to_char(public.article.date, 'Month') AS articlemonth,
                                         date_part('year', public.article.date) AS articleyear,
@@ -229,7 +230,7 @@
 										LEFT JOIN public.users ON (public.article.idUser = public.users.id)
 										LEFT JOIN public.rating ON (public.article.idArticle = public.rating.idArticle)
 										WHERE public.article.visibility = ? AND LOWER(public.article.title) LIKE LOWER(?)
-										GROUP BY public.article.idArticle, public.users.name, public.users.photoURL
+										GROUP BY public.article.idArticle, public.users.name, public.users.id, public.users.photoURL
 										ORDER BY rating DESC
 										LIMIT ?
 										OFFSET ?");

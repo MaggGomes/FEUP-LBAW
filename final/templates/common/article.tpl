@@ -4,11 +4,15 @@
             <div class="profile-header-container">
                 <div class="row">
                     <div class="col-xs-10">
-                        <div class="profile-header-img">
+                        <div class="profile-header-img" onclick="location.href='{$BASE_URL}pages/profile.php?id={$article.userid}'">
                             {if $article.userimage == NULL}
-                                <img class="img-circle" src="{$BASE_URL}upload/user_profile/default.png"/>
+                                <img class="img-circle" src="{$BASE_URL}upload/user_profile/default.png" />
                             {else}
-                                <img class="img-circle" src="{$BASE_URL}upload/user_profile/{$article.userimage}"/>
+                                {if strpos($article.userimage, '://')}
+                                    <img class="img-circle" src="{$article.userimage}"/>
+                                {else}
+                                    <img class="img-circle" src="{$BASE_URL}upload/user_profile/{$article.userimage}"/>
+                                {/if}
                             {/if}
                         </div>
                         <div class="article-publisher">

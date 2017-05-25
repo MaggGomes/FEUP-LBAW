@@ -9,6 +9,6 @@
     $titles = getArticlesByTitle($search, $limit, $offset);
 
     $smarty->assign('articles', $titles);
-	$output = $smarty->fetch("list_articles.tpl");
+	$output = $smarty->fetch("search_articles.tpl");
     echo $output;
  ?>

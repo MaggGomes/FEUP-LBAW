@@ -112,7 +112,7 @@
       <div class="home-search">
         <div id="expandsearch" class="expandsearch">
           <form method="get" action="{$BASE_URL}pages/advanced_search.php" class="expandsearch-form">
-            <input class="expandsearch-input" name="search" onkeyup="searchByTitle(this.value)" type="search" placeholder="Search ..."/>
+            <input class="expandsearch-input" name="search" spellcheck="false" autocomplete="off" onkeyup="searchByTitle(this.value)" type="search" placeholder="Search ..."/>
             <button class="expandsearch-submit" type="submit">Search</button>
           </form>
           <div class="expandsearch-content"></div>

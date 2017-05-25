@@ -120,9 +120,7 @@ $(document).ready(function() {
 
   })();
 
-  /*
-  Third party login scripts
-   */
+  /* Third party login scripts */
 
   //Google
 
@@ -245,9 +243,11 @@ function searchByTitle(value) {
       "limit": 4,
       "offset": 0
     }, function(results) {
-      $("#normalSearch").html(results);
+      $(".expandsearch-content").html(results);
       console.log(results);
     });
+  }  else {
+    $(".expandsearch-content").html("");
   }
 }
 
@@ -310,7 +310,6 @@ function follow(html, idPerson) {
 function reportArticle(id) {
   $("input#repID").val(id);
 }
-
 
 /* Allows account pages to be shown dynamically*/
 function accountPage(html, page) {
