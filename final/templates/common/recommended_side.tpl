@@ -1,3 +1,6 @@
+<div class="row container-category-title">
+	<h3 class="col-xs-12">Recommended <span class="glyphicon glyphicon-menu-down"></span></h3>
+</div>
 <div class="list-group">
     <a href="#" class="list-group-item">
         <h4 class="list-group-item-heading">Lorem ipsum</h4>
