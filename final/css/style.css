@@ -33,11 +33,11 @@ a:hover {
     font-weight: bold;
     padding-right: 0;
 }
- #brand-title:hover {
+ .brand-title:hover {
     color: #039be5;
 }
 
-#brand-title {
+.brand-title {
     padding-left: 18px;
     padding-right: 20px;
 }
@@ -1017,6 +1017,26 @@ input[type="search"] {
     width:100%;
     margin-bottom: 5px;
     padding: 16px;
+}
+
+.modal-title {
+    border-top: none;
+    border-bottom: 1px solid #e5e5e5;;
+}
+
+.modal-title .navbar-brand {
+    padding-left: 0;
+    color: #039be5;
+}
+
+.modal-close {
+    font-size: 22px;
+    cursor: pointer;
+    color: #a9a9a9;
+}
+
+.modal-close:hover {
+    color: #039be5;
 }
 
 .modal-social-icons i {

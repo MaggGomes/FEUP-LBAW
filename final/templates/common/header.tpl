@@ -33,9 +33,9 @@
 
   <!-- HTML5 shim and Respond.scripts for IE8 support of HTML5 elements and media queries -->
   <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
 
   <!-- scripts for login with google account-->
   <script src="https://apis.google.com/js/platform.js" async defer></script>
@@ -44,26 +44,42 @@
 </head>
 
 <body class="{$addarticlebody}">
-  <nav class="navbar navbar-default navbar-fixed-top">
-    <div class="container">
-      <div class="navbar-header">
-        <button class="navbar-toggle" data-toggle="collapse" data-target=".nav-bottom">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-        </button>
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" data-toggle="collapse" data-target=".nav-bottom">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="home.php">
+        <img alt="Brand" src="../images/logo.png">
+      </a>
+      <a href="home.php" class="navbar-brand brand-title">scriba</a>
+    </div>
 
-        <a class="navbar-brand" href="home.php">
-          <img alt="Brand" src="../images/logo.png">
-        </a>
-        <a href="home.php" class="navbar-brand" id="brand-title">scriba</a>
-      </div>
+    <ul class="nav navbar-nav menu-right navbar-right pull-right">
+      <li><a href="#" id="search"><span class="glyphicon glyphicon-search menu-top"></span></a></li>
+      <li><a href="#"><span class="glyphicon glyphicon-bell menu-top"></span></a></li>
+      <button class="navbar-toggle" data-toggle="collapse" data-target=".menu-user">
+        {if !$USERNAME}
+          <span class="glyphicon glyphicon-user menu-top"></span>
+        {else}
+          {if !$PHOTO}
+            <img class="img-circle menu-photo" src="{$BASE_URL}upload/user_profile/default.png"/>
+          {else}
+            {if strpos($PHOTO, '://')}
+              <img class="img-circle menu-photo" src="{$PHOTO}"/>
+            {else}
+              <img class="img-circle menu-photo" src="{$BASE_URL}upload/user_profile/{$PHOTO}"/>
+            {/if}
+          {/if}
+        {/if}
+      </button>
 
-      <ul class="nav navbar-nav menu-right navbar-right pull-right">
-        <li><a href="#" id="search"><span class="glyphicon glyphicon-search menu-top"></span></a></li>
-        <li><a href="#"><span class="glyphicon glyphicon-bell menu-top"></span></a></li>
-        <button class="navbar-toggle" data-toggle="collapse" data-target=".menu-user">
+      <li id="menu-user-dropdown" class="dropdown">
+        <a class="dropdown-toggle" href="#" data-toggle="dropdown">
           {if !$USERNAME}
             <span class="glyphicon glyphicon-user menu-top"></span>
           {else}
@@ -77,190 +93,194 @@
               {/if}
             {/if}
           {/if}
-        </button>
-
-        <li id="menu-user-dropdown" class="dropdown">
-          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
-            {if !$USERNAME}
-              <span class="glyphicon glyphicon-user menu-top"></span>
-            {else}
-              {if !$PHOTO}
-                <img class="img-circle menu-photo" src="{$BASE_URL}upload/user_profile/default.png"/>
-              {else}
-                {if strpos($PHOTO, '://')}
-                  <img class="img-circle menu-photo" src="{$PHOTO}"/>
-                {else}
-                  <img class="img-circle menu-photo" src="{$BASE_URL}upload/user_profile/{$PHOTO}"/>
-                {/if}
-              {/if}
-            {/if}
-          </a>
-          <ul class="dropdown-menu collapse">
-            {if !$USERNAME}
-              <li><a href="#signin" data-toggle="modal"><span class="fa fa-user-o"><span class="menu-text"> &nbsp;Sign In</span></a></li>
-              <li><a href="#register" data-toggle="modal"><span class="fa fa-sign-in"><span class="menu-text"> &nbsp;Register</span></a></li>
-            {else}
-              <li><a href="{$BASE_URL}pages/account.php" data-toggle="modal"><span class="fa fa-user-o"><span class="menu-text"> &nbsp;My Profile</span></a></li>
-              <li><a href="{$BASE_URL}pages/add_article.php" data-toggle="modal"><span class="fa fa-pencil"><span class="menu-text"> &nbsp;Create Article</span></a></li>
-              <li><a href="{$BASE_URL}actions/base/logout.php" data-toggle="modal"><span class="fa fa-sign-out"><span class="menu-text"> &nbsp;Log out</span></a></li>
-            {/if}
-          </ul>
-        </li>
-      </ul>
-
-      <!-- Menu search -->
-      <div class="home-search">
-        <div id="expandsearch" class="expandsearch">
-          <form method="get" action="{$BASE_URL}pages/advanced_search.php" class="expandsearch-form">
-            <input class="expandsearch-input" name="search" spellcheck="false" autocomplete="off" onkeyup="searchByTitle(this.value)" type="search" placeholder="Search ..."/>
-            <button class="expandsearch-submit" type="submit">Search</button>
-          </form>
-          <div class="expandsearch-content"></div>
-          <span class="expandsearch-close"></span>
-        </div>
-		<div id="normalSearch" class="overlay"></div>
-      </div>
-    </div>
-
-    <!-- Collapsable menu user for resolutions < 768px -->
-    <div class="container menu-user-container">
-      <div class="collapse navbar-collapse menu-user">
-        <ul class="nav navbar-nav">
+        </a>
+        <ul class="dropdown-menu collapse">
           {if !$USERNAME}
             <li><a href="#signin" data-toggle="modal"><span class="fa fa-user-o"><span class="menu-text"> &nbsp;Sign In</span></a></li>
             <li><a href="#register" data-toggle="modal"><span class="fa fa-sign-in"><span class="menu-text"> &nbsp;Register</span></a></li>
           {else}
-            <li><a href="../pages/account.php" data-toggle="modal"><span class="fa fa-user-o"><span class="menu-text"> &nbsp;My Profile</span></a></li>
-            <li><a href="../pages/add_article.php" data-toggle="modal"><span class="fa fa-pencil"><span class="menu-text"> &nbsp;Create Article</span></a></li>
-            <li><a href="../actions/base/logout.php" data-toggle="modal"><span class="fa fa-sign-out"><span class="menu-text"> &nbsp;Log out</span></a></li>
+            <li><a href="{$BASE_URL}pages/account.php" data-toggle="modal"><span class="fa fa-user-o"><span class="menu-text"> &nbsp;My Profile</span></a></li>
+            <li><a href="{$BASE_URL}pages/add_article.php" data-toggle="modal"><span class="fa fa-pencil"><span class="menu-text"> &nbsp;Create Article</span></a></li>
+            <li><a href="{$BASE_URL}actions/base/logout.php" data-toggle="modal"><span class="fa fa-sign-out"><span class="menu-text"> &nbsp;Log out</span></a></li>
           {/if}
         </ul>
+      </li>
+    </ul>
+
+    <!-- Menu search -->
+    <div class="home-search">
+      <div id="expandsearch" class="expandsearch">
+        <form method="get" action="{$BASE_URL}pages/advanced_search.php" class="expandsearch-form">
+          <input class="expandsearch-input" name="search" spellcheck="false" autocomplete="off" onkeyup="searchByTitle(this.value)" type="search" placeholder="Search ..."/>
+          <button class="expandsearch-submit" type="submit">Search</button>
+        </form>
+        <div class="expandsearch-content"></div>
+        <span class="expandsearch-close"></span>
+      </div>
+      <div id="normalSearch" class="overlay"></div>
+    </div>
+  </div>
+
+  <!-- Collapsable menu user for resolutions < 768px -->
+  <div class="container menu-user-container">
+    <div class="collapse navbar-collapse menu-user">
+      <ul class="nav navbar-nav">
+        {if !$USERNAME}
+          <li><a href="#signin" data-toggle="modal"><span class="fa fa-user-o"><span class="menu-text"> &nbsp;Sign In</span></a></li>
+          <li><a href="#register" data-toggle="modal"><span class="fa fa-sign-in"><span class="menu-text"> &nbsp;Register</span></a></li>
+        {else}
+          <li><a href="../pages/account.php" data-toggle="modal"><span class="fa fa-user-o"><span class="menu-text"> &nbsp;My Profile</span></a></li>
+          <li><a href="../pages/add_article.php" data-toggle="modal"><span class="fa fa-pencil"><span class="menu-text"> &nbsp;Create Article</span></a></li>
+          <li><a href="../actions/base/logout.php" data-toggle="modal"><span class="fa fa-sign-out"><span class="menu-text"> &nbsp;Log out</span></a></li>
+        {/if}
+      </ul>
+    </div>
+  </div>
+
+  <div id="nav-bottom-container" class="container nav-bottom-container">
+    <div class="collapse navbar-collapse nav-bottom">
+      <ul class="nav navbar-nav">
+        <li><a href="../pages/home.php"><span>Home</span></a></li>
+        <li><a href="#"><span class="menu-text">Top Articles</span></a></li>
+        <li><a href="#"><span class="menu-text">World</span></a></li>
+        <li><a href="#"><span class="menu-text">Sports</span></a></li>
+        <li><a href="#"><span class="menu-text">Technology</span></a></li>
+        <li><a href="#"><span class="menu-text">Politics</span></a></li>
+        <li><a href="#"><span class="menu-text">Culture</span></a></li>
+        <li><a href="#"><span class="menu-text">Science</span></a></li>
+        <li><a href="#"><span class="menu-text">Miscellaneous</span></a></li>
+        <li><a href="#"><span class="menu-text">Recommended</span></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Sign In -->
+
+<div id="signin" class="modal fade" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-sm" role="document">
+    <div class="modal-content">
+      <div class="modal-footer modal-title">
+        <div class="navbar-brand brand-title">scriba</div>
+        <div class="modal-close" data-dismiss="modal"><i class="fa fa-times" aria-hidden="true"></i></div>
+      </div>
+      <div id="modal-message-signin"></div>
+      <div class="modal-body">
+        <div class="modal-social-icons">
+          <button class="btn btn-default facebook" id="facebook_login"><i class="fa fa-facebook modal-icons"></i> Continue with Facebook </button>
+          <button class="btn btn-default google" id="google_login" data-dismiss="modal"><img src="../images/google-logo.png"> Continue with Google</button>
+          <button class="btn btn-default sigarra"><i class="fa fa-graduation-cap" aria-hidden="true"></i> Continue with Sigarra U.Porto</button>
+        </div>
+        <div class="login-or">
+          <hr class="hr-or">
+          <span class="span-or">or</span>
+        </div>
+        <button type="button" data-dismiss="modal" class="btn btn-primary btn-signin">Sign in</button>
+        <button type="button" data-dismiss="modal" class="btn btn-default btn-register">Register</button>
+
+        <!--<div class="remember-password">
+          <input type="checkbox" checked="checked"> Remember me
+          <a href="#" class="pull-right">Forgot password?</a>
+        </div>-->
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
       </div>
     </div>
+  </div>
+</div>
 
-    <div id="nav-bottom-container" class="container nav-bottom-container">
-      <div class="collapse navbar-collapse nav-bottom">
-        <ul class="nav navbar-nav">
-          <li><a href="../pages/home.php"><span>Home</span></a></li>
-          <li><a href="#"><span class="menu-text">Top Articles</span></a></li>
-          <li><a href="#"><span class="menu-text">World</span></a></li>
-          <li><a href="#"><span class="menu-text">Sports</span></a></li>
-          <li><a href="#"><span class="menu-text">Technology</span></a></li>
-          <li><a href="#"><span class="menu-text">Politics</span></a></li>
-          <li><a href="#"><span class="menu-text">Culture</span></a></li>
-          <li><a href="#"><span class="menu-text">Science</span></a></li>
-          <li><a href="#"><span class="menu-text">Miscellaneous</span></a></li>
-          <li><a href="#"><span class="menu-text">Recommended</span></a></li>
-        </ul>
+<!-- Log in -->
+<div id="login" class="modal fade" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-sm" role="document">
+    <div class="modal-content">
+      <div class="modal-footer modal-title">
+        <div class="navbar-brand brand-title">scriba</div>
+        <div class="modal-close" data-dismiss="modal"><i class="fa fa-times" aria-hidden="true"></i></div>
+      </div>
+      <div id="modal-message-login"></div>
+      <div class="modal-body">
+        <form action="../actions/base/login.php" method="post">
+          <div class="form-group has-feedback">
+            <input type="text" class="form-control" name="email" placeholder="E-mail address">
+            <span class="fa fa-envelope-o form-control-feedback"></span>
+          </div>
+          <div class="form-group has-feedback">
+            <input type="password" class="form-control" name="password" placeholder="Password">
+            <span class="fa fa-lock form-control-feedback"></span>
+          </div>
+          <input type="submit" class="btn btn-primary btn-submit-dialog" value="Sign In">
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-default btn-register">Register</button>
       </div>
     </div>
-  </nav>
+  </div>
+</div>
 
-  <!-- Sign In -->
 
-  <div id="signin" class="modal fade" tabindex="-1" role="dialog">
-    <div class="modal-dialog modal-sm" role="document">
-      <div class="modal-content">
-        <div class="modal-body">
-          <div class="modal-social-icons">
-            <button class="btn btn-default facebook" id="facebook_login"><i class="fa fa-facebook modal-icons"></i> Sign In with Facebook </button>
-            <button class="btn btn-default google" id="google_login" data-dismiss="modal"><img src="../images/google-logo.png">Sign In with Google</button>
-            <button class="btn btn-default sigarra"><i class="fa fa-graduation-cap" aria-hidden="true"></i> Sign In with Sigarra U.Porto</button>
-          </div>
-          <div class="login-or">
-            <hr class="hr-or">
-            <span class="span-or">or</span>
-          </div>
-          <form action="../actions/base/login.php" method="post">
+<!-- Register -->
+
+<div id="register" class="modal fade" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-sm" role="document">
+    <div class="modal-content">
+      <div class="modal-footer modal-title">
+        <div class="navbar-brand brand-title">scriba</div>
+        <div class="modal-close" data-dismiss="modal"><i class="fa fa-times" aria-hidden="true"></i></div>
+      </div>
+      <div id="modal-message-register"></div>
+      <div class="modal-body">
+        <form action="../actions/base/register.php" method="post">
+          <div class="form-group">
             <div class="form-group has-feedback">
-              <input type="text" class="form-control" name="email" placeholder="E-mail address">
+              <input type="text" class="form-control" placeholder="Name" name="name">
+              <span class="fa fa-user-o form-control-feedback"></span>
+            </div>
+            <div class="form-group has-feedback">
+              <input type="email" class="form-control" placeholder="E-mail address" name="email">
               <span class="fa fa-envelope-o form-control-feedback"></span>
             </div>
             <div class="form-group has-feedback">
-              <input type="password" class="form-control" name="password" placeholder="Password">
+              <input type="password" class="form-control" placeholder="Password" name="password">
               <span class="fa fa-lock form-control-feedback"></span>
             </div>
-            <input type="submit" class="btn btn-primary btn-submit-dialog" value="Sign In">
-          </form>
-
-          <div class="remember-password">
-            <input type="checkbox" checked="checked"> Remember me
-            <a href="#" class="pull-right">Forgot password?</a>
-          </div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-default">Register</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-  <!-- Register -->
-
-  <div id="register" class="modal fade" tabindex="-1" role="dialog">
-    <div class="modal-dialog modal-sm" role="document">
-      <div class="modal-content">
-        <div class="modal-body">
-          <div class="modal-social-icons">
-            <button class="btn btn-default facebook"><i class="fa fa-facebook modal-icons"></i> Continue with Facebook </button>
-            <button class="btn btn-default google"><img src="../images/google-logo.png">Continue with Google</button>
-            <button class="btn btn-default sigarra"><i class="fa fa-graduation-cap" aria-hidden="true"></i> Continue with Sigarra U.Porto</button>
-          </div>
-          <div class="login-or">
-            <hr class="hr-or">
-            <span class="span-or">or</span>
-          </div>
-          <form action="../actions/base/register.php" method="post">
-            <div class="form-group">
-              <div class="form-group has-feedback">
-                <input type="text" class="form-control" placeholder="Name" name="name">
-                <span class="fa fa-user-o form-control-feedback"></span>
-              </div>
-              <div class="form-group has-feedback">
-                <input type="email" class="form-control" placeholder="E-mail address" name="email">
-                <span class="fa fa-envelope-o form-control-feedback"></span>
-              </div>
-              <div class="form-group has-feedback">
-                <input type="password" class="form-control" placeholder="Password" name="password">
-                <span class="fa fa-lock form-control-feedback"></span>
-              </div>
-              <div class="form-group has-feedback">
-                <input type="password" class="form-control" placeholder="Confirm Password">
-                <span class="fa fa-lock form-control-feedback"></span>
-              </div>
+            <div class="form-group has-feedback">
+              <input type="password" class="form-control" placeholder="Confirm Password">
+              <span class="fa fa-lock form-control-feedback"></span>
             </div>
-            <input type="submit" class="btn btn-primary btn-submit-dialog" value="Register">
-          </form>
+          </div>
+          <input type="submit" class="btn btn-primary btn-submit-dialog" value="Register">
+        </form>
 
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
-        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
       </div>
     </div>
   </div>
+</div>
 
-  <!-- Report Article -->
+<!-- Report Article -->
 
-  <div id="report-article" class="modal fade" tabindex="-1" role="dialog">
-    <div class="modal-dialog modal-sm" role="document">
-      <div class="modal-content">
-        <div class="modal-body">
-          <h4>Reason for report:</h4>
-          <form>
-            <input type="checkbox" name="vehicle" class="reportCheck" id="repC1" value=""> Contains abusive language.<br>
-            <input type="checkbox" name="vehicle" class="reportCheck" id="repC2" value=""> Contains not apropriate content for Scriba<br>
-            <input type="checkbox" name="vehicle" class="reportCheck" id="repC3" value=""> It's spam. <br> <br>
-            <textarea id="repAdditional" placeholder="Additional information"></textarea>
-            <input type="text"id="repID" value="-1" hidden="true">
-          </form>
-          <button type="button" class="btn btn-primary btn-submit-dialog" id="submitRep" disabled>Submit</button>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
-        </div>
+<div id="report-article" class="modal fade" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-sm" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <h4>Reason for report:</h4>
+        <form>
+          <input type="checkbox" name="vehicle" class="reportCheck" id="repC1" value=""> Contains abusive language.<br>
+          <input type="checkbox" name="vehicle" class="reportCheck" id="repC2" value=""> Contains not apropriate content for Scriba<br>
+          <input type="checkbox" name="vehicle" class="reportCheck" id="repC3" value=""> It's spam. <br> <br>
+          <textarea id="repAdditional" placeholder="Additional information"></textarea>
+          <input type="text"id="repID" value="-1" hidden="true">
+        </form>
+        <button type="button" class="btn btn-primary btn-submit-dialog" id="submitRep" disabled>Submit</button>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
       </div>
     </div>
   </div>
+</div>

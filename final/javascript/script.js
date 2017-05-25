@@ -120,6 +120,14 @@ $(document).ready(function() {
 
   })();
 
+  $('.btn-signin').click(function(){
+    $("#login").modal();
+  });
+
+  $('.btn-register').click(function(){
+    $("#register").modal();
+  });
+
   /* Third party login scripts */
 
   //Google
@@ -290,21 +298,26 @@ function changeRating(html, value, idSession) {
 }
 
 /* Updates follow/following button */
-function follow(html, idPerson) {
-  $.post("../api/editFollow.php", {
-      idPerson: idPerson
-    },
-    function(result) {
-      $(html).toggleClass("btn-primary");
-      $(html).toggleClass("btn-default");
-      if (result) {
-        $(html).html("<span class=\"fa fa-user\"> Following</span>");
-        $("#user-follower").html(parseInt($("#user-follower").html()) + 1);
-      } else {
-        $(html).html("<span class=\"fa fa-user-plus\"> Follow</span>");
-        $("#user-follower").html(parseInt($("#user-follower").html()) - 1);
-      }
-    });
+function follow(html, idPerson, idSession) {
+  if (idSession) {
+    $.post("../api/editFollow.php", {
+          idPerson: idPerson
+        },
+        function (result) {
+          $(html).toggleClass("btn-primary");
+          $(html).toggleClass("btn-default");
+          if (result) {
+            $(html).html("<span class=\"fa fa-user\"> Following</span>");
+            $("#user-follower").html(parseInt($("#user-follower").html()) + 1);
+          } else {
+            $(html).html("<span class=\"fa fa-user-plus\"> Follow</span>");
+            $("#user-follower").html(parseInt($("#user-follower").html()) - 1);
+          }
+        });
+  } else {
+    // Show modal for login
+    $("#signin").modal();
+  }
 }
 
 function reportArticle(id) {
