@@ -63,7 +63,7 @@
     <div class="panel-footer article-footer">
         <div class="row article-footer-upper">
             <div class="col-xs-12 small-text">
-                <span class="glyph-text pull-right">4 comments &middot; 2 shares</span>
+                <span class="glyph-text pull-right">{$article.numcomments} comments &middot; 2 shares</span>
             </div>
         </div>
         <div class="row article-footer-lower">

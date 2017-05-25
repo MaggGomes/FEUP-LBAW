@@ -1,5 +1,5 @@
 <?php
-
+    include_once 'comment.php';
     function getArticlesByCategory($category) {
         global $conn;
 
@@ -43,7 +43,10 @@
             $result = $stmt->fetch();
 
             $article['downvotes'] = $result['downvotes'];
+
+            $article['numcomments'] = getNumberComments($article['id']);
         }
+
 
         return $articles;
     }
@@ -91,6 +94,8 @@
 
         $article['downvotes'] = $result['downvotes'];
 
+        $article['numcomments'] = getNumberComments($id);
+
         return $article;
     }
 
@@ -135,6 +140,8 @@
         $result = $stmt->fetch();
 
         $article['downvotes'] = $result['downvotes'];
+
+        $article['numcomments'] = getNumberComments($article['id']);
 
         return $article;
     }

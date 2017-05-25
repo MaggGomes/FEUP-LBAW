@@ -7,6 +7,8 @@
                         <div class="profile-header-img">
                             {if $comment.userimage == NULL}
                                 <img class="img-circle" src="{$BASE_URL}upload/user_profile/default.png"/>
+                            {elseif strpos($comment.userimage, '://')}
+                                <img class="img-circle" src="{$comment.userimage}"/>
                             {else}
                                 <img class="img-circle" src="{$BASE_URL}upload/user_profile/{$comment.userimage}"/>
                             {/if}
@@ -49,7 +51,7 @@
         </form>
     </div>
     {/if}
-    
+
     {foreach $comment.replies as $reply}
         {include file='common/reply_comment.tpl'}
     {/foreach}

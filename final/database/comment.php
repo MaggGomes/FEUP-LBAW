@@ -19,11 +19,15 @@
         $stmt->execute(array($id));
         $comments = $stmt->fetchAll();
 
+        //$numcomments = count($comments);
+
         for ($i = 0; $i < count($comments); $i++){
             $comments[$i]['replies'] = getCommentReplies($comments[$i]['idcomment']);
+        //    $numreplies = count($comments[$i]['replies']);
+        //    $numcomments = $numcomments + $numreplies;
         }
 
-        console_log($comments);
+        //$comments['numcomments'] = $numcomments;
 
         return $comments;
     }
@@ -48,4 +52,21 @@
 
         return $comments;
     }
+
+    function getNumberComments($id){
+        global $conn;
+
+        $stmt = $conn->prepare("SELECT COUNT(*) AS numbercomments
+			FROM comment
+			WHERE comment.idArticle = ? ");
+
+        $stmt->execute(array($id));
+        $comments = $stmt->fetch();
+
+
+        console_log($comments);
+        return $comments['numbercomments'];
+    }
+
+
 ?>

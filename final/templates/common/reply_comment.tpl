@@ -7,6 +7,8 @@
                         <div class="profile-header-img">
                             {if $reply.userimage == NULL}
                                 <img class="img-circle" src="{$BASE_URL}upload/user_profile/default.png"/>
+                            {elseif strpos($reply.userimage, '://')}
+                                <img class="img-circle" src="{$reply.userimage}"/>
                             {else}
                                 <img class="img-circle" src="{$BASE_URL}upload/user_profile/{$reply.userimage}"/>
                             {/if}
