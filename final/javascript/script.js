@@ -371,3 +371,12 @@ function updateSession(usName, em, image, platf) {
     location.reload();
   }
 }
+
+$("#advancedSearchForm").change(function(){
+	console.log("aqui");
+});
+
+function advancedSearch(){
+	console.log("entrou");
+	$("#advancedSearchForm").serialize();
+}

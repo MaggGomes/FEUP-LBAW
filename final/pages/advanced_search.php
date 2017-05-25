@@ -14,6 +14,7 @@
 
 	$smarty->assign('limit', $limit);
 	$smarty->assign('pageNo', $pageNo);
+	$smarty->assign('search', $search);
 	$smarty->assign('articlesLength', count($articles));
 	$smarty->assign('articles', $articles);
     $smarty->display('advanced_search.tpl');
