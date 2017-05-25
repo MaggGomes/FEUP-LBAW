@@ -128,6 +128,28 @@ $(document).ready(function() {
     $("#register").modal();
   });
 
+  /* Sign in */
+  $('#sigin-submit').click(function(){
+    var userEmail = $('#signin-email').val();
+    var userPassword = $('#signin-password').val();
+
+    var value = 3;
+    var id = 1;
+
+    $.post("../actions/base/login.php", {
+          email: userEmail ,
+          password: userPassword
+        },
+        function(result) {
+          console.log(result);
+          if(result == 200){
+            location.reload();
+          } else {
+            $('#modal-message-login').html('<div class="modal-message-content">Incorrect e-mail and/or password.</div>');
+          }
+        });
+  });
+
   /* Third party login scripts */
 
   //Google

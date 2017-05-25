@@ -1,6 +1,4 @@
 <?php
-include_once("../config/init.php");
-
 	function getAllUsers($pageNo, $limit){
 		global $conn;
 

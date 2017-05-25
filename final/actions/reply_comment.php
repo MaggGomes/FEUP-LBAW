@@ -12,5 +12,4 @@
 
 	$link = 'Location: ../pages/read_article.php?id=' . $idarticle;
 	header($link);
-
 ?>

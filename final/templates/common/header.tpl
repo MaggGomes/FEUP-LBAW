@@ -164,8 +164,8 @@
         <div class="navbar-brand brand-title">scriba</div>
         <div class="modal-close" data-dismiss="modal"><i class="fa fa-times" aria-hidden="true"></i></div>
       </div>
-      <div id="modal-message-signin"></div>
       <div class="modal-body">
+        <div id="modal-message-signin"></div>
         <div class="modal-social-icons">
           <button class="btn btn-default facebook" id="facebook_login"><i class="fa fa-facebook modal-icons"></i> Continue with Facebook </button>
           <button class="btn btn-default google" id="google_login" data-dismiss="modal"><img src="../images/google-logo.png"> Continue with Google</button>
@@ -175,8 +175,8 @@
           <hr class="hr-or">
           <span class="span-or">or</span>
         </div>
-        <button type="button" data-dismiss="modal" class="btn btn-primary btn-signin">Sign in</button>
-        <button type="button" data-dismiss="modal" class="btn btn-default btn-register">Register</button>
+        <button type="button" data-dismiss="modal" class="btn-bottom btn btn-primary btn-signin">Sign in</button>
+        <button type="button" data-dismiss="modal" class="btn-bottom btn btn-default btn-register">Register</button>
 
         <!--<div class="remember-password">
           <input type="checkbox" checked="checked"> Remember me
@@ -198,19 +198,17 @@
         <div class="navbar-brand brand-title">scriba</div>
         <div class="modal-close" data-dismiss="modal"><i class="fa fa-times" aria-hidden="true"></i></div>
       </div>
-      <div id="modal-message-login"></div>
       <div class="modal-body">
-        <form action="../actions/base/login.php" method="post">
+        <div id="modal-message-login"></div>
           <div class="form-group has-feedback">
-            <input type="text" class="form-control" name="email" placeholder="E-mail address">
+            <input id="signin-email" type="text" class="form-control" name="email" placeholder="E-mail address">
             <span class="fa fa-envelope-o form-control-feedback"></span>
           </div>
           <div class="form-group has-feedback">
-            <input type="password" class="form-control" name="password" placeholder="Password">
+            <input id="signin-password" type="password" class="form-control" name="password" placeholder="Password">
             <span class="fa fa-lock form-control-feedback"></span>
           </div>
-          <input type="submit" class="btn btn-primary btn-submit-dialog" value="Sign In">
-        </form>
+          <button id="sigin-submit" class="btn btn-primary btn-submit-dialog">Sign In</button>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
@@ -230,8 +228,8 @@
         <div class="navbar-brand brand-title">scriba</div>
         <div class="modal-close" data-dismiss="modal"><i class="fa fa-times" aria-hidden="true"></i></div>
       </div>
-      <div id="modal-message-register"></div>
       <div class="modal-body">
+        <div id="modal-message-register"></div>
         <form action="../actions/base/register.php" method="post">
           <div class="form-group">
             <div class="form-group has-feedback">
