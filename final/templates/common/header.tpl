@@ -101,7 +101,7 @@
           {else}
             <li><a href="{$BASE_URL}pages/account.php" data-toggle="modal"><span class="fa fa-user-o"><span class="menu-text"> &nbsp;My Profile</span></a></li>
             <li><a href="{$BASE_URL}pages/add_article.php" data-toggle="modal"><span class="fa fa-pencil"><span class="menu-text"> &nbsp;Create Article</span></a></li>
-            <li><a href="{$BASE_URL}actions/base/logout.php" data-toggle="modal"><span class="fa fa-sign-out"><span class="menu-text"> &nbsp;Log out</span></a></li>
+            <li><a href="{$BASE_URL}actions/base/logout.php" id="logout" data-toggle="modal"><span class="fa fa-sign-out"><span class="menu-text"> &nbsp;Log out</span></a></li>
           {/if}
         </ul>
       </li>

@@ -63,10 +63,6 @@
         $stmt->execute(array($id));
         $comments = $stmt->fetch();
 
-
-        console_log($comments);
         return $comments['numbercomments'];
     }
-
-
 ?>
