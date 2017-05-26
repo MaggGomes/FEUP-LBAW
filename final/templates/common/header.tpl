@@ -175,6 +175,7 @@
           <hr class="hr-or">
           <span class="span-or">or</span>
         </div>
+        <h4 class="useemail">Or use your  e-mail address</h4>
         <button type="button" data-dismiss="modal" class="btn-bottom btn btn-primary btn-signin">Sign in</button>
         <button type="button" data-dismiss="modal" class="btn-bottom btn btn-default btn-register">Register</button>
 
@@ -212,7 +213,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-default btn-register">Register</button>
+        <button type="button" data-dismiss="modal" class="btn btn-default btn-register">Register</button>
       </div>
     </div>
   </div>
@@ -230,27 +231,25 @@
       </div>
       <div class="modal-body">
         <div id="modal-message-register"></div>
-        <form action="../actions/base/register.php" method="post">
-          <div class="form-group">
-            <div class="form-group has-feedback">
-              <input type="text" class="form-control" placeholder="Name" name="name">
-              <span class="fa fa-user-o form-control-feedback"></span>
-            </div>
-            <div class="form-group has-feedback">
-              <input type="email" class="form-control" placeholder="E-mail address" name="email">
-              <span class="fa fa-envelope-o form-control-feedback"></span>
-            </div>
-            <div class="form-group has-feedback">
-              <input type="password" class="form-control" placeholder="Password" name="password">
-              <span class="fa fa-lock form-control-feedback"></span>
-            </div>
-            <div class="form-group has-feedback">
-              <input type="password" class="form-control" placeholder="Confirm Password">
-              <span class="fa fa-lock form-control-feedback"></span>
-            </div>
+        <div class="form-group">
+          <div class="form-group has-feedback">
+            <input id="register-name" type="text" class="form-control" placeholder="Name" name="name">
+            <span class="fa fa-user-o form-control-feedback"></span>
           </div>
-          <input type="submit" class="btn btn-primary btn-submit-dialog" value="Register">
-        </form>
+          <div class="form-group has-feedback">
+            <input id="register-email" type="email" class="form-control" placeholder="E-mail address" name="email">
+            <span class="fa fa-envelope-o form-control-feedback"></span>
+          </div>
+          <div class="form-group has-feedback">
+            <input id="register-password" type="password" class="form-control" placeholder="Password" name="password">
+            <span class="fa fa-lock form-control-feedback"></span>
+          </div>
+          <div class="form-group has-feedback">
+            <input id="register-confirmpassword" type="password" class="form-control" placeholder="Confirm Password">
+            <span class="fa fa-lock form-control-feedback"></span>
+          </div>
+        </div>
+        <button id="register-submit" class="btn btn-primary btn-submit-dialog">Register</button>
 
       </div>
       <div class="modal-footer">

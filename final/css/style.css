@@ -12,10 +12,15 @@ body {
     background-color: #f3f3f3;
     overflow-x: hidden;
     overflow-y: scroll;
+    padding-right: 0 !important;
 }
 
 a:hover {
     text-decoration: none;
+}
+
+.modal-open, .modal-open .navbar-fixed-top {
+    margin-right: 0 !important;
 }
 
 .navbar-header .navbar-brand {
@@ -273,6 +278,10 @@ body.modal-open {
 
 .modal-open {
     padding-right: 0;
+}
+
+.useemail {
+    text-align: center;
 }
 
 /* Thumbs */

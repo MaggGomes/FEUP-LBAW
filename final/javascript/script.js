@@ -133,9 +133,6 @@ $(document).ready(function() {
     var userEmail = $('#signin-email').val();
     var userPassword = $('#signin-password').val();
 
-    var value = 3;
-    var id = 1;
-
     $.post("../actions/base/login.php", {
           email: userEmail ,
           password: userPassword
@@ -148,6 +145,48 @@ $(document).ready(function() {
             $('#modal-message-login').html('<div class="modal-message-content">Incorrect e-mail and/or password.</div>');
           }
         });
+  });
+
+  /* Register */
+  $('#register-submit').click(function(){
+    var userName = $('#register-name').val();
+    var userEmail = $('#register-email').val();
+    var userPassword = $('#register-password').val();
+    var userConfirmPassword = $('#register-confirmpassword').val();
+
+    console.log(userName);
+    console.log(userEmail);
+    console.log(userPassword);
+    console.log(userConfirmPassword);
+  if (/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test($("#register-email").val())) {
+      $("#register-email").css("border", "1px solid #3fa246");
+      bEmail = true;
+    } else {
+    $("#register-email").css("border", "1px solid #c21212");
+  }
+
+    /*$.post("../actions/base/register.php", {
+          name: userName,
+          email: userEmail ,
+          password: userPassword
+        },
+        function(result) {
+          console.log(result);
+          if(result == 200){
+            location.reload();
+          } else {
+            $('#modal-message-login').html('<div class="modal-message-content">E-mail already in use.</div>');
+          }
+        });*/
+  });
+
+
+
+  /* Cleans modal inputs */
+  $('.modal').on('hidden.bs.modal', function () {
+    $('#signin-email').val('');
+    $('#signin-password').val('');
+    $('#modal-message-login').html('');
   });
 
   /* Third party login scripts */

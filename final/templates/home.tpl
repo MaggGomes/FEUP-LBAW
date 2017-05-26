@@ -14,9 +14,6 @@
             </article>
 
             <div class="col-lg-3">
-                <div class="row container-category-title">
-                    <h3 class="col-xs-12">Recommended <span class="glyphicon glyphicon-menu-down"></span></h3>
-                </div>
                 {include file='common/recommended_side.tpl'}
             </div>
         </div>
