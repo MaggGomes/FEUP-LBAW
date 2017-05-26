@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/templates/common/header.tpl" description="&lt;!DOCTYPE html&gt;&#10;&lt;html lang=&quot;en&quot;&gt;" line="2" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="f57a898e-1f4b-4167-af9a-d7d50ae88ff8" name="Default" comment="" />
     <ignored path="final.iws" />
@@ -29,92 +32,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/style.css">
+      <file leaf-file-name="script.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/javascript/script.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.3636365">
-              <caret line="287" column="0" selection-start-line="287" selection-start-column="0" selection-end-line="287" selection-end-column="0" />
-              <folding>
-                <element signature="e#4531#5022#0" expanded="false" />
-                <element signature="e#5043#5155#0" expanded="false" />
-                <element signature="e#5176#5593#0" expanded="false" />
-                <element signature="e#5633#5753#0" expanded="false" />
-                <element signature="e#5775#6087#0" expanded="false" />
-                <element signature="e#6120#6142#0" expanded="false" />
-                <element signature="e#6188#6279#0" expanded="false" />
-                <element signature="e#6320#6343#0" expanded="false" />
-                <element signature="e#6535#6558#0" expanded="false" />
-                <element signature="e#6602#6625#0" expanded="false" />
-                <element signature="e#6671#6698#0" expanded="false" />
-                <element signature="e#6721#6788#0" expanded="false" />
-                <element signature="e#6844#6866#0" expanded="false" />
-                <element signature="e#6889#7347#0" expanded="false" />
-                <element signature="e#7389#7728#0" expanded="false" />
-                <element signature="e#7750#8020#0" expanded="false" />
-                <element signature="e#8061#8348#0" expanded="false" />
-                <element signature="e#8406#8578#0" expanded="false" />
-                <element signature="e#8686#8705#0" expanded="false" />
-                <element signature="e#8735#8806#0" expanded="false" />
-                <element signature="e#8835#8908#0" expanded="false" />
-                <element signature="e#9178#9342#0" expanded="false" />
-                <element signature="e#9367#9728#0" expanded="false" />
-                <element signature="e#9760#9779#0" expanded="false" />
-                <element signature="e#9805#9828#0" expanded="false" />
-                <element signature="e#9847#9944#0" expanded="false" />
-                <element signature="e#10099#10663#0" expanded="false" />
-                <element signature="e#10921#10970#0" expanded="false" />
-                <element signature="e#10995#11032#0" expanded="false" />
-                <element signature="e#11058#11128#0" expanded="false" />
-                <element signature="e#11268#11325#0" expanded="false" />
-                <element signature="e#11343#11366#0" expanded="false" />
-                <element signature="e#11386#11411#0" expanded="false" />
-                <element signature="e#11437#11478#0" expanded="false" />
-                <element signature="e#11515#11543#0" expanded="false" />
-                <element signature="e#11571#11637#0" expanded="false" />
-                <element signature="e#11667#11714#0" expanded="false" />
-                <element signature="e#11748#11802#0" expanded="false" />
-                <element signature="e#11842#11876#0" expanded="false" />
-                <element signature="e#11909#11937#0" expanded="false" />
-                <element signature="e#11972#12085#0" expanded="false" />
-                <element signature="e#12125#12159#0" expanded="false" />
-                <element signature="e#12178#12203#0" expanded="false" />
-                <element signature="e#12227#12349#0" expanded="false" />
-                <element signature="e#12372#12394#0" expanded="false" />
-                <element signature="e#12446#12468#0" expanded="false" />
-                <element signature="e#12504#12529#0" expanded="false" />
-                <element signature="e#12567#12597#0" expanded="false" />
-                <element signature="e#12649#12674#0" expanded="false" />
-                <element signature="e#12699#12725#0" expanded="false" />
-                <element signature="e#13105#13155#0" expanded="false" />
-                <element signature="e#13192#13224#0" expanded="false" />
-                <element signature="e#13252#13394#0" expanded="false" />
-                <element signature="e#13428#13472#0" expanded="false" />
-                <element signature="e#13538#13566#0" expanded="false" />
-                <element signature="e#13602#13721#0" expanded="false" />
-                <element signature="e#13744#13798#0" expanded="false" />
-                <element signature="e#13805#13963#0" expanded="false" />
-                <element signature="e#13975#14114#0" expanded="false" />
-                <element signature="e#14127#14207#0" expanded="false" />
-                <element signature="e#14225#14305#0" expanded="false" />
-                <element signature="e#14337#14387#0" expanded="false" />
-                <element signature="e#14407#14475#0" expanded="false" />
-                <element signature="e#14506#14541#0" expanded="false" />
-                <element signature="e#14553#14594#0" expanded="false" />
-                <element signature="e#14613#14638#0" expanded="false" />
-                <element signature="e#14658#14839#0" expanded="false" />
-                <element signature="e#14858#14925#0" expanded="false" />
-                <element signature="e#14943#15068#0" expanded="false" />
-              </folding>
+            <state vertical-scroll-proportion="-4.714286">
+              <caret line="162" column="20" selection-start-line="162" selection-start-column="20" selection-end-line="162" selection-end-column="20" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="script.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/javascript/script.js">
+      <file leaf-file-name="login_sigarra.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/actions/sigarra/login_sigarra.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.52589643">
-              <caret line="162" column="20" selection-start-line="162" selection-start-column="20" selection-end-line="162" selection-end-column="20" />
-              <folding />
+            <state vertical-scroll-proportion="0.67105263">
+              <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+              <folding>
+                <marker date="1495822172115" expanded="true" signature="286:364" placeholder="INSERT INTO public.users... " />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -134,8 +69,8 @@
       <file leaf-file-name="header.tpl" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/common/header.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.6792455">
-              <caret line="177" column="19" selection-start-line="177" selection-start-column="19" selection-end-line="177" selection-end-column="27" />
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -146,10 +81,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/actions/base/3rd_party_login.php" />
-        <option value="$PROJECT_DIR$/pages/edit_profile.php" />
-        <option value="$PROJECT_DIR$/pages/followees.php" />
-        <option value="$PROJECT_DIR$/pages/list_users.php" />
         <option value="$PROJECT_DIR$/pages/moderated_articles.php" />
         <option value="$PROJECT_DIR$/pages/managing_team.php" />
         <option value="$PROJECT_DIR$/pages/notifications.php" />
@@ -195,8 +126,12 @@
         <option value="$PROJECT_DIR$/actions/base/login.php" />
         <option value="$PROJECT_DIR$/javascript/script.js" />
         <option value="$PROJECT_DIR$/templates/home.tpl" />
-        <option value="$PROJECT_DIR$/templates/common/header.tpl" />
         <option value="$PROJECT_DIR$/css/style.css" />
+        <option value="$PROJECT_DIR$/.htcaccess" />
+        <option value="$PROJECT_DIR$/actions/base/3rd_party_login.php" />
+        <option value="$PROJECT_DIR$/test.php" />
+        <option value="$PROJECT_DIR$/templates/common/header.tpl" />
+        <option value="$PROJECT_DIR$/actions/sigarra/login_sigarra.php" />
       </list>
     </option>
   </component>
@@ -302,7 +237,25 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
+              <option name="myItemId" value="actions" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="final" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="final" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="actions" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sigarra" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -318,6 +271,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\LBAW-Project\final\actions\sigarra" />
       <recent name="C:\wamp64\www\LBAW-Project\final\upload\user_profile" />
       <recent name="C:\wamp64\www\LBAW-Project\final\templates" />
       <recent name="C:\wamp64\www\LBAW-Project\final\templates\account" />
@@ -419,13 +373,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/templates/account/moderated_articles.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.15977444">
-          <caret line="5" column="34" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/account/notifications.tpl">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.15977444">
@@ -497,6 +444,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.38418078">
           <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="35" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -638,14 +586,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/common/article.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33200794">
-          <caret line="30" column="82" selection-start-line="30" selection-start-column="82" selection-end-line="30" selection-end-column="89" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/actions/action_add_article.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.75751877">
@@ -700,14 +640,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/init.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7988722">
-          <caret line="25" column="26" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/database/comment.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.4379699">
@@ -745,24 +677,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/actions/base/3rd_party_login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5432331">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding>
-            <marker date="1493944988573" expanded="true" signature="351:429" placeholder="INSERT INTO public.users... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/actions/base/logout.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/actions/reply_comment.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.12781955">
@@ -797,14 +711,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/actions/base/login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5432331">
-          <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/home.tpl">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.2644135">
@@ -821,28 +727,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/actions/base/register.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.5384617">
-          <caret line="10" column="53" selection-start-line="10" selection-start-column="53" selection-end-line="10" selection-end-column="53" />
-          <folding>
-            <marker date="1493931590636" expanded="true" signature="372:437" placeholder="INSERT INTO public.Users... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/common/header.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.6792455">
-          <caret line="177" column="19" selection-start-line="177" selection-start-column="19" selection-end-line="177" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.3636365">
-          <caret line="287" column="0" selection-start-line="287" selection-start-column="0" selection-end-line="287" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.29821074">
+          <caret line="1080" column="0" selection-start-line="1080" selection-start-column="0" selection-end-line="1080" selection-end-column="0" />
           <folding>
             <element signature="e#4531#5022#0" expanded="false" />
             <element signature="e#5043#5155#0" expanded="false" />
@@ -919,9 +807,87 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/javascript/script.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.52589643">
+        <state vertical-scroll-proportion="-4.714286">
           <caret line="162" column="20" selection-start-line="162" selection-start-column="20" selection-end-line="162" selection-end-column="20" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/init.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.06759443">
+          <caret line="2" column="20" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/actions/base/logout.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.19172932">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/common/article.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9586466">
+          <caret line="30" column="82" selection-start-line="30" selection-start-column="82" selection-end-line="30" selection-end-column="89" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/actions/base/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5432331">
+          <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/actions/base/register.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.5384617">
+          <caret line="10" column="53" selection-start-line="10" selection-start-column="53" selection-end-line="10" selection-end-column="53" />
+          <folding>
+            <marker date="1493931590636" expanded="true" signature="372:437" placeholder="INSERT INTO public.Users... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/actions/base/3rd_party_login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2236842">
+          <caret line="7" column="16" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="26" />
+          <folding>
+            <marker date="1493944988573" expanded="true" signature="351:429" placeholder="INSERT INTO public.users... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/actions/sigarra/.htaccess">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="9" selection-start-line="0" selection-start-column="9" selection-end-line="0" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/common/header.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/actions/sigarra/login_sigarra.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.67105263">
+          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding>
+            <marker date="1495822172115" expanded="true" signature="286:364" placeholder="INSERT INTO public.users... " />
+          </folding>
         </state>
       </provider>
     </entry>

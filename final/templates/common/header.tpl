@@ -169,7 +169,7 @@
         <div class="modal-social-icons">
           <button class="btn btn-default facebook" id="facebook_login"><i class="fa fa-facebook modal-icons"></i> Continue with Facebook </button>
           <button class="btn btn-default google" id="google_login" data-dismiss="modal"><img src="../images/google-logo.png"> Continue with Google</button>
-          <button class="btn btn-default sigarra"><i class="fa fa-graduation-cap" aria-hidden="true"></i> Continue with Sigarra U.Porto</button>
+          <a href="{$BASE_URL}actions/sigarra/login_sigarra.php"><button class="btn btn-default sigarra"><i class="fa fa-graduation-cap" aria-hidden="true"></i> Continue with Sigarra U.Porto</button></a>
         </div>
         <div class="login-or">
           <hr class="hr-or">
