@@ -262,6 +262,30 @@ $(document).ready(function () {
         fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
 
+    $("#facebook_login").click(function () {
+        $("#signin").modal('hide');
+        FB.login(function (response) {
+            console.log("facebook login");
+            if (response.status === "connected") {
+                console.log("connected");
+
+                FB.api('/me', 'GET',
+                    {fields: 'name, email, picture.width(300).height(300)'}, function (data) {
+                        console.log(data.name);
+                        console.log(data.email);
+                        console.log(data.picture.data.url);
+
+                        updateSession(data.name, data.email, data.picture.data.url, "facebook");
+                    }
+                )
+            } else if (response.status === "not_authorized") {
+                console.log("not connected");
+            } else {
+                console.log("not logged with a facebook account");
+            }
+        });
+    });
+
     //functions to work with report
     $(".reportCheck").click(
         function () {
