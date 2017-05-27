@@ -15,22 +15,26 @@
                 <div class="list-group">
                     <a href="#" class="list-group-item">
                         <h4 class="list-group-item-heading">Lorem ipsum</h4>
-                        <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                        <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed
+                            diam eget risus varius blandit.</p>
                         <small class="text-muted">3 days ago</small>
                     </a>
                     <a href="#" class="list-group-item">
                         <h4 class="list-group-item-heading">Lorem ipsum</h4>
-                        <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                        <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed
+                            diam eget risus varius blandit.</p>
                         <small class="text-muted">3 days ago</small>
                     </a>
                     <a href="#" class="list-group-item">
                         <h4 class="list-group-item-heading">Lorem ipsum</h4>
-                        <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                        <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed
+                            diam eget risus varius blandit.</p>
                         <small class="text-muted">3 days ago</small>
                     </a>
                     <a href="#" class="list-group-item">
                         <h4 class="list-group-item-heading">Lorem ipsum</h4>
-                        <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                        <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed
+                            diam eget risus varius blandit.</p>
                         <small class="text-muted">3 days ago</small>
                     </a>
                 </div>
@@ -38,19 +42,18 @@
         </div>
         <div class="row">
             {if $smarty.session.id != null}
-            <div class="col-lg-9">
-                <form action="../actions/add_comment.php" method="post">
-                    <input class="form-control" type="text" name="comment">
-                    <input type="text" name="idarticle" value="{$article.id}" hidden="hidden">
-                    <button class="btn btn-primary" type="submit">Comment </button>
-                </form>
-            </div>
+                <div class="col-md-6">
+                    <form action="../actions/add_comment.php" method="post">
+                        <input class="form-control comment-text" type="text" placeholder="Write a comment..."
+                               name="comment">
+                        <input type="text" name="idarticle" value="{$article.id}" hidden="hidden">
+                        <button class="btn btn-primary" type="submit">Comment</button>
+                    </form>
+                </div>
             {/if}
-            <div class="col-lg-9 ">
-                {foreach $comments as $comment}
-                    {include file='common/comment.tpl'}
-                {/foreach}
-            </div>
+            {foreach $comments as $comment}
+                {include file='common/comment.tpl'}
+            {/foreach}
         </div>
     </div>
 </section>

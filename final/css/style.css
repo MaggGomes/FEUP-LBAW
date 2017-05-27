@@ -1173,6 +1173,15 @@ textarea#repAdditional {
     top: 1px;
 }
 
+.comment-likes {
+    position: relative;
+    top: 10px
+}
+
+.btn-comment {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
 .horizontal-menu .dropdown-menu li a:hover {
     color: #333333;
     background-color: white;

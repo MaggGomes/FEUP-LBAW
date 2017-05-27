@@ -4,6 +4,9 @@
         global $conn;
 
         $stmt = $conn->prepare("SELECT comment.*,
+            date_part('day', comment.date) AS commentday,
+            to_char(comment.date, 'Month') AS commentmonth,
+            date_part('year', comment.date) AS commentyear,
 			users.id AS userid,
 			users.name AS username,
 			users.photourl AS userimage,
@@ -19,15 +22,9 @@
         $stmt->execute(array($id));
         $comments = $stmt->fetchAll();
 
-        //$numcomments = count($comments);
-
         for ($i = 0; $i < count($comments); $i++){
             $comments[$i]['replies'] = getCommentReplies($comments[$i]['idcomment']);
-        //    $numreplies = count($comments[$i]['replies']);
-        //    $numcomments = $numcomments + $numreplies;
         }
-
-        //$comments['numcomments'] = $numcomments;
 
         return $comments;
     }
@@ -36,6 +33,9 @@
         global $conn;
 
         $stmt = $conn->prepare("SELECT comment.*,
+            date_part('day', comment.date) AS commentday,
+            to_char(comment.date, 'Month') AS commentmonth,
+            date_part('year', comment.date) AS commentyear,
 			users.id AS userid,
 			users.name AS username,
 			users.photourl AS userimage,

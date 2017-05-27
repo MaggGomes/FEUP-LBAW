@@ -354,7 +354,7 @@ function showResults(data) {
     console.log(data);
 }
 
-/* Changes rating og an article*/
+/* Changes rating of an article*/
 function changeRating(html, value, idSession) {
     if (idSession) {
         $.post("../api/update_rating.php", {

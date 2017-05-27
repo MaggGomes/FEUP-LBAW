@@ -26,7 +26,7 @@
 
                             <ul class="dropdown-menu pull-right" role="menu">
                                 {if $smarty.session.id == $article.userid}
-                                <li><a href="edit_article.php?id={$article.id}"><span class="fa fa-pencil-square-o" aria-hidden="true"></span><span class="menu-text"> &nbsp;Edit article</span></a></li>
+                                    <li><a href="edit_article.php?id={$article.id}"><span class="fa fa-pencil-square-o" aria-hidden="true"></span><span class="menu-text"> &nbsp;Edit article</span></a></li>
                                 {/if}
                                 <li><a href="#report-article" data-toggle="modal" onclick="reportArticle({$article.id})"><span class="fa fa-flag" aria-hidden="true"></span>
                                         <span class="menu-text"> &nbsp;Report article</span></a></li>
@@ -37,7 +37,6 @@
                 </div>
             </div>
         </div>
-
         {if $article.content == NULL}
             {if $largeArticleImage == true}
                 <a href="{$BASE_URL}pages/read_article.php?id={$article.id}" class="article-title"><h3>{$article.title}</h3>
@@ -68,7 +67,6 @@
                 {else}
                     <span class="glyph-text pull-right">{$article.numcomments} comments <!--&middot; 2 shares--></span>
                 {/if}
-
             </div>
         </div>
         <div class="row article-footer-lower">
@@ -84,14 +82,11 @@
                     <div class="thumbs-down small-text {if $article.rating == -1} voted {/if}" data-value="{$article.id}"><span class="glyphicon glyphicon-thumbs-down"></span>
                         <span> </span><span class="glyph-text">{$article.downvotes}</span></div>
                 {/if}
-
-
             </div>
             <div class="col-xs-7">
                 <div class="pull-right">
                     <a href="{$BASE_URL}pages/read_article.php?id={$article.id}"><span class="glyphicon glyphicon-comment"></span><span class="glyph-text"> Comment &nbsp&nbsp</span></a>
-                    <a href="#"><span class="glyphicon glyphicon-share-alt"></span><span
-                                class="glyph-text"> Share</span></a>
+                    <a href="#"><span class="glyphicon glyphicon-share-alt"></span><span class="glyph-text"> Share</span></a>
                 </div>
             </div>
         </div>
