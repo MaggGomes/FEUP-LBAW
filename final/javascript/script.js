@@ -154,30 +154,39 @@ $(document).ready(function () {
         var userPassword = $('#register-password').val();
         var userConfirmPassword = $('#register-confirmpassword').val();
 
-        console.log(userName);
-        console.log(userEmail);
-        console.log(userPassword);
-        console.log(userConfirmPassword);
-        if (/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test($("#register-email").val())) {
-            $("#register-email").css("border", "1px solid #3fa246");
-            bEmail = true;
-        } else {
-            $("#register-email").css("border", "1px solid #c21212");
+        if (!/^([A-Za-z0-9]*)$/.test($("#register-name").val()) && /^\S/.test($("#register-name").val())){
+            $('#modal-message-register').html('<div class="modal-message-content">Invalid name. Special characters like # ; > < ! - = ? * are not allowed.</div>');
+            return;
         }
 
-        /*$.post("../actions/base/register.php", {
-         name: userName,
-         email: userEmail ,
-         password: userPassword
-         },
-         function(result) {
-         console.log(result);
-         if(result == 200){
-         location.reload();
-         } else {
-         $('#modal-message-login').html('<div class="modal-message-content">E-mail already in use.</div>');
-         }
-         });*/
+        if (!/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test($("#register-email").val())) {
+            $('#modal-message-register').html('<div class="modal-message-content">Invalid e-mail address.</div>');
+            return;
+        }
+
+        if (userPassword.length < 8) {
+            $('#modal-message-register').html('<div class="modal-message-content">Password must be at least 6 characters long.</div>');
+            return;
+        }
+
+        if (userPassword != userConfirmPassword) {
+            $('#modal-message-register').html('<div class="modal-message-content">Passwords don\'t match.</div>');
+            return;
+        }
+
+        $.post("../actions/base/register.php", {
+                name: userName,
+                email: userEmail,
+                password: userPassword
+            },
+            function (result) {
+                console.log(result);
+                if (result == 200) {
+                    location.reload();
+                } else {
+                    $('#modal-message-register').html('<div class="modal-message-content" style="text-align: left">E-mail already in use.</div>');
+                }
+            });
     });
 
 

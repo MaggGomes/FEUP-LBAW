@@ -63,20 +63,33 @@
     <div class="panel-footer article-footer">
         <div class="row article-footer-upper">
             <div class="col-xs-12 small-text">
-                <span class="glyph-text pull-right">{$article.numcomments} comments &middot; 2 shares</span>
+                {if $article.numcomments == 1}
+                    <span class="glyph-text pull-right">{$article.numcomments} comment <!--&middot; 2 shares--></span>
+                {else}
+                    <span class="glyph-text pull-right">{$article.numcomments} comments <!--&middot; 2 shares--></span>
+                {/if}
+
             </div>
         </div>
         <div class="row article-footer-lower">
             <div class="col-xs-5">
+                {if $smarty.session.id != $article.userid}
+                    <div class="thumbs-up small-text {if $article.rating == 1} voted {/if}" data-value="{$article.id}" onclick="changeRating(this, 1, {$smarty.session.id});"><span class="glyphicon glyphicon-thumbs-up"></span>
+                        <span> </span><span class="glyph-text">{$article.upvotes}</span><span> &nbsp&nbsp</span></div>
+                    <div class="thumbs-down small-text {if $article.rating == -1} voted {/if}" data-value="{$article.id}" onclick="changeRating(this, -1, {$smarty.session.id});"><span class="glyphicon glyphicon-thumbs-down"></span>
+                        <span> </span><span class="glyph-text">{$article.downvotes}</span></div>
+                {else}
+                    <div class="thumbs-up small-text {if $article.rating == 1} voted {/if}" data-value="{$article.id}"><span class="glyphicon glyphicon-thumbs-up"></span>
+                        <span> </span><span class="glyph-text">{$article.upvotes}</span><span> &nbsp&nbsp</span></div>
+                    <div class="thumbs-down small-text {if $article.rating == -1} voted {/if}" data-value="{$article.id}"><span class="glyphicon glyphicon-thumbs-down"></span>
+                        <span> </span><span class="glyph-text">{$article.downvotes}</span></div>
+                {/if}
 
-                <div class="thumbs-up small-text {if $article.rating == 1} voted {/if}" data-value="{$article.id}" onclick="changeRating(this, 1, {$smarty.session.id});"><span class="glyphicon glyphicon-thumbs-up"></span>
-                    <span> </span><span class="glyph-text">{$article.upvotes}</span><span> &nbsp&nbsp</span></div>
-                <div class="thumbs-down small-text {if $article.rating == -1} voted {/if}" data-value="{$article.id}" onclick="changeRating(this, -1, {$smarty.session.id});"><span class="glyphicon glyphicon-thumbs-down"></span>
-                    <span> </span><span class="glyph-text">{$article.downvotes}</span></div>
+
             </div>
             <div class="col-xs-7">
                 <div class="pull-right">
-                    <a href="#"><span class="glyphicon glyphicon-comment"></span><span class="glyph-text"> Comment &nbsp&nbsp</span></a>
+                    <a href="{$BASE_URL}pages/read_article.php?id={$article.id}"><span class="glyphicon glyphicon-comment"></span><span class="glyph-text"> Comment &nbsp&nbsp</span></a>
                     <a href="#"><span class="glyphicon glyphicon-share-alt"></span><span
                                 class="glyph-text"> Share</span></a>
                 </div>

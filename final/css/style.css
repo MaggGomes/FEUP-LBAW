@@ -1040,9 +1040,8 @@ input[type="search"] {
     display: inline-block;
     margin-bottom: 5px;
     font-weight: normal;
-    text-align: center;
+    text-align: left;
     vertical-align: middle;
-    white-space: nowrap;
     padding: 6px 12px;
     font-size: 14px;
     line-height: 1.42857143;
@@ -1158,6 +1157,20 @@ input[type="search"] {
     text-decoration: none;
     color: #777777;
     background-image: none;
+}
+
+/* Report */
+textarea#repAdditional {
+    width:100%;
+    resize: vertical;
+    margin-bottom: 5px;
+    padding: 16px;
+    border-radius: 3px;
+}
+
+#report-article input[type="checkbox"] {
+    position: relative;
+    top: 1px;
 }
 
 .horizontal-menu .dropdown-menu li a:hover {
@@ -1376,9 +1389,3 @@ input[type="search"] {
     }
 }
 
-textarea#repAdditional {
-  width:100%;
-  margin-bottom: 5px;
-  padding: 16px;
-  border-radius: 5%;
-}

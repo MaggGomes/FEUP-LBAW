@@ -23,9 +23,7 @@
         $_SESSION["username"] = $result["name"];
         $_SESSION["id"] = $result["id"];
         $_SESSION["photo"] = $result["photourl"];
-
-        echo json_encode($status);
-    } else {
-        echo json_encode($status);
     }
+
+    echo json_encode($status);
 ?>

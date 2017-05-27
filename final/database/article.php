@@ -287,7 +287,7 @@
 			return false;
 		}
 
-		if ($_FILES['articlePicture']['size'] > 500000) {
+		if ($_FILES['articlePicture']['size'] > 1000000) {
             echo 'Sorry, your file is too large.';
 			return false;
         }

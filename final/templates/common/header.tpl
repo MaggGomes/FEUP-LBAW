@@ -268,7 +268,7 @@
         <h4>Reason for report:</h4>
         <form>
           <input type="checkbox" name="vehicle" class="reportCheck" id="repC1" value=""> Contains abusive language.<br>
-          <input type="checkbox" name="vehicle" class="reportCheck" id="repC2" value=""> Contains not apropriate content for Scriba<br>
+          <input type="checkbox" name="vehicle" class="reportCheck" id="repC2" value=""> Contains not apropriate content for Scriba.<br>
           <input type="checkbox" name="vehicle" class="reportCheck" id="repC3" value=""> It's spam. <br> <br>
           <textarea id="repAdditional" placeholder="Additional information"></textarea>
           <input type="text"id="repID" value="-1" hidden="true">
