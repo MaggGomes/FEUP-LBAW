@@ -400,12 +400,12 @@ function changeRating(html, value, idSession) {
 /* Changes rating of an article*/
 function changeRatingComment(html, value, idSession) {
     if (idSession) {
-        $.post("../api/update_rating.php", {
+        $.post("../api/update_rating_comment.php", {
                 value: value,
                 idArticle: $(html).data('value')
             },
             function (result) {
-                if ($(html).hasClass("voted")) {
+               /* if ($(html).hasClass("voted")) {
                     $(html).removeClass("voted");
                 } else {
                     $(html).addClass("voted");
@@ -422,7 +422,7 @@ function changeRatingComment(html, value, idSession) {
                         $(html).prev().removeClass("voted");
                         $(html).prev().children()[2].innerHTML = $(html).prev().children()[2].innerHTML - 1;
                     }
-                }
+                }*/
             });
     } else {
         // Show modal for login
