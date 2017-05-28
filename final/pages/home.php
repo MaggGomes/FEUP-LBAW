@@ -11,6 +11,7 @@
         $articlesCulture = getArticlesByCategory('Culture');
         $articlesScience = getArticlesByCategory('Science');
         $articlesMiscellaneous = getArticlesByCategory('Miscellaneous');
+        $mostRecent = getMostRecentArticles();
     } catch (PDOException $e) {
         die($e->getMessage());
     }
@@ -25,5 +26,6 @@
 
     $smarty->assign('dailyTopArticle', $dailyTopArticle);
     $smarty->assign('articles', $articles);
+    $smarty->assign('mostRecent', $mostRecent);
     $smarty->display('home.tpl');
 ?>

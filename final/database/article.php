@@ -221,6 +221,24 @@
         return $articles;
     }
 
+    function getMostRecentArticles(){
+        global $conn;
+
+        $stmt = $conn->prepare("SELECT article.idArticle AS id,
+                                article.title AS title,
+                                article.abstract AS abstract,
+                                DATE_PART('day', LOCALTIMESTAMP - article.date) AS daydiff,
+                                DATE_PART('hour', LOCALTIMESTAMP - article.date) AS hourdiff,
+                                DATE_PART('minute', LOCALTIMESTAMP - article.date) AS minutediff
+                                FROM public.article
+                                ORDER BY article.date DESC LIMIT 8");
+
+        $stmt->execute();
+        $articles = $stmt->fetchAll();
+
+        return $articles;
+    }
+
 	function getArticlesByTitle($name, $limit, $offset){
 		global $conn;
 		$stmt = $conn->prepare("SELECT public.article.idArticle AS id,

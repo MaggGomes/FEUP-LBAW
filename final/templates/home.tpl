@@ -48,7 +48,7 @@
 
         <div class="container">
             <div class="row container-category-title">
-                <h3 class="col-md-12">{$category} <span class="glyphicon glyphicon-menu-down"></span></h3>
+                <h3 id="{$category}" class="col-md-12">{$category} <span class="glyphicon glyphicon-menu-down"></span></h3>
             </div>
             <div class="row">
                 {foreach $firstArticles as $article}

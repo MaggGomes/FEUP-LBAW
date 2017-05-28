@@ -142,13 +142,13 @@
       <ul class="nav navbar-nav">
         <li><a href="../pages/home.php"><span>Home</span></a></li>
         <li><a href="#"><span class="menu-text">Top Articles</span></a></li>
-        <li><a href="#"><span class="menu-text">World</span></a></li>
-        <li><a href="#"><span class="menu-text">Sports</span></a></li>
-        <li><a href="#"><span class="menu-text">Technology</span></a></li>
-        <li><a href="#"><span class="menu-text">Politics</span></a></li>
-        <li><a href="#"><span class="menu-text">Culture</span></a></li>
-        <li><a href="#"><span class="menu-text">Science</span></a></li>
-        <li><a href="#"><span class="menu-text">Miscellaneous</span></a></li>
+        <li><a href="home.php#World"><span class="menu-text">World</span></a></li>
+        <li><a href="home.php#Sports"><span class="menu-text">Sports</span></a></li>
+        <li><a href="home.php#Technology"><span class="menu-text">Technology</span></a></li>
+        <li><a href="home.php#Politics"><span class="menu-text">Politics</span></a></li>
+        <li><a href="home.php#Culture"><span class="menu-text">Culture</span></a></li>
+        <li><a href="home.php#Science"><span class="menu-text">Science</span></a></li>
+        <li><a href="home.php#Miscellaneous"><span class="menu-text">Miscellaneous</span></a></li>
         <li><a href="#"><span class="menu-text">Recommended</span></a></li>
       </ul>
     </div>
