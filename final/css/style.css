@@ -1178,6 +1178,33 @@ textarea#repAdditional {
     top: 10px
 }
 
+.comment-header {
+    margin-bottom: 5px;
+}
+
+.comment-footer {
+    padding-top: 0;
+}
+
+.reply-comment {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    margin-top: 10px;
+    display: none;
+}
+
+.show-reply {
+    cursor: pointer;
+    color: #a9a9a9;
+}
+
+.show-reply:hover {
+    color: #039be5;
+}
+
+.reply-comment .btn {
+    margin-top: 10px;
+}
+
 .btn-comment {
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }

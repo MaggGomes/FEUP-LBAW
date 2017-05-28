@@ -32,15 +32,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="comment.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/database/comment.php">
+      <file leaf-file-name="script.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/javascript/script.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.8545455">
-              <caret line="21" column="35" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="331" column="20" selection-start-line="331" selection-start-column="20" selection-end-line="331" selection-end-column="20" />
               <folding>
-                <marker date="1495852504170" expanded="true" signature="101:785" placeholder="SELECT comme... comment" />
-                <marker date="1495852504170" expanded="true" signature="1139:1754" placeholder="SELECT comme... comment" />
-                <marker date="1495852504170" expanded="true" signature="1960:2040" placeholder="SELECT COUNT... comment" />
+                <element signature="e#6950#7489#0" expanded="false" />
+                <element signature="e#8007#8171#0" expanded="false" />
+                <element signature="n#!!block;n#searchByTitle#0" expanded="false" />
+                <element signature="n#!!block;n#follow#0" expanded="false" />
+                <element signature="n#!!block;n#reportArticle#0" expanded="false" />
+                <element signature="n#!!block;n#accountPage#0" expanded="false" />
+                <element signature="n#!!block;n#changePermissions#0" expanded="false" />
+                <element signature="n#!!block;n#updateSession#0" expanded="false" />
+                <element signature="e#16768#16796#0" expanded="false" />
+                <element signature="n#!!block;n#advancedSearch#0" expanded="false" />
+                <marker date="1495940579081" expanded="true" signature="6533:6549" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -49,9 +57,40 @@
       <file leaf-file-name="read_article.tpl" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/read_article.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.961538">
-              <caret line="51" column="22" selection-start-line="51" selection-start-column="22" selection-end-line="51" selection-end-column="22" />
+            <state vertical-scroll-proportion="-8.346154">
+              <caret line="44" column="91" selection-start-line="44" selection-start-column="91" selection-end-line="44" selection-end-column="91" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="update_rating.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/api/update_rating.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-5.8846154">
+              <caret line="9" column="30" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="rating.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/database/rating.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.60828626">
+              <caret line="40" column="50" selection-start-line="40" selection-start-column="50" selection-end-line="40" selection-end-column="50" />
+              <folding>
+                <marker date="1495942750728" expanded="true" signature="118:181" placeholder="SELECT id, v... rating" />
+                <marker date="1495942750728" expanded="true" signature="461:542" placeholder="UPDATE publi... " />
+                <marker date="1495942750728" expanded="true" signature="693:745" placeholder="DELETE FROM " />
+                <marker date="1495942750728" expanded="true" signature="898:985" placeholder="INSERT INTO public.rating... " />
+                <marker date="1495942750728" expanded="true" signature="1189:1252" placeholder="SELECT id, v... rating" />
+                <marker date="1495942750728" expanded="true" signature="1524:1605" placeholder="UPDATE publi... " />
+                <marker date="1495942750728" expanded="true" signature="1744:1796" placeholder="DELETE FROM " />
+                <marker date="1495942750728" expanded="true" signature="1933:2020" placeholder="INSERT INTO public.rating... " />
+                <marker date="1495942750728" expanded="true" signature="2188:2367" placeholder="SELECT COUNT... rating" />
+                <marker date="1495942750728" expanded="true" signature="2526:2708" placeholder="SELECT COUNT... rating" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -59,99 +98,19 @@
       <file leaf-file-name="reply_comment.tpl" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/common/reply_comment.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-14.384615">
-              <caret line="22" column="18" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
+            <state vertical-scroll-proportion="-11.769231">
+              <caret line="21" column="22" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="comment.tpl" pinned="false" current-in-tab="true">
+      <file leaf-file-name="comment.tpl" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/common/comment.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6723164">
-              <caret line="21" column="67" selection-start-line="21" selection-start-column="67" selection-end-line="21" selection-end-column="67" />
+            <state vertical-scroll-proportion="-3.9230769">
+              <caret line="6" column="62" selection-start-line="6" selection-start-column="62" selection-end-line="6" selection-end-column="62" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/style.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-16.961538">
-              <caret line="1178" column="1" selection-start-line="1178" selection-start-column="1" selection-end-line="1178" selection-end-column="1" />
-              <folding>
-                <element signature="e#4531#5022#0" expanded="false" />
-                <element signature="e#5043#5155#0" expanded="false" />
-                <element signature="e#5176#5593#0" expanded="false" />
-                <element signature="e#5633#5753#0" expanded="false" />
-                <element signature="e#5775#6087#0" expanded="false" />
-                <element signature="e#6120#6142#0" expanded="false" />
-                <element signature="e#6188#6279#0" expanded="false" />
-                <element signature="e#6320#6343#0" expanded="false" />
-                <element signature="e#6535#6558#0" expanded="false" />
-                <element signature="e#6602#6625#0" expanded="false" />
-                <element signature="e#6671#6698#0" expanded="false" />
-                <element signature="e#6721#6788#0" expanded="false" />
-                <element signature="e#6844#6866#0" expanded="false" />
-                <element signature="e#6889#7347#0" expanded="false" />
-                <element signature="e#7389#7728#0" expanded="false" />
-                <element signature="e#7750#8020#0" expanded="false" />
-                <element signature="e#8061#8348#0" expanded="false" />
-                <element signature="e#8406#8578#0" expanded="false" />
-                <element signature="e#8686#8705#0" expanded="false" />
-                <element signature="e#8735#8806#0" expanded="false" />
-                <element signature="e#8835#8908#0" expanded="false" />
-                <element signature="e#9178#9342#0" expanded="false" />
-                <element signature="e#9367#9728#0" expanded="false" />
-                <element signature="e#9760#9779#0" expanded="false" />
-                <element signature="e#9805#9828#0" expanded="false" />
-                <element signature="e#9847#9944#0" expanded="false" />
-                <element signature="e#10099#10663#0" expanded="false" />
-                <element signature="e#10921#10970#0" expanded="false" />
-                <element signature="e#10995#11032#0" expanded="false" />
-                <element signature="e#11058#11128#0" expanded="false" />
-                <element signature="e#11268#11325#0" expanded="false" />
-                <element signature="e#11343#11366#0" expanded="false" />
-                <element signature="e#11386#11411#0" expanded="false" />
-                <element signature="e#11437#11478#0" expanded="false" />
-                <element signature="e#11515#11543#0" expanded="false" />
-                <element signature="e#11571#11637#0" expanded="false" />
-                <element signature="e#11667#11714#0" expanded="false" />
-                <element signature="e#11748#11802#0" expanded="false" />
-                <element signature="e#11842#11876#0" expanded="false" />
-                <element signature="e#11909#11937#0" expanded="false" />
-                <element signature="e#11972#12085#0" expanded="false" />
-                <element signature="e#12125#12159#0" expanded="false" />
-                <element signature="e#12178#12203#0" expanded="false" />
-                <element signature="e#12227#12349#0" expanded="false" />
-                <element signature="e#12372#12394#0" expanded="false" />
-                <element signature="e#12446#12468#0" expanded="false" />
-                <element signature="e#12504#12529#0" expanded="false" />
-                <element signature="e#12567#12597#0" expanded="false" />
-                <element signature="e#12649#12674#0" expanded="false" />
-                <element signature="e#12699#12725#0" expanded="false" />
-                <element signature="e#13105#13155#0" expanded="false" />
-                <element signature="e#13192#13224#0" expanded="false" />
-                <element signature="e#13252#13394#0" expanded="false" />
-                <element signature="e#13428#13472#0" expanded="false" />
-                <element signature="e#13538#13566#0" expanded="false" />
-                <element signature="e#13602#13721#0" expanded="false" />
-                <element signature="e#13744#13798#0" expanded="false" />
-                <element signature="e#13805#13963#0" expanded="false" />
-                <element signature="e#13975#14114#0" expanded="false" />
-                <element signature="e#14127#14207#0" expanded="false" />
-                <element signature="e#14225#14305#0" expanded="false" />
-                <element signature="e#14337#14387#0" expanded="false" />
-                <element signature="e#14407#14475#0" expanded="false" />
-                <element signature="e#14506#14541#0" expanded="false" />
-                <element signature="e#14553#14594#0" expanded="false" />
-                <element signature="e#14613#14638#0" expanded="false" />
-                <element signature="e#14658#14839#0" expanded="false" />
-                <element signature="e#14858#14925#0" expanded="false" />
-                <element signature="e#14943#15068#0" expanded="false" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -159,8 +118,8 @@
       <file leaf-file-name="article.tpl" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/common/article.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.269231">
-              <caret line="85" column="12" selection-start-line="85" selection-start-column="12" selection-end-line="90" selection-end-column="18" />
+            <state vertical-scroll-proportion="-6.269231">
+              <caret line="74" column="119" selection-start-line="74" selection-start-column="119" selection-end-line="74" selection-end-column="173" />
               <folding />
             </state>
           </provider>
@@ -171,7 +130,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/pages/reported_comments.php" />
         <option value="$PROJECT_DIR$/pages/statistics.php" />
         <option value="$PROJECT_DIR$/templates/account/account.tpl" />
         <option value="$PROJECT_DIR$/templates/account/followees.tpl" />
@@ -215,13 +173,14 @@
         <option value="$PROJECT_DIR$/actions/base/login.php" />
         <option value="$PROJECT_DIR$/actions/base/register.php" />
         <option value="$PROJECT_DIR$/database/comment.php" />
+        <option value="$PROJECT_DIR$/templates/add_article.tpl" />
         <option value="$PROJECT_DIR$/templates/common/reply_comment.tpl" />
         <option value="$PROJECT_DIR$/templates/common/article.tpl" />
-        <option value="$PROJECT_DIR$/templates/add_article.tpl" />
-        <option value="$PROJECT_DIR$/javascript/script.js" />
-        <option value="$PROJECT_DIR$/css/style.css" />
         <option value="$PROJECT_DIR$/templates/read_article.tpl" />
+        <option value="$PROJECT_DIR$/css/style.css" />
+        <option value="$PROJECT_DIR$/javascript/script.js" />
         <option value="$PROJECT_DIR$/templates/common/comment.tpl" />
+        <option value="$PROJECT_DIR$/database/rating.php" />
       </list>
     </option>
   </component>
@@ -339,7 +298,53 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="database" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="final" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="final" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="database" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sql" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="final" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="final" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="final" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="final" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -459,21 +464,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pages/list_articles.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/account/list_users.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.64030135">
-          <caret line="20" column="38" selection-start-line="20" selection-start-column="38" selection-end-line="20" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/account.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.38418078">
@@ -574,13 +564,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/update_rating.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.15977444">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/actions/reply_comment.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.12781955">
@@ -638,13 +621,6 @@
             <marker date="1495735974906" expanded="true" signature="6278:6789" placeholder="SELECT publi... article" />
             <marker date="1495735974906" expanded="true" signature="6922:7283" placeholder="SELECT publi... users" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/actions/sigarra/.htaccess">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0609319">
-          <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
         </state>
       </provider>
     </entry>
@@ -756,51 +732,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/actions/sigarra/login_sigarra.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6723164">
-          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding>
-            <marker date="1495822172115" expanded="true" signature="286:364" placeholder="INSERT INTO public.users... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/sql/create.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.9066427">
-          <caret line="42" column="61" selection-start-line="42" selection-start-column="60" selection-end-line="42" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/article.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.43426296">
-          <caret line="65" column="58" selection-start-line="65" selection-start-column="58" selection-end-line="65" selection-end-column="58" />
-          <folding>
-            <element signature="n#getArticleShortById#0;n#!!top" expanded="false" />
-            <element signature="n#getDailyTopArticle#0;n#!!top" expanded="false" />
-            <marker date="1495842914231" expanded="true" signature="141:1466" placeholder="SELECT publi... article" />
-            <marker date="1495842914231" expanded="true" signature="1661:1840" placeholder="SELECT COUNT... rating" />
-            <marker date="1495842914231" expanded="true" signature="2026:2208" placeholder="SELECT COUNT... rating" />
-            <marker date="1495842914231" expanded="true" signature="2569:3922" placeholder="SELECT publi... article" />
-            <marker date="1495842914231" expanded="true" signature="4048:4227" placeholder="SELECT COUNT... rating" />
-            <marker date="1495842914231" expanded="true" signature="4397:4579" placeholder="SELECT COUNT... rating" />
-            <marker date="1495842914231" expanded="true" signature="4906:6192" placeholder="SELECT publi... article" />
-            <marker date="1495842914231" expanded="true" signature="6318:6497" placeholder="SELECT COUNT... rating" />
-            <marker date="1495842914231" expanded="true" signature="6667:6849" placeholder="SELECT COUNT... rating" />
-            <marker date="1495842914231" expanded="true" signature="7222:7708" placeholder="SELECT publi... rating" />
-            <marker date="1495842914231" expanded="true" signature="8190:9584" placeholder="SELECT publi... article" />
-            <marker date="1495842914231" expanded="true" signature="9766:9945" placeholder="SELECT COUNT... rating" />
-            <marker date="1495842914231" expanded="true" signature="10131:10313" placeholder="SELECT COUNT... rating" />
-            <marker date="1495842914231" expanded="true" signature="10606:11582" placeholder="SELECT publi... article" />
-            <marker date="1495842914231" expanded="true" signature="11794:12377" placeholder="SELECT publi... article" />
-            <marker date="1495842914231" expanded="true" signature="12487:12652" placeholder="SELECT tag A... tags" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/read_article.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.35216573">
@@ -835,27 +766,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/script.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.29802513">
-          <caret line="359" column="44" selection-start-line="359" selection-start-column="44" selection-end-line="359" selection-end-column="44" />
-          <folding>
-            <element signature="e#6950#7489#0" expanded="false" />
-            <element signature="e#8007#8171#0" expanded="false" />
-            <element signature="n#!!block;n#searchByTitle#0" expanded="false" />
-            <element signature="n#!!block;n#showResults#0" expanded="false" />
-            <element signature="n#!!block;n#reportArticle#0" expanded="false" />
-            <element signature="n#!!block;n#accountPage#0" expanded="false" />
-            <element signature="n#!!block;n#changePermissions#0" expanded="false" />
-            <element signature="n#!!block;n#advancedSearch#0" expanded="false" />
-            <marker date="1495859284285" expanded="true" signature="6533:6549" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/database/comment.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.8545455">
+        <state vertical-scroll-proportion="0.20318726">
           <caret line="21" column="35" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
           <folding>
             <marker date="1495852504170" expanded="true" signature="101:785" placeholder="SELECT comme... comment" />
@@ -865,18 +778,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/common/article.tpl">
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/phpstorm.jar!/resources/html5-schema/html5/phrase.rnc">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.269231">
-          <caret line="85" column="12" selection-start-line="85" selection-start-column="12" selection-end-line="90" selection-end-column="18" />
+        <state vertical-scroll-proportion="0.61041296">
+          <caret line="20" column="42" selection-start-line="20" selection-start-column="42" selection-end-line="20" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/actions/sigarra/login_sigarra.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.12806027">
+          <caret line="4" column="36" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
+          <folding>
+            <marker date="1495822172115" expanded="true" signature="286:364" placeholder="INSERT INTO public.users... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/actions/sigarra/.htaccess">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.06104129">
+          <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/read_article.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.346154">
+          <caret line="44" column="91" selection-start-line="44" selection-start-column="91" selection-end-line="44" selection-end-column="91" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.961538">
-          <caret line="1178" column="1" selection-start-line="1178" selection-start-column="1" selection-end-line="1178" selection-end-column="1" />
+        <state vertical-scroll-proportion="0.58380413">
+          <caret line="1199" column="19" selection-start-line="1199" selection-start-column="19" selection-end-line="1199" selection-end-column="19" />
           <folding>
             <element signature="e#4531#5022#0" expanded="false" />
             <element signature="e#5043#5155#0" expanded="false" />
@@ -951,27 +890,109 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/read_article.tpl">
+    <entry file="file://$PROJECT_DIR$/database/article.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.961538">
-          <caret line="51" column="22" selection-start-line="51" selection-start-column="22" selection-end-line="51" selection-end-column="22" />
+        <state vertical-scroll-proportion="0.48775893">
+          <caret line="66" column="62" selection-start-line="66" selection-start-column="62" selection-end-line="66" selection-end-column="62" />
+          <folding>
+            <element signature="n#getArticleShortById#0;n#!!top" expanded="false" />
+            <element signature="n#getDailyTopArticle#0;n#!!top" expanded="false" />
+            <marker date="1495842914231" expanded="true" signature="141:1466" placeholder="SELECT publi... article" />
+            <marker date="1495842914231" expanded="true" signature="1661:1840" placeholder="SELECT COUNT... rating" />
+            <marker date="1495842914231" expanded="true" signature="2026:2208" placeholder="SELECT COUNT... rating" />
+            <marker date="1495842914231" expanded="true" signature="2569:3922" placeholder="SELECT publi... article" />
+            <marker date="1495842914231" expanded="true" signature="4048:4227" placeholder="SELECT COUNT... rating" />
+            <marker date="1495842914231" expanded="true" signature="4397:4579" placeholder="SELECT COUNT... rating" />
+            <marker date="1495842914231" expanded="true" signature="4906:6192" placeholder="SELECT publi... article" />
+            <marker date="1495842914231" expanded="true" signature="6318:6497" placeholder="SELECT COUNT... rating" />
+            <marker date="1495842914231" expanded="true" signature="6667:6849" placeholder="SELECT COUNT... rating" />
+            <marker date="1495842914231" expanded="true" signature="7222:7708" placeholder="SELECT publi... rating" />
+            <marker date="1495842914231" expanded="true" signature="8190:9584" placeholder="SELECT publi... article" />
+            <marker date="1495842914231" expanded="true" signature="9766:9945" placeholder="SELECT COUNT... rating" />
+            <marker date="1495842914231" expanded="true" signature="10131:10313" placeholder="SELECT COUNT... rating" />
+            <marker date="1495842914231" expanded="true" signature="10606:11582" placeholder="SELECT publi... article" />
+            <marker date="1495842914231" expanded="true" signature="11794:12377" placeholder="SELECT publi... article" />
+            <marker date="1495842914231" expanded="true" signature="12487:12652" placeholder="SELECT tag A... tags" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/common/article.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.269231">
+          <caret line="74" column="119" selection-start-line="74" selection-start-column="119" selection-end-line="74" selection-end-column="173" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/common/reply_comment.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.384615">
-          <caret line="22" column="18" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
+        <state vertical-scroll-proportion="-11.769231">
+          <caret line="21" column="22" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/common/comment.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6723164">
-          <caret line="21" column="67" selection-start-line="21" selection-start-column="67" selection-end-line="21" selection-end-column="67" />
+        <state vertical-scroll-proportion="-3.9230769">
+          <caret line="6" column="62" selection-start-line="6" selection-start-column="62" selection-end-line="6" selection-end-column="62" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/script.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="331" column="20" selection-start-line="331" selection-start-column="20" selection-end-line="331" selection-end-column="20" />
+          <folding>
+            <element signature="e#6950#7489#0" expanded="false" />
+            <element signature="e#8007#8171#0" expanded="false" />
+            <element signature="n#!!block;n#searchByTitle#0" expanded="false" />
+            <element signature="n#!!block;n#follow#0" expanded="false" />
+            <element signature="n#!!block;n#reportArticle#0" expanded="false" />
+            <element signature="n#!!block;n#accountPage#0" expanded="false" />
+            <element signature="n#!!block;n#changePermissions#0" expanded="false" />
+            <element signature="n#!!block;n#updateSession#0" expanded="false" />
+            <element signature="e#16768#16796#0" expanded="false" />
+            <element signature="n#!!block;n#advancedSearch#0" expanded="false" />
+            <marker date="1495940579081" expanded="true" signature="6533:6549" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/update_rating.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.8846154">
+          <caret line="9" column="30" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/sql/create.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.777336">
+          <caret line="109" column="2" selection-start-line="109" selection-start-column="2" selection-end-line="109" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/rating.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.60828626">
+          <caret line="40" column="50" selection-start-line="40" selection-start-column="50" selection-end-line="40" selection-end-column="50" />
+          <folding>
+            <marker date="1495942750728" expanded="true" signature="118:181" placeholder="SELECT id, v... rating" />
+            <marker date="1495942750728" expanded="true" signature="461:542" placeholder="UPDATE publi... " />
+            <marker date="1495942750728" expanded="true" signature="693:745" placeholder="DELETE FROM " />
+            <marker date="1495942750728" expanded="true" signature="898:985" placeholder="INSERT INTO public.rating... " />
+            <marker date="1495942750728" expanded="true" signature="1189:1252" placeholder="SELECT id, v... rating" />
+            <marker date="1495942750728" expanded="true" signature="1524:1605" placeholder="UPDATE publi... " />
+            <marker date="1495942750728" expanded="true" signature="1744:1796" placeholder="DELETE FROM " />
+            <marker date="1495942750728" expanded="true" signature="1933:2020" placeholder="INSERT INTO public.rating... " />
+            <marker date="1495942750728" expanded="true" signature="2188:2367" placeholder="SELECT COUNT... rating" />
+            <marker date="1495942750728" expanded="true" signature="2526:2708" placeholder="SELECT COUNT... rating" />
+          </folding>
         </state>
       </provider>
     </entry>

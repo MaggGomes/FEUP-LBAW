@@ -1,6 +1,6 @@
 <div class="panel panel-default">
     <div class="panel-body article-text">
-        <div class="page-header">
+        <div class="page-header comment-header">
             <div class="profile-header-container">
                 <div class="row">
                     <div class="col-xs-10">
@@ -24,9 +24,8 @@
         </div>
             <p>{$reply.text}</p>
     </div>
-
-    <div class="panel-footer article-footer">
-        <div class="row article-footer-lower">
+    <div class="panel-footer article-footer comment-footer">
+        <div class="row article-footer-lower comment-footer">
             <div class="col-xs-5">
                 <div class="thumbs-up small-text {if $article.rating == 1} voted {/if}" data-value="{$article.id}" onclick=""><span class="glyphicon glyphicon-thumbs-up"></span>
                     <span> </span><span class="glyph-text">{$reply.upvotes}</span><span> &nbsp&nbsp</span></div>

@@ -24,6 +24,31 @@
         }
     }
 
+    function createRatingComment($value, $idComment, $idUser) {
+        global $conn;
+
+        $stmt = $conn->prepare("SELECT id, value FROM rating WHERE idComment = ? AND idUser = ?");
+        $stmt->execute(array($idComment, $idUser));
+
+        $result = $stmt->fetch();
+        $oldValue = $result['value'];
+        $id = $result['id'];
+        if($result){
+        if($oldValue != $value){ //changes the new value
+            $stmt = $conn->prepare("UPDATE public.rating SET value = ?
+                    WHERE public.rating.id = ?");
+            $stmt->execute(array($value, $id));
+        } else{ //cancels the vote made previously
+            $stmt = $conn->prepare("DELETE FROM public.rating WHERE public.rating.id = ?");
+            $stmt->execute(array($id));
+        }
+        } else{
+        //in case it doesn't exist
+        $stmt = $conn->prepare("INSERT INTO public.rating (value,date,idComment,idUser) VALUES(?, LOCALTIMESTAMP, ?, ?)");
+        $stmt->execute(array($value, $idComment, $idUser));
+    }
+}
+
     function getRatingByArticleId($id){
         global $conn;
 

@@ -327,6 +327,16 @@ $(document).ready(function () {
         });
 });
 
+/* Reply a comment */
+function replyComment(html, idSession) {
+    if (idSession) {
+        $(html).parent().parent().next().slideToggle();
+    } else {
+        // Show modal for login
+        $("#signin").modal();
+    }
+}
+
 window.onload = function () {
     $(".add-article-tags a").click(function () {
         $("#tags").css("display", "inline")
@@ -354,8 +364,41 @@ function showResults(data) {
     console.log(data);
 }
 
-/* Changes rating of an article*/
+/* Changes rating of an article */
 function changeRating(html, value, idSession) {
+    if (idSession) {
+        $.post("../api/update_rating.php", {
+                value: value,
+                idArticle: $(html).data('value')
+            },
+            function (result) {
+                if ($(html).hasClass("voted")) {
+                    $(html).removeClass("voted");
+                } else {
+                    $(html).addClass("voted");
+                }
+                if (value > 0) {
+                    $(html).html('<span class="glyphicon glyphicon-thumbs-up"></span><span> </span><span class="glyph-text">' + result + '</span><span> &nbsp&nbsp</span>');
+                    if ($(html).next().hasClass("voted")) {
+                        $(html).next().removeClass("voted");
+                        $(html).next().children()[2].innerHTML = $(html).next().children()[2].innerHTML - 1;
+                    }
+                } else {
+                    $(html).html('<span class="glyphicon glyphicon-thumbs-down"></span><span> </span><span class="glyph-text">' + result + '</span>');
+                    if ($(html).prev().hasClass("voted")) {
+                        $(html).prev().removeClass("voted");
+                        $(html).prev().children()[2].innerHTML = $(html).prev().children()[2].innerHTML - 1;
+                    }
+                }
+            });
+    } else {
+        // Show modal for login
+        $("#signin").modal();
+    }
+}
+
+/* Changes rating of an article*/
+function changeRatingComment(html, value, idSession) {
     if (idSession) {
         $.post("../api/update_rating.php", {
                 value: value,
