@@ -143,7 +143,6 @@
     <div class="collapse navbar-collapse nav-bottom">
       <ul class="nav navbar-nav">
         <li><a href="../pages/home.php"><span>Home</span></a></li>
-        <li><a href="#"><span class="menu-text">Top Articles</span></a></li>
         <li><a href="home.php#World"><span class="menu-text">World</span></a></li>
         <li><a href="home.php#Sports"><span class="menu-text">Sports</span></a></li>
         <li><a href="home.php#Technology"><span class="menu-text">Technology</span></a></li>
@@ -151,7 +150,6 @@
         <li><a href="home.php#Culture"><span class="menu-text">Culture</span></a></li>
         <li><a href="home.php#Science"><span class="menu-text">Science</span></a></li>
         <li><a href="home.php#Miscellaneous"><span class="menu-text">Miscellaneous</span></a></li>
-        <li><a href="#"><span class="menu-text">Recommended</span></a></li>
       </ul>
     </div>
   </div>
@@ -204,7 +202,7 @@
       <div class="modal-body">
         <div id="modal-message-login"></div>
           <div class="form-group has-feedback">
-            <input id="signin-email" type="text" class="form-control" name="email" placeholder="E-mail address">
+            <input id="signin-email" type="email" class="form-control" name="email" placeholder="E-mail address">
             <span class="fa fa-envelope-o form-control-feedback"></span>
           </div>
           <div class="form-group has-feedback">
@@ -235,7 +233,7 @@
         <div id="modal-message-register"></div>
         <div class="form-group">
           <div class="form-group has-feedback">
-            <input id="register-name" type="text" class="form-control" placeholder="Name" name="name">
+            <input id="register-name" type="text" class="form-control" pattern="" placeholder="Name" name="name">
             <span class="fa fa-user-o form-control-feedback"></span>
           </div>
           <div class="form-group has-feedback">
@@ -320,12 +318,12 @@
             <div style="overflow:hidden;">
             <form id="banInfo" class="form-group">
                 <div class='input-group date' id='datetimepicker'>
-                    <input type='text' class="form-control" />
+                    <input type='text' name="date" class="form-control" required/>
                     <span class="input-group-addon">
                         <span class="glyphicon glyphicon-calendar">
                         </span>
                     </span>
-                    <input type="hidden" id="banUserId" value=""/>
+                    <input type="hidden" id="banUserId" name="id" value=""/>
                 </div>
                 <br>
                 <div>

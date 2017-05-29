@@ -138,10 +138,13 @@ $(document).ready(function () {
                 password: userPassword
             },
             function (result) {
-                console.log(result);
                 if (result == 200) {
                     location.reload();
-                } else {
+                }
+                else if(result == 401) {
+                    $('#modal-message-login').html('<div class="modal-message-content">Your account has been suspended.</div>');
+                }
+                 else {
                     $('#modal-message-login').html('<div class="modal-message-content">Incorrect e-mail and/or password.</div>');
                 }
             });
@@ -199,7 +202,7 @@ $(document).ready(function () {
 
     $(function () {
         $('#datetimepicker').datetimepicker({
-            timeFormat: 'HH:mm:ss',
+            // timeFormat: 'HH:mm:ss',
             dateFormat: 'yy-mm-dd',
             minDate: 0,
             inline: true,
@@ -575,7 +578,10 @@ function advancedSearch() {
     var serial = $("#advancedSearchForm").serialize();
     serial += "&page=" + accountPageStatus + "&offset=" + accountPageNumber;
     $.get("../api/accountPage.php", serial, function (data) {
-        $("#page").html(data.main);
+        JSON.parse(data, function (key, value) {
+            if (key === "main")
+                $("#page").html(value);
+        });
     });
 }
 
@@ -627,5 +633,8 @@ function banModal(userId){
 }
 
 function ban(){
-
+    var info = $("#banInfo").serialize();
+    $.post("../api/banUser.php", info, function(data){
+        console.log(data);
+    });
 }

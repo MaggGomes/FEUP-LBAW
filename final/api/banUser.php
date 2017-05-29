@@ -10,5 +10,9 @@
     if(!$reason) $reason = "No reason given";
     if(!$banLevel) $banLevel = "Hard";
 
-    banUser($id, $endDate, $reason, $banLevel);
+    try{
+        banUser($id, $endDate, $reason, $banLevel);
+    }catch(PDOException $e){
+        echo $e->getMessage();
+    }
 ?>

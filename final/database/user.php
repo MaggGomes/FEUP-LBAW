@@ -302,4 +302,20 @@
 
 		return $user->fetch();
 	}
+
+	function isBanned($id){
+		global $conn;
+
+		$user = $conn->prepare("SELECT *
+									   FROM suspension
+									   WHERE iduser = ?
+									   AND suspension.terminate > localtimestamp");
+		$user->execute(array($id));
+		$result = $user->fetchAll();
+
+		if(count($result) > 0)
+			return true;
+
+		return false;
+	}
 ?>
