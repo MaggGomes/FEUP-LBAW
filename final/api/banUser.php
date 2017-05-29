@@ -3,7 +3,7 @@
     include_once("../database/user.php");
 
     $id = $_POST["id"];
-    $endDate = strtotime($_POST["date"]);
+    $endDate = $_POST["date"];
     $reason = $_POST["reason"];
     $banLevel = $_POST["banLevel"];
 
