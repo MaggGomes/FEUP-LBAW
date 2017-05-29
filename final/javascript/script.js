@@ -555,3 +555,15 @@ function displayEditForm(idcomment) {
     }
 
 }
+
+function approveArticle(idarticle){
+    $.post({
+        url: "../api/approveArticle.php",
+        data: {
+            idarticle: idarticle,
+        },
+        success: function (data) {
+        //    location.reload();
+        }
+    });
+}
