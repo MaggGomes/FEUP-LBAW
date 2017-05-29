@@ -24,6 +24,9 @@
             <div class="container-category-title">
                 <h3 class="col-md-12">{sizeof($comments)} Comments <span class="glyphicon glyphicon-menu-down"></span></h3>
             </div>
+            {foreach $comments as $comment}
+                {include file='common/comment.tpl'}
+            {/foreach}
         </div>
     </div>
 </section>
