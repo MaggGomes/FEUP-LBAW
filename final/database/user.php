@@ -2,9 +2,6 @@
 	function getAllUsers($name, $minRating, $limit, $offset, $orderChoice){
 		global $conn;
 
-
-        //$limits = " LIMIT " + $limit +
-            //"OFFSET " + $offset;
         $limits = " OFFSET ? LIMIT ? ";
         $params = moreParameters($name, $minRating);
         $order = ordering($orderChoice);
@@ -20,7 +17,7 @@
         $statement = $statement . $limits;
 		$stmt = $conn->prepare($statement);
 
-		$stmt->execute(array(($offset-1)*$limit, $limit));
+		$stmt->execute(array($offset*$limit, $limit));
 
 		return $stmt->fetchAll();
 	}
@@ -82,7 +79,7 @@
         $statement = $statement . $order;
         $statement = $statement . $limits;
 		$stmt = $conn->prepare($statement);
-		$stmt->execute(array($id, ($offset-1)*$limit, $limit));
+		$stmt->execute(array($id, $offset*$limit, $limit));
 		return $stmt->fetchAll();
 	}
 
@@ -100,7 +97,7 @@
             $statement = $statement . $order;
             $statement = $statement . $limits;
         $stmt = $conn->prepare($statement);
-		$stmt->execute(array($id, ($offset-1)*$limit, $limit));
+		$stmt->execute(array($id, $offset*$limit, $limit));
 		return $stmt->fetchAll();
 	}
 
@@ -180,7 +177,6 @@
         $stmt->execute($end, $reason, $banLevel, $id);
     }
 
-	//TODO needs testing
 	function changeStatus($id, $newStatus){
 		global $conn;
 
@@ -239,22 +235,26 @@
 
 	}
 
-	function getStaff(){
-		global $conn;
+	function getStaff($name, $minRating, $limit, $offset, $orderChoice){
+        global $conn;
 
-		$stmt = $conn->prepare("SELECT public.users.name,
-										public.users.email,
-										public.users.photoURL,
-										public.users.rating,
-										public.users.permission,
-										public.users.id
-								FROM public.users
-								WHERE users.permission = 'Moderator' OR users.permission = 'Administrator'
-								ORDER BY public.users.name ASC
-								OFFSET ?
-								LIMIT ?");
+        $limits = " OFFSET ? LIMIT ? ";
+        $params = moreParameters($name, $minRating);
+        $order = ordering($orderChoice);
+        $statement = "SELECT public.users.name,
+			public.users.email,
+			public.users.photoURL,
+			public.users.rating,
+			public.users.permission,
+			public.users.id FROM public.users
+            WHERE permission = 'Moderator' OR permission = 'Administrator'";
+        //$statement += pageLimits();
+        if($params) $statement .= " AND " . $params;
+        $statement = $statement . $order;
+        $statement = $statement . $limits;
+		$stmt = $conn->prepare($statement);
 
-		$stmt->execute(array($pageNo*$limit, $limit));
+		$stmt->execute(array($offset*$limit, $limit));
 
 		return $stmt->fetchAll();
 	}

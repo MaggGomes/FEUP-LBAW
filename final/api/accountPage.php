@@ -10,7 +10,7 @@
     $offset = $_GET["offset"];
     $order = $_GET["order"];
     if(!$limit) $limit = 10;
-    if(!$offset) $offset = 1;
+    if(!$offset) $offset = 0;
 
     try {
         $recommend = false;
@@ -57,8 +57,15 @@
                 $users = getAllUsers($name, $minRating, $limit, $offset, $order);
                 $smarty->assign('users', $users);
                 $filename = "list_users.tpl";
+                $smarty->assign('pageNo', $offset);
+                $smarty->assign('usersLength', $limit);
                 break;
             case 'teamManagement':
+                $users = getStaff($name, $minRating, $limit, $offset, $order);
+                $smarty->assign('users', $users);
+                $filename = "list_users.tpl";
+                $smarty->assign('pageNo', $offset);
+                $smarty->assign('usersLength', $limit);
                 break;
             case 'articlesPending':
                 $hiddenArticles = getHiddenArticles(null);
