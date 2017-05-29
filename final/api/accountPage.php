@@ -27,16 +27,25 @@
                 $followers = getFollowers($_SESSION["id"], $name, $minRating, $limit, $offset, $order);
                 $smarty->assign('follows', $followers);
                 $filename = "followers.tpl";
+                $smarty->assign('pageNo', $offset);
+                $smarty->assign('length', count($followers));
+                $smarty->assign('limit', $limit);
                 break;
             case 'following':
                 $following = getFollowing($_SESSION["id"], $name, $minRating, $limit, $offset, $order);
                 $smarty->assign('follows', $following);
                 $filename = "following.tpl";
+                $smarty->assign('pageNo', $offset);
+                $smarty->assign('length', count($following));
+                $smarty->assign('limit', $limit);
                 break;
             case 'articlesModerated':
                 $moderated = ownModerated($_SESSION["id"], $name, $minRating, $limit, $offset, $order);
                 $smarty->assign('moderated', $moderated);
                 $filename = "moderated_articles.tpl";
+                $smarty->assign('pageNo', $offset);
+                $smarty->assign('length', count($moderated));
+                $smarty->assign('limit', $limit);
                 break;
             case 'delete':
                 $filename = "delete.tpl";
@@ -58,14 +67,17 @@
                 $smarty->assign('users', $users);
                 $filename = "list_users.tpl";
                 $smarty->assign('pageNo', $offset);
-                $smarty->assign('usersLength', $limit);
+                $smarty->assign('length', count($users));
+                $smarty->assign('limit', $limit);
                 break;
             case 'teamManagement':
                 $users = getStaff($name, $minRating, $limit, $offset, $order);
                 $smarty->assign('users', $users);
                 $filename = "list_users.tpl";
                 $smarty->assign('pageNo', $offset);
-                $smarty->assign('usersLength', $limit);
+                $smarty->assign('length', count($users));
+                $smarty->assign('limit', $limit);
+
                 break;
             case 'articlesPending':
                 $hiddenArticles = getHiddenArticles(null);
@@ -73,6 +85,9 @@
                 $filename = "pending_articles.tpl";
                 $mostRecent = getMostRecentArticles();
                 $smarty->assign('mostRecent', $mostRecent);
+                $smarty->assign('pageNo', $offset);
+                $smarty->assign('length', count($hiddenArticles));
+                $smarty->assign('limit', $limit);
                 $recommend = true;
                 break;
             case 'articlesReported':
@@ -81,6 +96,9 @@
                 $filename = "reported_articles.tpl";
                 $mostRecent = getMostRecentArticles();
                 $smarty->assign('mostRecent', $mostRecent);
+                $smarty->assign('pageNo', $offset);
+                $smarty->assign('length', count($reported_articles));
+                $smarty->assign('limit', $limit);
                 $recommend = true;
                 break;
             case 'commentsReported':
@@ -89,6 +107,9 @@
                 $filename = "reported_comments.tpl";
                 $mostRecent = getMostRecentArticles();
                 $smarty->assign('mostRecent', $mostRecent);
+                $smarty->assign('pageNo', $offset);
+                $smarty->assign('length', count($reported_comments));
+                $smarty->assign('limit', $limit);
                 $recommend = true;
                 break;
             default:
