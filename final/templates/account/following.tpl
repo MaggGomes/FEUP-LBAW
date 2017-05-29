@@ -41,6 +41,15 @@
             </article>
         </div>
     {/foreach}
+
+    <div align="center">
+        {if $pageNo > 0}
+            <button class="btn btn-link" onclick="accountPageNumber--;advancedSearch()"><span class="glyphicon glyphicon-chevron-left"></span>Previous </button>
+        {/if}
+        {if $limit == $length}
+            <button class="btn btn-link" onclick="accountPageNumber++;advancedSearch()">Next <span class="glyphicon glyphicon-chevron-right"></span></button>
+        {/if}
+    </div>
 {else}
     <div class="row">
         <article class="col-xs-12 col-sm-12 article-text">
@@ -59,5 +68,3 @@
         </article>
     </div>
 {/if}
-
-
