@@ -10,6 +10,8 @@
         die($e->getMessage());
     }
 
+console_log($_POST['value'].$_POST['idComment'].$_SESSION['id']);
+
     /*$rating = getRatingByArticleId($_POST['idArticle']);
 
     if($_POST['value'] > 0)

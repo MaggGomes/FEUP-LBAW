@@ -400,6 +400,7 @@ function changeRating(html, value, idSession) {
 
 /* Changes rating of an article*/
 function changeRatingComment(html, value, idSession) {
+    console.log($(html).data('value'));
     if (idSession) {
         $.post("../api/update_rating_comment.php", {
                 value: value,

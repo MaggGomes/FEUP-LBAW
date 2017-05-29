@@ -50,13 +50,13 @@
                 <div class="panel-footer article-footer comment-footer">
                     <div class="row article-footer-lower comment-footer">
                         <div class="col-xs-5">
-                            <div class="thumbs-up small-text {if $article.rating == 1} voted {/if}"
-                                 data-value="{$article.id}"
+                            <div class="thumbs-up small-text {if $comment.rating == 1} voted {/if}"
+                                 data-value="{$comment.idcomment}"
                                  onclick="changeRatingComment(this, 1, {$smarty.session.id});"><span class="glyphicon glyphicon-thumbs-up"></span>
                                 <span> </span><span class="glyph-text">{$comment.upvotes}</span><span> &nbsp&nbsp</span>
                             </div>
-                            <div class="thumbs-down small-text {if $article.rating == -1} voted {/if}"
-                                 data-value="{$article.id}" onclick="changeRatingComment(this, -1, {$smarty.session.id});"><span
+                            <div class="thumbs-down small-text {if $comment.rating == -1} voted {/if}"
+                                 data-value="{$comment.idcomment}" onclick="changeRatingComment(this, -1, {$smarty.session.id});"><span
                                         class="glyphicon glyphicon-thumbs-down"></span>
                                 <span> </span><span class="glyph-text">{$comment.downvotes}</span></div>
                         </div>
