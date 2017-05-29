@@ -24,11 +24,13 @@
   <link href="../css/bootstrap.min.css" rel="stylesheet">
   <link href="../css/bootstrap-theme.min.css" rel="stylesheet">
   <link href="../css/style.css" rel="stylesheet">
+  <link href="../css/bootstrap-datetimepicker.min.css" rel="stylesheet">
 
   <!--script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script-->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="../javascript/bootstrap.min.js"></script>
   <script src="../javascript/script.js"></script>
+  <script src="../javascript/bootstrap-datetimepicker.js"></script>
   <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>-->
 
   <!-- HTML5 shim and Respond.scripts for IE8 support of HTML5 elements and media queries -->
@@ -279,5 +281,61 @@
         <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
       </div>
     </div>
+  </div>
+</div>
+
+<!-- Report Comment -->
+
+<div id="report-comment" class="modal fade" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-sm" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <h4>Reason for report:</h4>
+        <form>
+          <input type="checkbox" name="vehicle" class="reportCheck" id="repC1" value=""> Contains abusive language.<br>
+          <input type="checkbox" name="vehicle" class="reportCheck" id="repC2" value=""> Contains not apropriate content for Scriba.<br>
+          <input type="checkbox" name="vehicle" class="reportCheck" id="repC3" value=""> It's spam. <br> <br>
+          <textarea id="repAdditional" placeholder="Additional information"></textarea>
+          <input type="text"id="repComID" value="-1" hidden="true">
+        </form>
+        <button type="button" class="btn btn-primary btn-submit-dialog" id="submitRepComment" disabled>Submit</button>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="banUser" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Modal Header</h4>
+        </div>
+        <div class="modal-body">
+            <div style="overflow:hidden;">
+            <form id="banInfo" class="form-group">
+                <div class='input-group date' id='datetimepicker'>
+                    <input type='text' class="form-control" />
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar">
+                        </span>
+                    </span>
+                    <input type="hidden" id="banUserId" value=""/>
+                </div>
+            </form>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" onclick="ban()" class="btn btn-primary" data-dismiss="modal">Ban</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+
   </div>
 </div>

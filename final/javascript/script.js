@@ -197,6 +197,16 @@ $(document).ready(function () {
         $('#modal-message-login').html('');
     });
 
+    $(function () {
+        $('#datetimepicker').datetimepicker({
+            timeFormat: 'HH:mm:ss',
+            dateFormat: 'yy-mm-dd',
+            minDate: 0,
+            inline: true,
+            sideBySide: true
+        });
+    });
+
     /* Third party login scripts */
 
     //Google
@@ -577,4 +587,12 @@ function moderateArticle(idarticle, idreport, articlevisibility, reportstate){
             $(report).fadeOut("fast");
         }
     );
+}
+
+function banModal(userId){
+    $("#banUserId").val(userId);
+}
+
+function ban(){
+    
 }
