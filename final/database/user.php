@@ -5,15 +5,17 @@
 
         //$limits = " LIMIT " + $limit +
             //"OFFSET " + $offset;
-        $limits += "OFFSET ? \nLIMIT ? \n";
+        $limits = " OFFSET ? LIMIT ? ";
         $params = moreParameters($name, $minRating);
         $statement = "SELECT public.users.name,
 			public.users.email,
 			public.users.photoURL,
 			public.users.rating,
 			public.users.permission,
-			public.users.id FROM public.users\n" + $limits;
+			public.users.id FROM public.users";
         //$statement += pageLimits();
+        if($params) $statement = $statement . " WHERE " . $params;
+        $statement = $statement . $limits;
 		$stmt = $conn->prepare($statement);
 
 		$stmt->execute(array(($offset-1)*$limit, $limit));
@@ -248,16 +250,12 @@
     function moreParameters($name, $minRating){
         $stmt = "";
         if($name && $name !== "")
-            $stmt += " users.name LIKE " + $name;
+            $stmt = $stmt . " users.name LIKE  '%".$name."%'";
         if($minRating){
             if($stmt !== "")
-                $stmt += " AND ";
-            $stmt += " users.rating > " + $minRating;
+                $stmt = $stmt ." AND ";
+            $stmt = $stmt . " users.rating > " . $minRating;
         }
         return $stmt;
-    }
-    function pageLimits(){
-        return " LIMIT ?
-                OFFSET ?";
     }
 ?>
