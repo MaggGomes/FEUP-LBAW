@@ -27,7 +27,8 @@
                                 <div class="col-xs-3">
                                     {if $comment.userid == $smarty.session.id}
                                         <div class="show-reply small-text glyph-text pull-right" onclick="displayEditForm({$comment.idcomment})">
-                                            <i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</div>
+                                            <i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit
+                                        </div>
                                     {/if}
                                 </div>
                             </div>

@@ -231,6 +231,7 @@
                                 DATE_PART('hour', LOCALTIMESTAMP - article.date) AS hourdiff,
                                 DATE_PART('minute', LOCALTIMESTAMP - article.date) AS minutediff
                                 FROM public.article
+                                WHERE article.visibility = 'Visible'
                                 ORDER BY article.date DESC LIMIT 8");
 
         $stmt->execute();
@@ -293,6 +294,24 @@
         $article['tags'] = $stringtag;
 
         return $article;
+    }
+
+    function getReportedArticles($offset){
+        global $conn;
+
+        $stmt = $conn->prepare("SELECT article.title AS title,
+                                       article.idarticle AS id,
+                                       users.photourl AS userimage,
+                                       users.name AS user,
+                                       users.id AS userid,
+                                       report.description AS report
+                                       FROM report JOIN article ON report.idArticle = article.idArticle
+                                                   JOIN users ON users.id = report.idUser LIMIT 8");
+
+        $stmt->execute();
+        $articles = $stmt->fetchAll();
+
+        return $articles;
     }
 
     function uploadArticlePhoto(){

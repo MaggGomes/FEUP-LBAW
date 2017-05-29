@@ -63,8 +63,14 @@
             case 'articlesPending':
                 break;
             case 'articlesReported':
+                $reportedArticles = getReportedArticles(null);
+                $smarty->assign('reportedArticles', $reportedArticles);
+                $filename = "reported_articles.tpl";
                 break;
             case 'commentsReported':
+                $reportedComments = getReportedComments(null);
+                $smarty->assign('reportedComments', $reportedComments);
+                $filename = "reported_comments.tpl";
                 break;
             default:
                 # code...

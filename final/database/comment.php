@@ -65,4 +65,22 @@
 
         return $comments['numbercomments'];
     }
+
+    function getReportedComments($offset){
+        global $conn;
+
+        $stmt = $conn->prepare("SELECT comment.idarticle AS idarticle,
+                                       comment.text AS comment,
+                                       users.photourl AS userimage,
+                                       users.name AS user,
+                                       users.id AS userid,
+                                       report.description AS report
+                                       FROM report JOIN comment ON report.idcomment = comment.idcomment
+                                                   JOIN users ON users.id = report.idUser LIMIT 8");
+
+        $stmt->execute();
+        $comments = $stmt->fetchAll();
+
+        return $comments;
+    }
 ?>

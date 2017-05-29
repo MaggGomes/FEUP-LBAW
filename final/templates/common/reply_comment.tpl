@@ -19,7 +19,9 @@
                             <small>{$reply.commentmonth} {$reply.commentday}, {$reply.commentyear}</small>
                         </div>
                         {if $reply.userid == $smarty.session.id}
-                            <a onclick="displayEditForm({$reply.idcomment})"> Edit comment </a>
+                            <div class="show-reply small-text glyph-text pull-right" onclick="displayEditForm({$reply.idcomment})">
+                                <i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit
+                            </div>
                         {/if}
                     </div>
                 </div>
@@ -32,8 +34,8 @@
             <form action="../actions/edit_comment.php" method="post">
                 <input type="text" name="idcomment" value="{$reply.idcomment}" hidden="hidden">
                 <input type="text" name="idarticle" value="{$reply.idarticle}" hidden="hidden">
-                <input class="form-control" type="text" name="text" value="{$reply.text}">
-                <button class="btn btn-primary" type="submit">Edit</button>
+                <input class="form-edit-comment col-xs-9" type="text" name="text" value="{$reply.text}">
+                <button class="btn-edit-comment btn btn-primary col-xs-2 pull-right" type="submit">Edit</button>
             </form>
         </div>
     </div>
