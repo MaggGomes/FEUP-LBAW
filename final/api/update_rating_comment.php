@@ -10,10 +10,10 @@
         die($e->getMessage());
     }
 
-    $rating = getRatingByArticleId($_POST['idComment']);
+    $rating = getRatingByCommentId($_POST['idComment']);
 
     if($_POST['value'] > 0)
-        echo json_encode(1);
+        echo json_encode($rating['upvotes']);
     else
-        echo json_encode(-1)
+        echo json_encode($rating['downvotes'])
 ?>
