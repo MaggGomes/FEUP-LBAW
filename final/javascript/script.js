@@ -457,17 +457,19 @@ function reportArticle(id) {
   $("input#repID").val(id);
 }
 
+var accountPageNumber = 1;
+var accountPageStatus;
 /* Allows account pages to be shown dynamically*/
 function accountPage(html, page) {
-  $.get("../api/accountPage.php", {
-      page: page
-    },
-    function(data) {
-      $("#page").html(data);
-      console.log(data);
-      $("li.active").removeClass("active");
-      $(html).parent().addClass("active");
-
+    accountPageStatus = page;
+    $.get("../api/accountPage.php", {
+            page: page
+        },
+        function (data) {
+            $("#page").html(data);
+            console.log(data);
+            $("li.active").removeClass("active");
+            $(html).parent().addClass("active");
     });
 }
 
@@ -500,8 +502,11 @@ $("#advancedSearchForm").change(function() {
 });
 
 function advancedSearch() {
-  console.log("entrou");
-  $("#advancedSearchForm").serialize();
+  var serial = $("#advancedSearchForm").serialize();
+  serial += "&page=" + accountPageStatus + "&offset=" + accountPageNumber;
+  $.get("../api/accountPage.php", serial, function(data){
+      $("#page").html(data);
+  });
 }
 
 function displayEditForm(idcomment) {
@@ -518,4 +523,5 @@ function displayEditForm(idcomment) {
       $(form).fadeIn("fast");
     });
   }
+
 }
