@@ -578,7 +578,10 @@ function advancedSearch() {
     var serial = $("#advancedSearchForm").serialize();
     serial += "&page=" + accountPageStatus + "&offset=" + accountPageNumber;
     $.get("../api/accountPage.php", serial, function (data) {
-        $("#page").html(data.main);
+        JSON.parse(data, function (key, value) {
+            if (key === "main")
+                $("#page").html(value);
+        });
     });
 }
 
