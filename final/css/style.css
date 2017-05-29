@@ -549,6 +549,8 @@ input[type="search"] {
 	top: 10%;
 	position: -webkit-sticky;
 	position: sticky;
+    padding-right: 15px;
+    padding-left: 15px;
 }
 
 .account-userpic {
