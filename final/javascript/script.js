@@ -335,29 +335,27 @@ $(document).ready(function () {
         });
 
         //functions to work with report comments
-        $(".reportComCheck").click(
-            console.log(123);
+        $(".repComCheck").click(
             function () {
-                $("#submitRepComment").attr("disabled", !($(".reportComCheck#repComC1")[0].checked || $(".reportComCheck#repComC2")[0].checked || $(".reportComCheck#repComC3")[0].checked));
+              $("#submitRepComment").attr("disabled", !($("#repCom1")[0].checked || $("#repCom2")[0].checked || $("#repCom3")[0].checked));
             });
 
         $("#submitRepComment").click(
             function () {
-                console.log(1);
                 var descr = "";
-                if ($(".reportCheck#repComC1")[0].checked)
+                if ($("#repCom1")[0].checked)
                     descr += "Contains abusive language;\n";
-                if ($(".reportCheck#repComC2")[0].checked)
+                if ($("#repCom2")[0].checked)
                     descr += "Contains not apropriate content for Scriba;\n";
-                if ($(".reportCheck#repComC3")[0].checked)
+                if ($("#repCom3")[0].checked)
                     descr += "It's spam;\n";
 
-                descr += "Additional information: " + $("#repAdditional").val();
+                descr += "Additional information: " + $("#repComAdditional").val();
 
                 $.post("../actions/report.php",{
-                        repID: $("input#repID").val(),
+                        repID: $("input#repComID").val(),
                         description: descr,
-                        type: "article"
+                        type: "comment"
                     },
                     function (data) {
                         location.reload()
@@ -611,6 +609,7 @@ function approveArticle(idarticle){
 
 function moderateArticle(idarticle, idreport, articlevisibility, reportstate){
 
+    var report = ".report" + idreport;
     $.post("../api/moderateArticle.php", {
             idarticle: idarticle,
             idreport: idreport,
@@ -618,7 +617,6 @@ function moderateArticle(idarticle, idreport, articlevisibility, reportstate){
             reportstate: reportstate
         },
         function (data) {
-            var report = ".report" + idreport;
             $(report).fadeOut("fast");
         }
     );

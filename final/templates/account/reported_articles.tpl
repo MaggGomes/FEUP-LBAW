@@ -2,7 +2,7 @@
 {foreach $reportedArticles as $article}
     <div class="row">
         <div class="account-content account-notifications">
-            <article class="article-text report{$article.idreport}">
+            <article class="article-text report{$article.reportid}">
                 <div class="panel panel-default">
                     <div class="panel-body article-text">
                         <div class="profile-header-container">
