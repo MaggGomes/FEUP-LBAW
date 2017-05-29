@@ -403,7 +403,7 @@ function changeRatingComment(html, value, idSession) {
     if (idSession) {
         $.post("../api/update_rating_comment.php", {
                 value: value,
-                idArticle: $(html).data('value')
+                idComment: $(html).data('value')
             },
             function (result) {
                 result = value;
