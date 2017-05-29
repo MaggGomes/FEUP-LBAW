@@ -471,6 +471,15 @@ function openRepArticle(isUserLogged,articleID) {
   }
 }
 
+function openRepComment(isUserLogged,commentID) {
+  console.log(commentID);
+  if (isUserLogged) {
+    $("input#repComID").val(commentID);
+  }else {
+    $("#signin").modal();
+  }
+}
+
 function reportArticle(id) {
     $("input#repID").val(id);
 }
@@ -594,5 +603,5 @@ function banModal(userId){
 }
 
 function ban(){
-    
+
 }
