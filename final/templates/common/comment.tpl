@@ -68,7 +68,7 @@
                               {if $smarty.session.id == null}
                                  <a href="#report-comment"  onclick="openRepComment(false,{$comment.id})"><span class="fa fa-flag"></span><span class="glyph-text"> Report &nbsp&nbsp</span></a>
                               {else}
-                                <a href="#report-comment" data-toggle="modal" onclick="openRepComment(true,{$article.id})"><span class="fa fa-flag"></span><span class="glyph-text"> Report &nbsp&nbsp</span></a>
+                                <a href="#report-comment" data-toggle="modal" onclick="openRepComment(true,{$comment.idcomment})"><span class="fa fa-flag"></span><span class="glyph-text"> Report &nbsp&nbsp</span></a>
                               {/if}
                           </div>
                         </div>

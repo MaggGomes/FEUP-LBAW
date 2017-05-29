@@ -316,7 +316,6 @@ $(document).ready(function () {
 
     $("#submitRep").click(
         function () {
-            console.log(1);
             var descr = "";
             if ($(".reportCheck#repC1")[0].checked)
                 descr += "Contains abusive language;\n";
@@ -327,7 +326,7 @@ $(document).ready(function () {
 
             descr += "Additional information: " + $("#repAdditional").val();
 
-            $.post("../actions/report.php",{
+            $.post("../actions/report_article.php",{
                     repID: $("input#repID").val(),
                     description: descr,
                     type: "article"
@@ -355,12 +354,13 @@ $(document).ready(function () {
 
                 descr += "Additional information: " + $("#repComAdditional").val();
 
-                $.post("../actions/report.php",{
+                $.post("../actions/report_comment.php",{
                         repID: $("input#repComID").val(),
                         description: descr,
                         type: "comment"
                     },
                     function (data) {
+                      console.log(data);
                         location.reload()
                     });
             });
@@ -503,7 +503,6 @@ function openRepArticle(isUserLogged,articleID) {
 }
 
 function openRepComment(isUserLogged,commentID) {
-  console.log(commentID);
   if (isUserLogged) {
     $("input#repComID").val(commentID);
   }else {
