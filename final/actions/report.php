@@ -13,8 +13,8 @@
 		$stmt = $conn->prepare("INSERT INTO report (description,state,idArticle,idUser) VALUES (?, "Pending", ?, ?)");
 		$stmt->execute(array($description, $reportID, $userID));
 	} elseif ($reportType === "comment") {
-			#$stmt = $conn->prepare("INSERT INTO report (description,state,idArticle,idUser) VALUES (?, "Pending", ?, ?)");
-			#$stmt->execute(array($description, $reportID, $userID));
+			$stmt = $conn->prepare("INSERT INTO report (description,state,idComment,idUser) VALUES (?, "Pending", ?, ?)");
+			$stmt->execute(array($description, $reportID, $userID));
 	}
 	$result = $stmt->fetch();
 
