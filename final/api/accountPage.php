@@ -71,18 +71,24 @@
                 $hiddenArticles = getHiddenArticles(null);
                 $smarty->assign('hiddenArticles', $hiddenArticles);
                 $filename = "pending_articles.tpl";
+                $mostRecent = getMostRecentArticles();
+                $smarty->assign('mostRecent', $mostRecent);
                 $recommend = true;
                 break;
             case 'articlesReported':
                 $reportedArticles = getReportedArticles(null);
                 $smarty->assign('reportedArticles', $reportedArticles);
                 $filename = "reported_articles.tpl";
+                $mostRecent = getMostRecentArticles();
+                $smarty->assign('mostRecent', $mostRecent);
                 $recommend = true;
                 break;
             case 'commentsReported':
                 $reportedComments = getReportedComments(null);
                 $smarty->assign('reportedComments', $reportedComments);
                 $filename = "reported_comments.tpl";
+                $mostRecent = getMostRecentArticles();
+                $smarty->assign('mostRecent', $mostRecent);
                 $recommend = true;
                 break;
             default:
