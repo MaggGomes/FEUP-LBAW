@@ -342,4 +342,24 @@
 
 		return $name;
     }
+
+    function advancedArticleSearch($search, $category, $author, $content, $tags, $order, $limit, $offset){
+        global $conn;
+        $string = "SELECT article.title, article.category, users.name,  SUM(rating.value) AS rating FROM article JOIN users ON users.id = article.idUser
+            JOIN rating ON rating.idArticle = article.idArticle
+            WHERE to_tsvector(content) @@ to_tsquery('?')
+            OR to_tsvector(abstract) @@ to_tsquery('?')
+            AND to_tsvector(title) @@ to_tsquery('?')";
+        if($author)
+            $string = $string . " AND LOWER(name) LIKE LOWER('%".$author ."%')";
+        if($category)
+            $string = $string . " AND article.category = " . $category;
+
+        $group = " GROUP BY article.idArticle, users.id ";
+        $string = $string . $group . $order . " LIMIT ? OFFSET ? ";
+
+        $stmt = $conn->prepare($string);
+        $stmt->execute(array($content, $content, $search, $limit, $offset));
+        return $stmt->fetchAll();
+        }
 ?>

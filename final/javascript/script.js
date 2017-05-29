@@ -511,6 +511,14 @@ $("#advancedSearchForm").change(function() {
   console.log("aqui");
 });
 
+function articleSearch(){
+    var serial = $("#advancedSearchForm").serialize();
+    serial += "&offset=" + accountPageNumber;
+    $.get("../api/searchArticles.php", serial, function(data){
+        $("#advancedResults").html(data);
+    });
+}
+
 function advancedSearch() {
   var serial = $("#advancedSearchForm").serialize();
   serial += "&page=" + accountPageStatus + "&offset=" + accountPageNumber;
