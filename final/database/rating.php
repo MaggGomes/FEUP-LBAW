@@ -46,8 +46,32 @@
         //in case it doesn't exist
         $stmt = $conn->prepare("INSERT INTO public.rating (value,date,idComment,idUser) VALUES(?, LOCALTIMESTAMP, ?, ?)");
         $stmt->execute(array($value, $idComment, $idUser));
+        }
     }
-}
+
+    function getRatingByCommentId($id){
+        global $conn;
+
+        $stmt = $conn->prepare("SELECT COUNT(*) AS upvotes
+                                    FROM public.rating
+                                    WHERE public.rating.idComment = ? AND public.rating.value = 1");
+
+        $stmt->execute(array($id));
+        $result = $stmt->fetch();
+
+        $comment['upvotes'] = $result['upvotes'];
+
+        $stmt = $conn->prepare("SELECT COUNT(*) AS downvotes
+                                    FROM public.rating
+                                    WHERE public.rating.idComment = ? AND public.rating.value = -1");
+
+        $stmt->execute(array($id));
+        $result = $stmt->fetch();
+
+        $comment['downvotes'] = $result['downvotes'];
+
+        return $comment;
+    }
 
     function getRatingByArticleId($id){
         global $conn;
@@ -71,5 +95,5 @@
     $article['downvotes'] = $result['downvotes'];
 
     return $article;
-}
+    }
 ?>
