@@ -3,7 +3,7 @@
         <div class="page-header comment-header">
             <div class="profile-header-container">
                 <div class="row">
-                    <div class="col-xs-10">
+                    <div class="col-xs-9">
                         <div class="profile-header-img">
                             {if $reply.userimage == NULL}
                                 <img class="img-circle" src="{$BASE_URL}upload/user_profile/default.png"/>
@@ -18,6 +18,8 @@
                             <h4 class="article-author">{$reply.name}</h4>
                             <small>{$reply.commentmonth} {$reply.commentday}, {$reply.commentyear}</small>
                         </div>
+                    </div>
+                    <div class="col-xs-3">
                         {if $reply.userid == $smarty.session.id}
                             <div class="show-reply small-text glyph-text pull-right" onclick="displayEditForm({$reply.idcomment})">
                                 <i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit
