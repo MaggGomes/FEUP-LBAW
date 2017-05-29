@@ -183,7 +183,6 @@ $(document).ready(function () {
                 password: userPassword
             },
             function (result) {
-                console.log(result);
                 if (result == 200) {
                     location.reload();
                 } else {
@@ -247,7 +246,6 @@ $(document).ready(function () {
         function () {
             /*
              var auth2 = gapi.auth2.getAuthInstance();
-             console.log(auth2.currentUser.get());
              auth2.signOut();*/
         });
 
@@ -262,11 +260,8 @@ $(document).ready(function () {
 
         FB.getLoginStatus(function (response) {
             if (response.status === "connected") {
-                console.log("connected");
             } else if (response.status === "not_authorized") {
-                console.log("not connected");
             } else {
-                console.log("not logged with a facebook account");
             }
         });
 
@@ -287,23 +282,16 @@ $(document).ready(function () {
     $("#facebook_login").click(function () {
         $("#signin").modal('hide');
         FB.login(function (response) {
-            console.log("facebook login");
             if (response.status === "connected") {
-                console.log("connected");
 
                 FB.api('/me', 'GET', {
                     fields: 'name, email, picture.width(300).height(300)'
                 }, function (data) {
-                    console.log(data.name);
-                    console.log(data.email);
-                    console.log(data.picture.data.url);
 
                     updateSession(data.name, data.email, data.picture.data.url, "facebook");
                 })
             } else if (response.status === "not_authorized") {
-                console.log("not connected");
             } else {
-                console.log("not logged with a facebook account");
             }
         });
     });
@@ -360,7 +348,6 @@ $(document).ready(function () {
                         type: "comment"
                     },
                     function (data) {
-                      console.log(data);
                         location.reload()
                     });
             });
@@ -391,7 +378,6 @@ function searchByTitle(value) {
             "offset": 0
         }, function (results) {
             $(".expandsearch-content").html(results);
-            console.log(results);
         });
     } else {
         $(".expandsearch-content").html("");
@@ -400,7 +386,6 @@ function searchByTitle(value) {
 
 /* Show results */
 function showResults(data) {
-    console.log(data);
 }
 
 /* Changes rating of an article */
@@ -438,14 +423,12 @@ function changeRating(html, value, idSession) {
 
 /* Changes rating of a comment */
 function changeRatingComment(html, value, idSession) {
-    console.log($(html).data('value'));
     if (idSession) {
         $.post("../api/update_rating_comment.php", {
                 value: value,
                 idComment: $(html).data('value')
             },
             function (result) {
-                console.log(result);
                 if ($(html).hasClass("voted")) {
                     $(html).removeClass("voted");
                 } else {
@@ -520,8 +503,6 @@ function accountPage(html, page) {
         },
         function (data) {
             JSON.parse(data, function (key, value) {
-                console.log(key);
-                console.log(value);
                 if (key === "main")
                     $("#page").html(value);
                 if (key === "side")
@@ -530,7 +511,6 @@ function accountPage(html, page) {
             });
             // $("#page").html(data.main);
             // $("#rightSidebar").html(data.side);
-            // console.log(data);
             $("li.active").removeClass("active");
             $(html).parent().addClass("active");
         });
@@ -542,7 +522,6 @@ function changePermissions(permission, userId) {
             id: userId
         },
         function (data) {
-            console.log(data);
         });
 }
 
@@ -562,7 +541,6 @@ function updateSession(usName, email, image, platf) {
 }
 
 $("#advancedSearchForm").change(function () {
-    console.log("aqui");
 });
 
 function articleSearch() {
@@ -634,6 +612,5 @@ function banModal(userId){
 function ban(){
     var info = $("#banInfo").serialize();
     $.post("../api/banUser.php", info, function(data){
-        console.log(data);
     });
 }
