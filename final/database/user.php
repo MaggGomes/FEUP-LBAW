@@ -1,5 +1,5 @@
 <?php
-	function getAllUsers($name, $minRating, $limit, $offset){
+	function getAllUsers($name, $minRating, $limit, $offset, $orderChoice){
 		global $conn;
 
 
@@ -7,6 +7,7 @@
             //"OFFSET " + $offset;
         $limits = " OFFSET ? LIMIT ? ";
         $params = moreParameters($name, $minRating);
+        $order = ordering($orderChoice);
         $statement = "SELECT public.users.name,
 			public.users.email,
 			public.users.photoURL,
@@ -15,6 +16,7 @@
 			public.users.id FROM public.users";
         //$statement += pageLimits();
         if($params) $statement = $statement . " WHERE " . $params;
+        $statement = $statement . $order;
         $statement = $statement . $limits;
 		$stmt = $conn->prepare($statement);
 
@@ -66,29 +68,36 @@
 		}
 	}
 
-	function getFollowing($id, $name, $minRating, $limit, $offset){
+	function getFollowing($id, $name, $minRating, $limit, $offset, $orderChoice){
 		global $conn;
+        $limits = " OFFSET ? LIMIT ? ";
+        $params = moreParameters($name, $minRating);
+        $order = ordering($orderChoice);
         $statement = "SELECT public.users.name, public.users.photoURL, public.follower.idFollowed
 			FROM public.users
 			JOIN public.follower ON (public.users.id = public.follower.idFollowed)
 			WHERE public.follower.idFollower = ?";
-        $statement += " AND " + moreParameters($name, $minRating);
-        $statement += pageLimits($limits, $offset);
+        $statement = $statement . " AND " + $params;
+        $statement = $statement . $order;
+        $statement = $statement . $limits;
 		$stmt = $conn->prepare($statement);
-		$stmt->execute(array($id));
+		$stmt->execute(array($id, ($offset-1)*$limit, $limit));
 		return $stmt->fetchAll();
 	}
 
-	function getFollowers($id, $name, $minRating, $limit, $offset){
+	function getFollowers($id, $name, $minRating, $limit, $offset, $orderChoice){
 		global $conn;
+        $limits = " OFFSET ? LIMIT ? ";
+        $params = moreParameters($name, $minRating);
+        $order = ordering($orderChoice);
         $statement = "SELECT public.users.name, public.users.photoURL, public.follower.idFollowed
     		FROM public.users
     		JOIN public.follower ON (public.users.id = public.follower.idFollower)
     		WHERE public.follower.idFollowed = ?";
-        $statement += " AND " + moreParameters($name, $minRating);
-        $statement += pageLimits($limits, $offset);
-		$stmt = $conn->prepare($statement);
-		$stmt->execute(array($id));
+            $statement = $statement . " AND " + $params;
+            $statement = $statement . $order;
+            $statement = $statement . $limits;
+		$stmt->execute(array($id, ($offset-1)*$limit, $limit));
 		return $stmt->fetchAll();
 	}
 
@@ -257,5 +266,28 @@
             $stmt = $stmt . " users.rating > " . $minRating;
         }
         return $stmt;
+    }
+
+    function ordering($order){
+        $st = " ORDER BY ";
+        $i;
+        switch ($order) {
+            case 1:
+                $i = "users.name ASC";
+                break;
+            case 2:
+                $i = "users.name DESC";
+                break;
+            case 3:
+                $i = "users.rating DESC";
+                break;
+            case 4:
+                $i = "users.rating ASC";
+                break;
+            default:
+                $i = "users.name ASC";
+                break;
+        }
+        return $st . $i;
     }
 ?>

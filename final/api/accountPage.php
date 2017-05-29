@@ -7,6 +7,7 @@
     $minRating = $_GET["minRating"];
     $limit = $_GET["limit"];
     $offset = $_GET["offset"];
+    $order = $_GET["order"];
     if(!$limit) $limit = 10;
     if(!$offset) $offset = 1;
 
@@ -18,17 +19,17 @@
                 $filename = "edit_profile.tpl";
                 break;
             case 'followers':
-                $followers = getFollowers($_SESSION["id"], $name, $minRating, $limit, $offset);
+                $followers = getFollowers($_SESSION["id"], $name, $minRating, $limit, $offset, $order);
                 $smarty->assign('follows', $followers);
                 $filename = "followers.tpl";
                 break;
             case 'following':
-                $following = getFollowing($_SESSION["id"], $name, $minRating, $limit, $offset);
+                $following = getFollowing($_SESSION["id"], $name, $minRating, $limit, $offset, $order);
                 $smarty->assign('follows', $following);
                 $filename = "following.tpl";
                 break;
             case 'articlesModerated':
-                $moderated = ownModerated($_SESSION["id"], $name, $minRating, $limit, $offset);
+                $moderated = ownModerated($_SESSION["id"], $name, $minRating, $limit, $offset, $order);
                 $smarty->assign('moderated', $moderated);
                 $filename = "moderated_articles.tpl";
                 break;
@@ -42,7 +43,7 @@
                 break;
             //check if admin
             case 'listUsers':
-                $users = getAllUsers($name, $minRating, $limit, $offset);
+                $users = getAllUsers($name, $minRating, $limit, $offset, $order);
                 $smarty->assign('users', $users);
                 $filename = "list_users.tpl";
                 break;
