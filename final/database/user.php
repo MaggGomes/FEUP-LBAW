@@ -173,8 +173,8 @@
 	function banUser($id, $end, $reason, $banLevel){
 		global $conn;
 
-		$stmt = $conn->prepare("INSERT INTO public.suspension (start, terminate, reason, ban, idUser) VALUES(LOCALTIMESTAMP, ?, ?, ?, ?)");
-        $stmt->execute($end, $reason, $banLevel, $id);
+		$stmt = $conn->prepare("INSERT INTO public.suspension (start, terminate, reason, ban, idUser) VALUES(LOCALTIMESTAMP, ? , ? , ? , ?)");
+        $stmt->execute(array($end, $reason, $banLevel, $id));
     }
 
 	function changeStatus($id, $newStatus){
