@@ -184,8 +184,8 @@
 	function changeStatus($id, $newStatus){
 		global $conn;
 
-		$stmt = $conn->prepare("UPDATE users SET users.permission = ? WHERE users.id = ?");
-        $stmt->execute($newStatus, $id);
+		$stmt = $conn->prepare("UPDATE users SET permission = ? WHERE id = ?");
+        $stmt->execute(array($newStatus, $id));
     }
 
 	//TODO needs testing
