@@ -453,6 +453,14 @@ function follow(html, idPerson, idSession) {
   }
 }
 
+function openRepArticle(isUserLogged,articleID) {
+  if (isUserLogged) {
+    $("input#repID").val(articleID);
+  }else {
+    $("#signin").modal();
+  }
+}
+
 function reportArticle(id) {
   $("input#repID").val(id);
 }
