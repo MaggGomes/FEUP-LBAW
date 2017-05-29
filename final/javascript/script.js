@@ -563,3 +563,18 @@ function approveArticle(idarticle){
         }
     );
 }
+
+function moderateArticle(idarticle, idreport, articlevisibility, reportstate){
+
+    $.post("../api/moderateArticle.php", {
+            idarticle: idarticle,
+            idreport: idreport,
+            articlevisibility: articlevisibility,
+            reportstate: reportstate
+        },
+        function (data) {
+            var report = ".report" + idreport;
+            $(report).fadeOut("fast");
+        }
+    );
+}
