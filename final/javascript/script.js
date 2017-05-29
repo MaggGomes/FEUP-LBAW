@@ -199,7 +199,7 @@ $(document).ready(function () {
 
     $(function () {
         $('#datetimepicker').datetimepicker({
-            timeFormat: 'HH:mm:ss',
+            // timeFormat: 'HH:mm:ss',
             dateFormat: 'yy-mm-dd',
             minDate: 0,
             inline: true,
@@ -627,5 +627,8 @@ function banModal(userId){
 }
 
 function ban(){
-
+    var info = $("#banInfo").serialize();
+    $.post("../api/banUser.php", info, function(data){
+        console.log(data);
+    });
 }

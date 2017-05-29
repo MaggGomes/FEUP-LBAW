@@ -318,12 +318,12 @@
             <div style="overflow:hidden;">
             <form id="banInfo" class="form-group">
                 <div class='input-group date' id='datetimepicker'>
-                    <input type='text' class="form-control" />
+                    <input type='text' name="date" class="form-control" required/>
                     <span class="input-group-addon">
                         <span class="glyphicon glyphicon-calendar">
                         </span>
                     </span>
-                    <input type="hidden" id="banUserId" value=""/>
+                    <input type="hidden" id="banUserId" name="id" value=""/>
                 </div>
                 <br>
                 <div>
