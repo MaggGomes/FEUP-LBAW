@@ -77,7 +77,8 @@
 			FROM public.users
 			JOIN public.follower ON (public.users.id = public.follower.idFollowed)
 			WHERE public.follower.idFollower = ?";
-        $statement = $statement . " AND " + $params;
+        if($params)
+            $statement = $statement . " AND " . $params;
         $statement = $statement . $order;
         $statement = $statement . $limits;
 		$stmt = $conn->prepare($statement);
@@ -94,9 +95,11 @@
     		FROM public.users
     		JOIN public.follower ON (public.users.id = public.follower.idFollower)
     		WHERE public.follower.idFollowed = ?";
-            $statement = $statement . " AND " + $params;
+            if($params)
+                $statement = $statement . " AND " . $params;
             $statement = $statement . $order;
             $statement = $statement . $limits;
+        $stmt = $conn->prepare($statement);
 		$stmt->execute(array($id, ($offset-1)*$limit, $limit));
 		return $stmt->fetchAll();
 	}
@@ -259,7 +262,7 @@
     function moreParameters($name, $minRating){
         $stmt = "";
         if($name && $name !== "")
-            $stmt = $stmt . " users.name LIKE  '%".$name."%'";
+            $stmt = $stmt . " LOWER(users.name) LIKE  LOWER('%".$name."%')";
         if($minRating){
             if($stmt !== "")
                 $stmt = $stmt ." AND ";

@@ -466,8 +466,18 @@ function accountPage(html, page) {
             page: page
         },
         function (data) {
-            $("#page").html(data);
-            console.log(data);
+            JSON.parse(data, function(key, value){
+                console.log(key);
+                console.log(value);
+                if(key === "main")
+                    $("#page").html(value);
+                if(key === "side")
+                    $("#rightSidebar").html(value);
+
+            });
+            // $("#page").html(data.main);
+            // $("#rightSidebar").html(data.side);
+            // console.log(data);
             $("li.active").removeClass("active");
             $(html).parent().addClass("active");
     });

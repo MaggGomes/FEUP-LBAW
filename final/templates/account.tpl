@@ -11,7 +11,7 @@
                 <div id="page" class="account-content"></div>
             </div>
 
-            <div class="account-recommended col-md-3">
+            <div class="account-recommended col-md-3" id="rightSidebar">
 
                 {include file='account/accountFilter.tpl'}
             </div>
