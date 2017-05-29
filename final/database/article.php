@@ -314,6 +314,24 @@
         return $articles;
     }
 
+    function getHiddenArticles($offset){
+
+        global $conn;
+
+        $stmt = $conn->prepare("SELECT article.title AS title,
+                                       article.idarticle AS id,
+                                       users.photourl AS userimage,
+                                       users.name AS user,
+                                       users.id AS userid
+                                       FROM article JOIN users ON users.id = article.iduser
+                                       WHERE article.visibility = 'Hidden' LIMIT 8");
+
+        $stmt->execute();
+        $articles = $stmt->fetchAll();
+
+        return $articles;
+    }
+    
     function uploadArticlePhoto(){
         $name = $_FILES['articlePicture']['name'];
 

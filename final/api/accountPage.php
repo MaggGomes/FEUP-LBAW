@@ -61,26 +61,34 @@
             case 'teamManagement':
                 break;
             case 'articlesPending':
+                $hiddenArticles = getHiddenArticles(null);
+                $smarty->assign('hiddenArticles', $hiddenArticles);
+                $filename = "pending_articles.tpl";
+                $recommend = true;
                 break;
             case 'articlesReported':
                 $reportedArticles = getReportedArticles(null);
                 $smarty->assign('reportedArticles', $reportedArticles);
                 $filename = "reported_articles.tpl";
+                $recommend = true;
                 break;
             case 'commentsReported':
                 $reportedComments = getReportedComments(null);
                 $smarty->assign('reportedComments', $reportedComments);
                 $filename = "reported_comments.tpl";
+                $recommend = true;
                 break;
             default:
                 # code...
                 break;
         }
+
         if($recommend){
             $ret['side']= $smarty->fetch($BASE_DIR . "templates/common/recommended_side.tpl");
         } else{
             $ret['side'] = $smarty->fetch($BASE_DIR . "templates/account/accountFilter.tpl");
         }
+
         $output = $smarty->fetch($BASE_DIR . "templates/account/" . $filename);
         $ret['main'] = $output;
     } catch (PDOException $e) {
@@ -88,4 +96,5 @@
     }
 
     echo json_encode($ret);
+    //echo $output;
 ?>
