@@ -311,8 +311,9 @@
         }
 
 		if(file_exists($target)){
-			echo "File already exists";
-			return false;
+            $randNumb = rand(0, 10000);
+            $name = $randNumb . $_FILES['articlePicture']['name'];
+            $target = '../upload/articles/' . $randNumb . $_FILES['articlePicture']['name'];
 		}
 
 		if(!move_uploaded_file($_FILES['articlePicture']['tmp_name'], $target)){

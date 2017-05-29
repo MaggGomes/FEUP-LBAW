@@ -17,6 +17,16 @@
 	$stmt->execute(array($abstract, $title, $text, $category, $idarticle));
 	$result = $stmt->fetch();
 
+
+	if(strlen($_FILES['articlePicture']['name']) > 0){
+		$articlePhoto = uploadArticlePhoto();
+		if($articlePhoto !== false){
+			$stmt = $conn->prepare('UPDATE "image" SET url = ? WHERE idarticle = ? ');
+			$stmt->execute(array($articlePhoto, $idarticle));
+		}
+	}
+
+
 	$link = 'Location: ../pages/read_article.php?id=' . $idarticle;
 	header($link);
 ?>

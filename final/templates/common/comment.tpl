@@ -21,15 +21,28 @@
                                         <a href="{$BASE_URL}pages/profile.php?id={$comment.userid}"><h4
                                                     class="article-author">{$comment.username}</h4></a>
                                         <h4 class="article-author">{$comment.name}</h4>
-                                        <small>{$comment.commentmonth} {$comment.commentday}
-                                            , {$comment.commentyear}</small>
-
+                                        <small>{$comment.commentmonth} {$comment.commentday}, {$comment.commentyear}</small>
                                     </div>
                                 </div>
+                                {if $comment.userid == $smarty.session.id}
+                                    <a onclick="displayEditForm({$comment.idcomment})"> Edit comment </a>
+                                {/if}
                             </div>
                         </div>
                     </div>
-                    <p>{$comment.text}</p>
+                    <div class="comment{$comment.idcomment}">
+                        <p>{$comment.text}</p>
+                    </div>
+                    <div class="editComment{$comment.idcomment} reply-comment">
+                        <form action="../actions/edit_comment.php" method="post">
+                            <input type="text" name="idcomment" value="{$comment.idcomment}" hidden="hidden">
+                            <input type="text" name="idarticle" value="{$comment.idarticle}" hidden="hidden">
+                            <div class="row">
+                                <input class="form-control col-xs-9" type="text" name="text" value="{$comment.text}">
+                                <button class="btn btn-primary col-xs-3" type="submit">Edit</button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
 
                 <div class="panel-footer article-footer comment-footer">

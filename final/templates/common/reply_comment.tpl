@@ -18,11 +18,24 @@
                             <h4 class="article-author">{$reply.name}</h4>
                             <small>{$reply.commentmonth} {$reply.commentday}, {$reply.commentyear}</small>
                         </div>
+                        {if $reply.userid == $smarty.session.id}
+                            <a onclick="displayEditForm({$reply.idcomment})"> Edit comment </a>
+                        {/if}
                     </div>
                 </div>
             </div>
         </div>
+        <div class="comment{$reply.idcomment}">
             <p>{$reply.text}</p>
+        </div>
+        <div class="editComment{$reply.idcomment} reply-comment">
+            <form action="../actions/edit_comment.php" method="post">
+                <input type="text" name="idcomment" value="{$reply.idcomment}" hidden="hidden">
+                <input type="text" name="idarticle" value="{$reply.idarticle}" hidden="hidden">
+                <input class="form-control" type="text" name="text" value="{$reply.text}">
+                <button class="btn btn-primary" type="submit">Edit</button>
+            </form>
+        </div>
     </div>
     <div class="panel-footer article-footer comment-footer">
         <div class="row article-footer-lower comment-footer">

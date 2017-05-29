@@ -8,8 +8,8 @@
     <div class="container add-article">
         <form action="../actions/edit_article.php" method="post" class="form-group" enctype="multipart/form-data">
             <div class="add-article-header">
-                <input type="text" name="title" class="form-control input-lg" value="{$article.title}" required autocomplete="off">
-                <input type="text" name="abstract" class="form-control input-lg" value="{$article.abstract}" required autocomplete="off">
+                <input type="text" placeholder="Title" name="title" class="form-control input-lg" value="{$article.title}" required autocomplete="off">
+                <input type="text" placeholder="Abstract" name="abstract" class="form-control input-lg" value="{$article.abstract}" required autocomplete="off">
                 <input type="file" name="articlePicture" class="form-control input-lg" >
             </div>
 
@@ -55,7 +55,7 @@
             </div>
 
             <div class="row col-lg-12 add-article-tags">
-                <span class="glyphicon glyphicon-tags"></span> Edit tag(s)
+                <span class="glyphicon glyphicon-tags"></span> Tag(s)
                 <input type="text" id="tags-edit" name="tags" class="form-control input-lg" value="{$article.tags}" placeholder="Tags separated by spaces">
             </div>
 

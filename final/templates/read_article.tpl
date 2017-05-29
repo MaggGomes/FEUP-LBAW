@@ -14,7 +14,7 @@
         </div>
         <div class="row">
             {if $smarty.session.id != null}
-                <div class="col-md-8 col-md-offset-2 col-lg-7 col-lg-offset-1 reply-comment">
+                <div class="col-md-8 col-md-offset-2 col-lg-7 col-lg-offset-1">
                     <form action="../actions/add_comment.php" method="post">
                         <input class="form-control comment-text" type="text" placeholder="Write a comment..."
                                name="comment">

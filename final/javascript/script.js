@@ -503,3 +503,20 @@ function advancedSearch() {
     console.log("entrou");
     $("#advancedSearchForm").serialize();
 }
+
+function displayEditForm(idcomment){
+    var form = ".editComment" + idcomment;
+    var comment = ".comment" + idcomment;
+
+
+    if($(form).is(":visible")){
+        $(form).fadeOut("fast", function(){
+            $(comment).fadeIn("fast");
+        });
+    }
+    else {
+        $(comment).fadeOut("fast", function(){
+            $(form).fadeIn("fast");
+        });
+    }
+}
