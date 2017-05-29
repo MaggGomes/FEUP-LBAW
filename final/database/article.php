@@ -345,21 +345,42 @@
 
     function advancedArticleSearch($search, $category, $author, $content, $tags, $order, $limit, $offset){
         global $conn;
+        $params = " WHERE";
         $string = "SELECT article.title, article.category, users.name,  SUM(rating.value) AS rating FROM article JOIN users ON users.id = article.idUser
-            JOIN rating ON rating.idArticle = article.idArticle
-            WHERE to_tsvector(content) @@ to_tsquery('?')
-            OR to_tsvector(abstract) @@ to_tsquery('?')
-            AND to_tsvector(title) @@ to_tsquery('?')";
-        if($author)
-            $string = $string . " AND LOWER(name) LIKE LOWER('%".$author ."%')";
-        if($category)
-            $string = $string . " AND article.category = " . $category;
+            JOIN rating ON rating.idArticle = article.idArticle";
 
+
+        if($content){
+            $params .= " to_tsvector(content) @@ to_tsquery('". $content . "')
+            OR to_tsvector(abstract) @@ to_tsquery('". $content . "')
+            OR to_tsvector(title) @@ to_tsquery('". $content . "')";
+            $has = true;
+        }
+        if($search){
+            if($has)
+                $params .= " AND ";
+            $params .= " LOWER(title) LIKE LOWER('%".$search ."%')";
+            $has = true;
+        }
+        if($author){
+            if($has)
+                $params .= " AND ";
+            $params .= " LOWER(name) LIKE LOWER('%".$author ."%')";
+            $has = true;
+        }
+        if($category){
+            if($has)
+                $params .= " AND ";
+            $params .= " article.category = '" . $category."'";
+            $has = true;
+        }
         $group = " GROUP BY article.idArticle, users.id ";
-        $string = $string . $group . $order . " LIMIT ? OFFSET ? ";
+        if($has)
+            $string .= $params;
+        $string .= $group . $order . " LIMIT ? OFFSET ? ";
 
         $stmt = $conn->prepare($string);
-        $stmt->execute(array($content, $content, $search, $limit, $offset));
+        $stmt->execute(array($limit, ($offset-1)*$limit));
         return $stmt->fetchAll();
         }
 ?>

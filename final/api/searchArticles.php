@@ -11,6 +11,10 @@
     $tags = $_GET["tags"];
     $order = $_GET["order"];
 
+    if(!$author) $author = "";
+    if(!$search) $search = "";
+    if(!$content) $content = "";
+
     switch ($category) {
         case 1:
             $category = "World";
@@ -56,6 +60,6 @@
     $titles = advancedArticleSearch($search, $category, $author, $content, $tags, $order, $limit, $offset);
 
     $smarty->assign('articles', $titles);
-	$output = $smarty->fetch("search_articles.tpl");
+	$output = $smarty->fetch("advancedResults.tpl");
     echo $output;
  ?>
