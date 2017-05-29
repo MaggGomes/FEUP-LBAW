@@ -11,6 +11,9 @@
             </div>
         </div>
         <div class="row">
+            {foreach $article.tags as $tag}
+                {$tag['tag']}
+            {/foreach}
             {if $smarty.session.id != null}
                 <div class="col-md-8 col-md-offset-2 col-lg-7 col-lg-offset-1 comment-article">
                     <form action="../actions/add_comment.php" method="post">

@@ -96,6 +96,15 @@
 
         $article['numcomments'] = getNumberComments($id);
 
+
+        $stmt = $conn->prepare("SELECT tag AS tag FROM tags LEFT JOIN linktag ON tags.id = linktag.idtag
+                                                                 WHERE linktag.idarticle = ?");
+        $stmt->execute(array($id));
+        $tags = $stmt->fetchAll();
+
+
+        $article['tags'] = $tags;
+
         return $article;
     }
 
