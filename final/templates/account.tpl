@@ -3,7 +3,7 @@
 <section class="central">
     <div class="container">
         <div class="row account">
-            <div class="col-md-3">
+            <div class="col-md-3" id="mySidebar">
                 {include file='account/accountOverview.tpl'}
             </div>
 
@@ -12,7 +12,7 @@
             </div>
 
             <div class="account-recommended col-md-3">
-                
+
                 {include file='account/accountFilter.tpl'}
             </div>
         </div>

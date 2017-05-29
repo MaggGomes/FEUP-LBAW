@@ -1,4 +1,4 @@
-<div class="account-sidebar">
+<div class="account-sidebar" data-spy="affix" data-offset-top="205" data-offset-bottom="205">
     <div class="account-userpic">
         {if $info.photourl == NULL}
             <img class="img-responsive" src="{$BASE_URL}upload/user_profile/default.png"/>
