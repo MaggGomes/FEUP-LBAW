@@ -138,10 +138,13 @@ $(document).ready(function () {
                 password: userPassword
             },
             function (result) {
-                console.log(result);
                 if (result == 200) {
                     location.reload();
-                } else {
+                }
+                else if(result == 401) {
+                    $('#modal-message-login').html('<div class="modal-message-content">Your account has been suspended.</div>');
+                }
+                 else {
                     $('#modal-message-login').html('<div class="modal-message-content">Incorrect e-mail and/or password.</div>');
                 }
             });

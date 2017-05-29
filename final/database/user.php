@@ -173,8 +173,8 @@
 	function banUser($id, $end, $reason, $banLevel){
 		global $conn;
 
-		$stmt = $conn->prepare("INSERT INTO public.suspension (start, terminate, reason, ban, idUser) VALUES(LOCALTIMESTAMP, ? , ? , ? , ?)");
-        $stmt->execute(array($end, $reason, $banLevel, $id));
+		$stmt = $conn->prepare("INSERT INTO public.suspension (start, terminate, reason, ban, idUser) VALUES(LOCALTIMESTAMP, ?, ?, ?, ?)");
+        $stmt->execute($end, $reason, $banLevel, $id);
     }
 
 	function changeStatus($id, $newStatus){
@@ -301,5 +301,21 @@
 		$user->execute(array($id));
 
 		return $user->fetch();
+	}
+
+	function isBanned($id){
+		global $conn;
+
+		$user = $conn->prepare("SELECT *
+									   FROM suspension
+									   WHERE iduser = ?
+									   AND suspension.terminate > localtimestamp");
+		$user->execute(array($id));
+		$result = $user->fetchAll();
+
+		if(count($result) > 0)
+			return true;
+
+		return false;
 	}
 ?>

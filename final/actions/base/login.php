@@ -18,6 +18,10 @@
         $status = 400;
     }
 
+    if(isBanned($result["id"])){
+        $status = 401;
+    }
+
     if($status == 200){
         $_SESSION["email"] = $email;
         $_SESSION["username"] = $result["name"];
