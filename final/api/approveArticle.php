@@ -5,6 +5,5 @@
 
     $idarticle = $_POST['idarticle'];
 
-    console_log($idarticle);
     approveArticle($idarticle);
 ?>

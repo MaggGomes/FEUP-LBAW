@@ -313,11 +313,13 @@
                                        users.photourl AS userimage,
                                        users.name AS user,
                                        users.id AS userid,
-                                       report.description AS report
+                                       report.description AS report,
+                                       report.id AS reportid
                                        FROM report JOIN article ON report.idArticle = article.idArticle
-                                                   JOIN users ON users.id = report.idUser LIMIT 8");
+                                                   JOIN users ON users.id = report.idUser
+                                                   WHERE report.state = ? LIMIT 8");
 
-        $stmt->execute();
+        $stmt->execute(array("Pending"));
         $articles = $stmt->fetchAll();
 
         return $articles;
@@ -421,6 +423,23 @@
                                            WHERE idarticle = ?');
 
             $stmt->execute(array("Visible", $idArticle));
+            $stmt->fetch();
+        }
+
+        function moderateArticle($idarticle, $idreport, $reportstate, $articlevisibility){
+            global $conn;
+
+            $stmt = $conn->prepare('UPDATE "article" SET visibility = ?
+                                           WHERE idarticle = ?');
+
+            $stmt->execute(array($articlevisibility, $idarticle));
+            $stmt->fetch();
+
+
+            $stmt = $conn->prepare('UPDATE "report" SET state = ?
+                                           WHERE id = ?');
+
+            $stmt->execute(array($reportstate, $idreport));
             $stmt->fetch();
         }
 ?>

@@ -1,12 +1,11 @@
 {include file='../common/header.tpl'}
 
-<section class="central">
     <div class="container">
         <div class="row account">
             <div class="col-md-6">
                 <div class="account-content account-notifications">
                     {foreach $reportedArticles as $article}
-                    <article class="article-text">
+                    <article class="article-text report{$article.idreport}">
                         <div class="panel panel-default">
                             <div class="panel-body article-text">
                                 <div class="profile-header-container">
@@ -33,8 +32,8 @@
                                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-option-horizontal pull-right"></span></a>
 
                                                 <ul class="dropdown-menu pull-right" role="menu">
-                                                    <li><a href="#"><span class="fa fa-check-circle-o" aria-hidden="true"></span> &nbsp;Ignore request</a></li>
-                                                    <li><a href="#"><span class="fa fa-ban" aria-hidden="true"></span> &nbsp;Moderate article</a></li>
+                                                    <li><a onclick="moderateArticle({$article.id}, {$article.reportid}, 'Visible', 'Ignored')" href="#"><span class="fa fa-check-circle-o" aria-hidden="true"></span> &nbsp;Ignore request</a></li>
+                                                    <li><a onclick="moderateArticle({$article.id}, {$article.reportid}, 'Moderated', 'Accepted')" href="#"><span class="fa fa-ban" aria-hidden="true"></span> &nbsp;Moderate article</a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -48,6 +47,5 @@
 
         </div>
     </div>
-</section>
 
 {include file='../common/footer.tpl'}

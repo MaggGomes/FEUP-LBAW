@@ -1,6 +1,6 @@
 {include file='../common/header.tpl'}
 
-<section class="central">
+
     <div class="container">
         <div class="row account">
             <div class="col-md-6">
@@ -48,6 +48,6 @@
             </div>
         </div>
     </div>
-</section>
+
 
 {include file='../common/footer.tpl'}

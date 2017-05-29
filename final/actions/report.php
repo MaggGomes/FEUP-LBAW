@@ -4,9 +4,16 @@
 	$idUser = $_SESSION["id"];
 	$repID = $_POST["repID"];
 	$description = $_POST["description"];
+	$repType = $_POST["type"]
 
-	$stmt = $conn->prepare("INSERT INTO report (description,state,idArticle,idUser) VALUES (?, 'Pending', ?, ?)");
-	$stmt->execute(array($description, $repID, $idUser));
+	if ($repType === "article") {
+		$stmt = $conn->prepare("INSERT INTO report (description,state,idArticle,idUser) VALUES (?, 'Pending', ?, ?)");
+		$stmt->execute(array($description, $repID, $idUser));
+	} elseif($repType === "article") {
+		$stmt = $conn->prepare("INSERT INTO report (description,state,idArticle,idUser) VALUES (?, 'Pending', ?, ?)");
+		$stmt->execute(array($description, $repID, $idUser));
+	}
+
 	$result = $stmt->fetch();
 
 	header("Location: ../pages/home.php");
