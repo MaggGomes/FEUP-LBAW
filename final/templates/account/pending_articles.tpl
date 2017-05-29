@@ -1,9 +1,9 @@
 {include file='../common/header.tpl'}
 
+{foreach $hiddenArticles as $article }
 <div class="row">
         <div class="account-content account-notifications">
-            {foreach $hiddenArticles as $article }
-                <article class="article-text pending{$article.id}">
+                <article class="col-xs-12 col-sm-12 article-text pending{$article.id}">
                     <div class="panel panel-default">
                         <div class="panel-body article-text">
                             <div class="profile-header-container">
@@ -50,9 +50,10 @@
                         </div>
                     </div>
                 </article>
-            {/foreach}
+
         </div>
 </div>
+{/foreach}
 
 
 {include file='../common/footer.tpl'}
