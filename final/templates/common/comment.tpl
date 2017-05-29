@@ -64,6 +64,13 @@
                             <div class="pull-right show-reply" onclick="replyComment(this, {$smarty.session.id});">
                                 <span class="glyphicon glyphicon-comment"></span><span class="glyph-text"> Comment</span>
                             </div>
+                            <div class="pull-right">
+                              {if $smarty.session.id == null}
+                                 <a href="#report-comment"  onclick="openRepComment(false,{$comment.id})"><span class="fa fa-flag"></span><span class="glyph-text"> Report &nbsp&nbsp</span></a>
+                              {else}
+                                <a href="#report-comment" data-toggle="modal" onclick="openRepComment(true,{$article.id})"><span class="fa fa-flag"></span><span class="glyph-text"> Report &nbsp&nbsp</span></a>
+                              {/if}
+                          </div>
                         </div>
                     </div>
                     {if $smarty.session.id != null}
