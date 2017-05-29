@@ -1,12 +1,8 @@
 {include file='../common/header.tpl'}
-
-
-    <div class="container">
-        <div class="row account">
-            <div class="col-md-6">
+{foreach $reportedComments as $comment}
+        <div class="row">
                 <div class="account-content account-notifications">
-                    {foreach $reportedComments as $comment}
-                    <article class="article-text">
+                    <article class="col-xs-12 col-sm-12 article-text">
                         <div class="panel panel-default">
                             <div class="panel-body article-text">
                                 <div class="profile-header-container">
@@ -43,11 +39,8 @@
                             </div>
                         </div>
                     </article>
-                    {/foreach}
                 </div>
             </div>
-        </div>
-    </div>
-
+{/foreach}
 
 {include file='../common/footer.tpl'}
