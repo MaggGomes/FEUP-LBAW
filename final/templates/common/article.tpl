@@ -65,12 +65,10 @@
     </div>
     <div class="panel-footer article-footer">
         <div class="row article-footer-upper">
-            <div class="col-xs-12 small-text">
-                {if $article.numcomments == 1}
-                    <span class="glyph-text pull-right">{$article.numcomments} comment <!--&middot; 2 shares--></span>
-                {else}
-                    <span class="glyph-text pull-right">{$article.numcomments} comments <!--&middot; 2 shares--></span>
-                {/if}
+            <div class="col-xs-12">
+                {foreach $article.tags as $tag}
+                    <div class="permission">{$tag['tag']}</div>
+                {/foreach}
             </div>
         </div>
         <div class="row article-footer-lower">
