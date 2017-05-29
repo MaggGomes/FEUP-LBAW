@@ -336,7 +336,6 @@ $(document).ready(function () {
 
         //functions to work with report comments
         $(".reportComCheck").click(
-            console.log(123);
             function () {
                 $("#submitRepComment").attr("disabled", !($(".reportComCheck#repComC1")[0].checked || $(".reportComCheck#repComC2")[0].checked || $(".reportComCheck#repComC3")[0].checked));
             });
@@ -611,6 +610,7 @@ function approveArticle(idarticle){
 
 function moderateArticle(idarticle, idreport, articlevisibility, reportstate){
 
+    var report = ".report" + idreport;
     $.post("../api/moderateArticle.php", {
             idarticle: idarticle,
             idreport: idreport,
@@ -618,7 +618,6 @@ function moderateArticle(idarticle, idreport, articlevisibility, reportstate){
             reportstate: reportstate
         },
         function (data) {
-            var report = ".report" + idreport;
             $(report).fadeOut("fast");
         }
     );
