@@ -59,7 +59,7 @@
         $stmt->execute(array($id));
         $result = $stmt->fetch();
 
-        $comment['upvotes'] = $result['upvotes'];
+        $article['upvotes'] = $result['upvotes'];
 
         $stmt = $conn->prepare("SELECT COUNT(*) AS downvotes
                                     FROM public.rating
@@ -68,9 +68,9 @@
         $stmt->execute(array($id));
         $result = $stmt->fetch();
 
-        $comment['downvotes'] = $result['downvotes'];
+        $article['downvotes'] = $result['downvotes'];
 
-        return $comment;
+        return $article;
     }
 
     function getRatingByArticleId($id){

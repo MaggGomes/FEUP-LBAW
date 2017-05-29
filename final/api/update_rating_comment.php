@@ -13,7 +13,7 @@
     $rating = getRatingByArticleId($_POST['idComment']);
 
     if($_POST['value'] > 0)
-        echo json_encode($rating['upvotes']);
+        echo json_encode(1);
     else
-        echo json_encode($rating['downvotes'])
+        echo json_encode(-1)
 ?>

@@ -398,7 +398,7 @@ function changeRating(html, value, idSession) {
     }
 }
 
-/* Changes rating of an article*/
+/* Changes rating of a comment */
 function changeRatingComment(html, value, idSession) {
     console.log($(html).data('value'));
     if (idSession) {
