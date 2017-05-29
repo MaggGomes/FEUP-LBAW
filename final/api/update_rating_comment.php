@@ -5,7 +5,7 @@
     header('Content-Type: application/json');
 
     try {
-        createRating($_POST['value'], $_POST['idArticle'], $_SESSION['id']);
+        createRatingComment($_POST['value'], $_POST['idComment'], $_SESSION['id']);
     } catch (PDOException $e) {
         die($e->getMessage());
     }

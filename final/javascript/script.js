@@ -406,7 +406,6 @@ function changeRatingComment(html, value, idSession) {
                 idComment: $(html).data('value')
             },
             function (result) {
-                result = value;
                 if ($(html).hasClass("voted")) {
                     $(html).removeClass("voted");
                 } else {
