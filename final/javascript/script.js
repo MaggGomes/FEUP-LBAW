@@ -303,6 +303,7 @@ $(document).ready(function () {
 
     $("#submitRep").click(
         function () {
+            console.log(1);
             var descr = "";
             if ($(".reportCheck#repC1")[0].checked)
                 descr += "Contains abusive language;";
@@ -313,18 +314,14 @@ $(document).ready(function () {
 
             descr += "+" + $("#repAdditional").val();
 
-
-            $.post({
-                url: "../actions/report_article.php",
-                //type: "post",
-                data: {
-                    artID: $("input#repID").val(),
-                    description: descr
+            $.post("../actions/report.php",{
+                    repID: $("input#repID").val(),
+                    description: descr,
+                    type: "article"
                 },
-                success: function (data) {
-                    console.log(data);
-                }
-            });
+                function (data) {
+                    location.reload()
+                });
         });
 });
 
@@ -468,7 +465,7 @@ function reportArticle(id) {
     $("input#repID").val(id);
 }
 
-var accountPageNumber = 1;
+var accountPageNumber = 0;
 var accountPageStatus;
 /* Allows account pages to be shown dynamically*/
 function accountPage(html, page) {
@@ -535,7 +532,7 @@ function advancedSearch() {
     var serial = $("#advancedSearchForm").serialize();
     serial += "&page=" + accountPageStatus + "&offset=" + accountPageNumber;
     $.get("../api/accountPage.php", serial, function (data) {
-        $("#page").html(data);
+        $("#page").html(data.main);
     });
 }
 
