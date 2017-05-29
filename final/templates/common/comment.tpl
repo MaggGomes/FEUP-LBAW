@@ -1,12 +1,12 @@
 <div class="container">
     <div class="row">
-        <div class="col-md-8 col-md-offset-2 col-lg-7 col-lg-offset-0">
+        <div class="col-md-9">
             <div class="panel panel-default">
                 <div class="panel-body article-text">
                     <div class="page-header comment-header">
                         <div class="profile-header-container">
                             <div class="row">
-                                <div class="col-xs-10">
+                                <div class="col-xs-9">
                                     <div class="profile-header-img">
                                         {if $comment.userimage == NULL}
                                             <img class="img-circle" src="{$BASE_URL}upload/user_profile/default.png"/>
@@ -24,9 +24,10 @@
                                         <small>{$comment.commentmonth} {$comment.commentday}, {$comment.commentyear}</small>
                                     </div>
                                 </div>
-                                {if $comment.userid == $smarty.session.id}
-                                    <a onclick="displayEditForm({$comment.idcomment})"> Edit comment </a>
-                                {/if}
+                                <div class="col-xs-3">
+                                        <div class="show-reply small-text glyph-text pull-right" onclick="displayEditForm({$comment.idcomment})">
+                                            <i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -37,10 +38,8 @@
                         <form action="../actions/edit_comment.php" method="post">
                             <input type="text" name="idcomment" value="{$comment.idcomment}" hidden="hidden">
                             <input type="text" name="idarticle" value="{$comment.idarticle}" hidden="hidden">
-                            <div class="row">
-                                <input class="form-control col-xs-9" type="text" name="text" value="{$comment.text}">
-                                <button class="btn btn-primary col-xs-3" type="submit">Edit</button>
-                            </div>
+                            <input class="form-edit-comment col-xs-9" type="text" name="text" value="{$comment.text}">
+                            <button class="btn-edit-comment btn btn-primary col-xs-2 pull-right" type="submit">Edit</button>
                         </form>
                     </div>
                 </div>
@@ -60,7 +59,7 @@
                         </div>
                         <div class="col-xs-7">
                             <div class="pull-right show-reply" onclick="replyComment(this, {$smarty.session.id});">
-                                <span class="glyphicon glyphicon-comment"></span><span class="glyph-text"> Comment &nbsp&nbsp</span>
+                                <span class="glyphicon glyphicon-comment"></span><span class="glyph-text"> Comment</span>
                             </div>
                         </div>
                     </div>
@@ -81,7 +80,7 @@
     </div>
     {foreach $comment.replies as $reply}
         <div class="row">
-            <div class="col-xs-11 col-xs-offset-1 col-md-7 col-md-offset-3 col-lg-6 col-lg-offset-1">
+            <div class="col-xs-11 col-xs-offset-1 col-md-8 col-md-offset-1">
                 {include file='common/reply_comment.tpl'}
             </div>
         </div>
