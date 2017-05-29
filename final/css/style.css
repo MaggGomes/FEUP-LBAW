@@ -1194,6 +1194,20 @@ textarea#repAdditional {
     border-radius: 3px;
 }
 
+textarea#repComAdditional {
+    width:100%;
+    resize: vertical;
+    margin-bottom: 5px;
+    padding: 16px;
+    border-radius: 3px;
+}
+
+.bg-lightgray{
+    background-color:LightGray;
+    color: white;
+    font-weight: bold;
+}
+
 #report-article input[type="checkbox"] {
     position: relative;
     top: 1px;
