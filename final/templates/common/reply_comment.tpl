@@ -6,11 +6,11 @@
                     <div class="col-xs-9">
                         <div class="profile-header-img">
                             {if $reply.userimage == NULL}
-                                <img class="img-circle" src="{$BASE_URL}upload/user_profile/default.png"/>
+                                <img class="img-circle" src="{$BASE_URL}upload/user_profile/default.png" alt="profile picture"/>
                             {elseif strpos($reply.userimage, '://')}
-                                <img class="img-circle" src="{$reply.userimage}"/>
+                                <img class="img-circle" src="{$reply.userimage}" alt="profile picture"/>
                             {else}
-                                <img class="img-circle" src="{$BASE_URL}upload/user_profile/{$reply.userimage}"/>
+                                <img class="img-circle" src="{$BASE_URL}upload/user_profile/{$reply.userimage}" alt="profile picture"/>
                             {/if}
                         </div>
                         <div class="article-publisher">

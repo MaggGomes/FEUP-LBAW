@@ -8,12 +8,12 @@
 							<div class="col-xs-10">
 								<div class="profile-header-img">
 									{if $article.userimage == NULL}
-		                                <a href="{$BASE_URL}pages/profile.php?id={$article.userid}"><img class="img-circle" src="{$BASE_URL}upload/user_profile/default.png"/></a>
+		                                <a href="{$BASE_URL}pages/profile.php?id={$article.userid}"><img class="img-circle" alt="profile picture" src="{$BASE_URL}upload/user_profile/default.png"/></a>
 									{else}
 										{if strpos($article.userimage, '://')}
-											<a href="{$BASE_URL}pages/profile.php?id={$article.userid}"><img class="img-circle" src="{$article.userimage}"/></a>
+											<a href="{$BASE_URL}pages/profile.php?id={$article.userid}"><img class="img-circle" alt="profile picture" src="{$article.userimage}"/></a>
 										{else}
-											<a href="{$BASE_URL}pages/profile.php?id={$article.userid}"><img class="img-circle" src="{$BASE_URL}upload/user_profile/{$article.userimage}"/></a>
+											<a href="{$BASE_URL}pages/profile.php?id={$article.userid}"><img alt="profile picture" class="img-circle" src="{$BASE_URL}upload/user_profile/{$article.userimage}"/></a>
 										{/if}
 		                            {/if}
 								</div>

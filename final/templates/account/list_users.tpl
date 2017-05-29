@@ -9,7 +9,7 @@
                             <div type="submit">
                                 <div class="col-xs-10">
                                     <div class="profile-header-img">
-                                        <img class="img-circle" src="../upload/user_profile/demo-user.png" />
+                                        <img class="img-circle" src="../upload/user_profile/demo-user.png" alt="profile picture"/>
                                     </div>
                                     <div class="article-publisher">
                                         <a href="../pages/profile.php?id={$user.id}">

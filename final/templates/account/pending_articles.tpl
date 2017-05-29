@@ -11,13 +11,13 @@
                                     <div class="col-xs-10">
                                         <div class="profile-header-img">
                                             {if $article.userimage == NULL}
-                                                <img class="img-circle"
+                                                <img class="img-circle" alt="profile picture"
                                                      src="{$BASE_URL}upload/user_profile/default.png"/>
                                             {else}
                                                 {if strpos($article.userimage, '://')}
-                                                    <img class="img-circle" src="{$article.userimage}"/>
+                                                    <img class="img-circle" alt="profile picture" src="{$article.userimage}"/>
                                                 {else}
-                                                    <img class="img-circle"
+                                                    <img class="img-circle" alt="profile picture"
                                                          src="{$BASE_URL}upload/user_profile/{$article.userimage}"/>
                                                 {/if}
                                             {/if}

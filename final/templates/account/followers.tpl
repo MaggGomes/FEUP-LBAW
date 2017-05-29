@@ -9,12 +9,12 @@
                                 <div class="col-xs-10">
                                     <div class="profile-header-img">
                                         {if $follow.photourl == NULL}
-                                            <img class="img-circle" src="{$BASE_URL}upload/user_profile/default.png"/>
+                                            <img class="img-circle" src="{$BASE_URL}upload/user_profile/default.png" alt="profile picture"/>
                                         {else}
                                             {if strpos($follow.photourl, '://')}
-                                                <img class="img-circle" src="{$follow.photourl}"/>
+                                                <img class="img-circle" src="{$follow.photourl}" alt="profile picture"/>
                                             {else}
-                                                <img class="img-circle" src="{$BASE_URL}upload/user_profile/{$follow.photourl}"/>
+                                                <img class="img-circle" src="{$BASE_URL}upload/user_profile/{$follow.photourl}" alt="profile picture"/>
                                             {/if}
                                         {/if}
                                     </div>

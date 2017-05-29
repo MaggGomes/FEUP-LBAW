@@ -17,7 +17,7 @@
                                         <div class="row">
                                             <div class="col-xs-10">
                                                 <div class="profile-header-img">
-                                                    <img class="img-circle" src="{$BASE_URL}upload/user_profile/demo-user.png" />
+                                                    <img class="img-circle" src="{$BASE_URL}upload/user_profile/demo-user.png" alt="profile picture"/>
                                                 </div>
                                                 <div class="article-publisher">
                                                     <a href="../../pages/read_article.php"><h4 class="article-author">Clark Muller</h4></a>
@@ -49,7 +49,7 @@
                                         <div class="row">
                                             <div class="col-xs-10">
                                                 <div class="profile-header-img">
-                                                    <img class="img-circle" src="{$BASE_URL}upload/user_profile/demo-user.png" />
+                                                    <img class="img-circle" src="{$BASE_URL}upload/user_profile/demo-user.png" alt="profile picture"/>
                                                 </div>
                                                 <div class="article-publisher">
                                                     <a href="../../pages/read_article.php"><h4 class="article-author">Clark Muller</h4></a>
@@ -83,7 +83,7 @@
                                         <div class="row">
                                             <div class="col-xs-10">
                                                 <div class="profile-header-img">
-                                                    <img class="img-circle" src="{$BASE_URL}upload/user_profile/demo-user.png" />
+                                                    <img class="img-circle" src="{$BASE_URL}upload/user_profile/demo-user.png" alt="profile picture"/>
                                                 </div>
                                                 <div class="article-publisher">
                                                     <a href="../../pages/read_article.php"><h4 class="article-author">Clark Muller</h4></a>
@@ -115,7 +115,7 @@
                                         <div class="row">
                                             <div class="col-xs-10">
                                                 <div class="profile-header-img">
-                                                    <img class="img-circle" src="{$BASE_URL}upload/user_profile/demo-user.png" />
+                                                    <img class="img-circle" src="{$BASE_URL}upload/user_profile/demo-user.png" alt="profile picture"/>
                                                 </div>
                                                 <div class="article-publisher">
                                                     <a href="../../pages/read_article.php"><h4 class="article-author">Clark Muller</h4></a>

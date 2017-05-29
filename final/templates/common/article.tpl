@@ -6,12 +6,12 @@
                     <div class="col-xs-10">
                         <div class="profile-header-img" onclick="location.href='{$BASE_URL}pages/profile.php?id={$article.userid}'">
                             {if $article.userimage == NULL}
-                                <img class="img-circle" src="{$BASE_URL}upload/user_profile/default.png" />
+                                <img class="img-circle" src="{$BASE_URL}upload/user_profile/default.png" alt="profile picture"/>
                             {else}
                                 {if strpos($article.userimage, '://')}
-                                    <img class="img-circle" src="{$article.userimage}"/>
+                                    <img class="img-circle" src="{$article.userimage}" alt="profile picture"/>
                                 {else}
-                                    <img class="img-circle" src="{$BASE_URL}upload/user_profile/{$article.userimage}"/>
+                                    <img class="img-circle" src="{$BASE_URL}upload/user_profile/{$article.userimage}" alt="profile picture"/>
                                 {/if}
                             {/if}
                         </div>
@@ -45,21 +45,21 @@
             {if $largeArticleImage == true}
                 <a href="{$BASE_URL}pages/read_article.php?id={$article.id}" class="article-title"><h3>{$article.title}</h3>
                 </a>
-                <img class="article-image" src="../upload/articles/{$article.articleimage}">
+                <img class="article-image" src="../upload/articles/{$article.articleimage}" alt="profile picture">
                 <div class="article-abstract">
                     <p>{$article.abstract}</p>
                 </div>
             {else}
                 <a href="{$BASE_URL}pages/read_article.php?id={$article.id}" class="article-title"><h4>{$article.title}</h4>
                 </a>
-                <img class="article-image article-image-small" src="{$BASE_URL}upload/articles/{$article.articleimage}">
+                <img class="article-image article-image-small" src="{$BASE_URL}upload/articles/{$article.articleimage}" alt="profile picture">
                 <div class="article-abstract">
                     <p>{$article.abstract}</p>
                 </div>
             {/if}
         {else}
             <h3>{$article.title}</h3>
-            <img class="article-image" src="{$BASE_URL}upload/articles/{$article.articleimage}">
+            <img class="article-image" src="{$BASE_URL}upload/articles/{$article.articleimage}" alt="profile picture">
             <p>{$article.content}</p>
         {/if}
     </div>

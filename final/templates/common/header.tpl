@@ -56,7 +56,7 @@
         <span class="icon-bar"></span>
       </button>
       <a class="navbar-brand" href="home.php">
-        <img alt="Brand" src="../images/logo.png">
+        <img alt="Brand" src="../images/logo.png" alt="Logo">
       </a>
       <a href="home.php" class="navbar-brand brand-title">scriba</a>
     </div>
@@ -69,12 +69,12 @@
           <span class="glyphicon glyphicon-user menu-top"></span>
         {else}
           {if !$PHOTO}
-            <img class="img-circle menu-photo" src="{$BASE_URL}upload/user_profile/default.png"/>
+            <img class="img-circle menu-photo" src="{$BASE_URL}upload/user_profile/default.png" alt="profile picture"/>
           {else}
             {if strpos($PHOTO, '://')}
-              <img class="img-circle menu-photo" src="{$PHOTO}"/>
+              <img class="img-circle menu-photo" src="{$PHOTO}" alt="profile picture"/>
             {else}
-              <img class="img-circle menu-photo" src="{$BASE_URL}upload/user_profile/{$PHOTO}"/>
+              <img class="img-circle menu-photo" src="{$BASE_URL}upload/user_profile/{$PHOTO}" alt="profile picture"/>
             {/if}
           {/if}
         {/if}
@@ -86,12 +86,12 @@
             <span class="glyphicon glyphicon-user menu-top"></span>
           {else}
             {if !$PHOTO}
-              <img class="img-circle menu-photo" src="{$BASE_URL}upload/user_profile/default.png"/>
+              <img class="img-circle menu-photo" src="{$BASE_URL}upload/user_profile/default.png" alt="profile picture"/>
             {else}
               {if strpos($PHOTO, '://')}
                 <img class="img-circle menu-photo" src="{$PHOTO}"/>
               {else}
-                <img class="img-circle menu-photo" src="{$BASE_URL}upload/user_profile/{$PHOTO}"/>
+                <img class="img-circle menu-photo" src="{$BASE_URL}upload/user_profile/{$PHOTO}" alt="profile picture"/>
               {/if}
             {/if}
           {/if}

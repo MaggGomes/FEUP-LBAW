@@ -6,12 +6,12 @@
             <div class="profiles col-xs-12 col-sm-10 col-sm-push-1 col-md-8 col-md-push-2 thumbnail">
                     <div class="row profile-row-img">
                         {if $user.photourl == NULL}
-                            <img class="img-responsive" src="{$BASE_URL}upload/user_profile/default.png"/>
+                            <img class="img-responsive" src="{$BASE_URL}upload/user_profile/default.png" alt="profile picture"/>
                         {else}
                             {if strpos($user.photourl, '://')}
-                                <img class="img-responsive" src="{$user.photourl}"/>
+                                <img class="img-responsive" src="{$user.photourl}" alt="profile picture"/>
                             {else}
-                                <img class="img-responsive" src="{$BASE_URL}upload/user_profile/{$user.photourl}"/>
+                                <img class="img-responsive" src="{$BASE_URL}upload/user_profile/{$user.photourl}" alt="profile picture"/>
                             {/if}
                         {/if}
                     </div>
