@@ -202,7 +202,7 @@
       <div class="modal-body">
         <div id="modal-message-login"></div>
           <div class="form-group has-feedback">
-            <input id="signin-email" type="text" class="form-control" name="email" placeholder="E-mail address">
+            <input id="signin-email" type="email" class="form-control" name="email" placeholder="E-mail address">
             <span class="fa fa-envelope-o form-control-feedback"></span>
           </div>
           <div class="form-group has-feedback">
@@ -233,7 +233,7 @@
         <div id="modal-message-register"></div>
         <div class="form-group">
           <div class="form-group has-feedback">
-            <input id="register-name" type="text" class="form-control" placeholder="Name" name="name">
+            <input id="register-name" type="text" class="form-control" pattern="" placeholder="Name" name="name">
             <span class="fa fa-user-o form-control-feedback"></span>
           </div>
           <div class="form-group has-feedback">
