@@ -346,7 +346,7 @@
     function advancedArticleSearch($search, $category, $author, $content, $tags, $order, $limit, $offset){
         global $conn;
         $params = " WHERE";
-        $string = "SELECT article.title, article.category, users.name,  SUM(rating.value) AS rating FROM article JOIN users ON users.id = article.idUser
+        $string = "SELECT article.idArticle AS id, article.title, article.category, users.name,  SUM(rating.value) AS rating FROM article JOIN users ON users.id = article.idUser
             JOIN rating ON rating.idArticle = article.idArticle";
 
 
@@ -378,6 +378,9 @@
         if($has)
             $string .= $params;
         $string .= $group . $order . " LIMIT ? OFFSET ? ";
+        console_log($string);
+        console_log($limit);
+        console_log($offset);
 
         $stmt = $conn->prepare($string);
         $stmt->execute(array($limit, ($offset-1)*$limit));

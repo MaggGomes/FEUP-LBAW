@@ -7,7 +7,7 @@
 		$pageNo = 0;
 
 	if(!($limit = $_GET['limit']))
-		$limit = 20;
+		$limit = 10;
 
 
 	$articles = getArticlesByTitle($search, $limit, $pageNo*$limit);

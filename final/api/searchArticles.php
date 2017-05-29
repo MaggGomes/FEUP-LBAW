@@ -60,6 +60,7 @@
     $titles = advancedArticleSearch($search, $category, $author, $content, $tags, $order, $limit, $offset);
 
     $smarty->assign('articles', $titles);
+    $smarty->assign('pageNo', $offset-1);
 	$output = $smarty->fetch("advancedResults.tpl");
     echo $output;
  ?>
