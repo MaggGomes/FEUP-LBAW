@@ -6,7 +6,7 @@
             <div class="col-md-6">
                 <div class="account-content account-notifications">
                     {foreach $hiddenArticles as $article }
-                    <article class="article-text">
+                    <article class="article-text pending{$article.id}">
                         <div class="panel panel-default">
                             <div class="panel-body article-text">
                                 <div class="profile-header-container">
@@ -33,7 +33,7 @@
                                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-option-horizontal pull-right"></span></a>
 
                                                 <ul class="dropdown-menu pull-right" role="menu">
-                                                    <li><a href="#"><span class="fa fa-check-circle-o" aria-hidden="true"></span> &nbsp;Approve article</a></li>
+                                                    <li><a onclick="approveArticle({$article.id})" href="#"><span class="fa fa-check-circle-o" aria-hidden="true"></span> &nbsp;Approve article</a></li>
                                                     <li><a href="#"><span class="fa fa-flag" aria-hidden="true"></span> &nbsp;Report article</a></li>
                                                 </ul>
                                             </div>

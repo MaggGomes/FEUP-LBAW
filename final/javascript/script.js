@@ -557,13 +557,12 @@ function displayEditForm(idcomment) {
 }
 
 function approveArticle(idarticle){
-    $.post({
-        url: "../api/approveArticle.php",
-        data: {
-            idarticle: idarticle,
+    $.post("../api/approveArticle.php", {
+            idarticle: idarticle
         },
-        success: function (data) {
-        //    location.reload();
+        function (data) {
+            var approved = ".pending" + idarticle;
+            $(approved).fadeOut("fast");
         }
-    });
+    );
 }

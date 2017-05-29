@@ -331,7 +331,7 @@
 
         return $articles;
     }
-    
+
     function uploadArticlePhoto(){
         $name = $_FILES['articlePicture']['name'];
 
@@ -403,5 +403,15 @@
         $stmt = $conn->prepare($string);
         $stmt->execute(array($limit, ($offset-1)*$limit));
         return $stmt->fetchAll();
+        }
+
+        function approveArticle($idArticle){
+            global $conn;
+
+            $stmt = $conn->prepare('UPDATE "article" SET visibility = ?
+                                           WHERE idarticle = ?');
+
+            $stmt->execute(array("Visible", $idArticle));
+            $stmt->fetch();
         }
 ?>
