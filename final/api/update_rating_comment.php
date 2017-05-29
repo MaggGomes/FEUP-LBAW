@@ -10,7 +10,10 @@
         die($e->getMessage());
     }
 
-console_log($_POST['value'].$_POST['idComment'].$_SESSION['id']);
+if($_POST['value'] > 0)
+    echo json_encode($_POST['idComment']);
+else
+    echo json_encode($_POST['idComment'])
 
     /*$rating = getRatingByArticleId($_POST['idArticle']);
 
