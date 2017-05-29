@@ -327,6 +327,12 @@
                     </span>
                     <input type="hidden" id="banUserId" value=""/>
                 </div>
+                <br>
+                <div>
+                    <label for="">Reason for suspension:</label>
+                    <br>
+                    <input type="text" name="reason" value="">
+                </div>
             </form>
             </div>
         </div>

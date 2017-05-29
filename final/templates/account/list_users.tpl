@@ -32,7 +32,9 @@
                                             {else}
                                                 <li><a href="#" onclick="changePermissions('Moderator', {$user.id})"><span class="fa fa-arrow-circle-o-down" aria-hidden="true"></span> &nbsp;Demote to Moderator</a></li>
                                             {/if}
+                                            {if $user.permission != "Administrator"}
                                             <li><a onclick="banModal({$user.id})" data-toggle="modal" data-target="#banUser"><span class="fa fa-ban" aria-hidden="true"></span> &nbsp;Ban user</a></li>
+                                            {/if}
                                         </ul>
                                     </div>
                                 </div>
