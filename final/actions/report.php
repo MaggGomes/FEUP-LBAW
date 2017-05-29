@@ -9,7 +9,7 @@
 	if ($repType === "article") {
 		$stmt = $conn->prepare("INSERT INTO report (description,state,idArticle,idUser) VALUES (?, 'Pending', ?, ?)");
 		$stmt->execute(array($description, $repID, $idUser));
-	}elseif($repType === "article") {
+	} elseif($repType === "article") {
 		$stmt = $conn->prepare("INSERT INTO report (description,state,idArticle,idUser) VALUES (?, 'Pending', ?, ?)");
 		$stmt->execute(array($description, $repID, $idUser));
 	}

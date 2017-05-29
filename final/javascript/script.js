@@ -306,13 +306,13 @@ $(document).ready(function () {
             console.log(1);
             var descr = "";
             if ($(".reportCheck#repC1")[0].checked)
-                descr += "Contains abusive language;";
+                descr += "Contains abusive language;\n";
             if ($(".reportCheck#repC2")[0].checked)
-                descr += "Contains not apropriate content for Scriba;";
+                descr += "Contains not apropriate content for Scriba;\n";
             if ($(".reportCheck#repC3")[0].checked)
-                descr += "It's spam;";
+                descr += "It's spam;\n";
 
-            descr += "+" + $("#repAdditional").val();
+            descr += "Additional information: " + $("#repAdditional").val();
 
             $.post("../actions/report.php",{
                     repID: $("input#repID").val(),
