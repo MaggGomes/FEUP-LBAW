@@ -4,7 +4,7 @@
 	$idUser = $_SESSION["id"];
 	$repID = $_POST["repID"];
 	$description = $_POST["description"];
-	$repType = $_POST["type
+	$repType = $_POST["type"];
 
 	$stmt = $conn->prepare("INSERT INTO report (description,state,idComment,idUser) VALUES (?, 'Pending', ?, ?)");
 	$stmt->execute(array($description, $repID, $idUser));
