@@ -1,6 +1,7 @@
 <?php
 	include_once('../config/init.php');
 	include_once('../database/article.php');
+	include_once('../database/user.php');
 
 	$title = $_POST["title"];
 	$abstract = $_POST["abstract"];
@@ -13,8 +14,18 @@
 		die("No session");
 	}
 
-	$stmt = $conn->prepare("INSERT INTO public.article (abstract, title, date, content, category, idUser, visibility) VALUES (?, ?, LOCALTIMESTAMP, ?, ?, ?, 'Visible')");
-	$stmt->execute(array($abstract, $title, $text, $category, $_SESSION["id"]));
+	$visibility = 'Visible';
+	$userRating = getUserRating($_SESSION["id"]);
+	$userRating = $userRating['rating'];
+	console_log($userRating);
+
+	if($userRating < 15){
+		$visibility = 'Hidden';
+	}
+	console_log($visibility);
+
+	$stmt = $conn->prepare("INSERT INTO public.article (abstract, title, date, content, category, idUser, visibility) VALUES (?, ?, LOCALTIMESTAMP, ?, ?, ?, ?)");
+	$stmt->execute(array($abstract, $title, $text, $category, $_SESSION["id"], $visibility));
 	$result = $stmt->fetch();
 
 	$stmt = $conn->prepare("SELECT idArticle FROM public.article WHERE abstract = ? AND title = ?");

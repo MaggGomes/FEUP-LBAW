@@ -293,4 +293,13 @@
         }
         return $st . $i;
     }
+
+	function getUserRating($id){
+		global $conn;
+
+		$user = $conn->prepare("SELECT rating AS rating FROM users WHERE id = ?");
+		$user->execute(array($id));
+
+		return $user->fetch();
+	}
 ?>
