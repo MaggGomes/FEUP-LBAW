@@ -1192,6 +1192,14 @@ textarea#repAdditional {
     padding-top: 0;
 }
 
+.comment-article {
+    margin-bottom: 20px;
+}
+
+.comment-article button {
+    margin-top: 10px;
+}
+
 .reply-comment {
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
     margin-top: 10px;

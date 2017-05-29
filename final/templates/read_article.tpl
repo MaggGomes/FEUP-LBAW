@@ -6,15 +6,13 @@
             <article class="col-lg-9 article-text">
                 {include file='common/article.tpl'}
             </article>
-
-
             <div class="col-lg-3">
                 {include file='common/recommended_side.tpl'}
             </div>
         </div>
         <div class="row">
             {if $smarty.session.id != null}
-                <div class="col-md-8 col-md-offset-2 col-lg-7 col-lg-offset-1">
+                <div class="col-md-8 col-md-offset-2 col-lg-7 col-lg-offset-1 comment-article">
                     <form action="../actions/add_comment.php" method="post">
                         <input class="form-control comment-text" type="text" placeholder="Write a comment..."
                                name="comment">
@@ -23,6 +21,9 @@
                     </form>
                 </div>
             {/if}
+            <div class="container-category-title">
+                <h3 class="col-md-12">{sizeof($comments)} Comments <span class="glyphicon glyphicon-menu-down"></span></h3>
+            </div>
             {foreach $comments as $comment}
                 {include file='common/comment.tpl'}
             {/foreach}

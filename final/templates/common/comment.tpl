@@ -1,6 +1,6 @@
 <div class="container">
     <div class="row">
-        <div class="col-md-9">
+        <div class="col-md-12 col-lg-9">
             <div class="panel panel-default">
                 <div class="panel-body article-text">
                     <div class="page-header comment-header">
@@ -83,7 +83,7 @@
     </div>
     {foreach $comment.replies as $reply}
         <div class="row">
-            <div class="col-xs-11 col-xs-offset-1 col-md-8 col-md-offset-1">
+            <div class="col-xs-11 col-xs-offset-1 col-lg-8 col-lg-offset-1">
                 {include file='common/reply_comment.tpl'}
             </div>
         </div>
