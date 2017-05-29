@@ -495,11 +495,12 @@ function accountPage(html, page) {
 }
 
 function changePermissions(permission, userId) {
-    $.get("../api/changePermission.php", {
-            permission: permission
+    $.post("../api/changePermissions.php", {
+            permission: permission,
+            id: userId
         },
         function (data) {
-
+            console.log(data);
         });
 }
 
